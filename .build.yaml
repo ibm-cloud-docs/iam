@@ -1,0 +1,11 @@
+includes:
+- repo: https://github.com/IBM-Cloud/ibm-cloud-cli
+  ref: master
+  path: docs
+  files:
+  - reference/ibmcloud/cli_api_policy.md
+- repo: https://github.com/IBM-Cloud/ibm-cloud-cli
+  ref: master
+  path: docs/plugins/cbr
+  files:
+  - context-based-restrictions.md
