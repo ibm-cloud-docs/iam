@@ -1,0 +1,173 @@
+toc:
+  properties:
+    subcollection: iam
+    category: platform_services
+    audience: platform
+    href: /docs/iam
+    console-page: /iam
+    product-page: https://ibm.com/cloud
+    path: iam
+    label: Identity and Access Management
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - getting-started.md
+      - topicgroup:
+          label: What is IAM?
+          topics:
+          - iam-identities.md
+          - iam-access-concepts.md
+          - iam-policies-overview.md
+          - iam-roles-overview.md
+          - iam-mappings.md
+      - iam-manageaccess.md
+      - context-restrictions-what-is.md
+  - navgroup:
+      id: tutorial
+      topics:
+      - iam-quickstart.md
+      - trustedprofile-compute-tutorial.md
+      - trustedprofile-fed-tutorial.md
+      - context-restrictions-tutorial.md
+  - navgroup:
+      id: howto
+      topics:
+      - topicgroup:
+          label: Authentication and MFA
+          topics:
+          - iam-mfatypes.md
+          - iam-mfa.md
+          - iam-mfa-report.md
+          - iam-enable-manage-mfa.md
+          - migrate-mfa.md
+          - legacy-mfa.md
+          - iam-ver-auth.md
+      - topicgroup:
+          label: Federation
+          topics:
+          - iam-federation-guide.md
+          - iam-idp-integration.md
+          - iam-saml-federation.md
+      - topicgroup:
+          label: Managing access
+          topics:
+          - iam-groups.md
+          - iam-mng-access.md
+          - iam-manage-user-account.md
+          - iam-serviceid.md
+          - iam-account_management.md
+          - iam-public_access.md
+          - iam-migrated_permissions.md
+          - iam-wildcard.md
+          - iam-mnginfra.md
+          - iam-audit-policies.md
+          - iam-audit-user-access.md
+          - iam-based-conditions.md
+          - iam-authorizations.md
+          - iam-roles-management.md
+          - iam-accessgroup_rules.md
+          - iam-identify-inactive.md
+          - iam-increase-limit.md
+          - iam-policy-number.md
+          - iam-cross-acc-access.md
+          - iam-cross-acct-restriction.md
+          - iam-leave-account.md
+          - iam-access-report.md
+      - topicgroup:
+          label: Trusted profiles
+          topics:
+          - trustedprofile-create.md
+          - trustedprofile-manage.md
+          - trustedprofile-iam-token.md
+          - trustedprofile-monitor.md
+      - topicgroup:
+          label: Context-based restrictions
+          topics:
+          - context-restrictions-create.md
+          - context-restrictions-manage.md
+          - iam-cbr.md
+          - cbr-monitor.md
+      - topicgroup:
+          label: Settings
+          topics:
+          - iam-usersetting.md
+          - iam-update_status.md
+          - iam-specific_ip.md
+          - iam-restrict-api.md
+          - iam-restrict-domain.md
+          - iam-restrict-service-id.md
+          - iam-vpn_password.md
+          - sessions-settings.md
+          - iam-token-exp.md
+          - sessions-users.md
+          - sessions-your-login.md
+      - topicgroup:
+          label: API keys
+          topics:
+          - iam-apikeys.md
+          - iam-userid_keys.md
+          - iam-serviceid_keys.md
+          - iam-classic_infra_keys.md
+          - iam-apikey_iamtoken.md
+          - iam-apikeys_services.md
+      - topicgroup:
+          label: Observability
+          topics:
+          - at-events-iam.md
+          - at-events-cbr.md
+  - navgroup:
+      id: reference
+      topics:
+      - topicgroup:
+          label: API reference
+          links:
+          - link:
+              label: IAM Access Groups
+              href: https://{DomainName}/apidocs/iam-access-groups
+          - link:
+              label: IAM Identity Services
+              href: https://{DomainName}/apidocs/iam-identity-token-api
+          - link:
+              label: IAM Policy Management
+              href: https://{DomainName}/apidocs/iam-policy-management
+          - link:
+              label: Context-based restrictions
+              href: https://{DomainName}/apidocs/context-based-restrictions
+      - iam-policies-change-log.md
+      - topicgroup:
+          label: Command reference
+          topics:
+          - include: ../cli/reference/ibmcloud/cli_api_policy.md
+          - include: ../cli/plugins/cbr/context-based-restrictions.md
+      - cbr-cli-change-log.md
+      - iam-service-roles.md
+      - iam-login-flows.md
+      - iam-login_fedid.md
+      - iam-condition-properties.md
+  - navgroup:
+      id: help
+      topics:
+      - topicgroup:
+          label: FAQs
+          topics:
+          - faqs-iam.md
+          - faqs-cbr.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - ts-iam-resourceaccess.md
+          - ts-iam-myaccess.md
+          - ts-iam-invite.md
+          - ts-iam-classicinfra.md
+          - ts-iam-migratedpermissions.md
+          - ts-iam-max-policy.md
+          - ts-iam-serviceid.md
+          - ts-iam-create-accesstag.md
+          - ts-iam-attach-detach-accesstag.md
+          - ts-iam-delete-accesstag.md
+          - ts-iam-instances.md
+          - ts-iam-mfa.md
+          - ts-iam-join-account.md
+          - ts-iam-public-vpc-endpoint.md
+          - ts-alt-owner.md
