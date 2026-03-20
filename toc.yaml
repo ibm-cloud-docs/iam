@@ -140,11 +140,11 @@ toc:
           topics:
           - include: ../cli/reference/ibmcloud/cli_api_policy.md
           - include: ../cli/plugins/cbr/context-based-restrictions.md
-      - cbr-cli-change-log.md
-      - iam-service-roles.md
-      - iam-login-flows.md
-      - iam-login_fedid.md
-      - iam-condition-properties.md
+          - cbr-cli-change-log.md
+          - iam-service-roles.md
+          - iam-login-flows.md
+          - iam-login_fedid.md
+          - iam-condition-properties.md
   - navgroup:
       id: help
       topics:
