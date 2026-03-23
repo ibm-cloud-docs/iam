@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: token, token expiration, settings, access token, refresh token, IAM
 
@@ -64,7 +64,7 @@ To update your refresh token expiration setting, complete the following steps:
 
 Sessions are created when a user logs in to the {{site.data.keyword.cloud}} CLI or {{site.data.keyword.cloud}} console. For example, if you create a user API key and use it for the {{site.data.keyword.cloud}} CLI, this generates a login session. However, if you use the same API key to create a token for API calls, like [creating an IAM access token for a user or service ID](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apikey), this does not generate a session.
 
-Tokens expiration settings apply only if there is no connected login session. If a login session is created, then [limits for login sessions](/docs/iam?topic=iam-work-sessions) apply. Use the following table to help you understand when each setting applies.
+Tokens expiration settings apply only if there is no connected login session. If a login session is created, then [limits for login sessions](/docs/iam?topic=iam-iam-work-sessions) apply. Use the following table to help you understand when each setting applies.
 
 | Login type | Sessions | Refresh tokens |
 |------------|----------|----------------|

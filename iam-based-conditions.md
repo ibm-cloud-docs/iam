@@ -3,7 +3,7 @@
 copyright:
 
   years: 2023, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: access policy, access, policy, restriction, time based restriction, time based, time based conditions, conditions, resource attribute
 
@@ -100,7 +100,7 @@ Complete the following steps to assign an access policy with a temporary time-ba
 Temporary policies aren't automatically removed. To avoid reaching the policy limit in the account, administrators can remove the policy manually after it expires.
 {: note}
 
-For more information about time-based conditions for access policies, see [Conditions in access policies](/docs/iam?topic=iam-condition-properties&interface=ui#policy-condition-properties).
+For more information about time-based conditions for access policies, see [Conditions in access policies](/docs/iam?topic=iam-iam-condition-properties#policy-condition-properties).
 
 ## Before you begin
 {: #before-you-begin-time-based-cli}
@@ -218,7 +218,7 @@ The following example shows you how to create a one-time time-based condition fo
 Temporary policies, which use the pattern `time-based-conditions:once`, aren't automatically removed. To avoid reaching the policy limit in the account, administrators can remove the policy manually after it expires.
 {: note}
 
-For more information about time-based conditions for access policies, see [Conditions in access policies](/docs/iam?topic=iam-condition-properties&interface=ui#policy-condition-properties).
+For more information about time-based conditions for access policies, see [Conditions in access policies](/docs/iam?topic=iam-iam-condition-properties#policy-condition-properties).
 
 ## Before you begin
 {: #before-you-begin-time-based-api}
@@ -469,7 +469,7 @@ policy_subject = V2PolicyBaseSubject(
 Temporary policies, which use the pattern `time-based-conditions:once`, aren't automatically removed. To avoid reaching the policy limit in the account, administrators can remove the policy manually after it expires.
 {: note}
 
-For more information about time-based conditions for access policies, see [Conditions in access policies](/docs/iam?topic=iam-condition-properties&interface=ui#policy-condition-properties).
+For more information about time-based conditions for access policies, see [Conditions in access policies](/docs/iam?topic=iam-iam-condition-properties#policy-condition-properties).
 
 ## Creating a recurring time-based condition by using the console
 {: #iam-time-based-recur-ui}
@@ -492,7 +492,7 @@ Complete the following steps to assign an access policy with a recurring time-ba
 
     As an example, let's say that you're creating a conditional policy for a developer that is based in Dublin. In this case, select `UTC+1` so that the date and time range that you select next is enforced at the correct time for that location.
     {: tip}
- 
+
 1. Select the days of the week that you want the condition to grant access.
    * (Optional) Set the **All day** toggle to **No** to specify a timeframe for the days that you select.
 1. Click **Create**.
@@ -500,7 +500,7 @@ Complete the following steps to assign an access policy with a recurring time-ba
 1. Click **Add** to add your policy configuration to your policy summary.
 1. Click **Assign**.
 
-For more information about time-based conditions for access policies, see [Conditions in access policies](/docs/iam?topic=iam-condition-properties&interface=ui#policy-condition-properties).
+For more information about time-based conditions for access policies, see [Conditions in access policies](/docs/iam?topic=iam-iam-condition-properties#policy-condition-properties).
 
 ## Creating a recurring time-based condition by using the CLI
 {: #iam-time-based-recur-cli}
@@ -601,7 +601,7 @@ The following example shows you how to create a recurring time-based condition f
     ```
     {: codeblock}
 
-For more information about time-based conditions for access policies, see [Conditions in access policies](/docs/iam?topic=iam-condition-properties&interface=ui#policy-condition-properties).
+For more information about time-based conditions for access policies, see [Conditions in access policies](/docs/iam?topic=iam-iam-condition-properties#policy-condition-properties).
 
 ## Creating a recurring time-based condition by using the API
 {: #iam-time-based-recur-api}
@@ -862,13 +862,13 @@ policy_subject = V2PolicyBaseSubject(
 {: codeblock}
 {: python}
 
-For more information about time-based conditions for access policies, see [Conditions in access policies](/docs/iam?topic=iam-condition-properties&interface=ui#policy-condition-properties).
+For more information about time-based conditions for access policies, see [Conditions in access policies](/docs/iam?topic=iam-iam-condition-properties#policy-condition-properties).
 
 ## Creating a resource attribute-based condition by using the console
 {: #create-resource-attribute-condition}
 {: ui}
 
-You can assign access by specifying a resource attribute that determines which resources the condition grants access to. For example, you might have a user that needs to present a demonstration in your account by using specific resources. For more information and examples about available operators, see [Resource attribute-based conditions](/docs/iam?topic=iam-condition-properties&interface=ui#resource-based-conditions).
+You can assign access by specifying a resource attribute that determines which resources the condition grants access to. For example, you might have a user that needs to present a demonstration in your account by using specific resources. For more information and examples about available operators, see [Resource attribute-based conditions](/docs/iam?topic=iam-iam-condition-properties#resource-based-conditions).
 
 You can have up to 10 conditions and nesting up to 2 levels by using `OR`.
 {: important}
@@ -916,7 +916,7 @@ You can assign access by specifying a resource attribute that determines which r
 You can have up to 10 conditions and nesting up to 2 levels by using `OR`.
 {: important}
 
-For more information and examples about available operators, see [Resource attribute-based conditions](/docs/iam?topic=iam-condition-properties&interface=ui#resource-based-conditions).
+For more information and examples about available operators, see [Resource attribute-based conditions](/docs/iam?topic=iam-iam-condition-properties#resource-based-conditions).
 
 ```json
 "pattern": "attribute-based-condition:resource:literal-and-wildcard",

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: Context based restriction, rule, context, network zone, IBM Cloud restrictions, IBM Cloud context restriction, IBM Cloud access, access control, resource access, endpoint type, layered security, reduce attack surface
 
@@ -172,7 +172,7 @@ The three common endpoint types are as follows:
 Some endpoint types might not be supported by the selected service.
 {: note}
 
-To access virtual private endpoints, the CLI users must log in using the command `ibmcloud login -a private.cloud.ibm.com --vpc`​. For more information, see [Creating a private endpoint gateway (required for VPC use)](/docs/cli?topic=cli-service-connection#cli-private-vpc). 
+To access virtual private endpoints, the CLI users must log in using the command `ibmcloud login -a private.cloud.ibm.com --vpc`​. For more information, see [Creating a private endpoint gateway (required for VPC use)](/docs/cli?topic=cli-service-connection#cli-private-vpc).
 {: note}
 
 ### Multifactor authentication
@@ -281,7 +281,7 @@ You can create context-based restrictions for the following services if you are 
 | Watsonx.data | IAM-enabled | No | `lakehouse` |
 {: caption="Services that are compatible with context-based restrictions." caption-side="top"}
 
-Context-based restrictions that are defined for IAM-enabled services do not apply to platform actions like create or delete. For more information, see [IAM roles and actions](/docs/iam?topic=iam-service-roles-actions).
+Context-based restrictions that are defined for IAM-enabled services do not apply to platform actions like create or delete. For more information, see [IAM roles and actions](/docs/iam?topic=iam-iam-service-roles-actions).
 {: important}
 
 Check back regularly to see what services are added as more services integrate with context-based restrictions.

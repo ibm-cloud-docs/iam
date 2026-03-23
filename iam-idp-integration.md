@@ -2,7 +2,7 @@
 copyright:
 
   years: 2020, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: identity provider, IdP, App ID, IAM, integration, IdP SSO, third-party authentication, dynamic rules, external identity provider, single sign on
 
@@ -225,7 +225,7 @@ Say an attribute that is called `groups` identifies departments, teams, and more
 
 To make sure that your conditions allow only the federated users you intend to grant access to, contact your corporate directory architect for more information on available attributes.
 
-For more information about the fields that are used to create conditions, see [IAM condition properties](/docs/iam?topic=iam-condition-properties).
+For more information about the fields that are used to create conditions, see [IAM condition properties](/docs/iam?topic=iam-iam-condition-properties).
 
 Create narrow conditions. You share an IdP URL with everyone in your organization. If a claim rule is too open, you might allow users to apply a trusted profile with access to your account unintentionally.
 {: important}

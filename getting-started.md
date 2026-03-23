@@ -3,7 +3,7 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: what is IAM, IAM features, IAM API, how IAM works, centralized access management, standards-based, enterprise access control
 
@@ -43,7 +43,7 @@ With unified user management, you can add and delete users in an account for bot
 
 Access for users, service IDs, access groups, and trusted profiles are defined by a policy. Within the policy, the scope of access can be assigned to a set of resources in a resource group, a single resource, or account management services. After the target is set, you can define what actions are allowed by the subject of the policy by selecting access roles. Roles provide a way to tailor the level of access that is granted for the subject of the policy to perform actions on the target of policy, whether it is platform management tasks within the account or accessing a service's UI or completing API calls.
 
-You can also add time-based conditions to a policy that defines when the policy grants access, whether you want to grant temporary access to resources in your account or allow access during recurring time windows. For more information, see [Limiting access with time-based conditions](/docs/iam?topic=iam-time-based&interface=ui).
+You can also add time-based conditions to a policy that defines when the policy grants access, whether you want to grant temporary access to resources in your account or allow access during recurring time windows. For more information, see [Limiting access with time-based conditions](/docs/iam?topic=iam-iam-time-based).
 
 ### Access groups for streamlined access management
 {: #access-groups-quick-access}

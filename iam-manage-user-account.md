@@ -2,7 +2,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: invite, invite users, invitation access, vpn-only user, remove user, delete user, IBMid change, credentials, ID, new ID
 
@@ -391,10 +391,10 @@ To remove a user from an account, complete the following steps:
 
 Any resources that are created by the user remain in the account, but any {{site.data.keyword.cloud_notm}} API keys that the user created are removed. The user no longer has access to work with the resources they created. The account owner or an administrator for the service or service instance can assign other users to work with the resources, or delete them from the account.
 
-If you get an error message that states a classic infrastructure user can't be removed, make sure that any descendants in the user hierarchy for that user are [assigned a new parent](/docs/iam?topic=iam-user-setting#update-parent), [disabled in the account](/docs/account?topic=account-status), or deleted. Then, you can try again.
+If you get an error message that states a classic infrastructure user can't be removed, make sure that any descendants in the user hierarchy for that user are [assigned a new parent](/docs/iam?topic=iam-iam-user-setting#update-parent), [disabled in the account](/docs/account?topic=account-status), or deleted. Then, you can try again.
 {: tip}
 
-As an alternative to removing a user from your account, you can assign them an access policy with a temporary time-based condition. This way, the user can log in to the console and view the account in their account list, but can't access resources in the account before the policy begins or after the policy expires. For more information, see [Creating a temporary time-based condition](/docs/iam?topic=iam-time-based&interface=api#iam-time-based-temp-api).
+As an alternative to removing a user from your account, you can assign them an access policy with a temporary time-based condition. This way, the user can log in to the console and view the account in their account list, but can't access resources in the account before the policy begins or after the policy expires. For more information, see [Creating a temporary time-based condition](/docs/iam?topic=iam-iam-time-based&interface=api#iam-time-based-temp-api).
 
 ## Removing a user from an account by using the CLI
 {: #remove-user-acount-cli}
@@ -495,4 +495,3 @@ After the user ensures that the new IBMid exists, complete the following steps t
 3. Enter the new IBMid, and click **Update**.
 
 The user can now log in to ibm.com with their new IMBid and continue working in the {{site.data.keyword.cloud_notm}} account with the access assigned to their previously used IBMid.
-

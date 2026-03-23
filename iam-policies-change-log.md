@@ -3,7 +3,7 @@
 copyright:
 
   years:  2023, 2024
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: change log for access-management polices, updates to access-management polices, IAM Policy Management API change log, policies change log, access management change log
 
@@ -65,8 +65,8 @@ This change log introduces new capabilities for the `v2` IAM Policy Management A
 
 This change log introduces a new version (`v1 -> v2`) of the IAM Policy Management API. This version adds a new JSON schema to support a conditional policy construct and several time-based comparison operators. These operators provide the capability to restrict access based on time and date. With time-based access control, customers can establish granular policy enforcement based on a specified time period.
 
-To get started, see [Limiting access with time-based conditions](/docs/iam?topic=iam-time-based&interface=api).
+To get started, see [Limiting access with time-based conditions](/docs/iam?topic=iam-iam-time-based&interface=api).
 
-For detailed operator descriptions and examples, see: [Conditions in `v2` access policies](/docs/iam?topic=iam-condition-properties#policy-condition-properties)
+For detailed operator descriptions and examples, see: [Conditions in `v2` access policies](/docs/iam?topic=iam-iam-condition-properties#policy-condition-properties)
 
 The new `v2/polices` schema provides backwards functional compatibility and allows for more complex comparisons and operators. The `v1/polices` schema remains supported and available. For more information, see [Comparing `/v1/policies` and `/v2/policies` syntax](/docs/account?topic=account-known-issues#compare-syntax).

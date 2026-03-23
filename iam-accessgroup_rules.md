@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: dynamic rules,access groups,specific identity attributes,identity provider,federated ID,
 
@@ -41,7 +41,7 @@ To create a rule, follow these steps:
 You can think of an access group rule as a key:value pair. The key is what you add in the `Add users when` field, and the value is what you enter in the `Values` field.
 {: tip}
 
-For more information about the fields that are used to create dynamic rules, see [IAM condition properties](/docs/iam?topic=iam-condition-properties).
+For more information about the fields that are used to create dynamic rules, see [IAM condition properties](/docs/iam?topic=iam-iam-condition-properties).
 
 ## Setting up rules by using Terraform
 {: #setup_rules_terraform}
@@ -98,7 +98,7 @@ To create a rule by using Terraform, follow these steps:
       ```
       {: pre}
 
-For more information about the fields that are used to create dynamic rules, see [IAM condition properties](/docs/iam?topic=iam-condition-properties).
+For more information about the fields that are used to create dynamic rules, see [IAM condition properties](/docs/iam?topic=iam-iam-condition-properties).
 
 ## Viewing dynamic members of access groups
 {: #view-dynamic-users}

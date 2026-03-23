@@ -3,7 +3,7 @@
 copyright:
 
   years: 2022, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: users level of access, user control, access control, permissions, manage access, access management, platform management tasks, assign roles, fine-grained access, least privilege
 
@@ -66,7 +66,7 @@ For more information, see [IAM roles](/docs/account?topic=account-userroles#iamu
 ## Actions
 {: #iam-roles-actions}
 
-Actions are mapped to {{site.data.keyword.cloud_notm}} IAM roles so that users can perform only specific tasks when they are assigned the different roles. Sometimes actions are also referred to as permissions or operations. Allowable actions for each role change based on the service that is being accessed because each service defines how that role maps to the use of the service. For more information, see [IAM roles and actions](/docs/iam?topic=iam-service-roles-actions).
+Actions are mapped to {{site.data.keyword.cloud_notm}} IAM roles so that users can perform only specific tasks when they are assigned the different roles. Sometimes actions are also referred to as permissions or operations. Allowable actions for each role change based on the service that is being accessed because each service defines how that role maps to the use of the service. For more information, see [IAM roles and actions](/docs/iam?topic=iam-iam-service-roles-actions).
 
 ## Enterprise-managed IAM templates
 {: #enterprise-iam-concept}

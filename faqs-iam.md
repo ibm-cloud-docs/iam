@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: frequently asked questions, iam faqs, administrator, administrator role
 
@@ -215,7 +215,7 @@ To assign a user in your account full administrator access, go to **Manage > Acc
 {: #users}
 {: faq}
 
-An account owner can view all users in the account and choose how users can view other users in the account on the Users page. An account owner can adjust the [user list visibility setting](/docs/iam?topic=iam-user-setting) on the Settings page by selecting one of the following options:
+An account owner can view all users in the account and choose how users can view other users in the account on the Users page. An account owner can adjust the [user list visibility setting](/docs/iam?topic=iam-iam-user-setting) on the Settings page by selecting one of the following options:
 
 * **Unrestricted view**: All users in your account can view everyone else in the account.
 * **Restricted view**: Limits the ability to view users on the Users page to only those who have been granted explicit access, along with those who have visibility of other users through a classic infrastructure user hierarchy relationship.

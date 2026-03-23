@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: auditing IAM policies, last permit information, restore policies, inactive policies
 
@@ -37,7 +37,7 @@ To manage inactive policies in the console, complete the following steps:
 1. Determine whether you can remove the inactive policies in the report.
 1. To delete inactive policies, click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") > **Remove**.
 
-When you delete a policy, it's no longer included for authorization evaluations. IAM keeps a copy of all deleted policies for 10 days. During this time period, you can list and restore them at any time. To restore a deleted policy, see [Restoring deleted policies by using the API](/docs/iam?topic=iam-audit-policies&interface=api#iam-audit-policies-restore).
+When you delete a policy, it's no longer included for authorization evaluations. IAM keeps a copy of all deleted policies for 10 days. During this time period, you can list and restore them at any time. To restore a deleted policy, see [Restoring deleted policies by using the API](/docs/iam?topic=iam-iam-audit-policies&interface=api#iam-audit-policies-restore).
 {: note}
 
 ## Exporting user access policy reports
@@ -447,4 +447,3 @@ You found out that a policy that was recently deleted is needed. In that case, y
 {: #audit-policies-next-steps}
 
 Gain insight on the access assignments in your account from different perspectives. View [Auditing access to resources](/docs/account?topic=account-access-report) to learn what identities and services can access a specific resource.
- 

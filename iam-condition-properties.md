@@ -3,7 +3,7 @@
 copyright:
 
   years: 2022, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: trusted profile, dynamic rule, operators, rules, conditions, properties, time-based, resource attribute
 
@@ -18,7 +18,7 @@ subcollection: iam
 
 Dynamic rules and trusted profiles both use conditional IAM statements that you specify to automatically add federated users to access groups or trusted profiles. When users log in with a federated ID, the data from the identity provider (IdP) dynamically maps them to an access group based on conditions that you set. For more information, see [Creating dynamic rules for access groups](/docs/account?topic=account-rules) and [Creating trusted profiles](/docs/account?topic=account-create-trusted-profile).
 
-You can also assign conditional IAM access policies to designate temporary access to resources in your account or allow access to resources during specific time windows. For more information, see [Limiting access with time-based conditions](/docs/iam?topic=iam-time-based&interface=ui) and review the section [Conditions in `/v2/policies` access policies](/docs/iam?topic=iam-condition-properties&interface=ui#policy-condition-properties).
+You can also assign conditional IAM access policies to designate temporary access to resources in your account or allow access to resources during specific time windows. For more information, see [Limiting access with time-based conditions](/docs/iam?topic=iam-iam-time-based) and review the section [Conditions in `/v2/policies` access policies](/docs/iam?topic=iam-iam-condition-properties#policy-condition-properties).
 
 ## Dynamic rule and trusted profile details
 {: #general-details}
@@ -171,14 +171,14 @@ The following table lists the operators available for creating time-based condit
 
 | Operator   | Description  | Example |
 |------------|--------------|---------|
-| `dayOfWeekAnyOf` | The days of the week that the client can use the policy.   \n 1 - Monday   \n 2 - Tuesday   \n 3 - Wednesday   \n 4- Thursday   \n 5 - Friday   \n 6 - Saturday   \n 7 - Sunday | See [example](/docs/iam?topic=iam-condition-properties&interface=ui#dayOfWeekAnyOf-timeGreaterThanOrEquals-timeLessThanOrEquals). |
-| `timeGreaterThanOrEquals` | The time that the condition begins granting access. Time is calculated by `<time>±<time_zone_offset>`. | See [example](/docs/iam?topic=iam-condition-properties&interface=ui#dayOfWeekAnyOf-timeGreaterThanOrEquals-timeLessThanOrEquals). |
-| `timeLessThanOrEquals` | The time that the condition terminates access. Time is calculated by `<time>±<time_zone_offset>`. | See [example](/docs/iam?topic=iam-condition-properties&interface=ui#dayOfWeekAnyOf-timeGreaterThanOrEquals-timeLessThanOrEquals). |
-| `dateTimeGreaterThanOrEquals` | The date and time that the condition begins granting access. Date is calculated by `<datetime>±<time_zone_offset>`. |  See [example](/docs/iam?topic=iam-condition-properties&interface=ui#dateTimeGreaterThanOrEquals-dateTimeLessThanOrEquals). |
-| `dateTimeLessThanOrEquals` | The date and time that the condition terminates access. Date is calculated by `<datetime>±<time_zone_offset>`. | See [example](/docs/iam?topic=iam-condition-properties&interface=ui#dateTimeGreaterThanOrEquals-dateTimeLessThanOrEquals). |
+| `dayOfWeekAnyOf` | The days of the week that the client can use the policy.   \n 1 - Monday   \n 2 - Tuesday   \n 3 - Wednesday   \n 4- Thursday   \n 5 - Friday   \n 6 - Saturday   \n 7 - Sunday | See [example](/docs/iam?topic=iam-iam-condition-properties#dayOfWeekAnyOf-timeGreaterThanOrEquals-timeLessThanOrEquals). |
+| `timeGreaterThanOrEquals` | The time that the condition begins granting access. Time is calculated by `<time>±<time_zone_offset>`. | See [example](/docs/iam?topic=iam-iam-condition-properties#dayOfWeekAnyOf-timeGreaterThanOrEquals-timeLessThanOrEquals). |
+| `timeLessThanOrEquals` | The time that the condition terminates access. Time is calculated by `<time>±<time_zone_offset>`. | See [example](/docs/iam?topic=iam-iam-condition-properties#dayOfWeekAnyOf-timeGreaterThanOrEquals-timeLessThanOrEquals). |
+| `dateTimeGreaterThanOrEquals` | The date and time that the condition begins granting access. Date is calculated by `<datetime>±<time_zone_offset>`. |  See [example](/docs/iam?topic=iam-iam-condition-properties#dateTimeGreaterThanOrEquals-dateTimeLessThanOrEquals). |
+| `dateTimeLessThanOrEquals` | The date and time that the condition terminates access. Date is calculated by `<datetime>±<time_zone_offset>`. | See [example](/docs/iam?topic=iam-iam-condition-properties#dateTimeGreaterThanOrEquals-dateTimeLessThanOrEquals). |
 {: caption="The operators available to time-based conditions for access policies." caption-side="top"}
 
-When you define a condition with a `GreaterThanOrEquals` operator, always include a condition with a `LessThanOrEquals` operator. This way, there is a clearly defined duration, whether it is temporary, recurring all day, or recurring with custom hours. For more information, see [Condition patterns](/docs/iam?topic=iam-time-based&interface=ui#advanced-condition-service).
+When you define a condition with a `GreaterThanOrEquals` operator, always include a condition with a `LessThanOrEquals` operator. This way, there is a clearly defined duration, whether it is temporary, recurring all day, or recurring with custom hours. For more information, see [Condition patterns](/docs/iam?topic=iam-iam-time-based#advanced-condition-service).
 
 For date and time operators, policies support the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format `hh:mm:ss±hh:mm`. The time zone offset refers to Coordinated Universal Time.
 {: note}
@@ -195,7 +195,7 @@ Use the following variables to represent the `key` that specifies the client’s
 #### Example: dayOfWeekAnyOf, timeGreaterThanOrEquals, and timeLessThanOrEquals
 {: #dayOfWeekAnyOf-timeGreaterThanOrEquals-timeLessThanOrEquals}
 
-The days of the week that are specified in this example map to Monday, Tuesday, Wednesday, and Thursday. The `timeGreaterThanOrEquals` value indicates that the condition begins granting access at 9 AM in the time zone UTC-5. The `timeLessThanOrEquals` value indicates that the condition terminates access at 5 PM in the time zone UTC-5.`environment.attributes.current_time` and `environment.attributes.day_of_week` indicate that it is a [recurring time-based condition](/docs/iam?topic=iam-time-based&interface=ui#iam-time-based-recur-ui). Always include `time` conditions with a `dayOfWeek` condition.
+The days of the week that are specified in this example map to Monday, Tuesday, Wednesday, and Thursday. The `timeGreaterThanOrEquals` value indicates that the condition begins granting access at 9 AM in the time zone UTC-5. The `timeLessThanOrEquals` value indicates that the condition terminates access at 5 PM in the time zone UTC-5.`environment.attributes.current_time` and `environment.attributes.day_of_week` indicate that it is a [recurring time-based condition](/docs/iam?topic=iam-iam-time-based#iam-time-based-recur-ui). Always include `time` conditions with a `dayOfWeek` condition.
 
 ```json
 "conditions": [
@@ -240,7 +240,7 @@ The day of the week in this example is represented by `3` in the `value` string,
 #### Example: dateTimeGreaterThanOrEquals and dateTimeLessThanOrEquals
 {: #dateTimeGreaterThanOrEquals-dateTimeLessThanOrEquals}
 
-In this example, the `dateTimeGreaterThanOrEquals` value indicates that the condition begins granting access on 26 December 2022 at 9 AM in the UTC-5 time zone. The `dateTimeLessThanOrEquals` value indicates that the condition terminates access on 27 December 2022 at 5 PM in the UTC-5 time zone. `environment.attributes.current_date_time` indicates that it is a [temporary time-based condition](/docs/iam?topic=iam-time-based&interface=ui#iam-time-based-recur-ui).
+In this example, the `dateTimeGreaterThanOrEquals` value indicates that the condition begins granting access on 26 December 2022 at 9 AM in the UTC-5 time zone. The `dateTimeLessThanOrEquals` value indicates that the condition terminates access on 27 December 2022 at 5 PM in the UTC-5 time zone. `environment.attributes.current_date_time` indicates that it is a [temporary time-based condition](/docs/iam?topic=iam-iam-time-based#iam-time-based-recur-ui).
 
 ```json
 "conditions": [
@@ -265,10 +265,10 @@ The following table lists the operators available for creating resource attribut
 
 | Operator   | Description  | Example |
 |------------|--------------|---------|
-| `stringEquals`  | Case-sensitive string comparison. Boolean or number values are converted into a string before comparison. | See [example](/docs/iam?topic=iam-condition-properties&interface=ui#example-stringExists).|
-| `stringExists` | Boolean where `true` indicates that the string must be present and can be empty. `false` indicates that the string must not be present.| See [example](/docs/iam?topic=iam-condition-properties&interface=ui#example-stringExists). |
-| `stringMatch`  | Case-sensitive string match is performed between the pattern and the target string by using either an asterisk (`*`), question mark (`?`), both, or none (same as literal value). An asterisk (`*`) represents any sequence of zero or more characters in the string, and a question mark (`?`) represents any single character. You can also express an asterisk `*` and question mark `?` as a literal value by enclosing each within two sets of curly brackets `{{}}`. |  See [example](/docs/iam?topic=iam-condition-properties&interface=ui#example-stringExists). |
-| `stringEqualsAnyOf` | Case-sensitive exact string matching any of the strings in an array of strings. Limit of 10 values. |  See [example](/docs/iam?topic=iam-condition-properties&interface=ui#example-stringMatchAnyOf-stringEqualsAnyOf). |
+| `stringEquals`  | Case-sensitive string comparison. Boolean or number values are converted into a string before comparison. | See [example](/docs/iam?topic=iam-iam-condition-properties#example-stringExists).|
+| `stringExists` | Boolean where `true` indicates that the string must be present and can be empty. `false` indicates that the string must not be present.| See [example](/docs/iam?topic=iam-iam-condition-properties#example-stringExists). |
+| `stringMatch`  | Case-sensitive string match is performed between the pattern and the target string by using either an asterisk (`*`), question mark (`?`), both, or none (same as literal value). An asterisk (`*`) represents any sequence of zero or more characters in the string, and a question mark (`?`) represents any single character. You can also express an asterisk `*` and question mark `?` as a literal value by enclosing each within two sets of curly brackets `{{}}`. |  See [example](/docs/iam?topic=iam-iam-condition-properties#example-stringExists). |
+| `stringEqualsAnyOf` | Case-sensitive exact string matching any of the strings in an array of strings. Limit of 10 values. |  See [example](/docs/iam?topic=iam-iam-condition-properties#example-stringMatchAnyOf-stringEqualsAnyOf). |
 | `stringMatchAnyOf` | Case-sensitive string matching any of the strings in an array of strings. The string values can include either an asterisk (`*`), question mark (`?`), both, or none (same as literal value). An asterisk (`*`) represents any sequence of zero or more characters in the string, and a question mark (`?`) represents any single character. You can also express an asterisk `*` and question mark `?` as a literal value by enclosing each within two sets of curly brackets `{{}}`. Limit of 10 values. |
 {: caption="The operators available to resource attribute-based conditions for access policies." caption-side="top"}
 
@@ -281,7 +281,7 @@ The `key` represents the resource attribute that is supported by the chosen serv
 | `resource.attributes.delimiter` | Restricts the type of folder structure that the user can generate and helps the user navigate the bucket like a file hierarchy.   | `stringEquals` |
 {: caption="Variable notation for resource attribute-based conditions." caption-side="top"}
 
-For more information, see [Condition patterns](/docs/iam?topic=iam-time-based&interface=ui).
+For more information, see [Condition patterns](/docs/iam?topic=iam-iam-time-based).
 
 #### Example: stringMatchAnyOf and stringEqualsAnyOf
 {: #example-stringMatchAnyOf-stringEqualsAnyOf}
