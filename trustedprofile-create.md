@@ -73,7 +73,7 @@ Complete the following steps to define which federated users can access specific
    1. Define the session duration for how long a user can apply the profile before they must reauthenticate.
 
 1. Click **Continue**.
-1. (Optional) [Assign access to the trusted profile](/docs/account?topic=account-create-trusted-profile&interface=ui#tp-access).
+1. (Optional) [Assign access to the trusted profile](/docs/iam?topic=iam-create-trusted-profile#tp-access).
 1. Or, click **Create** without assigning any access.
 
 For more information about the fields that are used to create conditions for trusted profiles, see [IAM condition properties](/docs/iam?topic=iam-iam-condition-properties).

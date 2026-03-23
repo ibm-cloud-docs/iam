@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: MFA, multifactor authentication, IBMid MFA, two-factor authentication, account MFA, time-based one-time passcode, TOTP, security key, security key, MFA requirement, MFA report
 
@@ -19,10 +19,10 @@ subcollection: iam
 As an administrator on the IAM Identity Service or All IAM Account Management services, you can choose to require multifactor authentication (MFA) for every user in the account, just users with IBMids who do not use single sign-on (SSO), or individual users.
 {: shortdesc}
 
-Starting 3 May 2023, by default CLI logins with only a username and password are disabled for all users that have MFA set to **None**. This applies to users in new and existing accounts. Administrators can opt-out before that date in the {{site.data.keyword.cloud_notm}} console. For more information, see [Disabling CLI logins with only a password](/docs/account?topic=account-enablemfa#disabling-cli)
+Starting 3 May 2023, by default CLI logins with only a username and password are disabled for all users that have MFA set to **None**. This applies to users in new and existing accounts. Administrators can opt-out before that date in the {{site.data.keyword.cloud_notm}} console. For more information, see [Disabling CLI logins with only a password](/docs/iam?topic=iam-enablemfa#disabling-cli).
 {: important}
 
-View the MFA requirement for each user in your account to determine if they fulfill the requirement by generating an MFA status report. For more information, see [Identifying a user's MFA status](/docs/account?topic=account-enablemfa#id-user-mfa).
+View the MFA requirement for each user in your account to determine if they fulfill the requirement by generating an MFA status report. For more information, see [Identifying a user's MFA status](/docs/iam?topic=iam-enablemfa#id-user-mfa).
 
 If MFA is [enterprise-managed]{: tag-cyan}, the MFA defined at the account-level applies if the enterprise-managed setting is less strict or removed.
 
@@ -51,7 +51,7 @@ You can also enable and disable MFA in your account on the [Verification methods
 
 Enabling MFA does not affect users that are already logged in because MFA takes effect only at the time of login. Make sure that you notify your account users that MFA is enabled, and describe the impact to users at their next login.
 
-The first time that you log in to your account after MFA settings are updated, you need to verify your identity by using two different verification methods. Methods for verification include email, text, or phone call, and you can use any combination of those options to verify your identity. After you verify your identity, you set up your authentication factors. If you need to update your verification methods or authentication factors later, see [Managing verification methods and MFA factors](/docs/account?topic=account-verification-authentication&interface=ui).
+The first time that you log in to your account after MFA settings are updated, you need to verify your identity by using two different verification methods. Methods for verification include email, text, or phone call, and you can use any combination of those options to verify your identity. After you verify your identity, you set up your authentication factors. If you need to update your verification methods or authentication factors later, see [Managing verification methods and MFA factors](/docs/iam?topic=iam-verification-authentication).
 {: note}
 
 ### Enabling MFA for an account
@@ -59,7 +59,7 @@ The first time that you log in to your account after MFA settings are updated, y
 
 1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)** > **Settings**.
 1. Click **Authentication**.
-1. Select the type of MFA that you want to enable in your account. For more information about the MFA options, see [MFA options](/docs/account?topic=account-types#mfa-options).
+1. Select the type of MFA that you want to enable in your account. For more information about the MFA options, see [MFA options](/docs/iam?topic=iam-types#mfa-options).
 
 ### Enabling MFA for an individual user
 {: #enabling-user}
@@ -118,7 +118,7 @@ Users are prompted only once for an additional factor if IBMid detects that a us
 
 {{/iam-ver-auth.md#resetting-mfa-factors}}
 
-For more information, see [Why can't I log in with my MFA factors?](/docs/account?topic=account-troubleshoot-MFA).
+For more information, see [Why can't I log in with my MFA factors?](/docs/iam?topic=iam-troubleshoot-MFA).
 
 ## Identifying a user's MFA status
 {: #id-user-mfa}
@@ -139,7 +139,7 @@ To view the MFA status of users in the console, complete the following steps:
 
    Only the most recent report is available. When you generate a new report, any reports older than a day are deleted.
    {: note}
-3. Contact the users in your account who don't satisfy the MFA requirements. Ask them to comply by logging in and setting up factors. For more information, see [Managing your authentication factors](/docs/account?topic=account-enablemfa#auth-factors).
+3. Contact the users in your account who don't satisfy the MFA requirements. Ask them to comply by logging in and setting up factors. For more information, see [Managing your authentication factors](/docs/iam?topic=iam-enablemfa#auth-factors).
 
 ## Managing verification methods and MFA factors
 {: #verification-authentication}
@@ -222,7 +222,7 @@ Remove an authentication factor if you don't have access to it anymore to ensure
 1. Click **Remove**.
 1. Click **Yes** to confirm that you want to remove the authentication factors.
 
-You can also enable and disable MFA for your own account on the Verification methods and authentication factors page. Changing the authentication settings for an account impacts all members of the account. By enabling MFA, you can require more secure logins for your account. For more information, see [Enabling MFA in your account](/docs/account?topic=account-enablemfa).
+You can also enable and disable MFA for your own account on the Verification methods and authentication factors page. Changing the authentication settings for an account impacts all members of the account. By enabling MFA, you can require more secure logins for your account. For more information, see [Enabling MFA in your account](/docs/iam?topic=iam-enablemfa).
 {: tip}
 
 #### Resetting authentication factors

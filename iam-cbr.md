@@ -65,11 +65,11 @@ To protect a specific IAM service or the group of all IAM Account Management ser
 
 | Service        | Name           | Value          |
 | -------------- | -------------- | -------------- |
-| [IAM Access Groups service](/docs/iam?topic=iam-services-cbr&interface=api#cbr-iam-access-groups) | `serviceName` | `iam-groups` |
-| [IAM Access Management service](/docs/iam?topic=iam-services-cbr&interface=api#cbr-iam-access-management) | `serviceName` | `iam-access-management` |
-| [IAM Identity service](/docs/iam?topic=iam-services-cbr&interface=api#cbr-iam-identity) | `serviceName` | `iam-identity` |
-| [User Management service](/docs/iam?topic=iam-services-cbr&interface=api#cbr-user-management) | `serviceName` | `user-management` |
-| [All IAM Account Management services](/docs/iam?topic=iam-services-cbr&interface=api#cbr-iam-all) | `service_group_id` | `IAM`
+| [IAM Access Groups service](/docs/iam?topic=iam-iam-services-cbr&interface=api#cbr-iam-access-groups) | `serviceName` | `iam-groups` |
+| [IAM Access Management service](/docs/iam?topic=iam-iam-services-cbr&interface=api#cbr-iam-access-management) | `serviceName` | `iam-access-management` |
+| [IAM Identity service](/docs/iam?topic=iam-iam-services-cbr&interface=api#cbr-iam-identity) | `serviceName` | `iam-identity` |
+| [User Management service](/docs/iam?topic=iam-iam-services-cbr&interface=api#cbr-user-management) | `serviceName` | `user-management` |
+| [All IAM Account Management services](/docs/iam?topic=iam-iam-services-cbr&interface=api#cbr-iam-all) | `service_group_id` | `IAM`
 {: caption="Attribute name value pairs that identify a service" caption-side="bottom"}
 
 To protect all actions associated with the service, create a rule without scoping it to specific resources or APIs. For more information, see [Creating rules](/docs/iam?topic=iam-context-restrictions-create&interface=ui#context-restrictions-create-rules). To protect only a specific set of actions, review the following sections, which are linked in Table 1.

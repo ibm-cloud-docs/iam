@@ -171,3 +171,4 @@ toc:
           - ts-iam-join-account.md
           - ts-iam-public-vpc-endpoint.md
           - ts-alt-owner.md
+      - get-help.md

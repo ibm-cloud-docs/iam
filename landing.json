@@ -8,11 +8,11 @@
     "links": [
       {
         "title": "What is IBM Cloud IAM?",
-        "href": "/docs/iam?topic=iam-iam-getting-started"
+        "href": "/docs/iam?group=what-is-iam"
       },
       {
         "title": "Getting started with IAM",
-        "href": "/docs/iam?topic=iam-iam-quickstart"
+        "href": "/docs/iam?topic=iam-access-getstarted"
       },
       {
         "title": "Managing access with access groups",
@@ -20,15 +20,15 @@
       },
       {
         "title": "Setting up trusted profiles",
-        "href": "/docs/iam?topic=iam-iam-trustedprofile-create"
+        "href": "/docs/iam?topic=iam-create-trusted-profile"
       },
       {
-        "title": "Implementing context-based restrictions",
+        "title": "Creating context-based restrictions",
         "href": "/docs/iam?topic=iam-context-restrictions-create"
       },
       {
         "title": "Configuring multifactor authentication",
-        "href": "/docs/iam?topic=iam-iam-mfa"
+        "href": "/docs/iam?topic=iam-enablemfa"
       }
     ]
   },

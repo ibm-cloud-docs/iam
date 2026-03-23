@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-23"
 
 keywords: IBM Cloud service APIs, IAM token, API key, authenticate with service API
 
@@ -29,7 +29,7 @@ You can identify the caller in one of the following ways:
 
 The API keys are credentials that consist of a long series of random characters or numbers. An {{site.data.keyword.cloud_notm}} identity can have multiple API keys. Each of these API keys can be managed independently, meaning if this API key is used by your service only, you can delete the API key without disrupting some other component.
 
-You can use API keys to [log in to the {{site.data.keyword.cloud_notm}} command-line interface (CLI)](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login) or to [generate IAM tokens](/docs/account?topic=account-iamtoken_from_apikey). While it is not recommended for production use, you can also send API keys to {{site.data.keyword.cloud_notm}} services.
+You can use API keys to [log in to the {{site.data.keyword.cloud_notm}} command-line interface (CLI)](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login) or to [generate IAM tokens](/docs/iam?topic=iam-iamtoken_from_apikey). While it is not recommended for production use, you can also send API keys to {{site.data.keyword.cloud_notm}} services.
 
 ## Passing an {{site.data.keyword.cloud_notm}} IAM token to authenticate with a service's API
 {: #token_auth}
@@ -40,8 +40,8 @@ To retrieve an IAM access token, the API client must first invoke an {{site.data
 
 To authenticate with a service's API by using an access token, complete the following steps:
 
-1. First, [create an {{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-userapikey#manage-user-keys) if you have not already.
-2. The next step for the API client is the retrieval of an IAM access token, as described in [Getting an IAM token from an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey).
+1. First, [create an {{site.data.keyword.cloud_notm}} API key](/docs/iam?topic=iam-userapikey#manage-user-keys) if you have not already.
+2. The next step for the API client is the retrieval of an IAM access token, as described in [Getting an IAM token from an API key](/docs/iam?topic=iam-iamtoken_from_apikey).
 3. From the response, extract the property `access_token` to get the IAM access token. `expires_in` indicates the seconds until the IAM access token `access_token` expires. Either use this relative value or the absolute time stamp `expiration` based in [UNIX time](https://en.wikipedia.org/wiki/Unix_time){: external}.
 4. Send the IAM access token as described in [RFC 6750, section 2.1. Authorization Request Header Field](https://datatracker.ietf.org/doc/html/rfc6750#page-5){: external}.
 
