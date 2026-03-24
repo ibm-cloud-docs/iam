@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-24"
 
 keywords: trusted profile, federated users, granting access, tutorial, IAM trusted profile, trust relationship, establish trust, trust policy, trusted entity, assume access, apply access
 subcollection: iam
@@ -35,7 +35,7 @@ Let's say that Marla is the manager of a dev team at an airline company. The tea
 * Make sure you're assigned to the following access:
    * Administrator role in the account to create a trusted profile
    * Administrator role on the specific resources to which you are assigning access
-* Enable authentication from an external identity provider. For more information, see [Enabling authentication from an external identity provider](/docs/account?topic=account-ibm-idp-integration).
+* Enable authentication from an external identity provider. For more information, see [Enabling authentication from an external identity provider](/docs/iam?topic=iam-ibm-idp-integration).
 * Create an instance of the following services and add them to a resource group for this tutorial.
    * {{site.data.keyword.containerlong_notm}}
    * {{site.data.keyword.toneanalyzerfull}}
@@ -86,7 +86,7 @@ Now that Marla created a trusted profile, she wants to establish criteria for th
 1. Set the session duration to 8 hours.
 1. Click **Continue**.
 
-For more information about the fields that are used to create conditions for trusted profiles, see [IAM condition properties](/docs/iam?topic=iam-condition-properties).
+For more information about the fields that are used to create conditions for trusted profiles, see [IAM condition properties](/docs/iam?topic=iam-iam-condition-properties).
 
 ## Assign access
 {: #trusted-profile-federated-access}

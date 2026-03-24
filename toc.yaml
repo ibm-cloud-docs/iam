@@ -99,7 +99,6 @@ toc:
           - iam-vpn_password.md
           - sessions-settings.md
           - iam-token-exp.md
-          - sessions-users.md
           - sessions-your-login.md
       - topicgroup:
           label: API keys

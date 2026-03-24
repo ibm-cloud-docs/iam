@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-03-24"
 
 keywords: trusted profile, identity and access management, federated users, compute resources, IAM trusted profile, trust relationship, establish trust, trust policy, trusted entity, assume access, apply access, access group, service IDs, IBM Cloud services, CRN, cloud resource name, workload identity, without credentials
 
@@ -46,7 +46,7 @@ If you have the following access, you can create trusted profiles:
 
 Complete the following steps to define which federated users can access specific resources:
 
-1. [Enable authentication from an external identity provider](/docs/account?topic=account-ibm-idp-integration).
+1. [Enable authentication from an external identity provider](/docs/iam?topic=iam-ibm-idp-integration).
 1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Trusted profiles**.
 1. Click **Create**.
 1. Describe your profile by providing a name, email, and a description, then click **Continue**.
@@ -68,7 +68,7 @@ Complete the following steps to define which federated users can access specific
 
    1. Add conditions based on your IdP data to define how and when federated users can apply the profile.
       * By clicking **Add a condition**, you can define multiple conditions. Federated users must meet all the conditions to be included in the trusted profile. For more information about the fields that are used to create conditions, see [IAM condition properties](/docs/iam?topic=iam-iam-condition-properties).
-      * Click **View identity provider (IdP) data** to search attribute names and values in your own personal data from your IdP. For more information, see [Using IdP data to build trusted profiles](/docs/account?topic=account-ibm-idp-integration#trusted-profiles-idp-data).
+      * Click **View identity provider (IdP) data** to search attribute names and values in your own personal data from your IdP. For more information, see [Using IdP data to build trusted profiles](/docs/iam?topic=iam-ibm-idp-integration#trusted-profiles-idp-data).
 
    1. Define the session duration for how long a user can apply the profile before they must reauthenticate.
 
@@ -78,6 +78,8 @@ Complete the following steps to define which federated users can access specific
 
 For more information about the fields that are used to create conditions for trusted profiles, see [IAM condition properties](/docs/iam?topic=iam-iam-condition-properties).
 {: tip}
+
+
 
 ## Establishing trust with compute resources in the console
 {: #create-profile-compute}
@@ -104,7 +106,7 @@ Complete the following steps to set up better control over granting access to co
 1. (Optional) [Assign access to the trusted profile](/docs/account?topic=account-create-trusted-profile&interface=ui#tp-access).
 1. Or, click **Create** without assigning any access.
 
-For more information about the fields that are used to create conditions for trusted profiles, see [IAM condition properties](/docs/iam?topic=iam-condition-properties).
+For more information about the fields that are used to create conditions for trusted profiles, see [IAM condition properties](/docs/iam?topic=iam-iam-condition-properties).
 {: tip}
 
 ## Establishing trust with {{site.data.keyword.cloud_notm}} services in the console
