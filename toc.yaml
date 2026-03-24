@@ -39,14 +39,14 @@ toc:
           - iam-mfatypes.md
           - iam-mfa.md
           - iam-mfa-report.md
-          - iam-enable-manage-mfa.md
+          - iam-ver-auth.md
           - migrate-mfa.md
           - legacy-mfa.md
-          - iam-ver-auth.md
       - topicgroup:
           label: Federation
           topics:
           - iam-federation-guide.md
+          - iam-login_fedid.md
           - iam-idp-integration.md
           - iam-saml-federation.md
       - topicgroup:
@@ -68,7 +68,6 @@ toc:
           - iam-roles-management.md
           - iam-accessgroup_rules.md
           - iam-identify-inactive.md
-          - iam-increase-limit.md
           - iam-policy-number.md
           - iam-cross-acc-access.md
           - iam-cross-acct-restriction.md
@@ -143,7 +142,6 @@ toc:
           - cbr-cli-change-log.md
           - iam-service-roles.md
           - iam-login-flows.md
-          - iam-login_fedid.md
           - iam-condition-properties.md
   - navgroup:
       id: help

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-24"
 
 keywords: MFA, multifactor authentication, IBMid MFA, two-factor authentication, account MFA, time-based one-time passcode, TOTP, security key
 
@@ -49,7 +49,7 @@ You can also enable and disable MFA in your account on the [Verification methods
 
 Enabling MFA does not affect users that are already logged in because MFA takes effect only at the time of login. Make sure that you notify your account users that MFA is enabled, and describe the impact to users at their next login.
 
-The first time that you log in to your account after MFA settings are updated, you need to verify your identity by using two different verification methods. Methods for verification include email, text, or phone call, and you can use any combination of those options to verify your identity. After you verify your identity, you set up your authentication factors. If you need to update your verification methods or authentication factors later, see [Managing verification methods and MFA factors](/docs/account?topic=account-verification-authentication).
+The first time that you log in to your account after MFA settings are updated, you need to verify your identity by using two different verification methods. Methods for verification include email, text, or phone call, and you can use any combination of those options to verify your identity. After you verify your identity, you set up your authentication factors. If you need to update your verification methods or authentication factors later, see [Managing verification methods and MFA factors](/docs/iam?topic=iam-verification-authentication).
 {: note}
 
 ### Enabling MFA for an account
@@ -57,7 +57,7 @@ The first time that you log in to your account after MFA settings are updated, y
 
 1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)** > **Settings**.
 1. Click **Authentication**.
-1. Select the type of MFA that you want to enable in your account. For more information about the MFA options, see [MFA options](/docs/account?topic=account-types#mfa-options).
+1. Select the type of MFA that you want to enable in your account. For more information about the MFA options, see [MFA options](/docs/iam?topic=iam-types#mfa-options).
 
 ### Enabling MFA for an individual user
 {: #enabling-user}
@@ -112,7 +112,3 @@ To disable CLI logins with only a password, complete the following steps:
 
 Users are prompted only once for an additional factor if IBMid detects that a user is logging in to a new device or browser. Once a user logs in using an additional factor on a new device, they aren't prompted for that factor again. This prevents certain programmatic attack vectors and enhances the security of users’ accounts without prompting users each time they log in.
 {: note}
-
-{{/iam-ver-auth.md#resetting-mfa-factors}}
-
-For more information, see [Why can't I log in with my MFA factors?](/docs/account?topic=account-troubleshoot-MFA).

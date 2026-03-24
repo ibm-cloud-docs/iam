@@ -3,7 +3,7 @@
 copyright:
 
   years: 2020, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-24"
 
 keywords: maximum limits, limits, maximum policies, check for limits, check policy number, increase policy limit, total number of account policies, increase account limit
 
@@ -20,7 +20,7 @@ subcollection: iam
 Default maximum limits are set on entities in your account such as access policies, service IDs, trusted profiles, identity providers (IdPs), and API keys. However, specific use cases can require an extended limit and you must request an increase for your chosen entity. You must be the account owner or administrator for all account management services to check how many policies exist in the account.
 {: shortdesc}
 
-To review the default limits for your account, see [{{site.data.keyword.cloud_notm}} IAM limits](/docs/account?topic=account-cloudaccess#iam_limits).
+To review the default limits for your account, see [{{site.data.keyword.cloud_notm}} IAM limits](/docs/iam?topic=iam-cloudaccess#iam_limits).
 {: note}
 
 ## Increasing limits for IAM identity entities
@@ -80,7 +80,7 @@ To get the total number of policies per account, you can use the [IAM Policy Man
    ```
    {: codeblock}
 
-   If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/account?topic=account-federated_id) for more details.
+   If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/iam?topic=iam-federated_id) for more details.
    {: tip}
 
    If it's your first time using the {{site.data.keyword.cloud_notm}} CLI, check out the [getting started tutorial](/docs/cli?topic=cli-getting-started).
@@ -189,7 +189,7 @@ To get the total number of rules per account, use the Context-based restrictions
    ```
    {: codeblock}
 
-   If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/account?topic=account-federated_id) for more details.
+   If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/iam?topic=iam-federated_id) for more details.
    {: tip}
 
    If it's your first time using the {{site.data.keyword.cloud_notm}} CLI, check out the [getting started tutorial](/docs/cli?topic=cli-getting-started).
@@ -254,7 +254,7 @@ If you meet all of the listed criteria, you can request a policy limit increase 
 
 * Case title of `Request to increase account policy limit`
 * The use case for the extra policies
-* Information on all efforts taken to follow the [Best practices for organizing resources and assigning access](/docs/account?topic=account-account_setup#how_access) to reduce the number of policies on the account
+* Information on all efforts taken to follow best practices for organizing resources and assigning access to reduce the number of policies on the account
 * Account ID
 * Note how many extra policies in the account are required
 * If you are requesting an increase per subject, note how many extra policies per subject are required
