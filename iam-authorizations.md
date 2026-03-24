@@ -3,7 +3,7 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-24"
 
 keywords: authorizations, service to service access, access between services, dependent service, source service, target service, assigned access, access policies
 
@@ -30,7 +30,7 @@ In some cases, you can authorize dependent services in addition to the source se
 
 ![S2S authorizations with dependent services.](images/dependent-services.svg){: caption="How S2S authorizations work with dependent services" caption-side="bottom"}
 
-For more information about roles, see [Service access roles](/docs/account?topic=account-userroles#service_access_roles).
+For more information about roles, see [Service access roles](/docs/iam?topic=iam-userroles#service_access_roles).
 
 The following example explains how the relationship between the source, target, and dependent services works. Let's say that you have an {{site.data.keyword.ibmwatson}} service that relies on an instance of {{site.data.keyword.cos_full_notm}} to store data. When you enable an authorization between your {{site.data.keyword.ibmwatson_notm}} service and {{site.data.keyword.keymanagementservicelong}} service, you might need the {{site.data.keyword.cos_short}} instance to access a key in the user's {{site.data.keyword.keymanagementserviceshort}} instance. So, while the authorization is between your {{site.data.keyword.ibmwatson_notm}} service and {{site.data.keyword.keymanagementserviceshort}} service, the {{site.data.keyword.cos_short}} service is also given access as a dependent service of the {{site.data.keyword.ibmwatson_notm}} service. By selecting the option to enable authorizations for dependent services, you don't need to take any additional action because the policies are automatically created for the dependent services.
 

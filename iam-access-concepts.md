@@ -3,7 +3,7 @@
 copyright:
 
   years: 2022, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-03-24"
 
 keywords: users level of access, user control, access control, permissions, manage access, access management, platform management tasks, assign roles, fine-grained access, least privilege
 
@@ -22,14 +22,14 @@ subcollection: iam
 ## Access groups
 {: #access-groups-iam}
 
-A group of users and service IDs can be organized so that the same access can be assigned to all members within the group by using one or more policies. With access groups, you can streamline the access assignment process so that you can manage fewer policies and reduce the number of policies in an account, which in turn increases performance. Access groups allow you to grant and revoke access by simply adding or removing users or service IDs in the access group. After your groups are set up, you can start assigning policies by selecting an access group as the subject of the policy. For more information, see [Access groups for streamlined access management](/docs/account?topic=account-iamoverview#access-groups-quick-access).
+A group of users and service IDs can be organized so that the same access can be assigned to all members within the group by using one or more policies. With access groups, you can streamline the access assignment process so that you can manage fewer policies and reduce the number of policies in an account, which in turn increases performance. Access groups allow you to grant and revoke access by simply adding or removing users or service IDs in the access group. After your groups are set up, you can start assigning policies by selecting an access group as the subject of the policy. For more information, see [Access groups for streamlined access management](/docs/iam?topic=iam-iamoverview#access-groups-quick-access).
 
 ## Trusted profiles
 {: #trusted-profiles-iam}
 
 With trusted profiles, you manage the identities of your users within your own corporate directory. And, you can centrally manage the access lifecycle to multiple {{site.data.keyword.cloud_notm}} accounts and assets for federated users without the need to configure access policies for each entity within each account. You don't need to invite users to your account to give them to access your {{site.data.keyword.cloud_notm}} resources.
 
-You can also define fine-grained authorization for all applications that are running in a compute resource without creating service IDs or managing the API key lifecycle for applications. To start creating trusted profiles for your organization, see [Trusted profiles for eliminating the need to manage credentials](/docs/account?topic=account-iamoverview#trusted-profiles-feature).
+You can also define fine-grained authorization for all applications that are running in a compute resource without creating service IDs or managing the API key lifecycle for applications. To start creating trusted profiles for your organization, see [Trusted profiles for eliminating the need to manage credentials](/docs/iam?topic=iam-iamoverview#trusted-profiles-feature).
 
 ## Resources
 {: #resources-access-management}
@@ -41,13 +41,13 @@ IAM access management enables fine-grained access, which means that a policy can
 ## Access policies
 {: #access-policies-concept}
 
-Access policies are how users, [service IDs](/docs/account?topic=account-serviceids), access groups, and trusted profiles in the account are given permission to access and take actions on account resources. Policies include a subject, target, and role. The subject is the user, service ID, or access group that you are providing access. The target of the policy is the resource to which you want to provide access. And, the IAM roles define the level of access or allowed actions on the target of the policy.
+Access policies are how users, [service IDs](/docs/iam?topic=iam-serviceids), access groups, and trusted profiles in the account are given permission to access and take actions on account resources. Policies include a subject, target, and role. The subject is the user, service ID, or access group that you are providing access. The target of the policy is the resource to which you want to provide access. And, the IAM roles define the level of access or allowed actions on the target of the policy.
 
 A policy assigns the subject one or more roles that define the level of access and one or more attributes that define the target that the policy allows access to. The policy can provide access to a single service at the instance level, to a set of resources that are organized together in a resource group or to any set of resources that can be defined by a set of attributes such as location or resource type. A policy can also provide access to account management services. Depending on the IAM roles that you assign, the subject is allowed varying levels of access for completing account management tasks, working with service instances, or accessing a service by using the console or completing API calls.
 
 There are different types of policies that allow access to account resources for users and service IDs: a resource group policy, a resource instance policy, an account-wide policy for access to all IAM-enabled services or all instances of a specified service, and a policy on all or one account management services. Depending on your selections, custom configuration options, such as defining access to resources in a specific location or defining access to the granular level of a service-specific resource within an instance, might be available.
 
-In addition to access policies for users and service IDs, there is a policy type that is called an authorization that allows specific services or instances of services access to other services. You can learn more about assigning access between services in the [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth) documentation.
+In addition to access policies for users and service IDs, there is a policy type that is called an authorization that allows specific services or instances of services access to other services. You can learn more about assigning access between services in the [Using authorizations to grant access between services](/docs/iam?topic=iam-serviceauth) documentation.
 
 ## Roles
 {: #iam-roles-concept}
@@ -61,7 +61,7 @@ Service access roles define allowable actions, such as calling service APIs or a
 When you assign access within the console, next to the role you can see the number of actions that are mapped to each role and drill down into that list to see exactly what each role allows.
 {: tip}
 
-For more information, see [IAM roles](/docs/account?topic=account-userroles#iamusermanrol).
+For more information, see [IAM roles](/docs/iam?topic=iam-userroles#iamusermanrol).
 
 ## Actions
 {: #iam-roles-actions}
@@ -84,7 +84,7 @@ Action controls enforce your preferences on which operations child account admin
 ## Access management system
 {: #access-management-system}
 
-The {{site.data.keyword.cloud_notm}} IAM control system allows or denies actions by users or service IDs within the context of a service based on their assigned access policies. By default, every user and service ID has no access. Each access policy that is added enables the user or service ID to perform an action within the account based on the specified target and role that is selected in the access policy. When a user tries to complete a specific action, the control system uses the attributes that are defined in the policy to determine whether the user has permission to perform that task. For more information, see [How {{site.data.keyword.cloud_notm}} IAM works](/docs/account?topic=account-iamoverview).
+The {{site.data.keyword.cloud_notm}} IAM control system allows or denies actions by users or service IDs within the context of a service based on their assigned access policies. By default, every user and service ID has no access. Each access policy that is added enables the user or service ID to perform an action within the account based on the specified target and role that is selected in the access policy. When a user tries to complete a specific action, the control system uses the attributes that are defined in the policy to determine whether the user has permission to perform that task. For more information, see [How {{site.data.keyword.cloud_notm}} IAM works](/docs/iam?topic=iam-iamoverview).
 
 ### What is ABAC and RBAC?
 {: #whatis-abac-rbac}
@@ -107,7 +107,7 @@ Each service defines the supported attributes for resources it manages. For more
 
 A best practice in {{site.data.keyword.cloud_notm}} IAM is to use access groups to manage access for identities. After the access group access policies are defined, granting, and revoking access is simply a matter of adding and removing identities to or from access groups. A user or service ID can belong to as many access groups as the administrator wants, and the members of the group inherit all access that is assigned to the access group. This approach provides the fine-grained access benefits of ABAC with the simplicity of RBAC.
 
-IAM administrators familiar with RBAC might use access groups to mimic an RBAC model. Conceptually an access group is similar to an RBAC role. If you're more familiar with using traditional RBAC roles like system administrator, network administrator, or storage administrator, these can be defined in {{site.data.keyword.cloud_notm}} IAM by using access groups with specific access policies that are assigned to each. For more information about using access groups and the best practices for assigning access, see [Best practices for organizing resources and assigning access](/docs/account?topic=account-account_setup).
+IAM administrators familiar with RBAC might use access groups to mimic an RBAC model. Conceptually an access group is similar to an RBAC role. If you're more familiar with using traditional RBAC roles like system administrator, network administrator, or storage administrator, these can be defined in {{site.data.keyword.cloud_notm}} IAM by using access groups with specific access policies that are assigned to each.
 {: tip}
 
 For example, you can create an access group called `Storage Administrators`. When it is first created, no access is granted to any members of the access group. The access group can then be assigned policies granting the Administrator role to all storage resources in the current account as well as any that will be created in the future. If a new user joins the team and their job in the organization is a storage administrator for the account, then they can simply be added to the access group and have all of the access that they need to do their job.

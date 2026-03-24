@@ -3,7 +3,7 @@
 copyright:
 
   years: 2022, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-24"
 
 keywords: context-based restrictions, enabled, disabled, report-only, monitor, monitor cbr, cbr, cbr events, context-based restrictions events, denied access
 
@@ -22,7 +22,7 @@ Context-based restrictions protect your resources by denying access to identitie
 Monitoring is available depending on the service and APIs that you target in your rule. Review each service's documentation to learn more about how it integrates with context-based restrictions.
 {: tip}
 
-For more information, see [Activity tracking events for context-based restrictions](/docs/account?topic=account-at_events_cbr).
+For more information, see [Activity tracking events for context-based restrictions](/docs/iam?topic=iam-at_events_cbr).
 
 ## Before you begin
 {: #before-monitor-cbr}

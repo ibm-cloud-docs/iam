@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-03-24"
 
 keywords: Context based restriction, rule, context, network zone, IBM Cloud restrictions, IBM Cloud context restriction, IBM Cloud access, access control, resource access, endpoint type, layered security, reduce attack surface
 
@@ -178,13 +178,13 @@ To access virtual private endpoints, the CLI users must log in using the command
 ### Multifactor authentication
 {: #context-restrictions-mfa}
 
-Multifactor authentication (MFA) requires identities to authenticate by using another authentication factor beyond an ID and password. By setting a less stringent MFA level requirement, you allow users who meet or exceed that level to authenticate. For example, if your rule requires users to authenticate with MFA LEVEL1, users that have MFA LEVEL2 are still compliant since LEVEL2 exceeds the security criteria for LEVEL1. The following MFA levels name the minimum MFA factor for each level. For more information, see [IBM Cloud multifactor authentication](/docs/account?topic=account-types).
+Multifactor authentication (MFA) requires identities to authenticate by using another authentication factor beyond an ID and password. By setting a less stringent MFA level requirement, you allow users who meet or exceed that level to authenticate. For example, if your rule requires users to authenticate with MFA LEVEL1, users that have MFA LEVEL2 are still compliant since LEVEL2 exceeds the security criteria for LEVEL1. The following MFA levels name the minimum MFA factor for each level. For more information, see [IBM Cloud multifactor authentication](/docs/iam?topic=iam-types).
 
 * LEVEL1: Email-based MFA
 * LEVEL2: TOTP MFA
 * LEVEL3: Security key MFA
 
-In addition to LEVEL1, LEVEL2, and LEVEL3 MFA, the context-based restrictions rule also supports the value `IAM_ACCOUNT_SETTING`, which means that the rule's MFA value matches whatever you define as the MFA requirement for your account. This way, any changes to your account's MFA settings automatically applies to the rule. For more information, see [MFA options](/docs/account?topic=account-types#mfa-options).
+In addition to LEVEL1, LEVEL2, and LEVEL3 MFA, the context-based restrictions rule also supports the value `IAM_ACCOUNT_SETTING`, which means that the rule's MFA value matches whatever you define as the MFA requirement for your account. This way, any changes to your account's MFA settings automatically applies to the rule. For more information, see [MFA options](/docs/iam?topic=iam-types#mfa-options).
 
 If an option is selected from the **MFA for users with an IBMid** section in the IAM authentication settings, the MFA value from IAM is mapped to LEVEL2 MFA in context-based restrictions. MFA is applied to both federated and nonfederated users, even if **Non-federated user** is selected.
 {: note}
@@ -214,7 +214,7 @@ To manage network zones, you must be assigned an IAM policy with a specific role
 | Administrator | View network zones   \n  \n Create network zones   \n  \n Update network zones   \n  \n Remove network zones |
 {: caption="Roles and actions for the context-based restrictions service" caption-side="top"}
 
-For more information, see [Actions and roles for account management services](/docs/account?topic=account-account-services&interface=ui).
+For more information, see [Actions and roles for account management services](/docs/iam?topic=iam-iam-services).
 
 You can also use network zones to restrict access at the account level. To set account-level restrictions by using network zones, go to **Manage** > **IAM** > **Settings** in the {{site.data.keyword.cloud_notm}} console and enter the name of your network zone.
 {: note}
@@ -240,7 +240,7 @@ You can create context-based restrictions for the following services if you are 
 
 | Service       | Service type | Scope to APIs | `service_name` |
 |---------------|--------------|---------------|----------------|
-| [{{site.data.keyword.atracker_short}}](/docs/account?topic=account-at_events_cbr) | Account Management | No | `atracker` |
+| [{{site.data.keyword.atracker_short}}](/docs/iam?topic=iam-at_events_cbr) | Account Management | No | `atracker` |
 | [{{site.data.keyword.appconfig_short}}](/docs/app-configuration?topic=app-configuration-ac-restrict-access-cbr) | IAM-enabled | No | `apprapp` |
 | Catalog Management Service | IAM-enabled | Yes | `globalcatalog-collection` |
 | {{site.data.keyword.logs_full_notm}} | IAM-enabled | No | `logs` |
@@ -292,7 +292,7 @@ Check back regularly to see what services are added as more services integrate w
 
 The following table lists the maximum limits for context-based restrictions. These limits apply to any user who can create context-based restrictions rules or network zones. For more information, see [What are context-based restrictions?](/docs/iam?topic=iam-context-restrictions-whatis).
 
-If you have a specific use case that requires an extended limit, you can request an increase. For more information, see [Increasing account limits](/docs/account?topic=account-account-limits).
+If you have a specific use case that requires an extended limit, you can request an increase. For more information, see [Increasing account limits](/docs/iam?topic=iam-account-limits).
 {: note}
 
 | Resource                               | Max  |
@@ -308,7 +308,7 @@ If you have a specific use case that requires an extended limit, you can request
 A context-based restriction rule that includes multiple network zones can have a maximum of 1000 IP addresses indirectly associated with it. For example, in a rule that includes two network zones, one of the zones might have 800 IP addresses and the other might have a maximum of 200 IP addresses.
 {: note}
 
-If you want to check the number of rules in your account, see [Viewing the total number of rules per account](/docs/account?topic=account-account-limits&interface=cli#total-number-rules-cli). To request an increase in the account limit, see [Requesting a policy and rule shared limit increase](/docs/account?topic=account-account-limits&interface=cli#limit-increase).
+If you want to check the number of rules in your account, see [Viewing the total number of rules per account](/docs/iam?topic=iam-account-limits&interface=cli#total-number-rules-cli). To request an increase in the account limit, see [Requesting a policy and rule shared limit increase](/docs/iam?topic=iam-account-limits&interface=cli#limit-increase).
 
 ### Eventual consistency
 {: #cbr-eventual-consistency}

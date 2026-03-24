@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-03-24"
 
 keywords: IBM Cloud service APIs, IAM token, API key, authenticate with service API
 
@@ -25,7 +25,7 @@ You can identify the caller in one of the following ways:
 * {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) token
 * {{site.data.keyword.cloud_notm}} API key or service ID API key
 
-[{{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey#manage-user-keys), [service ID API keys](/docs/account?topic=account-serviceidapikeys), and IAM tokens uniquely identify the caller’s identity. The caller identity is either an {{site.data.keyword.cloud_notm}} user or a service ID that was created in an {{site.data.keyword.cloud_notm}} account.
+[{{site.data.keyword.cloud_notm}} API keys](/docs/iam?topic=iam-userapikey#manage-user-keys), [service ID API keys](/docs/iam?topic=iam-serviceidapikeys), and IAM tokens uniquely identify the caller’s identity. The caller identity is either an {{site.data.keyword.cloud_notm}} user or a service ID that was created in an {{site.data.keyword.cloud_notm}} account.
 
 The API keys are credentials that consist of a long series of random characters or numbers. An {{site.data.keyword.cloud_notm}} identity can have multiple API keys. Each of these API keys can be managed independently, meaning if this API key is used by your service only, you can delete the API key without disrupting some other component.
 
@@ -172,7 +172,7 @@ Using an {{site.data.keyword.cloud_notm}} API key is convenient, and it makes it
 
 To authenticate with a service's API by using an API key, complete the following steps:
 
-1. First, [create an {{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-userapikey#manage-user-keys) if you have not already.
+1. First, [create an {{site.data.keyword.cloud_notm}} API key](/docs/iam?topic=iam-userapikey#manage-user-keys) if you have not already.
 2. Send the {{site.data.keyword.cloud_notm}} API key as defined in [RFC 7617](https://datatracker.ietf.org/doc/html/rfc7617){: external} as HTTP header “Authorization”. Use `apikey` as the user name, and the API key value as the password.
 
 

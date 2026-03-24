@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-24"
 
 keywords: update network access, network access rule, network zone
 
@@ -18,7 +18,7 @@ subcollection: iam
 You can manage context rules at any time by updating the description, which helps identifying the purpose of the rule, or selecting a new list of resources and network environments. You can also remove context-based restrictions to delete restrictions that are defined by the contexts in a rule.
 {: shortdesc}
 
-Context-based restrictions can define and enforce access restrictions for its own {{site.data.keyword.cloud}} resources. You can define these restrictions based on contexts, such as network zones and endpoint types. For more information, see [What are context-based restrictions](/docs/iam?topic=iam-context-restrictions-whatis&interface=ui).
+Context-based restrictions can define and enforce access restrictions for its own {{site.data.keyword.cloud}} resources. You can define these restrictions based on contexts, such as network zones and endpoint types. For more information, see [What are context-based restrictions](/docs/iam?topic=iam-context-restrictions-whatis).
 {: shortdesc}
 
 The context-based restriction service manages rules and network zones, so it is possible to lose all ability to manage these resources if you cannot satisfy a rule on the context-based restriction service. Attempts to create or update such a rule are permitted only if the context of the request satisfies the new or modified rule.

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-24"
 
 keywords: application programming interface key, API key, API, classic infrastructure API key, IBM Cloud API key
 
@@ -32,9 +32,9 @@ The user API key can be used directly or used to generate a token. Because users
 
 If a service requires a user API key for interacting with other services or applications, use the functional ID user API key. By using the API key that is associated with the functional ID, you can provide only the access that is needed for that service. Sharing a real user ID API key with a service allows the service to access any resources that the user can access across multiple accounts. Sharing a real user ID API key is highly discouraged.
 
-Only the user for which the API key is associated and an Administrator for the Identity Service can delete it. You can use the {{site.data.keyword.cloud_notm}} API keys in the command-line interface (CLI) or as part of automation to log in as your user identity. You can also use {{site.data.keyword.cloud_notm}} API keys to access classic infrastructure APIs. 
+Only the user for which the API key is associated and an Administrator for the Identity Service can delete it. You can use the {{site.data.keyword.cloud_notm}} API keys in the command-line interface (CLI) or as part of automation to log in as your user identity. You can also use {{site.data.keyword.cloud_notm}} API keys to access classic infrastructure APIs.
 
-For more information about using an API key associated with your user identity, see [Managing user API keys](/docs/account?topic=account-userapikey#manage-user-keys).
+For more information about using an API key associated with your user identity, see [Managing user API keys](/docs/iam?topic=iam-userapikey#manage-user-keys).
 
 
 ## Other types of API keys
@@ -46,9 +46,9 @@ In addition to your {{site.data.keyword.cloud_notm}} API keys, a couple of other
 * Classic infrastructure API keys
 * Service-specific API keys
 
-You can also use API keys that are associated with service IDs that you create. Service IDs are used to connect an application inside or outside of {{site.data.keyword.cloud_notm}} to an {{site.data.keyword.cloud_notm}} service. Service ID API keys inherit all access that is assigned to the specific service ID. For more information about creating API keys associated with a service ID, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys#serviceidapikeys).
+You can also use API keys that are associated with service IDs that you create. Service IDs are used to connect an application inside or outside of {{site.data.keyword.cloud_notm}} to an {{site.data.keyword.cloud_notm}} service. Service ID API keys inherit all access that is assigned to the specific service ID. For more information about creating API keys associated with a service ID, see [Managing service ID API keys](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys).
 
-[Classic infrastructure API keys](/docs/account?topic=account-classic_keys) are used to call the APIs for classic infrastructure services. You can create only one classic infrastructure API key at a time. You can create a classic infrastructure API key for yourself from the API keys page or the User details page.
+[Classic infrastructure API keys](/docs/iam?topic=iam-classic_keys) are used to call the APIs for classic infrastructure services. You can create only one classic infrastructure API key at a time. You can create a classic infrastructure API key for yourself from the API keys page or the User details page.
 
 {{site.data.keyword.cloud_notm}} API keys can also be used to access classic infrastructure APIs.
 {: tip}
@@ -76,16 +76,16 @@ Users and account administrators are notified through {{site.data.keyword.cloud_
 - Disable the API key
 - Delete the API key
 
-For more information on reviewing leaked user API keys, see [Reviewing leaked user API keys by using the console](/docs/account?topic=account-userapikey&interface=ui#review-apikeys-console) and [Reviewing leaked user API keys by using the CLI](/docs/account?topic=account-userapikey&interface=cli#review-apikeys-cli) respectively.
+For more information on reviewing leaked user API keys, see [Reviewing leaked user API keys by using the console](/docs/iam?topic=iam-userapikey&interface=ui#review-apikeys-console) and [Reviewing leaked user API keys by using the CLI](/docs/iam?topic=iam-userapikey&interface=cli#review-apikeys-cli) respectively.
 
-For more information on reviewing leaked service ID API keys, see [Reviewing leaked service ID API keys by using the console](/docs/account?topic=account-serviceidapikeys&interface=ui#review-api-keys-serviceid-console) and [Reviewing leaked service ID API keys by using the CLI](/docs/account?topic=account-serviceidapikeys&interface=cli#review-api-keys-serviceid-cli) respectively.
+For more information on reviewing leaked service ID API keys, see [Reviewing leaked service ID API keys by using the console](/docs/iam?topic=iam-serviceidapikeys&interface=ui#review-api-keys-serviceid-console) and [Reviewing leaked service ID API keys by using the CLI](/docs/iam?topic=iam-serviceidapikeys&interface=cli#review-api-keys-serviceid-cli) respectively.
 
 ### Required access for managing API keys
 {: #API-key-access}
 
 By default, you always have access to create your own API keys, and then update and delete them as needed. You can also manage your own classic infrastructure API key and any users' classic infrastructure API keys who you are an ancestor of in the classic infrastructure user hierarchy, meaning that you invited the user or someone you invited to the account invited the user, and so on.
 
-If the Restrict API key creation IAM account setting is enabled, then everyone in the account is blocked from creating API keys, including the account owner, unless they are assigned explicit access. For more information, see [Restricting users from creating API keys](/docs/account?topic=account-allow-api-create).
+If the Restrict API key creation IAM account setting is enabled, then everyone in the account is blocked from creating API keys, including the account owner, unless they are assigned explicit access. For more information, see [Restricting users from creating API keys](/docs/iam?topic=iam-allow-api-create).
 {: important}
 
 If you are the account owner or a user with the required access, you can access other user's API keys or service ID API keys by using the **View** filter on the API keys page. You can edit or delete the API keys depending on your assigned access. You see only the filter options for the type of API keys that you have access to view and manage.
@@ -97,5 +97,3 @@ If you are the account owner or a user with the required access, you can access 
 | All service ID API keys | All API keys created for service IDs in the account | Administrator role on the IAM Identity service | View, edit, and delete |
 | Classic infrastructure API keys | Your classic infrastructure API key and any classic infrastructure API keys for users who you are ancestor of in the user hierarchy | No access required other than being an ancestor in the user hierarchy | View details and delete |
 {: caption="Required access for API key management on the API keys page" caption-side="top"}
-
-

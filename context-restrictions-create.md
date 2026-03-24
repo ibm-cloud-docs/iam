@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-24"
 
 keywords: create network access, network access rule, network zone
 
@@ -16,7 +16,7 @@ subcollection: iam
 # Creating context-based restrictions
 {: #context-restrictions-create}
 
-Context-based restrictions allow you to manage user and service access to specific cloud resources. You can define restrictions to the resources based on contexts, such as network zones and endpoint types. For more information, see [What are context-based restrictions](/docs/iam?topic=iam-context-restrictions-whatis&interface=ui).
+Context-based restrictions allow you to manage user and service access to specific cloud resources. You can define restrictions to the resources based on contexts, such as network zones and endpoint types. For more information, see [What are context-based restrictions](/docs/iam?topic=iam-context-restrictions-whatis).
 {: shortdesc}
 
 User and account-level IP address restrictions can also affect users' ability to access resources. You can view account-level IP address restrictions on the [Settings](/iam/settings) page. To view individual user settings, go to the [Users](/iam/users) page and view each user's IP address restrictions in the details tab.
@@ -345,7 +345,7 @@ To create a rule, complete the following steps.
     When you create context-based restriction for the IAM Access Groups service, users who don't satisfy the rule can't view any groups in the account, including the public access group.
     {: note}
 
-1. (Optional) Select the scope of APIs whose operations are restricted by your rule. For more information, see [Defining the scope of a rule](/docs/iam?topic=iam-context-restrictions-whatis&interface=ui#rule-scope).
+1. (Optional) Select the scope of APIs whose operations are restricted by your rule. For more information, see [Defining the scope of a rule](/docs/iam?topic=iam-context-restrictions-whatis#rule-scope).
 
     Not all services support the ability to scope a rule by API.
     {: note}
@@ -358,7 +358,7 @@ To create a rule, complete the following steps.
     If you want to allow access from a VPC to public endpoints in your rule, include any public gateway IP addresses in the zone definition along with the VPC.
     {: important}
 
-    * You can add existing network zones to your rule or create new zones to add to your rule. For more information, see [Creating network zones](/docs/iam?topic=iam-context-restrictions-create&interface=ui#network-zones-create).
+    * You can add existing network zones to your rule or create new zones to add to your rule. For more information, see [Creating network zones](/docs/iam?topic=iam-context-restrictions-create#network-zones-create).
 1. Click **Continue**.
 1. Provide a unique description.
 1. Select how you want to enforce the rule. You can decide how you want to enforce a rule upon creation and update the rule enforcement at any time.

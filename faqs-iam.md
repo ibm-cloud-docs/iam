@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-03-24"
 
 keywords: frequently asked questions, iam faqs, administrator, administrator role
 
@@ -28,7 +28,7 @@ To find all FAQ for {{site.data.keyword.cloud}}, see our [FAQ library](/docs/faq
 {: faq}
 {: support}
 
-Identity and Access Management (IAM) enables you to securely authenticate users for platform services and control access to resources across the {{site.data.keyword.cloud_notm}} platform. A set of IBM Cloud services is enabled to use Cloud IAM for access control. They are organized into resource groups within your account to enable giving users quick and easy access to more than one resource at a time. Cloud IAM access policies are used to assign users, service IDs, and trusted profiles access to the resources within your account. For more information, see [{{site.data.keyword.cloud_notm}} Identity and Access Management](/docs/account?topic=account-iamoverview).
+Identity and Access Management (IAM) enables you to securely authenticate users for platform services and control access to resources across the {{site.data.keyword.cloud_notm}} platform. A set of IBM Cloud services is enabled to use Cloud IAM for access control. They are organized into resource groups within your account to enable giving users quick and easy access to more than one resource at a time. Cloud IAM access policies are used to assign users, service IDs, and trusted profiles access to the resources within your account. For more information, see [{{site.data.keyword.cloud_notm}} Identity and Access Management](/docs/iam?topic=iam-iamoverview).
 
 ## What is an IAM-enabled service?
 {: #iam-enabled}
@@ -246,7 +246,7 @@ IAM is used to manage access to your {{site.data.keyword.cloud_notm}} services a
 {: faq}
 {: support}
 
-Access for classic infrastructure starts with the user. For more information, see [Managing classic infrastructure access](/docs/account?topic=account-mngclassicinfra).
+Access for classic infrastructure starts with the user. For more information, see [Managing classic infrastructure access](/docs/iam?topic=iam-mngclassicinfra).
 
 If you need to assign access to IAM-enabled infrastructure services, such as {{site.data.keyword.vpc_full}}, you assign access to a user by completing the following steps:
 
@@ -259,13 +259,13 @@ If you need to assign access to IAM-enabled infrastructure services, such as {{s
 {: faq}
 {: support}
 
-All permissions that were previously assigned in your SoftLayer account can be managed in the {{site.data.keyword.cloud_notm}} console. Account permissions for managing billing information and support cases are now available in [managing migrated SoftLayer account permissions](/docs/account?topic=account-migrated_permissions). All users who were previously assigned these permissions in your SoftLayer account were migrated to these access groups, which are assigned the same level of access by using an IAM policy on the access group.
+All permissions that were previously assigned in your SoftLayer account can be managed in the {{site.data.keyword.cloud_notm}} console. Account permissions for managing billing information and support cases are now available in [managing migrated SoftLayer account permissions](/docs/iam?topic=iam-migrated_permissions). All users who were previously assigned these permissions in your SoftLayer account were migrated to these access groups, which are assigned the same level of access by using an IAM policy on the access group.
 
 ## How do I determine how many policies exist in my account?
 {: #total-policies}
 {: faq}
 
-You can [viewing the total number of policies per account](/docs/account?topic=account-account-limits&interface=cli#total-number-policies-cli) by using the CLI to ensure that you don't exceed the limit for your account.
+You can [viewing the total number of policies per account](/docs/iam?topic=iam-account-limits&interface=cli#total-number-policies-cli) by using the CLI to ensure that you don't exceed the limit for your account.
 
 ## What are verification methods and what they are used for?
 {: #verification-methods}
@@ -279,7 +279,7 @@ The first time that you log in to your account after MFA settings are updated, y
 {: #authenticaiton-factors}
 {: faq}
 
-These factors can be something that you have, like a security key, or that you receive, like a time-based one time passcode (TOTP) or OTP. If an administrator enables MFA in at least one of the accounts you are a member of, you must provide two or more factors each time you log in. If you are a member in multiple accounts and at least one of the accounts uses MFA, MFA is required each time that you log in. This applies regardless of the account that you are trying to access. For more information, see [Managing verification methods and MFA factors](/docs/account?topic=account-verification-authentication&interface=ui).
+These factors can be something that you have, like a security key, or that you receive, like a time-based one time passcode (TOTP) or OTP. If an administrator enables MFA in at least one of the accounts you are a member of, you must provide two or more factors each time you log in. If you are a member in multiple accounts and at least one of the accounts uses MFA, MFA is required each time that you log in. This applies regardless of the account that you are trying to access. For more information, see [Managing verification methods and MFA factors](/docs/iam?topic=iam-verification-authentication).
 
 ## How do I reset a verification method?
 {: #reset-verification}
@@ -338,13 +338,13 @@ For more information, see [Using Trusted Profiles in your Kubernetes and OpenShi
 {: #dynamic-members}
 {: faq}
 
-To view a list of dynamic members in an access group, go to **Manage** > **Access (IAM)** > **Access groups** in the {{site.data.keyword.cloud_notm}} console. Select an access group and click **Users**. Dynamically added users are indicated by the type `Dynamic`. For more information, see [Viewing dynamic members of access groups](/docs/account?topic=account-rules&interface=ui#view-dynamic-users)
+To view a list of dynamic members in an access group, go to **Manage** > **Access (IAM)** > **Access groups** in the {{site.data.keyword.cloud_notm}} console. Select an access group and click **Users**. Dynamically added users are indicated by the type `Dynamic`. For more information, see [Viewing dynamic members of access groups](/docs/iam?topic=iam-rules#view-dynamic-users)
 
 ## How do I find inactive users, service IDs, trusted profiles, and API keys in my account?
 {: #unused-identities}
 {: faq}
 
-To view a list of the inactive identities in your account, go to **Manage** > **Access (IAM)** > **Inactive identities**. You might want to remove inactive identities if they are no longer needed. For more information, see [Identifying inactive identities](/docs/account?topic=account-id-inactive-identities).
+To view a list of the inactive identities in your account, go to **Manage** > **Access (IAM)** > **Inactive identities**. You might want to remove inactive identities if they are no longer needed. For more information, see [Identifying inactive identities](/docs/iam?topic=iam-id-inactive-identities).
 
 ## How do I switch between trusted profiles and accounts?
 {: #switch-profile}

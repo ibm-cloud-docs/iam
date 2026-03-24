@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-24"
 
 keywords: network-level access, network security strategy
 subcollection: iam
@@ -64,7 +64,7 @@ Now, Xander can use the network zone that he created in a rule.
 1. Click **Continue**.
 1. Name the rule `Management team`
 1. Set the enforcement to **Report only** so that you can monitor the impact of the rule before you enable it.
-   You can update the enforcement at any time after you create the rule. For more information, see [Updating context-based restrictions](/docs/iam?topic=iam-context-restrictions-update&interface=ui).
+   You can update the enforcement at any time after you create the rule. For more information, see [Updating context-based restrictions](/docs/iam?topic=iam-context-restrictions-update).
    {: note}
 
 1. Click **Continue**.
@@ -77,7 +77,7 @@ Xander is logging and monitoring policy management requests by using report-only
 
 After 30 days of monitoring, update the rule to **Enabled** to begin enforcing your restrictions.
 
-You can also use network zones to restrict access at the account level and user level. For more information, see [Allowing specific IP addresses](/docs/account?topic=account-ips&interface=ui).
+You can also use network zones to restrict access at the account level and user level. For more information, see [Allowing specific IP addresses](/docs/account?topic=account-ips).
 
 To create context-based restrictions programmatically, see the [Context-based Restrictions API](/apidocs/context-based-restrictions) and the [Context-based restrictions CLI plug-in](/docs/iam?topic=iam-cbr-plugin).
 

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2023, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-03-24"
 
 keywords: access policy, access, policy, restriction, time based restriction, time based, time based conditions, conditions, resource attribute
 
@@ -32,10 +32,10 @@ Time-based conditions for access policies help you apply the principle of least 
 When you create a policy with resource attribute-based conditions, you can avoid creating multiple access policies to meet your access needs. Instead, you can create a single policy by using a combination of `OR`/`AND` operators that are applied on resource attributes with literal or wildcard values. You can grant access to a resource that meets multiple criteria simultaneously (AND), or grant access if any of several conditions are met (OR). For example, with resource attribute-based conditions, you can create a single policy that allows access based on `Service instance: abc`, **OR** `attribute-1: xyz`, **OR** **(**`attribute-2: def` **AND** `attribute-3: hij`**)**.
 {: shortdesc}
 
-You must have a minimum of 2 conditions that use `OR`/`AND` and resource attribute-based conditions. If you need to add a single condition, see [Assigning access to resources in the console](/docs/account?topic=account-assign-access-resources&interface=ui#access-resources-console) and add the condition after selecting **Specific resources**.
+You must have a minimum of 2 conditions that use `OR`/`AND` and resource attribute-based conditions. If you need to add a single condition, see [Assigning access to resources in the console](/docs/iam?topic=iam-assign-access-resources&interface=ui#access-resources-console) and add the condition after selecting **Specific resources**.
 {: note}
 
-To review a user's access, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources&interface=ui#review-your-access-console).
+To review a user's access, see [Reviewing assigned access in the console](/docs/iam?topic=iam-assign-access-resources&interface=ui#review-your-access-console).
 {: tip}
 
 ## Condition patterns
@@ -145,7 +145,7 @@ The following example shows you how to create a one-time time-based condition fo
    ```
    {: codeblock}
 
-   If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/account?topic=account-federated_id) for more details.
+   If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/iam?topic=iam-federated_id) for more details.
    {: tip}
 
    If it's the first time you're using the {{site.data.keyword.cloud_notm}} CLI, check out the [getting started tutorial](/docs/cli?topic=cli-getting-started).
@@ -515,7 +515,7 @@ The following example shows you how to create a recurring time-based condition f
    ```
    {: codeblock}
 
-   If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/account?topic=account-federated_id) for more details.
+   If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/iam?topic=iam-federated_id) for more details.
    {: tip}
 
    If it's your first time using the {{site.data.keyword.cloud_notm}} CLI, check out the [getting started tutorial](/docs/cli?topic=cli-getting-started).
