@@ -20,6 +20,7 @@ toc:
           - iam-access-concepts.md
           - iam-policies-overview.md
           - iam-roles-overview.md
+          - iam-least-privilege.md
           - iam-mappings.md
       - iam-manageaccess.md
       - context-restrictions-what-is.md
