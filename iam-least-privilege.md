@@ -19,7 +19,7 @@ subcollection: iam
 Apply the principle of least privilege in your {{site.data.keyword.cloud_notm}} enterprise by using fine-grained access management to grant users only the minimum permissions they need to perform their job functions.
 {: shortdesc}
 
-The principle of least privilege states users should be granted only the minimum level of access necessary to complete their tasks. {{site.data.keyword.cloud_notm}} IAM provides the tools and flexibility you need to implement this principle effectively across your enterprise.
+The principle of least privilege states that users should be granted only the minimum level of access necessary to complete their tasks. {{site.data.keyword.cloud_notm}} IAM provides the tools and flexibility that you need to implement this principle effectively across your enterprise.
 
 ## Why least privileged access matters
 {: #least-privilege-importance}
@@ -27,7 +27,7 @@ The principle of least privilege states users should be granted only the minimum
 Implementing least privileged access provides several critical benefits for your organization:
 
 Reduced security risk
-:   Limiting user permissions reduces the potential damage from compromised credentials, insider threats, or accidental misuse. If an account is compromised, the attacker can only access the resources and perform the actions that were granted to that account.
+:   Limiting user permissions reduces the potential damage from compromised credentials, insider threats, or accidental misuse. If an account is compromised, the attacker can access only the resources and perform the actions that were granted to that account.
 
 Improved compliance
 :   Many regulatory frameworks and industry standards require organizations to implement least privilege access controls. Fine-grained access management helps you meet these compliance requirements and demonstrate proper security controls during audits.
@@ -46,7 +46,7 @@ Minimized accidental changes
 ### Granular resource targeting
 {: #granular-targeting}
 
-IAM policies allow you to target resources at multiple levels of granularity:
+WIth IAM policies, you can target resources at multiple levels of granularity:
 
 Account-wide access
 :   Grant access to all resources of a specific type across your entire account.
@@ -164,15 +164,15 @@ Schedule regular access reviews to verify that users still need their current ac
 
 For applications and workloads running on compute resources, use trusted profiles instead of creating service IDs with API keys. Trusted profiles provide fine-grained authorization without requiring you to manage credentials, and they automatically revoke access when compute resources are deleted. For more information, see [Trusted profiles for federated users and workloads](/docs/iam?topic=iam-create-trusted-profile).
 
-### Leverage context-based restrictions
+### Implement context-based restrictions
 {: #cbr-least-privilege}
 
 Combine IAM policies with context-based restrictions to add network-level controls. Context-based restrictions allow you to define network zones and restrict access based on the network context of the request, such as limiting administrative access to specific IP addresses or preventing access to sensitive data from public networks. For more information, see [Context-based restrictions](/docs/iam?group=context-based-restrictions).
 
-### Use enterprise-managed IAM templates
+### Create enterprise-managed IAM templates
 {: #enterprise-templates}
 
-For organizations using {{site.data.keyword.cloud_notm}} enterprises, [leverage enterprise-managed IAM templates](/docs/enterprise-management?group=centrally-managing-access-in-child-account) to standardize access management across multiple accounts. Templates allow you to define access groups, trusted profiles, and security settings centrally and apply them consistently across child accounts.
+For organizations using {{site.data.keyword.cloud_notm}} enterprises, [use enterprise-managed IAM templates](/docs/enterprise-management?group=centrally-managing-access-in-child-account) to standardize access management across multiple accounts. Templates allow you to define access groups, trusted profiles, and security settings centrally and apply them consistently across child accounts.
 
 By using this approach, you can ensure that your least privileged access strategy is consistently applied across all accounts in your enterprise:
 
@@ -187,8 +187,8 @@ By using this approach, you can ensure that your least privileged access strateg
 Now that you understand how to implement least privileged access with {{site.data.keyword.cloud_notm}} IAM, you can:
 
 * [Set up access groups](/docs/iam?topic=iam-groups) to organize users by role and responsibility
-* [Understand the types of roles for creating fine-grained access policies](/docs/iam?topic=iam-userroles) that grant only necessary permissions
+* [Understand the types of roles for creating fine-grained access policies](/docs/iam?topic=iam-userroles) that grant only the necessary permissions
 * [Implement context-based restrictions](/docs/iam?topic=iam-context-restrictions-whatis) to add network-level controls
 * [Use trusted profiles](/docs/iam?topic=iam-create-trusted-profile) for compute resources and federated users
 * [Leverage IAM enterprise-managed templates](/docs/enterprise-management?topic=enterprise-management-ag-template-created) for consistent access control across your enterprise
-* [Audit and review access](/docs/iam?topic=iam-access-report) regularly to maintain least privilege over time
+* [Audit and review access](/docs/iam?topic=iam-access-report) regularly to maintain the least privilege over time
