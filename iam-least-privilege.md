@@ -169,11 +169,6 @@ For applications and workloads running on compute resources, use trusted profile
 
 Combine IAM policies with context-based restrictions to add network-level controls. Context-based restrictions allow you to define network zones and restrict access based on the network context of the request, such as limiting administrative access to specific IP addresses or preventing access to sensitive data from public networks. For more information, see [Context-based restrictions](/docs/iam?group=context-based-restrictions).
 
-## Best practices for enterprise-scale implementation
-{: #enterprise-best-practices}
-
-When implementing least privileged access across a large enterprise, consider the following best practices that leverage enterprise-managed IAM templates and scaling your IAM strategy effectively.
-
 ### Use enterprise-managed IAM templates
 {: #enterprise-templates}
 
@@ -185,26 +180,6 @@ By using this approach, you can ensure that your least privileged access strateg
 * Compliance requirements are met consistently
 * Access management is simplified through centralization
 * Changes can be rolled out efficiently across multiple accounts
-
-### Document access policies and rationale
-{: #document-policies}
-
-Maintain clear documentation of your access policies, including the purpose of each access group, the rationale for specific policy assignments, and the process for requesting and approving access changes.
-
-### Implement a formal access request process
-{: #access-request-process}
-
-Establish a formal process for requesting and approving access that includes clear request forms, approval workflows, and time-limited access grants for temporary needs.
-
-### Monitor and alert on privileged access usage
-{: #monitor-privileged-access}
-
-Implement monitoring and alerting for privileged access activities, such as tracking when users with Administrator roles perform actions and alerting on unusual access patterns.
-
-### Plan for emergency access
-{: #emergency-access}
-
-While implementing least privilege, maintain a small number of break-glass templates with elevated privileges for emergency situations. Store credentials securely, implement strong monitoring for their usage, and require justification and approval for emergency access.
 
 ## Next steps
 {: #least-privilege-next-steps}
