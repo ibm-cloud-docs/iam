@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-25"
 
 keywords: resource access, access report, export user access, who has access, download access report, audit access
 
@@ -64,6 +64,7 @@ Each type of report does include the following information:
 * The information for the user who exported the report
 * A flag called `fullReport` that indicates if you have access to view the full detailed report. When this attribute is set to `true`, the user who downloaded the report has all of the required access.
 * Subjects who have access to the resource, including the roles and actions mapped to each role by the service and the platform.
+
    Actions that are mapped to the role by the specific service are separated from the platform-specific actions that are mapped to the role in the JSON report only.
    {: note}
 

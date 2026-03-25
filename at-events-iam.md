@@ -3,7 +3,7 @@
 copyright:
 
   years: 2024, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-25"
 
 keywords: activity tracking, IAM events, Identity and Access Management, observibility
 
@@ -34,34 +34,8 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 
 
 
-IAM sends activity tracking events by {{site.data.keyword.atracker_full_notm}} in the regions that are indicated in the following table.
+IAM sends activity tracking events by {{site.data.keyword.atracker_full_notm}} to the Frankfurt (`eu-de`) region.
 
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
-|---------------------|-------------------------|-------------------|----------------------|
-| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where activity tracking events are sent in Americas locations" caption-side="bottom"}
-{: #atracker-table-1}
-{: tab-title="Americas"}
-{: tab-group="atracker"}
-{: class="simple-tab-table"}
-
-| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
-|---------------------|------------------|------------------|--------------------|
-| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="bottom"}
-{: #atracker-table-2}
-{: tab-title="Asia Pacific"}
-{: tab-group="atracker"}
-{: class="simple-tab-table"}
-
-| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
-|---------------------------------------------------------------|---------------------|------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where activity tracking events are sent in Europe locations" caption-side="bottom"}
-{: #atracker-table-3}
-{: tab-title="Europe"}
-{: tab-group="atracker"}
-{: class="simple-tab-table"}
 
 
 
