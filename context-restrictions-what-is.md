@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-25"
 
 keywords: Context based restriction, rule, context, network zone, IBM Cloud restrictions, IBM Cloud context restriction, IBM Cloud access, access control, resource access, endpoint type, layered security, reduce attack surface
 
@@ -214,7 +214,7 @@ To manage network zones, you must be assigned an IAM policy with a specific role
 | Administrator | View network zones   \n  \n Create network zones   \n  \n Update network zones   \n  \n Remove network zones |
 {: caption="Roles and actions for the context-based restrictions service" caption-side="top"}
 
-For more information, see [Actions and roles for account management services](/docs/iam?topic=iam-iam-services).
+For more information, see [Actions and roles for account management services](/docs/iam?topic=iam-account-services#account-management-actions-roles).
 
 You can also use network zones to restrict access at the account level. To set account-level restrictions by using network zones, go to **Manage** > **IAM** > **Settings** in the {{site.data.keyword.cloud_notm}} console and enter the name of your network zone.
 {: note}
