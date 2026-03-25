@@ -70,7 +70,6 @@ toc:
           - iam-accessgroup_rules.md
           - iam-identify-inactive.md
           - iam-policy-number.md
-          - iam-cross-acc-access.md
           - iam-cross-acct-restriction.md
           - iam-leave-account.md
           - iam-access-report.md
