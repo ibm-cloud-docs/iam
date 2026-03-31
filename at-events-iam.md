@@ -3,7 +3,7 @@
 copyright:
 
   years: 2024, 2026
-lastupdated: "2026-03-25"
+lastupdated: "2026-03-31"
 
 keywords: activity tracking, IAM events, Identity and Access Management, observibility
 
@@ -267,10 +267,10 @@ The following table lists the actions that generate an event:
 ### Login events
 {: #at_events_iam_analyze_login_events}
 
-In the {{site.data.keyword.cloud_notm}}, an administrator, or a user that has the correct access in your account, has different options to manage a user's login settings. For example, an administrator can order external authentication options, enable a one-time passcode to be used during login, enable the use of security questions at login, or set a password expiration time period. For more information, see [Types of multifactor authentication](/docs/account?topic=account-types).
+In the {{site.data.keyword.cloud_notm}}, an administrator, or a user that has the correct access in your account, has different options to manage a user's login settings. For example, an administrator can order external authentication options, enable a one-time passcode to be used during login, enable the use of security questions at login, or set a password expiration time period. For more information, see [Types of multifactor authentication](/docs/iam?topic=iam-types).
 
 * A user can log in by using a user ID and password.
-* A federated user that uses a corporate or enterprise single sign-on ID can log in to {{site.data.keyword.cloud_notm}} from the command-line interface (CLI) by using either a one-time passcode or an API key. For more information, see [Logging in with a federated ID](/docs/account?topic=account-federated_id).
+* A federated user that uses a corporate or enterprise single sign-on ID can log in to {{site.data.keyword.cloud_notm}} from the command-line interface (CLI) by using either a one-time passcode or an API key. For more information, see [Logging in with a federated ID](/docs/iam?topic=iam-federated_id).
 * A user can log in by using an API key.
 * A federated user that uses a corporate or enterprise single sign-on ID can log in to {{site.data.keyword.cloud_notm}} by applying a trusted profile.
 
@@ -291,9 +291,9 @@ The following field includes additional information:
 #### Log in with a federated ID from the {{site.data.keyword.cloud_notm}} CLI by using a one-time passcode or an API key
 {: #at_events_iam_analyze_login_events-2}
 
-When a user [logs in from the {{site.data.keyword.cloud_notm}} CLI by using a one-time passcode](/docs/account?topic=account-federated_id#onetime_passcode), you get an event in the account with action `iam-identity.user-refreshtoken.login`.
+When a user [logs in from the {{site.data.keyword.cloud_notm}} CLI by using a one-time passcode](/docs/iam?topic=iam-federated_id#onetime_passcode), you get an event in the account with action `iam-identity.user-refreshtoken.login`.
 
-When a user [logs in from the {{site.data.keyword.cloud_notm}} CLI by using an API key](/docs/account?topic=account-federated_id#api_key), you get an event in the account with action `iam-identity.user-apikey.login`.
+When a user [logs in from the {{site.data.keyword.cloud_notm}} CLI by using an API key](/docs/iam?topic=iam-federated_id#api_key), you get an event in the account with action `iam-identity.user-apikey.login`.
 
 The following field includes additional information:
 
@@ -302,7 +302,7 @@ The following field includes additional information:
 #### Log in with a federated ID by using trusted profiles
 {: #at_events_iam_analyze_login_events-2a}
 
-When a user [logs in with a federated ID by using trusted profiles](/docs/account?topic=account-federated_id), you get an event in the account with action `iam-identity.trustedprofile-apikey.login`.
+When a user [logs in with a federated ID by using trusted profiles](/docs/iam?topic=iam-federated_id), you get an event in the account with action `iam-identity.trustedprofile-apikey.login`.
 
 #### Failed log in actions
 {: #at_events_iam_analyze_login_events-3}
@@ -321,7 +321,7 @@ When a user logs out of the {{site.data.keyword.cloud_notm}}, the `iam-identity.
 ### Update an account service ID
 {: #at_events_iam_analyze_update_acc_scvid}
 
-A service ID identifies a service or application similar to how a user ID identifies a user. [Learn more](/docs/account?topic=account-serviceids).
+A service ID identifies a service or application similar to how a user ID identifies a user.
 
 When an action to update a service ID is requested, you get an event in the account with action `iam-identity.account-serviceid.update`.
 
@@ -358,7 +358,7 @@ The following fields include additional information:
 ### Limits events
 {: #at_events_iam_limits}
 
-There are [limitations](/docs/account?topic=account-known-issues#policy-version-limit) on the number of service IDs, API keys, trusted profiles, and policies allowed in an account. An event is generated when your account reaches 90% of the of the limit for service IDs, API keys, trusted profiles, and policies.
+There are [limitations](/docs/iam?topic=iam-known-issues#policy-version-limit) on the number of service IDs, API keys, trusted profiles, and policies allowed in an account. An event is generated when your account reaches 90% of the of the limit for service IDs, API keys, trusted profiles, and policies.
 
 The following is an example message when an account is approaching the maximum number of service IDs:
 
@@ -367,7 +367,7 @@ The following is an example message when an account is approaching the maximum n
 Apply the following search query to view all limits events:
 - `the maximum number of allowed`
 
-Start by removing inactive identities if they are no longer needed. For more information, see [Identifying inactive identities](/docs/account?topic=account-id-inactive-identities).
+Start by removing inactive identities if they are no longer needed. For more information, see [Identifying inactive identities](/docs/iam?topic=iam-id-inactive-identities).
 {: tip}
 
 ### Update a user API key or a service ID API key

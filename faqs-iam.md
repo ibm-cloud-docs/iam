@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-31"
 
 keywords: frequently asked questions, iam faqs, administrator, administrator role
 
@@ -94,9 +94,9 @@ The `owner` tag is listed for the owner of the account. This user is assigned th
 
 In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)** > **API keys** to view and manage API keys that you have access to.
 
-* For information about how to manage {{site.data.keyword.cloud_notm}} API keys that are associated with user identities, see [Managing user API keys](/docs/account?topic=account-userapikey).
-* For information about how to manage API keys that are associated with a service ID, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
-* For information about how to manage classic infrastructure API keys, see [Managing classic infrastructure API keys](/docs/account?topic=account-classic_keys).
+* For information about how to manage {{site.data.keyword.cloud_notm}} API keys that are associated with user identities, see [Managing user API keys](/docs/iam?topic=iam-userapikey).
+* For information about how to manage API keys that are associated with a service ID, see [Managing service ID API keys](/docs/iam?topic=iam-serviceidapikeys).
+* For information about how to manage classic infrastructure API keys, see [Managing classic infrastructure API keys](/docs/iam?topic=iam-classic_keys).
 
 ## Where do I find or add service credentials?
 {: #service-credentials}

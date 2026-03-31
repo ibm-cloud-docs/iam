@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-31"
 
 keywords: network-level access, network security strategy
 subcollection: iam
@@ -77,7 +77,7 @@ Xander is logging and monitoring policy management requests by using report-only
 
 After 30 days of monitoring, update the rule to **Enabled** to begin enforcing your restrictions.
 
-You can also use network zones to restrict access at the account level and user level. For more information, see [Allowing specific IP addresses](/docs/account?topic=account-ips).
+You can also use network zones to restrict access at the account level and user level. For more information, see [Allowing specific IP addresses](/docs/iam?topic=iam-ips).
 
 To create context-based restrictions programmatically, see the [Context-based Restrictions API](/apidocs/context-based-restrictions) and the [Context-based restrictions CLI plug-in](/docs/iam?topic=iam-cbr-plugin).
 

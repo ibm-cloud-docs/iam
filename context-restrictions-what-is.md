@@ -126,7 +126,7 @@ The following is a list of services that you can add to a network zone as a serv
 | All Account Management services | Account Management | `iam-access-management` |
 | IAM Access Groups Service  | Account Management | `iam-groups` |
 | IAM User Management | Account Management | `user-management` |
-| [{{site.data.keyword.atracker_short}}](/docs/account?topic=account-at_events_cbr) | IAM-enabled |  `logdnaat` |
+| [{{site.data.keyword.atracker_short}}](/docs/iam?topic=iam-at_events_cbr) | IAM-enabled |  `logdnaat` |
 | [{{site.data.keyword.appconfig_short}}](/docs/app-configuration?topic=app-configuration-ac-restrict-access-cbr) | IAM-enabled | `apprapp` |
 | Catalog Management Service | IAM-enabled | `globalcatalog-collection` |
 | Cloud {{site.data.keyword.block_storage_is_short}} | IAM-enabled | |
