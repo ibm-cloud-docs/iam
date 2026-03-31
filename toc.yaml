@@ -23,6 +23,13 @@ toc:
           - topic: iam-least-privilege.md
             navtitle: Implementing least privilege access
           - iam-mappings.md
+      - topicgroup:
+          label: IAM features
+          topics:
+          - iam-access-management-features.md
+          - iam-trusted-profiles-overview.md
+          - iam-authentication-features.md
+          - iam-advanced-features.md
       - iam-manageaccess.md
       - context-restrictions-what-is.md
   - navgroup:
