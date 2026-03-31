@@ -3,7 +3,7 @@
 copyright:
 
   years: 2022, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: inactive identity, inactive identities, inactive, inactive users, inactive service IDs, inactive trusted profiles, inactive API keys
 
@@ -43,8 +43,8 @@ Before you delete an identity, confirm that they are inactive for at least 30 da
 
 To learn more about the implications of removing or deleting identities in your account, review the following documentation:
 
-   - [Removing users from an account](/docs/account?topic=account-iamuserinv&interface=ui#remove-user-acount-ui)
-   - [Deleting service IDs by using the console](/docs/account?topic=account-serviceids&interface=ui#delete-group-ui)
-   - [Removing trusted profiles](/docs/account?topic=account-trusted-profile-update&interface=ui#remove-tp-console)
-   - [Deleting an API key](/docs/account?topic=account-userapikey&interface=ui#delete_user_key)
-   - [Deleting an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#delete_service_key)
+   - [Removing users from an account](/docs/iam?topic=iam-iamuserinv&interface=ui#remove-user-acount-ui)
+   - [Deleting service IDs by using the console](/docs/iam?topic=iam-serviceids&interface=ui#delete-group-ui)
+   - [Removing trusted profiles](/docs/iam?topic=iam-trusted-profile-update&interface=ui#remove-tp-console)
+   - [Deleting an API key](/docs/iam?topic=iam-userapikey&interface=ui#delete_user_key)
+   - [Deleting an API key for a service ID](/docs/iam?topic=iam-serviceidapikeys&interface=ui#delete_service_key)

@@ -2,7 +2,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-03-31"
 
 keywords: invite, invite users, invitation access, vpn-only user, remove user, delete user, IBMid change, credentials, ID, new ID
 
@@ -17,7 +17,7 @@ subcollection: iam
 Use {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) to manage users in your account. You can invite users, cancel invitations, remove a user from an account, or update a user's IBMid.
 {: shortdesc}
 
-All users must accept an invitation to become an active user within a new account. For more information, see [Canceling or resending pending invitations](/docs/account?topic=account-iamuserinv&interface=ui#pending-invitations)
+All users must accept an invitation to become an active user within a new account. For more information, see [Canceling or resending pending invitations](/docs/iam?topic=iam-iamuserinv&interface=ui#pending-invitations)
 {: important}
 
 ## Before you begin
@@ -68,7 +68,7 @@ To invite users, complete the following steps:
 1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Users**.
 1. Click **Invite users**.
 1. Specify the email addresses of the users. If you are inviting more than one user with a single invitation, they are all assigned the same access.
-   You can restrict membership to your account based on the domain of the users that are invited. This way, only users from a specific domain can be invited to the account. For more information, see [Restrict user domains for account invitations](/docs/account?topic=account-restrict-acct-invite).
+   You can restrict membership to your account based on the domain of the users that are invited. This way, only users from a specific domain can be invited to the account. For more information, see [Restrict user domains for account invitations](/docs/iam?topic=iam-restrict-acct-invite).
 
 Users cannot be automatically invited in enterprise-managed accounts and must be added manually.
 {: note}
@@ -78,7 +78,7 @@ Users cannot be automatically invited in enterprise-managed accounts and must be
    * Manually assign users access. Expand the section to assign individual IAM access policies or classic infrastructure permissions.
       * Select **Classic infrastructure**, and then choose from the three permission sets.
       * Select a group of services like **All Identity and Access enabled services**, **All Account management services**, and **All IAM Account Management services**, or a specific service. Next, you can scope the access to the entire account or just one resource group. Then, select all roles that apply. To view what actions are mapped to each role, click the numbers listed next to each role.
-         Some services support the use of advanced operators to grant access to resources that satisfy specific naming conventions. See [Assigning access by using wildcard policies](/docs/account?topic=account-wildcard) for more information.
+         Some services support the use of advanced operators to grant access to resources that satisfy specific naming conventions. See [Assigning access by using wildcard policies](/docs/iam?topic=iam-wildcard) for more information.
       * Select **Account management**, and then choose from the all account management services option or select a specific service. Then, select all roles that apply.
 1. Select **Add** to save the access assignment to the invitation.
 1. After you add all the necessary access assignments, click **Invite**.

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: resource access, assign access, IAM access policy, access to resource groups, edit access, remove access, administrator, administrator role
 
@@ -30,7 +30,7 @@ You can assign access to resources by using two types of policies:
 If you delete or edit an existing policy for a service ID that's currently being used, it might cause service interruption.
 {: note}
 
-If you want to enable a user full administrator access to complete [account management tasks](/docs/account?topic=account-account-services), such as inviting and removing users, viewing billing and usage, managing service IDs, managing access groups, managing user access, and access to all IAM-enabled resources, you must assign a user the following access:
+If you want to enable a user full administrator access to complete [account management tasks](/docs/iam?topic=iam-account-services), such as inviting and removing users, viewing billing and usage, managing service IDs, managing access groups, managing user access, and access to all IAM-enabled resources, you must assign a user the following access:
 
 * A policy for **Identity and Access enabled services** with the Administrator and Manager roles.
 * A policy with the Administrator role on **All Account Management services**.
@@ -115,7 +115,7 @@ You can repeat this type of policy as needed for each available resource group i
    ```
    {: codeblock}
 
-   If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/account?topic=account-federated_id) for more details.
+   If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. See [Logging in with a federated ID](/docs/iam?topic=iam-federated_id) for more details.
    {: tip}
 
    If it's your first time using the {{site.data.keyword.cloud_notm}} CLI, check out the [getting started tutorial](/docs/cli?topic=cli-getting-started).
@@ -153,7 +153,7 @@ You can repeat this type of policy as needed for each available resource group i
     * This example assigns access to **{{site.data.keyword.cos_short}}** with the `Manager` role. It scopes the access to a specific service instance, resource type, and resource ID:
 
     ```bash
-    ibmcloud iam service-policy-create SERVICE_ID service-name cloud-object-storage --service-instance SERVICE_INSTANCE_GUID --resource-type RESOURCE_TYPE --resource RESOURCE --roles Manager 
+    ibmcloud iam service-policy-create SERVICE_ID service-name cloud-object-storage --service-instance SERVICE_INSTANCE_GUID --resource-type RESOURCE_TYPE --resource RESOURCE --roles Manager
     ```
     {: codeblock}
 
@@ -520,12 +520,12 @@ To assign access to resources by using Terraform, use the following steps:
    ```
    {: codeblock}
 
-  
+
    Increased policy limits for service IDs are available for select accounts. To take advantage of the increased policy limits, assign access to {{site.data.keyword.messagehub}} or {{site.data.keyword.cos_full_notm}} services. You must also scope the access policies to a specific service instance, resource type, and resource ID.
    {: preview}
 
    The following example gives a service ID the `Reader` role access to an instance of {{site.data.keyword.cos_short}} by using [ibm_iam_user_policy](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_user_policy). It scopes the access to a specific service instance, resource type, and resource ID:
-   
+
    ```terraform
    resource "ibm_iam_service_policy" "policy" {
     iam_service_id = "$SERVICE_ID"

@@ -2,7 +2,7 @@
 copyright:
 
   years: 2020, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-03-31"
 
 keywords: identity provider, IdP, App ID, IAM, integration, IdP SSO, third-party authentication, dynamic rules, external identity provider, single sign on
 
@@ -36,7 +36,7 @@ The {{site.data.keyword.containerlong_notm}} up to release 1.18 relies on unique
 
 Connecting your external IdP to your {{site.data.keyword.cloud_notm}} account simplifies the log-in process to your cloud account for users in your enterprise. After the integration is complete, you must provide your users with a custom URL that they use to log in each time. You don't need to invite anyone to your account. If they exist as a user in your connected IdP's user repository, they can log in with their credentials through the custom URL.
 
-When a user authenticates successfully, the user is automatically added to the account. Added users don't get any access policies assigned by default. However, by using [dynamic rules](/docs/account?topic=account-rules) for access groups or trusted profiles, you can set up access policies that are automatically assigned based on user claims.
+When a user authenticates successfully, the user is automatically added to the account. Added users don't get any access policies assigned by default. However, by using [dynamic rules](/docs/iam?topic=iam-rules) for access groups or trusted profiles, you can set up access policies that are automatically assigned based on user claims.
 
 ### Enabling and connecting your identity provider with the {{site.data.keyword.cloud_notm}} SAML SP
 {: #cloud-sp-idp}
@@ -72,7 +72,7 @@ If you don't have any IAM IdP references before in your account, you must enable
       {: tip}
 
    - If the connection **Succeeded**, click **Next**.
-1. Review the IdP assertions that are automatically mapped to required IAM claims. You can override a default mapping or manually enter an attribute name from your IdP if it doesn't automatically populate. For more information, see [Mapping IdP assertions to IAM claims](/docs/account?topic=account-ibm-idp-integration#assertion-mapping).
+1. Review the IdP assertions that are automatically mapped to required IAM claims. You can override a default mapping or manually enter an attribute name from your IdP if it doesn't automatically populate. For more information, see [Mapping IdP assertions to IAM claims](/docs/iam?topic=iam-ibm-idp-integration#assertion-mapping).
    1. Click **Add mapping** if you want to rename a nonrequired attribute from your IdP.
 1. Click **Next** and then click **Test** to test the assertion mapping.
 1. Click **Finish**.
@@ -108,7 +108,7 @@ Review the following requirements to get started:
 
 * Create an instance of {{site.data.keyword.appid_short}} from the {{site.data.keyword.cloud_notm}} catalog. For more information, see the [Getting started tutorial](/docs/appid?topic=appid-getting-started).
 * Configure your {{site.data.keyword.appid_short}} instance. For more information about how to do this depending on your use case, see the {{site.data.keyword.appid_short}} documentation about [managing authentication](/docs/appid?topic=appid-managing-idp).
-* Make sure that you have the required access to view and manage IdP references, if you aren't the account owner. Be assigned the operator role or higher on the {{site.data.keyword.appid_short}} instance and the operator or administration role on the [IAM Identity Service](/docs/account?topic=account-account-services#identity-service-account-management).
+* Make sure that you have the required access to view and manage IdP references, if you aren't the account owner. Be assigned the operator role or higher on the {{site.data.keyword.appid_short}} instance and the operator or administration role on the [IAM Identity Service](/docs/iam?topic=iam-account-services#identity-service-account-management).
 
 ### Configuring your {{site.data.keyword.appid_short}} instance for IAM integration
 {: #configure-appid-instance}
@@ -142,7 +142,7 @@ For IAM to work correctly with your external IdP, you must make sure that the {{
 | name (optional)         | name if present, otherwise built by the firstname, a space, and the last name | No automatic mapping from SAML | Full name, including middle initial, title, or anything that is not covered by first name and last name |
 {: caption="Required attributes for App ID tokens" caption-side="bottom"}
 
-When a user authenticates successfully by using the {{site.data.keyword.appid_short}} service instance in the {{site.data.keyword.cloud_notm}} account, the user is automatically added to the account. Added users don't get any access policies assigned by default. However, by using [access groups](/docs/account?topic=account-groups) and [dynamic rules](/docs/account?topic=account-rules), you can set up automatically assigned access policies.
+When a user authenticates successfully by using the {{site.data.keyword.appid_short}} service instance in the {{site.data.keyword.cloud_notm}} account, the user is automatically added to the account. Added users don't get any access policies assigned by default. However, by using [access groups](/docs/iam?topic=iam-groups) and [dynamic rules](/docs/iam?topic=iam-rules), you can set up automatically assigned access policies.
 
 ### Enabling and connecting your identity provider with {{site.data.keyword.appid_short}}
 {: #idp-console}
@@ -162,7 +162,7 @@ If you have no IAM IdP references in your account, you must enable the login set
 1. Select how you want to onboard users:
    * **Static**: (Default) Add each user to your account when they log in the first time.
    * **Dynamic**: Add users to your account only if they log in and don't select a trusted profile.
-   * **Never**: Users aren't added to your account but can access your account by using trusted profiles. For more information about trusted profiles, see [Creating trusted profiles](/docs/account?topic=account-create-trusted-profile).
+   * **Never**: Users aren't added to your account but can access your account by using trusted profiles. For more information about trusted profiles, see [Creating trusted profiles](/docs/iam?topic=iam-create-trusted-profile).
 
    Say that you have onboarding set to Static and the user selects a trusted profile when they log in the first time. In this case, the user is still added to the account.
    {: note}
@@ -194,7 +194,7 @@ After your {{site.data.keyword.appid_short}} instance is connected to your IdP, 
 ## Using IdP data to build dynamic rules in access groups
 {: #app-id-dynamic-rules}
 
-In addition to the required attributes, you can pass any type of information with your SAML assertion. These attributes are available for you to use in [dynamic rules in access groups](/docs/account?topic=account-rules).
+In addition to the required attributes, you can pass any type of information with your SAML assertion. These attributes are available for you to use in [dynamic rules in access groups](/docs/iam?topic=iam-rules).
 
 To successfully build a dynamic rule, the following information is required:
 
@@ -211,7 +211,7 @@ If you are working with an external IdP, connect with one external IdP only, and
 ## Using IdP data to build trusted profiles
 {: #trusted-profiles-idp-data}
 
-After you enable and connect your IdP, you can start [creating trusted profiles](/docs/account?topic=account-create-trusted-profile). To build trust with federated users, you can use the personal data from your IdP to search attribute names and values that exist in your organization.
+After you enable and connect your IdP, you can start [creating trusted profiles](/docs/iam?topic=iam-create-trusted-profile). To build trust with federated users, you can use the personal data from your IdP to search attribute names and values that exist in your organization.
 
 If the users that you are creating a trusted profile for use {{site.data.keyword.appid_full_notm}}, create the trusted profile as an App ID user, and likewise for IBMid. This way, your own SAML attributes can give you an idea of how to structure the trusted profile conditions. Other users with the same IdP can have different SAML attributes and you can use your own only as a hint. To use attributes in a claim that are different than your own, input them manually.
 {: tip}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: restrict api keys, block users from creating api keys, restrict api key creation
 
@@ -18,7 +18,7 @@ subcollection: iam
 By default, all members of an account can create {{site.data.keyword.cloud}} API keys. However, that access can be restricted so that only members with the correct access can create these user API keys by using the API key creation setting.
 {: shortdesc}
 
-Restricting the ability to create API keys makes sense if you want users in your account to always log in interactively, meaning you don't want automation scripts to run that can log in users automatically by using an API key. For more information about API keys, see [Managing user API keys](/docs/account?topic=account-userapikey).
+Restricting the ability to create API keys makes sense if you want users in your account to always log in interactively, meaning you don't want automation scripts to run that can log in users automatically by using an API key. For more information about API keys, see [Managing user API keys](/docs/iam?topic=iam-userapikey).
 
 If API key creation is [enterprise-managed]{: tag-cyan}, the setting defined at the account-level applies if the enterprise-managed setting is less strict or removed.
 
@@ -28,7 +28,7 @@ If API key creation is [enterprise-managed]{: tag-cyan}, the setting defined at 
 
 To turn on the setting to restrict users from creating user API keys, you must have the following assigned access:
 
-* An IAM policy with the `Administrator`, `Operator`, or `Editor` role on the [IAM Identity Service](/docs/account?topic=account-account-services#identity-service-account-management).
+* An IAM policy with the `Administrator`, `Operator`, or `Editor` role on the [IAM Identity Service](/docs/iam?topic=iam-account-services#identity-service-account-management).
 
 If you turn on the Restrict API key creation setting, users in your account require specific access to create API keys, including the account owner. To restrict who can create API keys, use the following steps:
 
@@ -50,7 +50,7 @@ If you turn on the API key creation setting, users in your account require speci
 
 To turn on the setting to restrict users from creating user API keys, you must have the following assigned access:
 
-- An IAM policy with the `Administrator`, `Operator`, or `Editor` role on the [IAM Identity Service](/docs/account?topic=account-account-services#identity-service-account-management).
+- An IAM policy with the `Administrator`, `Operator`, or `Editor` role on the [IAM Identity Service](/docs/iam?topic=iam-account-services#identity-service-account-management).
 
 Before you can set limits for login sessions by using Terraform, make sure that you have completed the following:
 
@@ -102,6 +102,5 @@ Now that the setting is enabled to restrict users from creating API keys, you ca
 
 If the API key creation setting is enabled, only users, including the account owner, assigned the `User API key creator` role on the IAM Identity Service can create API keys.
 
-The quickest way to assign a group of users the required access for creating API keys is to create an access group and assign the group the required role. For more information about assigning access policies, see [Setting up access groups](/docs/account?topic=account-groups).
+The quickest way to assign a group of users the required access for creating API keys is to create an access group and assign the group the required role. For more information about assigning access policies, see [Setting up access groups](/docs/iam?topic=iam-groups).
 {: tip}
-

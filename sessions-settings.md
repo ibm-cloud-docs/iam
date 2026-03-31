@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: user session, inactivity, sign out, concurrent, login session, trusted profiles
 
@@ -98,7 +98,7 @@ For more information, see the [Terraform documentation](https://registry.terrafo
 {: #sessions-active-tp}
 {: ui}
 
-For more information, see [Updating trusted profiles](/docs/account?topic=account-trusted-profile-update&interface=ui#session-duration-tp).
+For more information, see [Updating trusted profiles](/docs/iam?topic=iam-trusted-profile-update&interface=ui#session-duration-tp).
 
 ## Setting the sign out due to inactivity duration
 {: #sessions-inactivity}
@@ -201,7 +201,7 @@ For more information, see the [Terraform documentation](https://registry.terrafo
 ## Determining when sessions are created
 {: #sessions-nonsessions-2}
 
-Login session settings apply only when there is connected login session. If no login session is created, then [limits for IAM tokens](/docs/account?topic=account-token-limit) apply. Use the following table to help you understand when each setting applies.
+Login session settings apply only when there is connected login session. If no login session is created, then [limits for IAM tokens](/docs/iam?topic=iam-token-limit) apply. Use the following table to help you understand when each setting applies.
 
 Sessions are created when a user logs in to the {{site.data.keyword.cloud}} CLI or {{site.data.keyword.cloud}} console. For example, if you create a user API key and use it for the {{site.data.keyword.cloud}} CLI, this generates a login session. However, if you use the same API key to create a token for API calls, like [creating an IAM access token for a user or service ID](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apikey), this does not generate a session.
 

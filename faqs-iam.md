@@ -147,7 +147,7 @@ You can also assign access to individual resource groups with a policy on a serv
 {: #resources-and-rg}
 {: faq}
 
-A user must be assigned an access policy on the specific resource with at least the Viewer role that is assigned on the resource group itself that contains the resource. To assign this type of policy, see [Assigning access to resources](/docs/account?topic=account-assign-access-resources).
+A user must be assigned an access policy on the specific resource with at least the Viewer role that is assigned on the resource group itself that contains the resource. To assign this type of policy, see [Assigning access to resources](/docs/iam?topic=iam-assign-access-resources).
 
 
 ## What access do I need to provide others access?
@@ -167,7 +167,7 @@ When you have access to manage a resource group, you can view, edit the name, an
 
 When you have access to resources within a resource group, you can edit, delete, and create instances, or have all management actions for the specified services within the resource group depending on the assigned role.
 
-For example, platform management roles and actions for account management services, see [Platform roles table](/docs/account?topic=account-userroles#platformroles).
+For example, platform management roles and actions for account management services, see [Platform roles table](/docs/iam?topic=iam-userroles#platformroles).
 
 ## Who can remove users?
 {: #remove-users}
@@ -185,7 +185,7 @@ The account owner can remove any users from the account, and any user with the f
 1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)**, and select **Settings**.
 2. From the Authentication section, click **Edit** to select MFA for all users or non-federated users only.
 
-For more information, see [Requiring MFA for users in your account](/docs/account?topic=account-enablemfa).
+For more information, see [Requiring MFA for users in your account](/docs/iam?topic=iam-enablemfa).
 
 ## What is the difference between service and platform roles?
 {: #service-platform-roles}
@@ -209,7 +209,7 @@ To assign a user in your account full administrator access, go to **Manage > Acc
 
 * The Super user permission set for classic infrastructure, which includes all of the available classic infrastructure permissions
 
-* A trusted profile set as the alternative account owner has the highest level of classic infrastructure permissions and has both IAM policies that grant full access. For more information, see [Setting an alternative account owner](/docs/account?topic=account-transfer&interface=ui#grant-alt-owner).
+* A trusted profile set as the alternative account owner has the highest level of classic infrastructure permissions and has both IAM policies that grant full access. For more information, see [Setting an alternative account owner](/docs/iam?topic=iam-transfer&interface=ui#grant-alt-owner).
 
 ## Can every user in my account see all the other users?
 {: #users}

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: access, users, service IDs, access group, IAM, policy, characters, wildcard, operators, asterisk, question mark, *, ?, JSON document, policy document
 
@@ -19,7 +19,7 @@ subcollection: iam
 When you're assigning access to certain IAM-enabled services, you can use advanced operators in a [policy](#x2853407){: term} to grant access to resources that satisfy specific naming conventions. By using wildcard policies, you can reduce the number of policies that are required for managing access to some resources.
 {: shortdesc}
 
-To assign access, you need the administrator role on the resource. For more information, see [IAM access](/docs/account?topic=account-userroles).
+To assign access, you need the administrator role on the resource. For more information, see [IAM access](/docs/iam?topic=iam-userroles).
 
 ## JSON policy document
 {: #policy-js}

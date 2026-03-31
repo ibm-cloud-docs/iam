@@ -3,7 +3,7 @@
 copyright:
 
   years: 2020, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: troubleshoot invite users, access to invite users, access to add users
 
@@ -43,4 +43,4 @@ To review your assigned access in the account, complete the following steps:
 
 If you aren't assigned the correct access, contact the account owner. After you have the correct access, go to **Manage > Access (IAM)**, then select **Users**, and click **Invite users** to add users to the account.
 
-If you're the account owner and can't invite users, contact [Support](/unifiedsupport/supportcenter){: external}. See [Using the Support Center](/docs/account?topic=account-using-avatar) for methods to contact support.
+If you're the account owner and can't invite users, contact [Support](/unifiedsupport/supportcenter){: external}.

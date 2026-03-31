@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: federated ID, password, enterprise SSO, single sign-on ID, API key login, one-time passcode login, temporary credential, to login, logging in, trusted profiles
 
@@ -21,7 +21,7 @@ As a federated user that uses a corporate or enterprise single sign-on ID, you c
 
 By using federated IDs, you don't need to set up new login credentials specific to {{site.data.keyword.cloud_notm}}, for example, by using IBMid. Instead, users in your organization can easily log in to {{site.data.keyword.cloud_notm}} with their organization credentials through your identity provider (IdP).
 
-When a user logs in, the user gets an IAM token, which is a temporary credential that expires after 1 hour. After that time, the token must be refreshed to secure the connection and to continue accessing account resources to which they are assigned access. For more information about using federated IDs, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started). For more information about using federated IDs, see [Enabling authentication from an external identity provider](/docs/account?topic=account-ibm-idp-integration).
+When a user logs in, the user gets an IAM token, which is a temporary credential that expires after 1 hour. After that time, the token must be refreshed to secure the connection and to continue accessing account resources to which they are assigned access. For more information about using federated IDs, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started). For more information about using federated IDs, see [Enabling authentication from an external identity provider](/docs/iam?topic=iam-ibm-idp-integration).
 
 Google login isn't available for users with federated IDs. For more information, see [known issues and limitations](/docs/account?topic=account-known-issues&interface=ui).
 {: note}
@@ -61,7 +61,7 @@ If you are an {{site.data.keyword.appid_short}} user, complete the following ste
 
 1. Go to the `<DefaultIdPURL>` for your organization.
 
-    If you don't know the `<DefaultIdPURL>`, ask your administrator. They have access to it from the Identity provider page. For more information, see [Logging in with external identity provider credentials](/docs/account?topic=account-ibm-idp-integration#log-in-external-idp)
+    If you don't know the `<DefaultIdPURL>`, ask your administrator. They have access to it from the Identity provider page. For more information, see [Logging in with external identity provider credentials](/docs/iam?topic=iam-ibm-idp-integration#log-in-external-idp)
     {: tip}
 
 2. Enter your credentials and log in.
@@ -74,7 +74,7 @@ If you are a user federated with {{site.data.keyword.cloud_notm}} SAML, complete
 
 1. Go to the `<DefaultIdPURL>` for your organization.
 
-    If you don't know the `<DefaultIdPURL>`, ask your administrator. They have access to it from the Identity provider page. For more information, see [Logging in with external identity provider credentials](/docs/account?topic=account-ibm-idp-integration#log-in-external-idp)
+    If you don't know the `<DefaultIdPURL>`, ask your administrator. They have access to it from the Identity provider page. For more information, see [Logging in with external identity provider credentials](/docs/iam?topic=iam-ibm-idp-integration#log-in-external-idp)
     {: tip}
 
 2. Enter your credentials and log in.

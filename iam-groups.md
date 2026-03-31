@@ -39,7 +39,7 @@ To manage or create new access groups, you must have the following type of acces
 * Administrator or editor for the All Account Management services
 * You must be the account owner
 
-Additionally, an administrator or editor can be assigned access to manage an individual group by creating an access policy where the resource is the Access group ID. For more information about access policies and roles for the IAM Access Groups service, see [IAM access](/docs/account?topic=account-userroles#userroles).
+Additionally, an administrator or editor can be assigned access to manage an individual group by creating an access policy where the resource is the Access group ID. For more information about access policies and roles for the IAM Access Groups service, see [IAM access](/docs/iam?topic=iam-userroles#userroles).
 
 ## Before you begin
 {: #prereq-create-groups-tf}
@@ -62,7 +62,7 @@ A unique name is required to differentiate access groups in the account. To crea
 1. Click **Create**.
 1. Enter a unique name to identify your access group, an optional description, and click **Create**.
 
-Next, continue to set up your groups by adding users, service IDs, or trusted profiles. You can add users manually or by [creating dynamic rules](/docs/account?topic=account-rules&interface=ui). Or, you can start assigning the group access, and decide who you want to add to the access group later.
+Next, continue to set up your groups by adding users, service IDs, or trusted profiles. You can add users manually or by [creating dynamic rules](/docs/iam?topic=iam-rules&interface=ui). Or, you can start assigning the group access, and decide who you want to add to the access group later.
 
 You can delete a group by selecting the **Remove group** option. When you remove a group from the account, you are removing all users and service IDs from the group and all access that is assigned to the group.
 {: note}
@@ -220,7 +220,7 @@ Use the following steps to assign access to a group in the console:
      * A specific service
 
 1. Next, you can scope the access to all resources or specific resources based on selected resource attributes like access management tags, location, or resource group.
-1. Select all roles that apply. To view what actions are mapped to each role, click the numbers listed next to each role. Some services support the use of advanced operators to grant access to resources that satisfy specific naming conventions. See [Assigning access by using wildcard policies](/docs/account?topic=account-wildcard) for more information.
+1. Select all roles that apply. To view what actions are mapped to each role, click the numbers listed next to each role. Some services support the use of advanced operators to grant access to resources that satisfy specific naming conventions. See [Assigning access by using wildcard policies](/docs/iam?topic=iam-wildcard) for more information.
 1. Click **Review**.
 1. Click **Add** to add your policy configuration to your policy summary.
 1. Click **Assign**.
@@ -520,7 +520,7 @@ Members can be users, service IDs, and trusted profiles.
    1. Click **Service IDs > Add Service IDs**.
    1. Click **Trusted profiles > Add trusted profiles**.
 
-   If you don't see the button to add members, you might not have access. Review the [access requirements](/docs/account?topic=account-groups&interface=ui#prereq-create-groups) and contact your account administrator for access.
+   If you don't see the button to add members, you might not have access. Review the [access requirements](/docs/iam?topic=iam-groups&interface=ui#prereq-create-groups) and contact your account administrator for access.
    {: note}
 
 1. Select the users, service IDs, or trusted profiles that you want to add to the group and click **Add to group**.

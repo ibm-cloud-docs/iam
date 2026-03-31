@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: troubleshoot MFA, multifactor authentication, verification method, authentication factor
 
@@ -15,7 +15,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why can't I log in with my MFA factors? 
+# Why can't I log in with my MFA factors?
 {: #troubleshoot-MFA}
 {: troubleshoot}
 
@@ -43,7 +43,7 @@ One or more of the authentication factors that you use are inaccessible. For exa
       1. Click the checkbox next to the MFA method that you want to reset and click Remove.
       1. Set up your new MFA factor the next time that you login to {{site.data.keyword.cloud}}.
 
-For more information, see [Managing verification methods and MFA factors](/docs/account?topic=account-verification-authentication&interface=ui).
+For more information, see [Managing verification methods and MFA factors](/docs/iam?topic=iam-verification-authentication&interface=ui).
 
 If you do not receive an email that contains the verification code for MFA, check all the folders in your email account. For example, the Other folder in Outlook.
 {: note}

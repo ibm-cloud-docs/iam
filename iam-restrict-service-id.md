@@ -3,7 +3,7 @@
 copyright:
 
   years: 2020, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: restrict service id, block users from creating service id, restrict service id creation
 
@@ -16,7 +16,7 @@ subcollection: iam
 # Restricting users from creating service IDs
 {: #restrict-service-id-create}
 
-By default, all members of an account can create service IDs. However, access can be restricted so that only members with the correct access can create service IDs by using the Service ID creation setting. For more information about Service IDs, see [Creating and working with service IDs](/docs/account?topic=account-serviceids).
+By default, all members of an account can create service IDs. However, access can be restricted so that only members with the correct access can create service IDs by using the Service ID creation setting. For more information about Service IDs, see [Creating and working with service IDs](/docs/iam?topic=iam-serviceids).
 {: shortdesc}
 
 If service ID creation is [enterprise-managed]{: tag-cyan}, the setting defined at the account-level applies if the enterprise-managed setting is less strict or removed.
@@ -27,7 +27,7 @@ If service ID creation is [enterprise-managed]{: tag-cyan}, the setting defined 
 
 To enable the setting to restrict users from creating service IDs, you must have the following assigned access:
 
-* An IAM policy with the `Administrator`, `Operator`, or `Editor` role on the [IAM Identity Service](/docs/account?topic=account-account-services#identity-service-account-management).
+* An IAM policy with the `Administrator`, `Operator`, or `Editor` role on the [IAM Identity Service](/docs/iam?topic=iam-account-services#identity-service-account-management).
 
 If you enable the Restrict service ID creation setting, users in your account require specific access to create service IDs, including the account owner. To restrict who can create service IDs, use the following steps:
 
@@ -46,7 +46,7 @@ If you enable the Restrict service ID creation setting, users in your account re
 
 To enable the setting to restrict users from creating service IDs, you must have the following assigned access:
 
-- An IAM policy with the `Administrator`, `Operator`, or `Editor` role on the [IAM Identity Service](/docs/account?topic=account-account-services#identity-service-account-management).
+- An IAM policy with the `Administrator`, `Operator`, or `Editor` role on the [IAM Identity Service](/docs/iam?topic=iam-account-services#identity-service-account-management).
 
 Before you can set limits for login sessions by using Terraform, make sure that you have completed the following:
 
@@ -93,5 +93,5 @@ For more information, see the [Terraform documentation](https://registry.terrafo
 
 If the Service ID creation setting is enabled, only users, including the account owner, assigned the `Service ID creator` role on the IAM Identity Service can create service IDs.
 
-The quickest way to assign a group of users the required access for creating service IDs is to create an access group and assign the group the required role. For more information about assigning access policies, see [Setting up access groups](/docs/account?topic=account-groups).
+The quickest way to assign a group of users the required access for creating service IDs is to create an access group and assign the group the required role. For more information about assigning access policies, see [Setting up access groups](/docs/iam?topic=iam-groups).
 {: tip}

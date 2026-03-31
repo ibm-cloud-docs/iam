@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: trusted profile, generating IAM token, compute resource, kubernetes cluster, virtual server
 
@@ -19,7 +19,7 @@ subcollection: iam
 Trusted profiles are used to automatically grant federated users access to your account, and you can use {{site.data.keyword.logs_full_notm}} to monitor which federated users and compute resources apply a trusted profile.
 {: shortdesc}
 
-For more information, see [Activity tracking events for IAM](/docs/account?topic=account-at_events_iam).
+For more information, see [Activity tracking events for IAM](/docs/iam?topic=iam-at_events_iam).
 
 You can also monitor active user login sessions. For more information, see [Monitoring your login sessions](/docs/account?topic=account-monitor-your-session).
 
@@ -75,5 +75,3 @@ A federated user that's applying trusted profile `fed-user-profile-1` has the fo
 | initiator.authnId | `IBMid11118967` |
 | initiator.authnName | `addison.martin@ibm.com` |
 {: caption="Sample trusted profile attributes and values from {{site.data.keyword.atracker_full_notm}}" caption-side="top"}
-
-

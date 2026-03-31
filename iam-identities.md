@@ -68,7 +68,7 @@ Service IDs are another type of identity that is used in an account. Service IDs
 ### Service ID API keys
 {: #serviceid-api-key}
 
-You can also create API keys that are associated with service IDs to authenticate applications as a particular service ID. This way, the applications can access resources that are assigned to that specific service ID. Service ID API key credentials can be used to make API and CLI calls. For more information about creating API keys associated with a service ID, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys#serviceidapikeys).
+You can also create API keys that are associated with service IDs to authenticate applications as a particular service ID. This way, the applications can access resources that are assigned to that specific service ID. Service ID API key credentials can be used to make API and CLI calls. For more information about creating API keys associated with a service ID, see [Managing service ID API keys](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys).
 
 ## Trusted profiles
 {: #trustedprofiles-bestpract}
@@ -77,14 +77,11 @@ Similar to other identities within IAM, trusted profiles are treated as a subjec
 
 Usually, for a user to take an action on a resource within an account, that identity must explicitly be added to the account. With trusted profiles, it is possible for a user to complete the actions without being invited to an account. Instead, they are automatically granted access to resources when they apply the trusted profile identity during login. Only users federated by an external IdP can be mapped to trusted profiles during login by evaluating SAML-based attributes to determine which profiles their identity can apply.
 
-Similarly, instead of creating a service ID, generating an API key, and getting the application to store and validate that key, you can create [trusted profiles for compute resources](/docs/account?topic=account-create-trusted-profile) to define fine-grained authorization for all applications that are running in a compute resource. Compute resources become identities when used as part of a trusted profile. Trust with compute resources is established by conditions based on resource attributes, or creating a direct link to a specific resource.
+Similarly, instead of creating a service ID, generating an API key, and getting the application to store and validate that key, you can create [trusted profiles for compute resources](/docs/iam?topic=iam-create-trusted-profile) to define fine-grained authorization for all applications that are running in a compute resource. Compute resources become identities when used as part of a trusted profile. Trust with compute resources is established by conditions based on resource attributes, or creating a direct link to a specific resource.
 
-You can also [establish trust with {{site.data.keyword.cloud_notm}} services](/docs/account?topic=account-create-trusted-profile&interface=ui#create-profile-services) that need to run an operation in your account. Or, use trusted profiels to give a [service ID](/docs/account?topic=account-create-trusted-profile&interface=ui#create-profile-serviceid) from another account access in your account.
+You can also [establish trust with {{site.data.keyword.cloud_notm}} services](/docs/iam?topic=iam-create-trusted-profile&interface=ui#create-profile-services) that need to run an operation in your account. Or, use trusted profiels to give a [service ID](/docs/iam?topic=iam-create-trusted-profile&interface=ui#create-profile-serviceid) from another account access in your account.
 
 ## Resource identities
 {: #resources-bestpract}
 
-The final piece of the identity concept in IAM is {{site.data.keyword.cloud_notm}} resources, which are identified by their [cloud resource names](#x9494304){: term} (CRN). All resources that are created from the catalog are identified by their CRN. These CRNs are used for service-to-service authorizations in IAM. Additionally, you use a CRN to assign access to specific resources when you use the API. For more information, see [Cloud Resource Names](/docs/account?topic=account-crn) and [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth).
-
-
-For more information, see [Cloud Resource Names](/docs/account?topic=account-crn) and [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth).
+The final piece of the identity concept in IAM is {{site.data.keyword.cloud_notm}} resources, which are identified by their [cloud resource names](#x9494304){: term} (CRN). All resources that are created from the catalog are identified by their CRN. These CRNs are used for service-to-service authorizations in IAM. Additionally, you use a CRN to assign access to specific resources when you use the API. For more information, see [Cloud Resource Names](/docs/account?topic=account-crn) and [Using authorizations to grant access between services](/docs/iam?topic=iam-serviceauth).

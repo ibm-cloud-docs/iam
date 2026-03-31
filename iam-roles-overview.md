@@ -41,7 +41,7 @@ You can manage and define access based on specific roles for users and resources
 ### Platform management roles
 {: #platformroles}
 
-With platform management roles, users can be assigned varying levels of permission for performing platform actions within the account and on a service. For example, platform management roles that are assigned for catalog resources enable users to complete actions such as creating, deleting, editing, and viewing service instances. And, the platform management roles that are assigned for account management services enable users to complete actions such as inviting and removing users, working with resource groups, and viewing billing information. For more information about the account management services, see [Assigning access to account management services](/docs/account?topic=account-account-services).
+With platform management roles, users can be assigned varying levels of permission for performing platform actions within the account and on a service. For example, platform management roles that are assigned for catalog resources enable users to complete actions such as creating, deleting, editing, and viewing service instances. And, the platform management roles that are assigned for account management services enable users to complete actions such as inviting and removing users, working with resource groups, and viewing billing information. For more information about the account management services, see [Assigning access to account management services](/docs/iam?topic=iam-account-services).
 
 Select all roles that apply when you create a policy. Each role allows separate actions to be completed and doesn't inherit the actions of the lesser roles.
 {: tip}
@@ -60,7 +60,7 @@ The following table provides examples for some of the platform management action
 {: summary="The first row of the table describes separate options that you can choose from when creating a policy, and the first column describes the selected roles for the policy. The remaining cells map to the selected role from the first column, and to the selected policy from the first row."}
 {: #platformrolestable1}
 
-For information about the specific actions users can take based on their assigned role on account management services, see [Assigning access to account management services](/docs/account?topic=account-account-services).
+For information about the specific actions users can take based on their assigned role on account management services, see [Assigning access to account management services](/docs/iam?topic=iam-account-services).
 {: #acctmgmt}
 
 Some services might map specific actions to the platform management roles that are related to the management of the service rather than to the access of the service. As an example, see the following table that details the {{site.data.keyword.containershort_notm}} service actions that are mapped to these roles.
@@ -93,4 +93,4 @@ The actions that can be taken based on each assigned role vary based on the serv
 
 An account owner or a user assigned the Administrator role on the Role management service can create custom roles for a service on the IAM Roles page. Any number of actions that are available for a service for any platform or service role can be combined and added to a custom named role.
 
-After the role is created, any user who can assign access for that service sees the new custom role as an option. For more information, see [Creating custom roles](/docs/account?topic=account-custom-roles).
+After the role is created, any user who can assign access for that service sees the new custom role as an option. For more information, see [Creating custom roles](/docs/iam?topic=iam-custom-roles).

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-31"
 
 keywords: trusted profile, identity and access management, federated users, compute resources, IAM trusted profile, trust relationship, establish trust, trust policy, trusted entity, assume access, apply access, access group, service IDs, IBM Cloud services, CRN, cloud resource name, workload identity, without credentials
 
@@ -26,7 +26,7 @@ A user doesn't need to be a member of the account to assume a trusted profile. A
 
 When you initially create a trusted profile, you can build conditions of trust with the following entity types: federated users, compute resources, service IDs, or {{site.data.keyword.cloud_notm}} services. After you create the trusted profile, you can add more conditions to combine multiple entity types in the same profile.
 
-You can use {{site.data.keyword.cloudaccesstrailshort}} to monitor which federated users compute resources, service IDs, and {{site.data.keyword.cloud_notm}} services apply a trusted profile. For more information, see [Monitoring login sessions for trusted profiles](/docs/account?topic=account-trusted-profile-monitor).
+You can use {{site.data.keyword.cloudaccesstrailshort}} to monitor which federated users compute resources, service IDs, and {{site.data.keyword.cloud_notm}} services apply a trusted profile. For more information, see [Monitoring login sessions for trusted profiles](/docs/iam?topic=iam-trusted-profile-monitor).
 {: tip}
 
 
@@ -38,7 +38,7 @@ If you have the following access, you can create trusted profiles:
 
 - Account owner
 - Administrator role on all account management services
-- Administrator role on the IAM Identity Service. For more information, see [IAM Identity service](/docs/account?topic=account-account-services#identity-service-account-management).
+- Administrator role on the IAM Identity Service. For more information, see [IAM Identity service](/docs/iam?topic=iam-account-services#identity-service-account-management).
 
 ## Establishing trust with federated users in the console
 {: #create-profile-federated-ui}
@@ -103,7 +103,7 @@ Complete the following steps to set up better control over granting access to co
    1. If you select **Specific resources**, you can establish trust with one or more existing compute resource instances directly without conditions. For example, a Kubernetes cluster.
 
 1. Click **Continue**.
-1. (Optional) [Assign access to the trusted profile](/docs/account?topic=account-create-trusted-profile&interface=ui#tp-access).
+1. (Optional) [Assign access to the trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=ui#tp-access).
 1. Or, click **Create** without assigning any access.
 
 For more information about the fields that are used to create conditions for trusted profiles, see [IAM condition properties](/docs/iam?topic=iam-iam-condition-properties).
@@ -119,7 +119,7 @@ Example 1
 :   A Project service instance in another account can assume a trusted profile to securely deploy an architecture in your account without the need for key rotation. For more information, see [Using trusted profiles to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-tp-project).
 
 Example 2
-:   A private catalog is an instance of the Catalog Management service that is identified by a CRN. You might want to validate products from your private catalog in an account that’s separate from the one that contains your catalog. You can give a private catalog access to create resources for validation in a target account by creating a trusted profile in the target account. Then you establish trust with the catalog by using the catalog CRN to link the service instance to the trusted profile. For more information, see [Setting up a target account for validation](/docs/account?topic=account-catalog-cross-validation).
+:   A private catalog is an instance of the Catalog Management service that is identified by a CRN. You might want to validate products from your private catalog in an account that’s separate from the one that contains your catalog. You can give a private catalog access to create resources for validation in a target account by creating a trusted profile in the target account. Then you establish trust with the catalog by using the catalog CRN to link the service instance to the trusted profile. For more information, see [Setting up a target account for validation](/docs/iam?topic=iam-catalog-cross-validation).
 
 Sharing resources across accounts by using trusted profiles works for a limited set of services and is not a general method for cross-account access for services.
 {: note}
@@ -146,7 +146,7 @@ Complete the following steps to define how an {{site.data.keyword.cloud_notm}} s
    {: note}
 
 1. Click **Continue**.
-1. (Optional) [Assign access to the trusted profile](/docs/account?topic=account-create-trusted-profile&interface=ui#tp-access).
+1. (Optional) [Assign access to the trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=ui#tp-access).
 1. Or, click **Create** without assigning any access.
 
 ## Establishing trust with service IDs in the console
@@ -171,7 +171,7 @@ You can use trusted profiles to give a service ID cross-account access and acces
    1. Select **Service IDs**
    1. Enter the service ID value that the administrator provided to you.
 1. Click **Continue**.
-1. (Optional) [Assign access to the trusted profile](/docs/account?topic=account-create-trusted-profile&interface=ui#tp-access).
+1. (Optional) [Assign access to the trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=ui#tp-access).
 1. Or, click **Create** without assigning any access.
 
 Service IDs are static identities that don't use conditions to establish trust. Instead, you establish trust by using the ID value from the service ID's metadata to create a direct link with the trusted entity.
@@ -205,7 +205,7 @@ You can assign classic infrastructure access only if your account is linked to a
 
 Complete the following steps to define which federated users can access specific resources:
 
-1. [Enable authentication from an external identity provider](/docs/account?topic=account-ibm-idp-integration).
+1. [Enable authentication from an external identity provider](/docs/iam?topic=iam-ibm-idp-integration).
 1. Create a trusted profile by running the following command:
 
    ```bash
@@ -213,7 +213,7 @@ Complete the following steps to define which federated users can access specific
    ```
    {: codeblock}
 
-   For more information, see the [CLI reference](/docs/account?topic=account-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_create).
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_create).
 
 1. To create conditions for your trusted profile, run the `ibmcloud iam trusted-profile-rule-create` command:
 
@@ -222,7 +222,7 @@ Complete the following steps to define which federated users can access specific
    ```
    {: codeblock}
 
-   For more information, see the [CLI reference](/docs/account?topic=account-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_rule_create).
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_rule_create).
 
 1. Create an access policy with the `Viewer` role for all resources in the account by running the following command:
 
@@ -231,7 +231,7 @@ Complete the following steps to define which federated users can access specific
    ```
    {: codeblock}
 
-   For more information, see the [CLI reference](/docs/account?topic=account-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_policy_create).
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_policy_create).
 
 ## Establishing trust with compute resources by using the CLI
 {: #create-profile-compute-cli}
@@ -249,7 +249,7 @@ Complete the following steps to set up better control over granting access to co
    ```
    {: codeblock}
 
-   For more information, see the [CLI reference](/docs/account?topic=account-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_create).
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_create).
 
 1. Create conditions for your trusted profile by using the `ibmcloud iam trusted-profile-rule-create` command:
 
@@ -258,7 +258,7 @@ Complete the following steps to set up better control over granting access to co
    ```
    {: codeblock}
 
-   For more information, see the [CLI reference](/docs/account?topic=account-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_rule_create).
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_rule_create).
 
    You can also create a direct link:
 
@@ -267,7 +267,7 @@ Complete the following steps to set up better control over granting access to co
    ```
    {: codeblock}
 
-   For more information, see the [CLI reference](/docs/account?topic=account-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_link_create).
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_link_create).
 
 1. Create an access policy by running the following command:
 
@@ -276,7 +276,7 @@ Complete the following steps to set up better control over granting access to co
    ```
    {: codeblock}
 
-   For more information, see the [CLI reference](/docs/account?topic=account-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_policy_create).
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_policy_create).
 
 ## Establishing trust with {{site.data.keyword.cloud_notm}} services by using the CLI
 {: #create-profile-services-cli}
@@ -294,14 +294,14 @@ An {{site.data.keyword.cloud_notm}} service in another account might need a toke
    ```
    {: codeblock}
 
-   For more information, see the [CLI reference](/docs/account?topic=account-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_link_create).
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_link_create).
 1. Create an access policy by running the following command:
    ```bash
    ibmcloud iam trusted-profile-policy-create --roles Viewer
    ```
    {: codeblock}
 
-   For more information, see the [CLI reference](/docs/account?topic=account-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_policy_create).
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_policy_create).
 
 ## Establishing trust with service IDs by using the CLI
 {: #create-profile-serviceid-cli}
@@ -323,14 +323,14 @@ You can use trusted profiles to give a service ID cross-account access and acces
    ```
    {: codeblock}
 
-   For more information, see the [CLI reference](/docs/account?topic=account-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_link_create).
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_link_create).
 1. Create an access policy by running the following command:
    ```bash
    ibmcloud iam trusted-profile-policy-create --roles Viewer
    ```
    {: codeblock}
 
-   For more information, see the [CLI reference](/docs/account?topic=account-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_policy_create).
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_policy_create).
 
 ## Assigning access to the trusted profile by using the CLI
 {: #tp-access-cli}
@@ -341,7 +341,7 @@ After you establish trust with federated users, compute resources, an {{site.dat
 You can assign classic infrastructure access only if your account is linked to a Softlayer account.
 {: note}
 
-Use the command [`trusted-profile-policy-create`](/docs/account?topic=account-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_policy_create) to assign an access policy to the trusted profile. The following example assigns a policy with the Administrator role on **All Account Management services**:
+Use the command [`trusted-profile-policy-create`](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_policy_create) to assign an access policy to the trusted profile. The following example assigns a policy with the Administrator role on **All Account Management services**:
 
 ```bash
 ibmcloud iam trusted-profile-policy-create Profile-36f5c562-1t36-4442-b7f0-2663c85386f1 --roles Administrator --attributes serviceType=service
@@ -355,7 +355,7 @@ ibmcloud iam trusted-profile-policy-create Profile-36f5c562-1t36-4442-b7f0-2663c
 
 Complete the following steps to define which federated users can access specific resources:
 
-1. [Enable authentication from an external identity provider](/docs/account?topic=account-ibm-idp-integration).
+1. [Enable authentication from an external identity provider](/docs/iam?topic=iam-ibm-idp-integration).
 1. Create a trusted profile by specifying your account ID.
 
    ```bash
@@ -391,7 +391,7 @@ Complete the following steps to define which federated users can access specific
    There is a limit of 20 claim rules per trusted profile.
    {: note}
 
-1. (Optional) [Assign access to the trusted profile](/docs/account?topic=account-create-trusted-profile&interface=api#tp-access-api).
+1. (Optional) [Assign access to the trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=api#tp-access-api).
 
 ## Establishing trust with compute resources with the API
 {: #create-profile-compute-api}
@@ -454,7 +454,7 @@ Complete the following steps to set up better control over granting access to co
       ```
       {: codeblock}
 
-1. (Optional) [Assign access to the trusted profile](/docs/account?topic=account-create-trusted-profile&interface=api#tp-access-api).
+1. (Optional) [Assign access to the trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=api#tp-access-api).
 
 ## Assigning access to the trusted profile by using the API
 {: #tp-access-api}

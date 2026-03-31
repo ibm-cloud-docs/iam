@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: public access, anonymous access, users, service IDs, public access group, enable, disable, manage, IAM
 
@@ -19,7 +19,7 @@ subcollection: iam
 By default, all users and service IDs in an account are members of the Public Access group in your account. Assigning an access policy to the access group opens access to that resource to anyone whether they're a member of your account or not because authentication is no longer required. However, sometimes you might want to help ensure that there is never public access that is allowed to your account resources, which you control by disabling public access at the account level.
 {: shortdesc}
 
-To manage public access, you must be an administrator of the [IAM Access Groups service](/docs/account?topic=account-account-services#access-groups-account-management) in the account.
+To manage public access, you must be an administrator of the [IAM Access Groups service](/docs/iam?topic=iam-account-services#access-groups-account-management) in the account.
 
 ## Assigning public access to resources
 {: #public_policy}

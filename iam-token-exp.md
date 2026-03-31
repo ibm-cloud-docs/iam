@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-03-31"
 
 keywords: token, token expiration, settings, access token, refresh token, IAM
 
@@ -32,7 +32,7 @@ If you have the following access, you can update the settings for token expirati
 - Operator or admin role on all account management services
 - Operator or admin role on IAM Identity service
 
-For more information about access, see [Actions and roles for account management services](/docs/account?topic=account-account-services&interface=ui#account-management-actions-roles).
+For more information about access, see [Actions and roles for account management services](/docs/iam?topic=iam-account-services&interface=ui#account-management-actions-roles).
 
 ## Managing access token expiration
 {: #accces-token-limit}
@@ -111,5 +111,5 @@ Tokens expiration settings apply only if there is no connected login session. If
 
 For more information about using IAM access tokens, see the following topics:
 
-* [Invoking {{site.data.keyword.cloud_notm}} service APIs](/docs/account?topic=account-iamapikeysforservices)
-* [Generating an {{site.data.keyword.cloud_notm}} IAM token by using an API key](/docs/account?topic=account-iamtoken_from_apikey)
+* [Invoking {{site.data.keyword.cloud_notm}} service APIs](/docs/iam?topic=iam-iamapikeysforservices)
+* [Generating an {{site.data.keyword.cloud_notm}} IAM token by using an API key](/docs/iam?topic=iam-iamtoken_from_apikey)

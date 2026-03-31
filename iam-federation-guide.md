@@ -3,7 +3,7 @@
 copyright:
 
   years: 2023, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: SAML federation, federation option, federated IBMid, SAML fed, federated, identity provider integration, SSO, single sign-on
 
@@ -62,7 +62,7 @@ Federated {{site.data.keyword.cloud_notm}} SAML users
 ## {{site.data.keyword.cloud_notm}} account owners
 {: #owner-v-members}
 
-To create an {{site.data.keyword.cloud_notm}} account, you need an IBMid user that will be the {{site.data.keyword.cloud_notm}} account owner. You can create this IBMid user during the [{{site.data.keyword.cloud_notm}} account registration process](https://{DomainName}/registration), or you use an existing IBMid user. We recommend creating the account by using a [functional ID](/docs/account?topic=account-identity-overview#functionalid-bestpract) or service account with a valid email address, this can help simplify account ownership continuity in your organization.
+To create an {{site.data.keyword.cloud_notm}} account, you need an IBMid user that will be the {{site.data.keyword.cloud_notm}} account owner. You can create this IBMid user during the [{{site.data.keyword.cloud_notm}} account registration process](https://{DomainName}/registration), or you use an existing IBMid user. We recommend creating the account by using a [functional ID](/docs/iam?topic=iam-identity-overview#functionalid-bestpract) or service account with a valid email address, this can help simplify account ownership continuity in your organization.
 
 <production>For any additional members of your {{site.data.keyword.cloud_notm}} account, you have the option to use normal or federated IBMid users as {{site.data.keyword.cloud_notm}} account members. Alternatively, you can connect your IdP to your {{site.data.keyword.cloud_notm}} account by using an {{site.data.keyword.appid_full_notm}} service instance. All users that log in through that {{site.data.keyword.appid_full_notm}} service instance are added to your account automatically, so you don't need to invite those users.</production><idp>For any additional members of your {{site.data.keyword.cloud_notm}} account, you have the option to use normal or federated IBMid users as {{site.data.keyword.cloud_notm}} account members. Alternatively, you can connect your IdP to your {{site.data.keyword.cloud_notm}} account by using the {{site.data.keyword.cloud_notm}} SAML SP or an {{site.data.keyword.appid_full_notm}} service instance. All users that log in through the {{site.data.keyword.cloud_notm}} SAML SP or that {{site.data.keyword.appid_full_notm}} service instance are added to your account automatically, so you don't need to invite those users.</idp>
 
@@ -133,17 +133,17 @@ The following links help you implement the federation that you choose:
 [IBMid Enterprise Federation Adoption Guide](https://www.ibm.com/docs/en/ief){: external}.
 :   The publicly available IBMid federation guide gives you an overview about the steps that are required to federate your Identity Provider and whom to contact to get the federation implemented. Be aware that you need an "IBM Sponsor" (for example, an {{site.data.keyword.IBM_notm}} employee that works as main contact between you and the IBMid team).
 
-[{{site.data.keyword.cloud_notm}} Self-Service Federation for External Identity Providers](/docs/account?topic=account-ibm-idp-integration).
+[{{site.data.keyword.cloud_notm}} Self-Service Federation for External Identity Providers](/docs/iam?topic=iam-ibm-idp-integration).
 :   Documentation for the {{site.data.keyword.cloud_notm}} IAM feature to federate with an Identity Provider through SAML using {{site.data.keyword.appid_full_notm}}.
 
-[Enabling authentication from an external identity provider](/docs/account?topic=account-ibm-idp-integration)
-:   Follow the steps necessary to integrate your IdP with the {{site.data.keyword.cloud_notm}} SAML SP so that your users can use your {{site.data.keyword.Bluemix_notm}} account without creating IBMids. Review the section [Mapping IdP assertions to IAM claims](/docs/account?topic=account-ibm-idp-integration#assertion-mapping) to make sure that your users are correctly onboarded and displayed inside your {{site.data.keyword.Bluemix_notm}} account.
+[Enabling authentication from an external identity provider](/docs/iam?topic=iam-ibm-idp-integration)
+:   Follow the steps necessary to integrate your IdP with the {{site.data.keyword.cloud_notm}} SAML SP so that your users can use your {{site.data.keyword.Bluemix_notm}} account without creating IBMids. Review the section [Mapping IdP assertions to IAM claims](/docs/iam?topic=iam-ibm-idp-integration#assertion-mapping) to make sure that your users are correctly onboarded and displayed inside your {{site.data.keyword.Bluemix_notm}} account.
 
 [Control access to cloud resources](https://developer.ibm.com/articles/identity-and-access-management-what-developers-need-to-know/){: external}.
 :   This tutorial describes how to use Dynamic Rules in Access Groups so that you automate permission assignments based on attributes that your Identity Provider is sending to {{site.data.keyword.cloud_notm}} via SAML. The tutorial itself was written for IBMid federation, but the same concept and steps also work with {{site.data.keyword.appid_full_notm}} based federation.
 
-[Using {{site.data.keyword.appid_short}} instances to build dynamic rules in access groups](/docs/account?topic=account-ibm-idp-integration#app-id-dynamic-rules)
-:   In case you plan to use dynamic rule with {{site.data.keyword.appid_full_notm}}-based federation, make sure to use the correct syntax for the "Identity Provider" setting inside the Dynamic Rule. The section in the link is describing how to build the correct "Identity Provider" identifier.[Using IdP data to build dynamic rules in access groups](/docs/account?topic=account-ibm-idp-integration#app-id-dynamic-rules)
+[Using {{site.data.keyword.appid_short}} instances to build dynamic rules in access groups](/docs/iam?topic=iam-ibm-idp-integration#app-id-dynamic-rules)
+:   In case you plan to use dynamic rule with {{site.data.keyword.appid_full_notm}}-based federation, make sure to use the correct syntax for the "Identity Provider" setting inside the Dynamic Rule. The section in the link is describing how to build the correct "Identity Provider" identifier.[Using IdP data to build dynamic rules in access groups](/docs/iam?topic=iam-ibm-idp-integration#app-id-dynamic-rules)
 :   In case you plan to use dynamic rule with federation through {{site.data.keyword.appid_full_notm}} or the {{site.data.keyword.cloud_notm}} SAML SP, reviw this section to make sure to use the correct syntax for the "Identity Provider" setting inside the dynamic rule.
 
 [{{site.data.keyword.cloud_notm}} Account Single Sign-on by using {{site.data.keyword.appid_full_notm}} and Microsoft Azure AD](https://medium.com/@vrvignesh/ibm-cloud-account-single-sign-on-using-ibm-cloud-app-id-and-microsoft-azure-ad-88932a5660a2){: external}

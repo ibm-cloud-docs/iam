@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: MFA, multifactor authentication, IBMid MFA, two-factor authentication, account MFA, time-based one-time passcode, TOTP, security key
 
@@ -96,7 +96,7 @@ Remove an authentication factor if you don't have access to it anymore to ensure
 1. Click **Remove**.
 1. Click **Yes** to confirm that you want to remove the authentication factors.
 
-You can also enable and disable MFA for your own account on the Verification methods and authentication factors page. Changing the authentication settings for an account impacts all members of the account. By enabling MFA, you can require more secure logins for your account. For more information, see [Enabling MFA in your account](/docs/account?topic=account-enablemfa).
+You can also enable and disable MFA for your own account on the Verification methods and authentication factors page. Changing the authentication settings for an account impacts all members of the account. By enabling MFA, you can require more secure logins for your account. For more information, see [Enabling MFA in your account](/docs/iam?topic=iam-enablemfa).
 {: tip}
 
 ### Resetting authentication factors

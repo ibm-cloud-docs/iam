@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: MFA, multifactor authentication, two-factor authentication, security key
 
@@ -48,8 +48,8 @@ Email, text message, and voice call verification methods use IBM Security Verify
 
 As an administrator on the IAM Identity Service or All IAM Account Management services, you can enable MFA for the account or a specific user, and it applies to all account resources.
 
-- You can update the MFA setting for your account by going to **Manage** > **Access (IAM)** > **Settings** > **Authentication** in the {{site.data.keyword.Bluemix}} console. For more information, see [Enabling MFA for an account](/docs/account?topic=account-enablemfa#enabling-account).
-- You can update the MFA setting for a specific user in your account by going to **Manage** > **Access (IAM)** > **Users** and clicking the user whose MFA you want to update. If you are a new user, use the ID-based MFA option to ensure that your login is secure. For more information, see [Enabling MFA for an individual user](/docs/account?topic=account-enablemfa#enabling-user).
+- You can update the MFA setting for your account by going to **Manage** > **Access (IAM)** > **Settings** > **Authentication** in the {{site.data.keyword.Bluemix}} console. For more information, see [Enabling MFA for an account](/docs/iam?topic=iam-enablemfa#enabling-account).
+- You can update the MFA setting for a specific user in your account by going to **Manage** > **Access (IAM)** > **Users** and clicking the user whose MFA you want to update. If you are a new user, use the ID-based MFA option to ensure that your login is secure. For more information, see [Enabling MFA for an individual user](/docs/iam?topic=iam-enablemfa#enabling-user).
 
 ### MFA for users with an IBMid
 {: #mfa-options-ibmid}
@@ -70,7 +70,7 @@ Users authenticate by using one of the following MFA factors. This option applie
 
 All users log in by using only a standard ID and password, which offers the lowest level of security. To increase the level of security for this option, you can disable logging in to the CLI with only a username and password. This way, you require an API key to log in to the CLI or users can log in with `--sso`.
 
-Starting 3 May 2023, by default CLI logins with only a username and password are disabled for all users that have MFA set to **None**. This applies to users in new and existing accounts. Administrators can opt-out before that date in the {{site.data.keyword.cloud_notm}} console. For more information, see [Disabling CLI logins with only a password](/docs/account?topic=account-enablemfa#disabling-cli).
+Starting 3 May 2023, by default CLI logins with only a username and password are disabled for all users that have MFA set to **None**. This applies to users in new and existing accounts. Administrators can opt-out before that date in the {{site.data.keyword.cloud_notm}} console. For more information, see [Disabling CLI logins with only a password](/docs/iam?topic=iam-enablemfa#disabling-cli).
 {: important}
 
 The following table lists the rules that users are going to be required to follow when authenticating through **IAM > Settings > Authentication**:

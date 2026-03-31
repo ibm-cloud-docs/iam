@@ -3,9 +3,9 @@
 copyright:
 
   years: 2023, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
-keywords: 
+keywords:
 
 subcollection: iam
 
@@ -23,7 +23,7 @@ You must have access to manage your own login settings for the account. Otherwis
 
 To migrate to the {{site.data.keyword.cloud_notm}} MFA:
 
-1. Set up {{site.data.keyword.cloud_notm}} MFA. You must have at least the role of administrator for the IAM (Identity and Access Management) service. For more information, see [Enabling MFA](/docs/account?topic=account-enablemfa#enabling).
+1. Set up {{site.data.keyword.cloud_notm}} MFA. You must have at least the role of administrator for the IAM (Identity and Access Management) service. For more information, see [Enabling MFA](/docs/iam?topic=iam-enablemfa#enabling).
 2. Disable the legacy account-based MFA.
 
    1. Go to **Manage** > **Access (IAM)** > **Users** > select your name > **User details**.

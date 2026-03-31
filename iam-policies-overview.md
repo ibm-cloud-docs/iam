@@ -50,7 +50,7 @@ You can provide fine-grained access for users, service IDs, or access groups by 
 * Resources in an individual instance
 * A single resource type within an instance, for example, a bucket in an {{site.data.keyword.objectstorageshort}} instance
 
-If you want to enable a user full administrator access to complete the [account management tasks](/docs/account?topic=account-account-services#account-services), such as inviting and removing users, viewing billing and usage, managing service IDs, managing access groups, managing user access, and access to all account resources, you must assign a user the following access:
+If you want to enable a user full administrator access to complete the [account management tasks](/docs/iam?topic=iam-account-services#account-services), such as inviting and removing users, viewing billing and usage, managing service IDs, managing access groups, managing user access, and access to all account resources, you must assign a user the following access:
 * A policy for **All Identity and Access enabled services** within the account with the administrator and manager roles assigned.
 * A policy with the administrator role assigned on **All Account Management services**.
 
@@ -60,7 +60,7 @@ If you want to enable a user full administrator access to complete the [account 
 You can assign access to a group of services so that you need only a single policy to assign access to multiple services. This way, you decrease the number of policies in your account and reduce the time and effort to manage access.
 
 * **All Identity and Access enabled services**: All catalog services that use IAM for access management.
-* **All Account Management services**: Platform services, such as billing and usage, license and entitlements, enterprises, and more. For more information, see [Assigning access to account management services](/docs/account?topic=account-account-services&interface=ui#account-management-actions-roles).
+* **All Account Management services**: Platform services, such as billing and usage, license and entitlements, enterprises, and more. For more information, see [Assigning access to account management services](/docs/iam?topic=iam-account-services&interface=ui#account-management-actions-roles).
    * **All IAM Account Management services**: A subset of account management services that includes the IAM platform services IAM Identity, IAM Access Management, IAM Users, IAM Groups, and future IAM services.
 
 ## Assigning {{site.data.keyword.cloud_notm}} access policies
@@ -75,7 +75,7 @@ In {{site.data.keyword.cloud_notm}}, a user, service ID, or the members of an ac
 To reduce the number of policies in the account and keep only the minimum access that is required for each user, you can identify and remove the infrequently used access policies. For more information, see [Managing inactive policies](/docs/iam?topic=iam-iam-audit-policies#iam-audit-policies-list).
 {: tip}
 
-When you specify a resource in a policy because {{site.data.keyword.cloud_notm}} is [attribute-based](/docs/account?topic=account-access-management-overview#access-management-system), you can specify a broad set of resources for a user to have access to, for example all resources in a resource group. Or, you can narrow the user's access to a specific instance of a single service or even a subresource type, such as a {{site.data.keyword.cos_short}} bucket. {{site.data.keyword.cloud_notm}} IAM provides a high level of flexibility and granularity to help you assign only the type of access that is required. A few examples of the different levels of access that you can assign by using attributes in an access policy are the following:
+When you specify a resource in a policy because {{site.data.keyword.cloud_notm}} is [attribute-based](/docs/iam?topic=iam-access-management-overview#access-management-system), you can specify a broad set of resources for a user to have access to, for example all resources in a resource group. Or, you can narrow the user's access to a specific instance of a single service or even a subresource type, such as a {{site.data.keyword.cos_short}} bucket. {{site.data.keyword.cloud_notm}} IAM provides a high level of flexibility and granularity to help you assign only the type of access that is required. A few examples of the different levels of access that you can assign by using attributes in an access policy are the following:
 
 * All Account Management services
 * A specific account management service
@@ -85,7 +85,7 @@ When you specify a resource in a policy because {{site.data.keyword.cloud_notm}}
 * A specific instance of a service in the account
 * A single subresource type within an instance, for example, a bucket in an {{site.data.keyword.cos_short}} instance
 
-If a specific predefined platform or service role doesn't fit what you're looking for when assigning the level of access, you can create a [custom role](/docs/account?topic=account-custom-roles) for a specific service and then choose from the available actions to create a role that fits your organization's needs.
+If a specific predefined platform or service role doesn't fit what you're looking for when assigning the level of access, you can create a [custom role](/docs/iam?topic=iam-custom-roles) for a specific service and then choose from the available actions to create a role that fits your organization's needs.
 {: tip}
 
 ### Policy example
@@ -132,4 +132,4 @@ Access groups are not identities like a user or service ID; however, they are a 
 ```
 {: codeblock}
 
-In addition to an access policy for a user, service ID, or access group that can provide access to a service, specific resource, or resource group in the account, {{site.data.keyword.cloud_notm}} also provides the capability to assign an access policy that is called a service to service authorization, which provides access between services. For an example of this policy type, see [Creating an authorization by using the API](/docs/account?topic=account-serviceauth&interface=api#auth-api).
+In addition to an access policy for a user, service ID, or access group that can provide access to a service, specific resource, or resource group in the account, {{site.data.keyword.cloud_notm}} also provides the capability to assign an access policy that is called a service to service authorization, which provides access between services. For an example of this policy type, see [Creating an authorization by using the API](/docs/iam?topic=iam-serviceauth&interface=api#auth-api).

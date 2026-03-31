@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: trusted profile, federated users, granting access, update trusted profile, compute resource, IAM trusted profile, trust relationship, establish trust,  trust policy, trusted entity, assume access, apply access, remove trusted profile
 
@@ -20,7 +20,7 @@ Manage trusted profiles by updating the permissions or redefining trust relation
 
 When you remove trusted profiles, you revoke all active sessions. Users are immediately logged out and the removed profiles are no longer available to connect to the target account. API calls that use access tokens might be successful until the access token expires.
 
-You can use {{site.data.keyword.cloudaccesstrailshort}} to monitor which federated users and compute resources apply a trusted profile. For more information, see [Monitoring login sessions for trusted profiles](/docs/account?topic=account-trusted-profile-monitor).
+You can use {{site.data.keyword.cloudaccesstrailshort}} to monitor which federated users and compute resources apply a trusted profile. For more information, see [Monitoring login sessions for trusted profiles](/docs/iam?topic=iam-trusted-profile-monitor).
 {: tip}
 
 ## Before you begin
@@ -328,28 +328,28 @@ You can remove a trusted profile from your account by using the CLI. For more in
    ibmcloud login
    ```
    {: codeblock}
-   
+
 1. Check the list of trusted profiles for the current account and select the one that you want to remove. The following command shows the list of trusted profiles for your {{site.data.keyword.cloud_notm}} account:
 
    ```bash
    ibmcloud iam trusted-profiles
    ```
-   {: codeblock}  
-   
+   {: codeblock}
+
 1. Remove the trusted profile from your account by running the following command. Specify the ID or the name of the trusted profile that you would like to remove.
 
    ```bash
    ibmcloud iam trusted-profile-delete <IDorName>
    ```
    {: codeblock}
-   
-For example, the following command removes a trusted profile that is named `Test trusted profile`. 
+
+For example, the following command removes a trusted profile that is named `Test trusted profile`.
 
    ```bash
    ibmcloud iam trusted-profile-delete <Test trusted profile>
    ```
    {: codeblock}
-   
+
 ## Removing trusted profiles by using the API
 {: #remove-tp-api}
 {: api}
@@ -362,4 +362,3 @@ curl -X DELETE 'https://iam.cloud.ibm.com/v1/profiles/PROFILE_ID' -H 'Authorizat
 {: codeblock}
 
 For more information, see the [IAM Identity Services API](/apidocs/iam-identity-token-api).
-

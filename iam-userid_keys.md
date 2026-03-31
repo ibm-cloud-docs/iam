@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: API key, user API keys, IBM Cloud API keys, manage user keys, create API key
 
@@ -31,7 +31,7 @@ The API key that is associated with your user identity has all of the access you
 
 A functional ID is a user ID created to represent a program, application, or service. The functional ID can be invited to an account and assigned only the access for a particular purpose, such as interacting with a specific resource or application. The functional ID should be granted only the minimum level access in a single account that is needed for the specific function for which it was created.
 
-If you are applying a trusted profile, you can't create a user API key. You can still create and manage all other API keys. For example, service ID API keys. For more information, see the [FAQ about IAM](/docs/account?topic=account-iamfaq#tp-apikey).
+If you are applying a trusted profile, you can't create a user API key. You can still create and manage all other API keys. For example, service ID API keys. For more information, see the [FAQ about IAM](/docs/iam?topic=iam-iamfaq#tp-apikey).
 {: note}
 
 
@@ -39,7 +39,7 @@ If you are applying a trusted profile, you can't create a user API key. You can 
 {: #manage-user-keys}
 {: ui}
 
-To manage the {{site.data.keyword.cloud_notm}} API keys that are associated with your user identity or the ones that you have access to manage for other users in the account, go to **Manage** > **Access (IAM)** > **API keys** in the {{site.data.keyword.cloud_notm}} console. On the API keys page, you can create, edit, or delete {{site.data.keyword.cloud_notm}} API keys for yourself. You can also manage all [classic infrastructure API keys](/docs/account?topic=account-classic_keys) for users that you are an ancestor of in the user hierarchy. In addition, if you are the account owner or a user assigned the required access to manage other user's API keys in the account, you can use the **View** filter to list and manage those API keys too.
+To manage the {{site.data.keyword.cloud_notm}} API keys that are associated with your user identity or the ones that you have access to manage for other users in the account, go to **Manage** > **Access (IAM)** > **API keys** in the {{site.data.keyword.cloud_notm}} console. On the API keys page, you can create, edit, or delete {{site.data.keyword.cloud_notm}} API keys for yourself. You can also manage all [classic infrastructure API keys](/docs/iam?topic=iam-classic_keys) for users that you are an ancestor of in the user hierarchy. In addition, if you are the account owner or a user assigned the required access to manage other user's API keys in the account, you can use the **View** filter to list and manage those API keys too.
 
 | Filter Options                                     | Displayed API Keys                                         | Required Access                            | Allowed Actions            |
 |----------------------------------------------------|------------------------------------------------------------|--------------------------------------------|----------------------------|
@@ -708,7 +708,7 @@ If a leaked user API key is detected, you can use the console to review it. Comp
 {: #review-apikeys-cli}
 {: cli}
 
-If a leaked user API key is detected, you can use the CLI to review it. Complete the following steps: 
+If a leaked user API key is detected, you can use the CLI to review it. Complete the following steps:
 
 1. Log in to the {{site.data.keyword.cloud_notm}} CLI.
 1. Select the account that contains the leaked API key.

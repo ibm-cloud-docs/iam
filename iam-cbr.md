@@ -3,7 +3,7 @@
 copyright:
 
   years: 2023, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-03-31"
 
 keywords: iam, context-based restrictions, protecting iam resources, security
 
@@ -328,7 +328,7 @@ The IAM Identity service includes the ability to view, update and delete service
 
 You can protect the whole service, or restrict a specific set of actions based on the context of the request. To protect only a specific set of actions, review the following sections.
 
-The IAM Token API is not subject to context-based restrictions. Any rules that target the IAM Identity service are not enforced on the Token API. The Token API uses a different mechanism to set IP address restrictions for users logging in to an account, during which users aquire a token. For more information, see [Allowing specific IP addresses for an account](/docs/account?topic=account-ips&interface=ui#ips_account).
+The IAM Token API is not subject to context-based restrictions. Any rules that target the IAM Identity service are not enforced on the Token API. The Token API uses a different mechanism to set IP address restrictions for users logging in to an account, during which users aquire a token. For more information, see [Allowing specific IP addresses for an account](/docs/iam?topic=iam-ips&interface=ui#ips_account).
 {: important}
 
 ### Restricting the ability to manage service IDs and their API keys in the console

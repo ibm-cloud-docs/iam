@@ -3,7 +3,7 @@
 copyright:
 
    years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: cross-account restriction, cross-account resource, resource sharing across account, cross-account, cross account
 
@@ -21,11 +21,11 @@ By default, users with an IAM access policy on resources in an account can acces
 
 You can monitor how limiting access to resources in your account affects users without enforcing it by using report-only mode. This way, you can identify gaps in your access policies and make sure that users have the access they need. For the best experience, turn on report-only mode for at least 30 days before you limit access to resources in your account.
 
-If you want to know which identities in your account access a specific resource, see [Auditing access to resources](/docs/account?topic=account-access-report&interface=ui).
+If you want to know which identities in your account access a specific resource, see [Auditing access to resources](/docs/iam?topic=iam-access-report).
 
 Anticipating the name and number of users who are impacted by limiting identity interactions can be difficult. To turn on report-only mode and observe the potential impact of limiting access to resources in your account, complete the following steps:
 
-1. Set up {{site.data.keyword.atracker_full_notm}} to view IAM audit events. For more information, see [Viewing activity tracking events for IAM](/docs/account?topic=account-at_events_iam#at-viewing-iam)
+1. Set up {{site.data.keyword.atracker_full_notm}} to view IAM audit events. For more information, see [Viewing activity tracking events for IAM](/docs/iam?topic=iam-at_events_iam#at-viewing-iam)
 1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)** > **Settings** > **Resources**.
 1. Click the **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit").
 1. Select **Report-only**.
@@ -37,7 +37,7 @@ Anticipating the name and number of users who are impacted by limiting identity 
     {: tip}
 
 1. Click **Save**.
-1. Next, view your [{{site.data.keyword.atracker_full_notm}} reports](/docs/account?topic=account-cross-acct#view-cross-acct-report).
+1. Next, view your [{{site.data.keyword.atracker_full_notm}} reports](/docs/iam?topic=iam-cross-acct#view-cross-acct-report).
 
 After you monitor the results from report-only mode for at least 30 days, update the setting to **Limited**.
 
@@ -60,11 +60,11 @@ To view {{site.data.keyword.atracker_full_notm}} events, you must configure an {
 When you are using the **Report-only** mode, identify the cross-account access that is blocked before switching to the **Limited** mode. To assess whether cross-account access would be blocked, complete the following steps:
 
 1. Select the filter for `responseData.isEnforced:"false" AND responseData.decision:"Deny"`
-   
+
 This is the most critical analysis you should perform. This query reveals all cross-account access attempts that would be blocked when enforcement is enabled. These results show which identities are currently accessing resources across account boundaries that would be denied access when you switch to **Limited** mode.
 
 2. For each "deny" result, you must determine if this cross-account flow needs to be preserved or if it should be blocked:
-   - If the flow should be preserved: Preferably, contact the user and adjust the work flow to ensure the token used is scoped to the correct account, or if that isn't possible, add the external account to your allowlist. For more information, see [Fixing unwanted external identity interactions](/docs/account?topic=account-cross-acct#fix-external-interactions).
+   - If the flow should be preserved: Preferably, contact the user and adjust the work flow to ensure the token used is scoped to the correct account, or if that isn't possible, add the external account to your allowlist. For more information, see [Fixing unwanted external identity interactions](/docs/iam?topic=iam-cross-acct#fix-external-interactions).
    - If the flow should be blocked: No action needed, as it is automatically blocked when the **Limited** mode is selected.
 
 ### Validating allowlist changes
@@ -73,7 +73,7 @@ This is the most critical analysis you should perform. This query reveals all cr
 When you decide to preserve specific external identity interaction flows by adding accounts to your allowlist, you can verify that these changes are working as expected by using the following steps:
 
 1. Select the filter for `responseData.isEnforced:"false" AND responseData.decision:"Permit"`
-   
+
    This query shows requests that passed the restriction, including those that were previously denied but are now permitted due to your allowlist changes.
 
 2. Look specifically for permits from accounts you recently added to your allowlist to confirm your changes are working correctly. This validation step is required when you've made allowlist changes and want to ensure that the previously blocked cross-account access is now permitted.
@@ -84,10 +84,10 @@ When you decide to preserve specific external identity interaction flows by addi
 When the restriction is set to **Limited**, you can monitor blocked requests:
 
 - Select the filter for `responseData.isEnforced:"true" AND responseData.decision:"Deny"`
-  
+
 This query displays requests that passed the restriction, including ones that were previously denied but are now allowed due to changes made to your allowlist.
 
-You can add or remove accounts from the allowlist at any time to meet your security requirements. For a list of the actions that generate an event, see [Activity tracking events for IAM](/docs/account?topic=account-at_events_iam).
+You can add or remove accounts from the allowlist at any time to meet your security requirements. For a list of the actions that generate an event, see [Activity tracking events for IAM](/docs/iam?topic=iam-at_events_iam).
 
 ## Fixing unwanted external identity interactions
 {: #fix-external-interactions}
@@ -103,7 +103,7 @@ The External Identity Interactions setting does not prevent you from adding spec
 
 To implement this approach, use the following steps:
 
-1. Create a trusted profile in your account. For more information, see [Creating trusted profiles](/docs/account?topic=account-create-trusted-profile&interface=ui).
+1. Create a trusted profile in your account. For more information, see [Creating trusted profiles](/docs/iam?topic=iam-create-trusted-profile).
 2. Add specific identities from other accounts to this trusted profile.
 3. Grant the trusted profile appropriate access to resources in your account.
 4. Configure external identities to use this profile for resource access.
