@@ -14,7 +14,7 @@ toc:
       topics:
       - getting-started.md
       - topicgroup:
-          label: What is IAM?
+          label: How IAM works
           topics:
           - iam-identities.md
           - iam-access-concepts.md
