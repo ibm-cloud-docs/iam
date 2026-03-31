@@ -27,8 +27,6 @@ toc:
           - iam-access-concepts.md
           - iam-policies-overview.md
           - iam-roles-overview.md
-          - topic: iam-least-privilege.md
-            navtitle: Implementing least privilege access
           - iam-mappings.md
       - iam-manageaccess.md
       - context-restrictions-what-is.md
