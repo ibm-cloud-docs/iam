@@ -3,7 +3,7 @@
 copyright:
 
   years: 2022, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: what is IAM, IAM features, IAM API, how IAM works, federated users, service IDs, trusted profiles, workload identity
 
@@ -23,7 +23,7 @@ The identity concept consists of user identities, service and app identities, AP
 
 {{site.data.keyword.cloud_notm}} IAM grants access to individual identities or a group of identities by using policies. The policies allow for users to grant access while adhering to the principle of least privilege by utilizing roles and scoped resources. Except for account owners, user identities do not have any access grants by default. Each access grant is independent of other access grants, and users with permission can access resources by using the console and APIs. The actions that are allowed can be for a single API or a group of APIs depending on customer needs. Access can be granted at a high level for a grouping of resources or scoped to a single resource depending on customer needs.
 
-Removing access for inactive identities can reduce the risk of unauthorized access to your {{site.data.keyword.cloud_notm}} resource and help you manage access more efficiently. For more information, see [Identifying inactive identities](/docs/account?topic=account-id-inactive-identities).
+Removing access for inactive identities can reduce the risk of unauthorized access to your {{site.data.keyword.cloud_notm}} resource and help you manage access more efficiently. For more information, see [Identifying inactive identities](/docs/iam?topic=iam-id-inactive-identities).
 {: tip}
 
 ## Users
@@ -42,7 +42,7 @@ To find your IAM ID, go to **Manage** >  **Access (IAM)**. You can see your IAM 
 
 {{site.data.keyword.cloud_notm}} API keys are credentials that are associated with a user's identity. The access that the user is assigned can be from policies across multiple accounts that the user is a member of. User API key credentials can be used to make API and CLI calls. The user API key can be used directly or used to generate a token.
 
-For more information about using an API key associated with your user identity, see [Managing user API keys](/docs/account?topic=account-userapikey).
+For more information about using an API key associated with your user identity, see [Managing user API keys](/docs/iam?topic=iam-userapikey).
 
 {{_include-segments/federating-segment.md}}
 
