@@ -17,7 +17,7 @@ subcollection: iam
 # IAM access policies for resource-level permissions
 {: #iamusermanpol}
 
-Assign granular, attribute-based access policies to control who can access specific IBM Cloud resources and what actions they can perform on them.
+Assign granular, attribute-based access policies to achieve least privilege access by controlling who can access specific IBM Cloud resources and what actions they can perform on them.
 {: shortdesc}
 
 The following graphic helps to explain how the IAM policy is created. Policies are always created by specifying the subject first. The subject is a specific user, service ID, access group, or a trusted profile. Next, the target of the policy is selected which is what you are allowing the user to access, for example: all services in a resource group, all IAM-enabled services in the account, account management services, or a particular service instance. Finally, you complete your access policy by selecting from the available roles. These roles define exactly what actions that a user can complete. More configuration options might be available, depending on the service you select.

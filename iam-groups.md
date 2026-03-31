@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: access groups, access group, create group, assign access to group, administrator, administrator role, streamlined access, efficient permissions
 
@@ -16,7 +16,7 @@ subcollection: iam
 # Streamlined access management with access groups
 {: #groups}
 
-Organize users, service IDs, and trusted profiles into access groups for efficient permission management. Assign policies once to the entire group.
+Organize users, service IDs, and trusted profiles into access groups for efficient permission management. Assign fine-grained policies once to the entire group to implement least privilege at scale.
 {: shortdesc}
 
 An access group can be created to organize a set of users, service IDs, and trusted profiles into a single entity that makes it easy for you to assign access. You can assign a single policy to the group instead of assigning the same access multiple times for an individual user or service ID.

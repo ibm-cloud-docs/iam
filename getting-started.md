@@ -3,7 +3,7 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-31"
 
 keywords: what is IAM, IAM features, IAM API, how IAM works, centralized access management, standards-based, enterprise access control
 
@@ -16,7 +16,7 @@ subcollection: iam
 # How {{site.data.keyword.cloud_notm}} Identity and Access Management works
 {: #iamoverview}
 
-{{site.data.keyword.cloud}} Identity and Access Management (IAM) provides centralized, standards-based access control for cloud resources across your organization.
+{{site.data.keyword.cloud}} Identity and Access Management (IAM) provides centralized, standards-based access control with fine-grained access management to implement least privilege across your organization.
 {: shortdesc}
 
 IAM enables you to securely authenticate users for platform services and control access to resources consistently across {{site.data.keyword.cloud_notm}}. A set of services is enabled to use IAM for access control, and are organized into [resource groups](/docs/account?topic=account-rgs) within your account so you can give users access quickly to more than one resource at a time. Each of these services is labeled as "IAM-enabled" in the catalog. You can use IAM access policies to assign users, service IDs, and trusted profiles access to resources within your account. And, you can group users, service IDs, and trusted profiles into an [access group](/docs/iam?topic=iam-groups) to easily give all members of the group the same level of access.

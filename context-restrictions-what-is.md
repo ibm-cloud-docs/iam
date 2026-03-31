@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-25"
+lastupdated: "2026-03-31"
 
 keywords: Context based restriction, rule, context, network zone, IBM Cloud restrictions, IBM Cloud context restriction, IBM Cloud access, access control, resource access, endpoint type, layered security, reduce attack surface
 
@@ -16,7 +16,7 @@ subcollection: iam
 # Layered security with context-based restrictions
 {: #context-restrictions-whatis}
 
-Reduce your attack surface with context-based restrictions. Add network location, endpoint type, and MFA requirements to your identity-based policies.
+Reduce your attack surface with context-based restrictions. Add network location, endpoint type, and MFA requirements to your identity-based policies for fine-grained access management.
 {: shortdesc}
 
 Context-based restrictions give account owners and administrators the ability to define and enforce access restrictions for {{site.data.keyword.cloud}} resources based on a rule's criteria. The criteria include the network location of access requests, the endpoint type from where the request is sent, the multifactor authentication level of an identity, and sometimes the API that the request tries to access. These restrictions work with traditional IAM policies, which are based on identity, to provide another layer of protection. Since both IAM policies and context-based restrictions enforce access, context-based restrictions offer protection even in the face of compromised or mismanaged credentials.

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: users level of access, user control, access control, permissions, manage access, access management, platform management tasks, assign roles, centralized, enterprise scale
 
@@ -19,7 +19,7 @@ subcollection: iam
 Control user access to IBM Cloud resources with centralized access management. Assign roles and policies to manage permissions at enterprise scale.
 {: shortdesc}
 
-Access management enables you to control which users see, create, use, and manage resources in your account. To grant access, you can assign roles that allow users levels of access for completing platform management tasks and accessing account resources.
+Access management enables you to control which users see, create, use, and manage resources in your account. To grant access following least privilege principles, you can assign roles that allow users fine-grained levels of access for completing platform management tasks and accessing account resources.
 
 The way that you manage access in {{site.data.keyword.Bluemix}} depends on the type of resource that you want to assign access to. {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) is the access management system that is used for consistently managing resources that are organized in a resource group across the {{site.data.keyword.cloud_notm}} platform. [Classic infrastructure resources](/docs/account?topic=account-mngclassicinfra) are not managed by using IAM. These resource types have their own access management systems.
 

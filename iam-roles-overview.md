@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-31"
 
 keywords: IAM access, access policy, IAM roles, platform management roles, service access roles, types of access policies, custom roles, permissions
 
@@ -16,7 +16,7 @@ subcollection: iam
 # Platform and service access roles for permissions
 {: #userroles}
 
-Define user permissions with platform management roles and service access roles. Create custom roles to meet your organization's specific needs.
+Define user permissions with platform management roles and service access roles to implement least privilege access. Create custom roles for fine-grained access management that meets your organization's specific needs.
 {: shortdesc}
 
 All services that are organized in a resource group in your account are managed by using {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). Account owners are automatically assigned the account administrator role. As the account administrator, you can assign and manage access for users, create resource groups, create access groups, create trusted profiles, view billing details and track usage, and create service instances. You provide access for users, service IDs, access groups, and trusted profiles by creating policies that set a target for the subject of the policy to access and a role that defines what type of access that is allowed.
