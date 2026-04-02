@@ -46,7 +46,7 @@ Minimized accidental changes
 ### Granular resource targeting
 {: #granular-targeting}
 
-WIth IAM policies, you can target resources at multiple levels of granularity:
+With IAM policies, you can target resources at multiple levels of granularity:
 
 Account-wide access
 :   Grant access to all resources of a specific type across your entire account.
