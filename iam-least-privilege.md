@@ -3,7 +3,7 @@
 copyright:
 
   years: 2026
-lastupdated: "2026-04-02"
+lastupdated: "2026-04-06"
 
 keywords: least privilege, fine-grained access, principle of least privilege, minimal access, access control, security best practices, enterprise access management, granular permissions, zero trust
 
@@ -191,5 +191,5 @@ Now that you understand how to implement least privileged access with {{site.dat
 * [Understand the types of roles for creating fine-grained access policies](/docs/iam?topic=iam-userroles) that grant only the necessary permissions.
 * [Implement context-based restrictions](/docs/iam?topic=iam-context-restrictions-whatis) to add network-level controls.
 * [Use trusted profiles](/docs/iam?topic=iam-create-trusted-profile) for compute resources and federated users.
-* [Leverage IAM enterprise-managed templates](/docs/enterprise-management?topic=enterprise-management-ag-template-created) for consistent access control across your enterprise.
+* [Leverage IAM enterprise-managed templates](/docs/enterprise-management?topic=enterprise-management-assign-access-enterprise#templates-roles) for consistent access control across your enterprise.
 * [Audit and review access](/docs/iam?topic=iam-access-report) regularly to maintain the least privilege over time.
