@@ -85,6 +85,7 @@ toc:
           topics:
           - context-restrictions-create.md
           - context-restrictions-manage.md
+          - cm-cbr.md
           - iam-cbr.md
           - cbr-monitor.md
       - topicgroup:
