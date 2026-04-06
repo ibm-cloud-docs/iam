@@ -7,12 +7,8 @@
   "section_topics": {
     "links": [
       {
-        "title": "What is IBM Cloud IAM?",
-        "href": "/docs/iam?group=what-is-iam"
-      },
-      {
         "title": "Getting started with IAM",
-        "href": "/docs/iam?topic=iam-access-getstarted"
+        "href": "/docs/iam?topic=iam-iamoverview"
       },
       {
         "title": "Managing access with access groups",

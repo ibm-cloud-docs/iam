@@ -13,7 +13,7 @@ subcollection: iam
 
 {{site.data.keyword.attribute-definition-list}}
 
-# What is {{site.data.keyword.cloud_notm}} Identity and Access Management?
+# Getting started with {{site.data.keyword.cloud_notm}} IAM
 {: #iamoverview}
 
 {{site.data.keyword.cloud}} Identity and Access Management (IAM) provides centralized, standards-based identity and access management with fine-grained access control to implement least-privilege access across your enterprise workloads and reduce your attack surface.
