@@ -14,13 +14,6 @@ toc:
       topics:
       - getting-started.md
       - topicgroup:
-          label: IAM features
-          topics:
-          - iam-access-management-features.md
-          - iam-trusted-profiles-overview.md
-          - iam-authentication-features.md
-          - iam-advanced-features.md
-      - topicgroup:
           label: How IAM works
           topics:
           - iam-identities.md

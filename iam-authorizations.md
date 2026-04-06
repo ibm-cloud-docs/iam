@@ -3,9 +3,9 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-04-06"
 
-keywords: authorizations, service to service access, access between services, dependent service, source service, target service, assigned access, access policies
+keywords: authorizations, service to service access, access between services, dependent service, source service, target service, assigned access, access policies, defense in depth, advanced security
 
 subcollection: iam
 
@@ -13,7 +13,7 @@ subcollection: iam
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using authorizations to grant access between services
+# Granting access between services
 {: #serviceauth}
 
 Use {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) to create or remove an authorization that grants one service access to another service. Use authorization delegation to automatically create access policies that grant access to dependent services.

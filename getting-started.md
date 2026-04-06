@@ -3,7 +3,7 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-04-06"
 
 keywords: what is IAM, IAM features, IAM API, how IAM works, centralized access management, standards-based, enterprise access control, workload, identity provider, centralized management, fine-grained access, enterprise, layered security architectures, attack surface, SSO, least-privilege access, defense in depth, standards-based identity and access management
 
@@ -25,41 +25,13 @@ You can use trusted profiles to automate the grouping and granting of access to 
 
 ![IAM access control in an account](images/tp-in-ag-access-diagram.svg){: caption="How IAM access works in an account by using access groups. Service IDs and select {{site.data.keyword.cloud_notm}} can also asssume trusted profiles." caption-side="bottom"}
 
-For classic infrastructure that doesn't support the use of IAM policies for managing access, see the [classic infrastructure permissions](/docs/iam?topic=iam-mngclassicinfra) documentation.
+For classic infrastructure that doesn't support the use of IAM policies for managing access, see [Managing classic infrastructure access](/docs/iam?topic=iam-mngclassicinfra).
 {: note}
 
-## Key IAM features
-{: #iam-key-features}
+Complete the following steps to get started with the comprehensive set of IAM features that are available for managing access to your {{site.data.keyword.cloud_notm}} resources:
 
-IAM provides a comprehensive set of features to manage access to your {{site.data.keyword.cloud_notm}} resources:
-
-### Access management
-{: #iam-access-mgmt}
-
-Control who can access your resources with fine-grained policies, access groups, and time-based conditions. For more details, see [access management features](/docs/iam?topic=iam-access-mgmt-features).
-
-### Trusted profiles
-{: #iam-trusted-profiles}
-
-Automate access for federated users and compute resources without managing credentials. For more details, see [trusted profiles](/docs/iam?topic=iam-trusted-profiles-overview).
-
-### Authentication
-{: #iam-authentication}
-
-Secure your account with API keys, service IDs, and multifactor authentication. For more details, see [authentication features](/docs/iam?topic=iam-authentication-features).
-
-### Advanced security
-{: #iam-advanced-security}
-
-Implement defense in depth with service authorizations and context-based restrictions. For more details, see [advanced IAM features](/docs/iam?topic=iam-advanced-features).
-
-## Getting started with IAM
-{: #iam-getting-started}
-
-Complete the following steps to start using IAM effectively:
-
-1. Review [IAM access concepts](/docs/iam?topic=iam-access-management-overview) and [IAM identities](/docs/iam?topic=iam-identity-overview) to understand the fundamentals.
-2. Plan your access strategy by learning about [least privilege access](/docs/iam?topic=iam-least-privilege) and reviewing [IAM policies overview](/docs/iam?topic=iam-iamusermanpol).
-3. Follow the [Assigning access quickstart tutorial](/docs/iam?topic=iam-access-getstarted) to invite users and assign access to your account.
-4. Set up [trusted profiles for federated users](/docs/iam?topic=iam-trustedprofile-fedusers-tutorial) or [compute resources](/docs/iam?topic=iam-trustedprofile-compute-tutorial).
-5. Implement [context-based restrictions](/docs/iam?topic=iam-context-restrictions-tutorial) and [multifactor authentication](/docs/iam?topic=iam-types) for enhanced security.
+1. Control who can access your resources with fine-grained policies, access groups, and time-based conditions. See [IAM access concepts](/docs/iam?topic=iam-access-management-overview) and [IAM identities](/docs/iam?topic=iam-identity-overview).
+1. Plan your access strategy by learning about [least privilege access](/docs/iam?topic=iam-least-privilege) and reviewing [IAM policies overview](/docs/iam?topic=iam-iamusermanpol).
+1. Invite users and assign access to your account by following the [Assigning access quickstart tutorial](/docs/iam?topic=iam-access-getstarted).
+1. Automate access for federated users and compute resources without managing credentials. See [Managing access for federated users](/docs/iam?topic=iam-trustedprofile-fedusers-tutorial) and [Managing access for compute resources](/docs/iam?topic=iam-trustedprofile-compute-tutorial).
+1. Implement defense in depth with service authorizations and context-based restrictions. See [Granting access between services](/docs/iam?topic=iam-serviceauth) and [Leveraging context-based restrictions to secure your resources](/docs/iam?topic=iam-context-restrictions-tutorial).
