@@ -3,7 +3,7 @@
 copyright:
 
   years: 2023, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-04-06"
 
 keywords: SAML federation, federation option, federated IBMid, SAML fed, federated, identity provider integration, SSO, single sign-on
 
@@ -52,7 +52,7 @@ Non-federated IBMid users
 :   Enterprise customers often connect their internal user directory, or IdP, with IBMid so that their employees don't need to manage an additional password. Instead, they can reuse their normal login to their IdP to log in to {{site.data.keyword.IBM_notm}} web offerings, including {{site.data.keyword.cloud_notm}}. Connecting an external IdP with IBMid is called federation, and the technical underlying protocol is called SAML. Those users are often referenced as federated IBMid users. As IBMid is federating with multiple enterprise customers at the same time, one prerequisite of a successful federation is a unique email address for each IBMid user.</production>
 
 {{site.data.keyword.appid_full_notm}} users
-:   Instances of the {{site.data.keyword.appid_full_notm}} can also connect to an IdP. An {{site.data.keyword.appid_short}} instance can connect to onlyone external IdP using SAML, and therefore a unique email address isn't required.<idp>
+:   Instances of the {{site.data.keyword.appid_full_notm}} can also connect to an IdP. An {{site.data.keyword.appid_short}} instance can connect to only one external IdP using SAML, and therefore a unique email address isn't required.<idp>
 
 Federated {{site.data.keyword.cloud_notm}} SAML users
 :   {{site.data.keyword.cloud_notm}}'s SAML SP enables SAML-based federation with your own identity provider. Unlike IBMid federation, which connects users through {{site.data.keyword.IBM_notm}}’s identity system, or {{site.data.keyword.appid_full_notm}}, which requires a searate service instance, the {{site.data.keyword.cloud_notm}} SAML SP integrates directly with your enterprise IdP in the IAM console for secure access to {{site.data.keyword.cloud_notm}} services.
@@ -87,8 +87,8 @@ To create an {{site.data.keyword.cloud_notm}} account, you need an IBMid user th
 | Federation scope| IBMid federation applies to every service that uses IBMid. This means that if a customer onboards to IBMid federation, this applies to his employees when logging on to {{site.data.keyword.cloud_notm}}, but also when using other {{site.data.keyword.IBM_notm}} SaaS offerings that are using IBMid.| The federation has impact only on the {{site.data.keyword.cloud_notm}} account in which the {{site.data.keyword.appid_full_notm}} instance is configured to allow logins. It also does not impact any other {{site.data.keyword.cloud_notm}} accounts or IBM SaaS offerings.|
 | Account member onboarding| Users need to be invited by their email address.| Each user that can successfully log in to the configured {{site.data.keyword.appid_full_notm}} instance will automatically be added to the {{site.data.keyword.cloud_notm}} account.|
 | Cross-account membership| IBMids can be members of multiple accounts.| Users can be members of one account only. Even if multiple {{site.data.keyword.appid_full_notm}} instances federate to the same IdP, the users are treated as separate users in each account.|
-| Use of SAML assertions in access group dynamic rules| Any SAML assertion sent by the IdP can be used in access group dynamic rules.| Any SAML assertion sent by the IdP can be used in access group dynamic rules.|
-| Reliability| IBMid is a global service with a dedicated operations team. In case of an outage in a data center, IBMid can failover to a different data center.| Any {{site.data.keyword.appid_full_notm}} instance exists in one region. Failures in that region can prevent account members from being able to log in. Users that are already logged in are usually not affected by such a failure.|
+| Use of SAML assertions in access group or trusted profile dynamic rules| Any SAML assertion sent by the IdP can be used in access group or trusted profile dynamic rules.| Any SAML assertion sent by the IdP can be used in access group or trusted profile dynamic rules.|
+| Reliability| IBMid is a global service with a dedicated operations team. In case of an outage in a data center, IBMid can failover to a different data center.| Depends on the user's IdP high availability and failover setup.| Any {{site.data.keyword.appid_full_notm}} instance exists in one region. Failures in that region can prevent account members from being able to log in. Users that are already logged in are usually not affected by such a failure.|
 | Login behavior| Users log in by using the central login page.| You need to use a special URL to log in to your {{site.data.keyword.cloud_notm}} account. Your account administrator gets this URL from the IAM [Identity providers](/iam/identity-providers) page in the {{site.data.keyword.cloud_notm}} console.|</production>
 
 <idp>The following table compares characteristics of each federation option. In all cases, the assumption is that the customer connects their IdP to the {{site.data.keyword.cloud_notm}} SAML SP, an IBMid, or an {{site.data.keyword.appid_full_notm}} instance with SAML.

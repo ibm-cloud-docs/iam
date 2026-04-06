@@ -3,7 +3,7 @@
 copyright:
 
   years: 2020, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-04-06"
 
 keywords: login, how login works, login flow, login diagram, login sequence
 
@@ -82,4 +82,4 @@ If you choose to integrate with your external IdP to securely authenticate exter
 10. After {{site.data.keyword.appid_short}} has provided the required tokens, IAM is now finishing its authentication flow with the console by sending an OAuth2 compliant redirect with an authorization code to the browser.
 11. The browser provides the authorization code to the console, which in turn is used to retrieve the required tokens from IAM.
 12. When the console receives the tokens, the login sequence ends. The console can now invoke {{site.data.keyword.cloud_notm}} APIs and identify the user.
-13. The console displays the dashboard with user-specific content.
+13. The dashboard with with user-specific content is displayed.

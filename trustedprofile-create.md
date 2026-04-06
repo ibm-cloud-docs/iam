@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-04-06"
 
 keywords: trusted profile, identity and access management, federated users, compute resources, IAM trusted profile, trust relationship, establish trust, trust policy, trusted entity, assume access, apply access, access group, service IDs, IBM Cloud services, CRN, cloud resource name, workload identity, without credentials
 
@@ -198,6 +198,20 @@ You can assign classic infrastructure access only if your account is linked to a
       1. Click **Add** to add your policy configuration to your summary.
       1. You can assign **Classic infrastructure** access by selecting a user, device, or service, then any combination of granular permissions.
 1. Click **Create**.
+
+## Customizing the console experience
+{: ##customize-console-experience}
+{: ui}
+
+As a trusted profile administrator, you can customize which navigation items appear in the {{site.data.keyword.cloud_notm}} console banner for users who apply a trusted profile. This capability helps streamline the console experience by hiding navigation elements that users don't need access to and preventing users from exploring areas where they lack permissions.
+
+To customize the console navigation for a trusted profile, complete the following steps:
+
+1. In the {{site.data.keyword.cloud_notm}} console, click **Manage > Access (IAM)**, and click **Trusted profiles**.
+1. Select the trusted profile that you want to customize, and click **Console experience**.
+1. Select the landing page that you want to use as the default landing page, and click **Save**.
+1. Select the navigation items that you want to include in the console banner.
+1. Select the private catalogs where the trusted profile can access specific products, and click **Save**.
 
 ## Establishing trust with federated users by using the CLI
 {: #create-profile-federated-cli}

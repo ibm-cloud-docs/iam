@@ -2,7 +2,7 @@
 copyright:
 
   years: 2020, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-04-06"
 
 keywords: identity provider, IdP, App ID, IAM, integration, IdP SSO, third-party authentication, dynamic rules, external identity provider, single sign on
 
@@ -76,6 +76,50 @@ If you don't have any IAM IdP references before in your account, you must enable
    1. Click **Add mapping** if you want to rename a nonrequired attribute from your IdP.
 1. Click **Next** and then click **Test** to test the assertion mapping.
 1. Click **Finish**.
+
+### Sharing {{site.data.keyword.cloud_notm}} SAML IdP configuration
+{: #share-saml}
+
+After you configure your {{site.data.keyword.cloud_notm}} SAML service provider and connect it to your external IdP, you can share the IdP configuration with other accounts and provide the login URL to your users. Users authenticate through your IdP and are automatically added to your account upon successful login.
+
+Complete the following steps to share the SAML IdP configuration:
+
+1. Go to **Manage** > **Access (IAM)** > **Identity providers** in the {{site.data.keyword.cloud_notm}} console and select an existing IdP that is in the **Ready to use** state, or create a new IdP as described in [Enabling and connecting your identity provider with the {{site.data.keyword.cloud_notm}} SAML SP](/docs/iam?topic=iam-ibm-idp-integration#cloud-sp-idp).
+1. Click the **Shared with** tab to share your IdP with other accounts.
+1. Click **Add** and in the **Your accounts** section, select the account you want to share the IdP with and click **Share**.
+1. In the **External** section, select either **Account** or **Enterprise** and enter the account ID and click **Add**. You can also add multiple account IDs.
+1. Click **Share** to share the IdP with the seclected accounts.
+1. Provide users with the login URL so they can authenticate and access your account.
+
+#### Consuming the SAML IdP
+{: #consume-saml}
+
+After you share the SAML IdP with other accounts, you can consume the IdP in your account.
+
+1. Click **Add** > **Shared with you** to view the IdPs that are shared with you.
+1. Select the IdP you want to use, and click **Next**.
+1. Set the **Enable for account login** toggle to **Yes** and click **Save** to allow users to log in to the account.
+1. Set the **Set as default** toggle to **Yes** to set this IdP as the default IdP for the account login.
+1. Select the users from **User management** based on how you want to manage them when they log in through the IdP.
+1. Click **Save**.
+
+#### Unconsuming an IdP
+{: #unconsme-idp}
+
+If you no longer need to use an IdP, you can unconsume it. Unconsuming an IdP removes the IdP from the list of IdPs that are available to your account, and removes all users who are associated with the IdP from the account.
+
+1. Go to **Manage** > **Access (IAM)** > **Identity providers** in the {{site.data.keyword.cloud_notm}} console.
+1. Select the IdP that has the type as {{site.data.keyword.cloud_notm}} SAML.
+1. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") in the row that contains the IdP, and click **Remove**.
+
+#### Reviewing IdP statuses
+{: #review-idp-statuses}
+
+1. Go to **Manage** > **Access (IAM)** > **Identity providers** in the {{site.data.keyword.cloud_notm}} console and select an existing IdP that is in the **Ready to use** state, or create a new IdP as described in [Enabling and connecting your identity provider with the {{site.data.keyword.cloud_notm}} SAML SP](/docs/account?topic=account-ibm-idp-integration#cloud-sp-idp).
+1. Click the **Details** tab to view the IdP status.
+    - **Inactive**: IdPs with an inactive tag are globally disabled by their owner. Click **Actions** > **Enable** to enable it.
+    - **Login will fail**: The IdP is not active. Click **Actions** > **Enable** and turn on the **Enable for account login** toggle to enable it.
+    - **Ready to use**: The IdP configuration is complete but not yet enabled for account login. Turn on the **Use for account login** toggle to enable it.
 
 ### Mapping IdP assertions to IAM claims
 {: #assertion-mapping}
