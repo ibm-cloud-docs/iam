@@ -1,0 +1,68 @@
+{
+  "version": 2,
+  "title": "Identity and Access Management docs",
+  "introduction": "Secure your IBM Cloud resources with comprehensive identity and access management. Control who has access to your resources, manage authentication methods, implement context-based restrictions, and ensure compliance with enterprise security requirements.",
+  "product_page": "https://www.ibm.com/products/identity-and-access-management",
+  "console_page": "/iam",
+  "section_topics": {
+    "links": [
+      {
+        "title": "Getting started with IAM",
+        "href": "/docs/iam?topic=iam-iamoverview"
+      },
+      {
+        "title": "Managing access with access groups",
+        "href": "/docs/iam?topic=iam-groups"
+      },
+      {
+        "title": "Setting up trusted profiles",
+        "href": "/docs/iam?topic=iam-create-trusted-profile"
+      },
+      {
+        "title": "Creating context-based restrictions",
+        "href": "/docs/iam?topic=iam-context-restrictions-create"
+      },
+      {
+        "title": "Configuring multifactor authentication",
+        "href": "/docs/iam?topic=iam-enablemfa"
+      }
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "Introducing trusted profiles for IBM Cloud",
+      "description": "Learn how trusted profiles enable you to grant access to compute resources without managing credentials.",
+      "href": "https://www.ibm.com/blog/announcement/introducing-trusted-profiles-for-ibm-cloud",
+      "type": "blog",
+      "recommended": true
+    },
+    {
+      "title": "Context-based restrictions for enhanced security",
+      "description": "Discover how to use context-based restrictions to define and enforce access restrictions based on network location and other contexts.",
+      "href": "https://www.ibm.com/blog/announcement/context-based-restrictions",
+      "type": "blog"
+    }
+  ],
+  "section_devtools": {
+    "api": "/apidocs/iam-identity-token-api",
+    "cli": "/docs/cli?topic=cli-ibmcloud_commands_iam",
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
+  },
+  "section_updates": {
+    "view_more": "/docs/overview?topic=overview-whatsnew",
+    "tiles": [
+      {
+        "date": "15 February 2026",
+        "title": "Enhanced trusted profile monitoring"
+      },
+      {
+        "date": "10 January 2026",
+        "title": "New context-based restriction rule types"
+      },
+      {
+        "date": "05 December 2025",
+        "title": "Improved access group management"
+      }
+    ]
+  }
+}
