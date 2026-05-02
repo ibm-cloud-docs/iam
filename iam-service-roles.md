@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-04-23"
+lastupdated: "2026-05-02"
 
 keywords: service iam roles, service iam actions, account management roles, iam roles
 
@@ -14677,7 +14677,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
 {: #service-roles-table132}
 
-## Power Systems Virtual Server
+## Workspace for Power Virtual Server
 {: #power-iaas-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas` for the service name.
@@ -14689,7 +14689,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Operator | As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. | `power-iaas.route.dashboard.view`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.update`, `resource-controller.broker.retrieve`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
 | Viewer | As a viewer, you can view service instances, but you can't modify them. | `power-iaas.route.dashboard.view`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `iam.role.read`, `resource-controller.broker.retrieve`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.subscription.retrieve` |
 {: row-headers}
-{: caption="Platform roles - Power Systems Virtual Server" caption-side="top"}
+{: caption="Platform roles - Workspace for Power Virtual Server" caption-side="top"}
 {: tab-title="Platform roles"}
 {: tab-group="power-iaas"}
 {: class="simple-tab-table"}
@@ -14703,7 +14703,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. | `power-iaas.dashboard.view`, `power-iaas.cloud-instance.read`, `power-iaas.cloud-connection-vpc.list`, `power-iaas.cloud-connection.read`, `power-iaas.cloud-connection.list`, `power-iaas.cloud-instance.list`, `power-iaas.cos-image.read`, `power-iaas.event.read`, `power-iaas.event.list`, `power-iaas.image-export.read`, `power-iaas.stock-image.read`, `power-iaas.stock-image.list`, `power-iaas.cloud-instance-image.read`, `power-iaas.cloud-instance-image.list`, `power-iaas.job.read`, `power-iaas.job.list`, `power-iaas.network-port.read`, `power-iaas.network-port.list`, `power-iaas.network.read`, `power-iaas.network.list`, `power-iaas.pvm-instance-console.read`, `power-iaas.pvm-instance-network.read`, `power-iaas.pvm-instance-network.list`, `power-iaas.pvm-instance.read`, `power-iaas.pvm-instance.list`, `power-iaas.pvm-instance-capture.read`, `power-iaas.pvm-instance-snapshot.list`, `power-iaas.placement-group.read`, `power-iaas.placement-group.list`, `power-iaas.shared-processor-pool.list`, `power-iaas.shared-processor-pool.read`, `power-iaas.spp-placement-group.read`, `power-iaas.spp-placement-group.list`, `power-iaas.sap.read`, `power-iaas.sap.list`, `power-iaas.dhcp-service.read`, `power-iaas.dhcp-service.list`, `power-iaas.cloud-instance-snapshot.read`, `power-iaas.cloud-instance-snapshot.list`, `power-iaas.storage-capacity-type.list`, `power-iaas.storage-capacity-type.read`, `power-iaas.storage-capacity-pool.list`, `power-iaas.storage-capacity-pool.read`, `power-iaas.storage-tier.read`, `power-iaas.system-pool.list`, `power-iaas.task.read`, `power-iaas.volume-clone.read`, `power-iaas.volume-clone.list`, `power-iaas.volume-group.list`, `power-iaas.volume-group.read`, `power-iaas.volume-group-remote-copy.read`, `power-iaas.volume-group-storage.read`, `power-iaas.volume-onboarding.list`, `power-iaas.volume-onboarding.read`, `power-iaas.cloud-instance-volume.read`, `power-iaas.cloud-instance-volume.list`, `power-iaas.pvm-instance-volume.list`, `power-iaas.pvm-instance-volume.read`, `power-iaas.volume-remote-copy.read`, `power-iaas.volume-flash-copy.read`, `power-iaas.vpn-connection-network.read`, `power-iaas.vpn-connection-peer-subnet.read`, `power-iaas.vpn-connection-ike-policy.read`, `power-iaas.vpn-connection-ike-policy.list`, `power-iaas.vpn-connection-ipsec-policy.read`, `power-iaas.vpn-connection-ipsec-policy.list`, `power-iaas.vpn-connection.read`, `power-iaas.vpn-connection.list`, `power-iaas.disaster-recovery.read`, `power-iaas.available-hosts.list`, `power-iaas.host-group.list`, `power-iaas.host-group.read`, `power-iaas.tenant-sshkey.list`, `power-iaas.tenant-sshkey.read`, `power-iaas.tenant.read`, `power-iaas.host.list`, `power-iaas.host.read`, `power-iaas.snapshot.list`, `power-iaas.snapshot.read`, `power-iaas.network-address-group.list`, `power-iaas.network-address-group.read`, `power-iaas.network-security-group.list`, `power-iaas.network-security-group.read`, `power-iaas.network-interfaces.list`, `power-iaas.network-interfaces.read`, `power-iaas.datacenter-private.read`, `power-iaas.datacenter-private.list`, `power-iaas.virtual-serial-number.read`, `power-iaas.virtual-serial-number.list`, `power-iaas.workspace.read`, `power-iaas.workspace.list`, `power-iaas.pvm-instance-vpmem-volume.list`, `power-iaas.pvm-instance-vpmem-volume.read`, `power-iaas.pvm-instance-virtual-serial-number.read`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 | Service Configuration Reader | The ability to read services configuration for Governance management. | `power-iaas.route.dashboard.view`, `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
 {: row-headers}
-{: caption="Service roles - Power Systems Virtual Server" caption-side="top"}
+{: caption="Service roles - Workspace for Power Virtual Server" caption-side="top"}
 {: tab-title="Service roles"}
 {: tab-group="power-iaas"}
 {: class="simple-tab-table"}
@@ -14964,62 +14964,62 @@ Review the available platform and service roles and the actions mapped to each t
 | `resource-controller.key.manager_delete` | | Key Manager |
 | `resource-controller.key.manager_update` | | Key Manager |
 | `resource-controller.key.manager_retrieve` | | Key Manager |
-{: caption="Service actions - Power Systems Virtual Server" caption-side="top"}
+{: caption="Service actions - Workspace for Power Virtual Server" caption-side="top"}
 {: tab-title="Actions"}
 {: tab-group="power-iaas"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
 {: #actions-table133}
 
-## Power Virtual Server Dedicated Host
+## Dedicated Host for Power Virtual Server
 {: #power-iaas.dedicated-host-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.dedicated-host` for the service name.
 
 No supported roles.
-## Power Virtual Server Image
+## Image for Power Virtual Server
 {: #power-iaas.image-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.image` for the service name.
 
 No supported roles.
-## PowerVS Network
+## Network for Power Virtual Server
 {: #power-iaas.network-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.network` for the service name.
 
 No supported roles.
-## Power Virtual Server Network Address Group
+## Network Address Group for Power Virtual Server
 {: #power-iaas.network-address-group-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.network-address-group` for the service name.
 
 No supported roles.
-## Power Virtual Server Network Interface
+## Network Interface for Power Virtual Server
 {: #power-iaas.network-interface-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.network-interface` for the service name.
 
 No supported roles.
-## Power Virtual Server Network Security Group
+## Network Security Group for Power Virtual Server
 {: #power-iaas.network-security-group-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.network-security-group` for the service name.
 
 No supported roles.
-## Power Virtual Server Placement Group
+## Placement Group for Power Virtual Server
 {: #power-iaas.placement-group-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.placement-group` for the service name.
 
 No supported roles.
-## PowerVS VM
+## Virtual Machine for Power Virtual Server
 {: #power-iaas.pvm-instance-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.pvm-instance` for the service name.
 
 No supported roles.
-## power-iaas.route
+## Route for Power Virtual Server
 {: #power-iaas.route-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.route` for the service name.
@@ -15031,7 +15031,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Operator | As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. | `power-iaas.route.dashboard.view`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.update`, `resource-controller.broker.retrieve`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
 | Viewer | As a viewer, you can view service instances, but you can't modify them. | `power-iaas.route.dashboard.view`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `iam.role.read`, `resource-controller.broker.retrieve`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.subscription.retrieve` |
 {: row-headers}
-{: caption="Platform roles - power-iaas.route" caption-side="top"}
+{: caption="Platform roles - Route for Power Virtual Server" caption-side="top"}
 {: tab-title="Platform roles"}
 {: tab-group="power-iaas.route"}
 {: class="simple-tab-table"}
@@ -15045,7 +15045,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. | `power-iaas.dashboard.view`, `power-iaas.cloud-instance.read`, `power-iaas.cloud-connection-vpc.list`, `power-iaas.cloud-connection.read`, `power-iaas.cloud-connection.list`, `power-iaas.cloud-instance.list`, `power-iaas.cos-image.read`, `power-iaas.event.read`, `power-iaas.event.list`, `power-iaas.image-export.read`, `power-iaas.stock-image.read`, `power-iaas.stock-image.list`, `power-iaas.cloud-instance-image.read`, `power-iaas.cloud-instance-image.list`, `power-iaas.job.read`, `power-iaas.job.list`, `power-iaas.network-port.read`, `power-iaas.network-port.list`, `power-iaas.network.read`, `power-iaas.network.list`, `power-iaas.pvm-instance-console.read`, `power-iaas.pvm-instance-network.read`, `power-iaas.pvm-instance-network.list`, `power-iaas.pvm-instance.read`, `power-iaas.pvm-instance.list`, `power-iaas.pvm-instance-capture.read`, `power-iaas.pvm-instance-snapshot.list`, `power-iaas.placement-group.read`, `power-iaas.placement-group.list`, `power-iaas.shared-processor-pool.list`, `power-iaas.shared-processor-pool.read`, `power-iaas.spp-placement-group.read`, `power-iaas.spp-placement-group.list`, `power-iaas.sap.read`, `power-iaas.sap.list`, `power-iaas.dhcp-service.read`, `power-iaas.dhcp-service.list`, `power-iaas.cloud-instance-snapshot.read`, `power-iaas.cloud-instance-snapshot.list`, `power-iaas.storage-capacity-type.list`, `power-iaas.storage-capacity-type.read`, `power-iaas.storage-capacity-pool.list`, `power-iaas.storage-capacity-pool.read`, `power-iaas.storage-tier.read`, `power-iaas.system-pool.list`, `power-iaas.task.read`, `power-iaas.volume-clone.read`, `power-iaas.volume-clone.list`, `power-iaas.volume-group.list`, `power-iaas.volume-group.read`, `power-iaas.volume-group-remote-copy.read`, `power-iaas.volume-group-storage.read`, `power-iaas.volume-onboarding.list`, `power-iaas.volume-onboarding.read`, `power-iaas.cloud-instance-volume.read`, `power-iaas.cloud-instance-volume.list`, `power-iaas.pvm-instance-volume.list`, `power-iaas.pvm-instance-volume.read`, `power-iaas.volume-remote-copy.read`, `power-iaas.volume-flash-copy.read`, `power-iaas.vpn-connection-network.read`, `power-iaas.vpn-connection-peer-subnet.read`, `power-iaas.vpn-connection-ike-policy.read`, `power-iaas.vpn-connection-ike-policy.list`, `power-iaas.vpn-connection-ipsec-policy.read`, `power-iaas.vpn-connection-ipsec-policy.list`, `power-iaas.vpn-connection.read`, `power-iaas.vpn-connection.list`, `power-iaas.disaster-recovery.read`, `power-iaas.available-hosts.list`, `power-iaas.host-group.list`, `power-iaas.host-group.read`, `power-iaas.tenant-sshkey.list`, `power-iaas.tenant-sshkey.read`, `power-iaas.tenant.read`, `power-iaas.host.list`, `power-iaas.host.read`, `power-iaas.snapshot.list`, `power-iaas.snapshot.read`, `power-iaas.network-address-group.list`, `power-iaas.network-address-group.read`, `power-iaas.network-security-group.list`, `power-iaas.network-security-group.read`, `power-iaas.network-interfaces.list`, `power-iaas.network-interfaces.read`, `power-iaas.datacenter-private.read`, `power-iaas.datacenter-private.list`, `power-iaas.virtual-serial-number.read`, `power-iaas.virtual-serial-number.list`, `power-iaas.workspace.read`, `power-iaas.workspace.list`, `power-iaas.pvm-instance-vpmem-volume.list`, `power-iaas.pvm-instance-vpmem-volume.read`, `power-iaas.pvm-instance-virtual-serial-number.read`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 | Service Configuration Reader | The ability to read services configuration for Governance management. | `power-iaas.route.dashboard.view`, `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
 {: row-headers}
-{: caption="Service roles - power-iaas.route" caption-side="top"}
+{: caption="Service roles - Route for Power Virtual Server" caption-side="top"}
 {: tab-title="Service roles"}
 {: tab-group="power-iaas.route"}
 {: class="simple-tab-table"}
@@ -15306,38 +15306,38 @@ Review the available platform and service roles and the actions mapped to each t
 | `power-iaas.pvm-instance-virtual-serial-number.read` | | Manager, Reader |
 | `power-iaas.pvm-instance-virtual-serial-number.update` | | Manager |
 | `power-iaas.pvm-instance-virtual-serial-number.delete` | | Manager |
-{: caption="Service actions - power-iaas.route" caption-side="top"}
+{: caption="Service actions - Route for Power Virtual Server" caption-side="top"}
 {: tab-title="Actions"}
 {: tab-group="power-iaas.route"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
 {: #actions-table142}
 
-## Power Virtual Server Shared Processor Pool
+## Shared Processor Pool for Power Virtual Server
 {: #power-iaas.shared-processor-pool-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.shared-processor-pool` for the service name.
 
 No supported roles.
-## PowerVS Snapshot
+## Snapshot for Power Virtual Server
 {: #power-iaas.snapshot-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.snapshot` for the service name.
 
 No supported roles.
-## Power Virtual Server Placement Group
+## Shared Processor Pool Placement Group for Power Virtual Server
 {: #power-iaas.spp-placement-group-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.spp-placement-group` for the service name.
 
 No supported roles.
-## PowerVS Volume
+## Volume for Power Virtual Server
 {: #power-iaas.volume-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.volume` for the service name.
 
 No supported roles.
-## power-iaas.vpmem-volume
+## Virtual Persistent Memory Volume for Power Virtual Server
 {: #power-iaas.vpmem-volume-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `power-iaas.vpmem-volume` for the service name.
