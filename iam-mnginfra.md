@@ -3,7 +3,7 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-05-06"
 
 
 keywords: classic infrastructure access, VPN subnet access, classic infrastructure permissions, device access
@@ -17,7 +17,7 @@ subcollection: iam
 # Managing classic infrastructure access
 {: #mngclassicinfra}
 
-When you invite a user to your account, you can select from three classic infrastructure permission sets that assign bulk access: View only, Basic user, Super user. You can update permissions for classic infrastructure services or add device and VPN subnet access for a user at any time. To access the classic infrastructure permissions, go to **Manage** &gt; **Access (IAM)** in the {{site.data.keyword.cloud}} console, select **Users**. Then, select the user's name that you want to update access for, and click **Classic infrastructure**.
+When you invite a user to your account, you can select from three classic infrastructure permission sets that assign bulk access: View only, Basic user, Super user. You can update permissions for classic infrastructure services or add device and VPN subnet access for a user at any time. To access the classic infrastructure permissions, go to **Manage** > **Access (IAM)** in the {{site.data.keyword.cloud}} console, select **Users**. Then, select the user's name that you want to update access for, and click **Classic infrastructure**.
 {: shortdesc}
 
 ## Classic infrastructure permissions
@@ -34,31 +34,108 @@ The following graphic shows how classic infrastructure permissions are assigned 
 
 ![Classic infrastructure access](images/ClassicIaaS.svg "Assigning classic infrastructure access by selecting a user, device, or service, then any combination of granular permissions"){: caption="Assigning classic infrastructure access by selecting a user, device, or service, then any combination of granular permissions" caption-side="bottom"}
 
-Classic infrastructure has four main categories of permissions to choose from: account, devices, network, and services. The following lists provide examples from each category that highlight some of the commonly assigned permissions from each. To view all of the available permissions from each category, go to **Manage** > **Access (IAM)** > **Users** in the {{site.data.keyword.cloud_notm}} console. Then, select a user's name from the list that you can manage access for, then click **Classic infrastructure**.
+Classic infrastructure has six main categories of permissions to choose from: Administrative, Devices, Network, Sales, Security, and Software. The following sections provide a complete list of all available permissions in each category. To view and assign these permissions, go to **Manage** > **Access (IAM)** > **Users** in the {{site.data.keyword.cloud_notm}} console. Then, select a user's name from the list that you can manage access for, and click **Classic infrastructure**.
 
-Account
-- Add and upgrade storage
-- Manage users
-- Add and upgrade services
-- Add server
+- **Activate Partner Customer Account** - Activate Partner Customer Account
+- **Add Brand Account** - Permission to create sub brand
+- **Add Customer Account** - Permission to create customer account
+- **Manage Account Notes** - Permission to manage account notes
+- **Manage E-mail Delivery Service** - Manage e-mail delivery service accounts
+- **Manage Notification Subscribers** - Create and manage notification subscribers for usage warnings and overages
+- **Manage Users** - Manage users and assign permissions
+- **Physically Access a Customer's Colo Cage** - Physically Access a Customer's Colo Cage
+- **Physically Access a Datacenter** - Physically Access a Datacenter
+- **View Event Log** - View the account-wide event log history
+{: #permissions-tab1}
+{: tab-title="Administrative"}
+{: tab-group="classic-infra-permissions"}
+{: class="simple-tab-table"}
 
-Devices
-- Upgrade server
-- Manage load balancers
-- Manage Firewalls
+- **Add IP Addresses** - Add IP Addresses to a server
+- **Edit Hostname/Domain** - Edit hostname and domain name for devices on the account
+- **Host IDS** - View Host IDS logs
+- **IPMI Remote Management** - View IPMI details regarding hardware and issue reboot commands through the portal
+- **Manage Configuration Template** - Allows users to manage configuration template
+- **Manage Customer Hardware** - Allows users to manage customer hardware
+- **Manage Device Monitoring** - View and edit monitoring information for devices
+- **Manage Provisioning Scripts** - Manage Customer Post Provisioning Scripts
+- **Manage Public Images** - Manage Public Image Templates
+- **OS Reloads and Rescue Kernel** - Issue OS reloads and Rescue Kernel for devices
+- **Storage Manage** - View storage details and edit storage passwords
+- **View Hardware Details** - View hardware information such as IP addresses, OS type, passwords, etc. Can also update hardware passwords in the portal
+- **View Location Reservation** - Allows users to view location reservation
+- **View Virtual Dedicated Host Details** - View virtual dedicated host information. Can also migrate dedicated instances to a different virtual dedicated host
+- **View Virtual Server Details** - View virtual server information such as IP addresses, OS type, passwords, etc. Can also update virtual server passwords in the portal
+- **View and edit dedicated host** - Allows users to view and edit dedicated host
+- **View and edit virtual guest** - Allows users to view and edit virtual guest data
+{: #permissions-tab2}
+{: tab-title="Devices"}
+{: tab-group="classic-infra-permissions"}
+{: class="simple-tab-table"}
 
-Network
-- Add IP addresses
-- VPN administration
-- Network gateways
-- Security groups
-- Manage private endpoint service
+- **Add Compute with Public Network Port** - When adding compute (Server or Cloud Instance), allow a Port Speed that includes access to the public network
+- **Manage CDN Account** - Manage content delivery network account
+- **Manage CDN File Transfers** - Manage content delivery network file transfers
+- **Manage DNS** - Add, edit, and view DNS records managed by SoftLayer
+- **Manage Firewall Rules** - Manage all firewall rules
+- **Manage Firewalls** - View and edit firewall logs and settings
+- **Manage Load Balancers** - Manage load balancers
+- **Manage Network Gateways** - Manage network gateway appliances
+- **Manage Network Subnet Routes** - Manage network subnet routes
+- **Manage Network VLAN Spanning** - Enable and disable private network VLAN spanning
+- **Manage Port Control** - Manage port status and speeds for connected devices
+- **Manage Private Endpoint Service** - Permission to connect and disconnect account with the private endpoint service
+- **Manage Security Groups** - Manage security groups
+- **VPN Administration** - Manage VPN access for all users
+- **View Bandwidth Statistics** - View bandwidth statistics and graphs for hardware
+- **View CDN Bandwidth Statistics** - View content delivery network bandwidth statistics
+{: #permissions-tab3}
+{: tab-title="Network"}
+{: tab-group="classic-infra-permissions"}
+{: class="simple-tab-table"}
 
-Services
-- Upgrade services
-- Manage DNS
-- Manage SSH keys
-- Manage certificates
+- **Add Server** - Add new servers to the account
+- **Add/Upgrade Cloud Instances** - Add and upgrade any cloud computing instances on the account
+- **Add/Upgrade Services** - Add and upgrade any services on the account
+- **Add/Upgrade Storage (StorageLayer)** - Add and upgrade any storage services (StorageLayer) on the account
+- **Cancel Server** - Cancel any servers on the account
+- **Cancel Services** - Cancel any services on the account
+- **Upgrade Server** - Upgrade any servers on the account
+- **Upgrade Services** - Upgrade Services
+- **View Billing ACH Information** - Permission to view billing ACH information
+- **View reseller order pricing** - Permission to view an order with reseller pricing
+{: #permissions-tab4}
+{: tab-title="Sales"}
+{: tab-group="classic-infra-permissions"}
+{: class="simple-tab-table"}
+
+- **Manage Certificates (SSL)** - Add, remove, and update certificates (includes the private key)
+- **Manage SAML Authentication** - Create, edit and delete SAML authentication records
+- **Manage SSH Keys** - Add, remove, and update SSH keys
+- **View Certificates (SSL)** - View certificates (includes the private key)
+{: #permissions-tab5}
+{: tab-title="Security"}
+{: tab-group="classic-infra-permissions"}
+{: class="simple-tab-table"}
+
+- **Manage Antivirus/Spyware** - View and edit antivirus / spyware logs and settings
+- **Manage Firewall Software** - Manage firewall software
+- **Openstack Link** - Permission to initiate and delete an openstack link
+- **View Customer Software Password** - View Customer Software Password
+- **View Helm** - View login information for Helm
+- **View Plesk** - View login information for Plesk
+- **View QuantaStor** - View login information for QuantaStor
+- **View Urchin** - View login information for Urchin
+- **View and edit disk image** - Allows users to view and edit disk image data
+- **View and edit manage image template** - Allows users to view and edit image template
+- **View and edit software component** - Allows users to view and edit software component
+- **View cPanel** - View login information for cPanel
+- **View licenses** - View licenses
+- **View software account license** - Allows users to view software account license
+{: #permissions-tab6}
+{: tab-title="Software"}
+{: tab-group="classic-infra-permissions"}
+{: class="simple-tab-table"}
 
 ### Migrated classic infrastructure permissions
 {: #predefined}
@@ -73,9 +150,9 @@ You must be assigned the Manage users classic infrastructure permission and be a
 When a classic infrastructure user invites another user to the account, the classic infrastructure user becomes the parent user. When a child of a parent invites other users to the account, those users become descendants of the original parent, who is now considered their ancestor.
 {: note}
 
-1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** &gt; **Access (IAM)**, select **Users**. Then, select the user's name that you want to update access for, and click **Classic infrastructure**.
+1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)**, select **Users**. Then, select the user's name that you want to update access for, and click **Classic infrastructure**.
 
-1. Select **Permissions** to update the user's permissions. You can select from four types of permissions: account, devices, network, and services. Individually select permissions from each category, or use a permission set option to assign permissions in bulk.
+1. Select **Permissions** to update the user's permissions. You can select from six types of permissions: Administrative, Devices, Network, Sales, Security, and Software. Individually select permissions from each category, or use a permission set option to assign permissions in bulk.
 
 
    The account management and support permissions that you previously assigned to users in your account are now migrated from classic infrastructure permissions to migrated IAM access groups. For more information, see [Managing migrated SoftLayer account permissions](/docs/iam?topic=iam-migrated_permissions).

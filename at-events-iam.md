@@ -3,7 +3,7 @@
 copyright:
 
   years: 2024, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-05-06"
 
 keywords: activity tracking, IAM events, Identity and Access Management, observibility
 
@@ -358,7 +358,7 @@ The following fields include additional information:
 ### Limits events
 {: #at_events_iam_limits}
 
-There are [limitations](/docs/iam?topic=iam-known-issues#policy-version-limit) on the number of service IDs, API keys, trusted profiles, and policies allowed in an account. An event is generated when your account reaches 90% of the of the limit for service IDs, API keys, trusted profiles, and policies.
+There are [limitations](/docs/iam?topic=iam-cloudaccess#iam_limits) on the number of service IDs, API keys, trusted profiles, and policies allowed in an account. An event is generated when your account reaches 90% of the of the limit for service IDs, API keys, trusted profiles, and policies.
 
 The following is an example message when an account is approaching the maximum number of service IDs:
 

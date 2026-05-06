@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-04-06"
+lastupdated: "2026-05-06"
 
 keywords: trusted profile, identity and access management, federated users, compute resources, IAM trusted profile, trust relationship, establish trust, trust policy, trusted entity, assume access, apply access, access group, service IDs, IBM Cloud services, CRN, cloud resource name, workload identity, without credentials
 
@@ -119,7 +119,7 @@ Example 1
 :   A Project service instance in another account can assume a trusted profile to securely deploy an architecture in your account without the need for key rotation. For more information, see [Using trusted profiles to authorize a project to deploy an architecture](/docs/secure-enterprise?topic=secure-enterprise-tp-project).
 
 Example 2
-:   A private catalog is an instance of the Catalog Management service that is identified by a CRN. You might want to validate products from your private catalog in an account that’s separate from the one that contains your catalog. You can give a private catalog access to create resources for validation in a target account by creating a trusted profile in the target account. Then you establish trust with the catalog by using the catalog CRN to link the service instance to the trusted profile. For more information, see [Setting up a target account for validation](/docs/iam?topic=iam-catalog-cross-validation).
+:   A private catalog is an instance of the Catalog Management service that is identified by a CRN. You might want to validate products from your private catalog in an account that's separate from the one that contains your catalog. You can give a private catalog access to create resources for validation in a target account by creating a trusted profile in the target account. Then you establish trust with the catalog by using the catalog CRN to link the service instance to the trusted profile. For more information, see [Onboarding software to your private catalog](/docs/account?topic=account-create-private-catalog).
 
 Sharing resources across accounts by using trusted profiles works for a limited set of services and is not a general method for cross-account access for services.
 {: note}

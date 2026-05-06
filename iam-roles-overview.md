@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-05-06"
 
 keywords: IAM access, access policy, IAM roles, platform management roles, service access roles, types of access policies, custom roles, permissions
 
@@ -26,7 +26,7 @@ All services that are organized in a resource group in your account are managed 
 
 You can manage and define access based on specific roles for users and resources in your account.
 
-* Platform management roles cover a range of actions, including the ability to create and delete instances, manage credentials, and manage access. The platform roles are administrator, editor, operator, viewer. Platform management roles also apply to [account management services](/docs/account?topic=account-account-services&interface=ui#account-management-actions-roles) that enable users to invite users, manage service IDs, access policies, catalog entries, and track billing and usage depending on their assigned role on an account management service.
+* Platform management roles cover a range of actions, including the ability to create and delete instances, manage credentials, and manage access. The platform roles are administrator, editor, operator, viewer. Platform management roles also apply to [account management services](/docs/iam?topic=iam-account-services&interface=ui#account-management-actions-roles) that enable users to invite users, manage service IDs, access policies, catalog entries, and track billing and usage depending on their assigned role on an account management service.
 
 * Service access roles define a user or service’s ability to perform actions on a service instance, such as accessing the console or performing API calls. The most common service access roles are manager, writer, and reader. Each service maps particular actions for working with the service to each of these roles.
 

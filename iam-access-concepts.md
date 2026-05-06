@@ -3,7 +3,7 @@
 copyright:
 
   years: 2022, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-05-06"
 
 keywords: users level of access, user control, access control, permissions, manage access, access management, platform management tasks, assign roles, fine-grained access, least privilege
 
@@ -22,14 +22,14 @@ subcollection: iam
 ## Access groups
 {: #access-groups-iam}
 
-A group of users and service IDs can be organized so that the same access can be assigned to all members within the group by using one or more policies. With access groups, you can streamline the access assignment process so that you can manage fewer policies and reduce the number of policies in an account, which in turn increases performance. Access groups allow you to grant and revoke access by simply adding or removing users or service IDs in the access group. After your groups are set up, you can start assigning policies by selecting an access group as the subject of the policy. For more information, see [Access groups for streamlined access management](/docs/iam?topic=iam-iamoverview#access-groups-quick-access).
+A group of users and service IDs can be organized so that the same access can be assigned to all members within the group by using one or more policies. With access groups, you can streamline the access assignment process so that you can manage fewer policies and reduce the number of policies in an account, which in turn increases performance. Access groups allow you to grant and revoke access by simply adding or removing users or service IDs in the access group. After your groups are set up, you can start assigning policies by selecting an access group as the subject of the policy. For more information, see [Setting up access groups](/docs/iam?topic=iam-groups).
 
 ## Trusted profiles
 {: #trusted-profiles-iam}
 
 With trusted profiles, you manage the identities of your users within your own corporate directory. And, you can centrally manage the access lifecycle to multiple {{site.data.keyword.cloud_notm}} accounts and assets for federated users without the need to configure access policies for each entity within each account. You don't need to invite users to your account to give them to access your {{site.data.keyword.cloud_notm}} resources.
 
-You can also define fine-grained authorization for all applications that are running in a compute resource without creating service IDs or managing the API key lifecycle for applications. To start creating trusted profiles for your organization, see [Trusted profiles for eliminating the need to manage credentials](/docs/iam?topic=iam-iamoverview#trusted-profiles-feature).
+You can also define fine-grained authorization for all applications that are running in a compute resource without creating service IDs or managing the API key lifecycle for applications. To start creating trusted profiles for your organization, see [Creating trusted profiles](/docs/iam?topic=iam-create-trusted-profile).
 
 ## Resources
 {: #resources-access-management}
