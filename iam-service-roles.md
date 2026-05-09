@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-05-02"
+lastupdated: "2026-05-09"
 
 keywords: service iam roles, service iam actions, account management roles, iam roles
 
@@ -8687,29 +8687,29 @@ Review the available platform and service roles and the actions mapped to each t
 | `instructlab.taxonomy.read` | Read details of a taxonomy | Manager, Reader, Writer |
 | `instructlab.taxonomy.create` | Create taxonomies | Manager, Writer |
 | `instructlab.taxonomy.list` | List taxonomies | Manager, Reader, Writer |
-| `instructlab.taxonomy.delete` | instructlab.taxonomy.delete | Manager, Writer |
+| `instructlab.taxonomy.delete` | Delete taxonomies. | Manager, Writer |
 | `instructlab.sdgdata.read` | Read details of a data generation run | Manager, Reader, Writer |
-| `instructlab.sdgdata.list` | instructlab.sdgdata.list | Manager, Reader, Writer |
-| `instructlab.sdgdata.create` | instructlab.sdgdata.create | Manager, Writer |
-| `instructlab.sdgdata.delete` | instructlab.sdgdata.delete | Manager, Writer |
-| `instructlab.sdgdata.stop` | instructlab.sdgdata.stop | Manager, Writer |
+| `instructlab.sdgdata.list` | List data generation runs. | Manager, Reader, Writer |
+| `instructlab.sdgdata.create` | Create a data generation run. | Manager, Writer |
+| `instructlab.sdgdata.delete` | Delete a data generation run. | Manager, Writer |
+| `instructlab.sdgdata.stop` | Stop a data generation run. | Manager, Writer |
 | `instructlab.model.read` | Read details of a model training run | Manager, Reader, Writer |
-| `instructlab.model.list` | instructlab.model.list | Manager, Reader, Writer |
-| `instructlab.model.create` | instructlab.model.create | Manager, Writer |
-| `instructlab.model.delete` | instructlab.model.delete | Manager, Writer |
-| `instructlab.model.stop` | instructlab.model.stop | Manager, Writer |
-| `instructlab.inference.create` | instructlab.inference.create | Manager, Writer |
-| `instructlab.inference.read` | instructlab.inference.read | Manager, Reader, Writer |
-| `instructlab.inference.list` | instructlab.inference.list | Manager, Reader, Writer |
-| `instructlab.inference-model.read` | instructlab.inference-model.read | Manager, Reader, Writer |
-| `instructlab.inference-model.list` | instructlab.inference-model.list | Manager, Reader, Writer |
-| `instructlab.inference.delete` | instructlab.inference.delete | Manager, Writer |
-| `instructlab.inference-session.read` | instructlab.inference-session.read | Manager, Reader, Writer |
-| `instructlab.inference-session.list` | instructlab.inference-session.list | Manager, Reader, Writer |
-| `instructlab.inference-session.delete` | instructlab.inference-session.delete | Manager, Writer |
-| `instructlab.inference-session.update` | instructlab.inference-session.update | Manager, Writer |
-| `instructlab.inference-model.create` | instructlab.inference-model.create | Manager, Writer |
-| `instructlab.inference-model.delete` | instructlab.inference-model.delete | Manager, Writer |
+| `instructlab.model.list` | List model training runs. | Manager, Reader, Writer |
+| `instructlab.model.create` | Create a model training run. | Manager, Writer |
+| `instructlab.model.delete` | Delete a model training run. | Manager, Writer |
+| `instructlab.model.stop` | Stop a model training run. | Manager, Writer |
+| `instructlab.inference.create` | Generate an OpenAI-compatible chat completion for the given messages using the specified model. | Manager, Writer |
+| `instructlab.inference.read` | Describe a chat completion by its ID. | Manager, Reader, Writer |
+| `instructlab.inference.list` | List chat completions, | Manager, Reader, Writer |
+| `instructlab.inference-model.read` | Get a model by its identifier. | Manager, Reader, Writer |
+| `instructlab.inference-model.list` | List models using the OpenAI API. | Manager, Reader, Writer |
+| `instructlab.inference.delete` | Delete a stored chat completion. | Manager, Writer |
+| `instructlab.inference-session.read` | Internal APIs used for storing session read state in the UI. | Manager, Reader, Writer |
+| `instructlab.inference-session.list` | Internal APIs used for storing session list state for the UI. | Manager, Reader, Writer |
+| `instructlab.inference-session.delete` | Internal APIs used for storing session delete state in the UI. | Manager, Writer |
+| `instructlab.inference-session.update` | Internal APIs used for storing session update state for the UI. | Manager, Writer |
+| `instructlab.inference-model.create` | Create a model. | Manager, Writer |
+| `instructlab.inference-model.delete` | Delete a model. | Manager, Writer |
 | `global-search-tagging.resource.read` | | Administrator, Editor, Manager, Operator, Reader, Service Configuration Reader, Viewer, Writer |
 | `resource-controller.instance.retrieve` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
 | `cbr.rule.read` | | Administrator, Editor, Manager, Operator, Reader, Viewer, Writer |
