@@ -3,7 +3,7 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-05-06"
 
 keywords: users level of access, user control, access control, permissions, manage access, access management, platform management tasks, assign roles, centralized, enterprise scale
 
@@ -39,7 +39,7 @@ For IAM policies, the subject can be an access group, user, service ID, or trust
 
 The following table lists the maximum limits for IAM resources. These limits apply to any user who can create IAM resources. If a limit is exceeded, you receive an exception and are not allowed to create any new resources beyond that limit.
 
-If you have a specific use case that requires an extended limit, you can request an increase. For more information, see [Increasing account limits](/docs/account?topic=account-account-limits).
+If you have a specific use case that requires an extended limit, you can request an increase. For more information, see [Increasing account limits](/docs/iam?topic=iam-account-limits).
 {: note}
 
 | Resource                               | Max  |
@@ -67,4 +67,4 @@ If you have a specific use case that requires an extended limit, you can request
 A maximum of 1,000 policies and service to service authorizations within one account is recommended to ensure optimal performance within your account. For more information about limiting the number of policies in your account, see the [Best practices for organizing resources and assigning access](/docs/account?topic=account-account_setup).
 {: tip}
 
-If you want to check the number of policies in your account, see [Viewing the total number of policies per account](/docs/account?topic=account-account-limits&interface=cli#total-number-policies-cli). To request an increase in the account limit, see [Requesting a policy and rule shared limit increase](/docs/account?topic=account-account-limits&interface=cli#limit-increase).
+If you want to check the number of policies in your account, see [Viewing the total number of policies per account](/docs/iam?topic=iam-account-limits&interface=cli#total-number-policies-cli). To request an increase in the account limit, see [Requesting a policy and rule shared limit increase](/docs/iam?topic=iam-account-limits&interface=cli#limit-increase).

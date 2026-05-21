@@ -3,7 +3,7 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-05-06"
 
 keywords: service ID, create service ID, lock service ID, service ID example
 
@@ -27,7 +27,7 @@ All users have access to create a service ID in an account to which they are a m
 
 Service ID groups organize service IDs more effectively into groups, improving the efficiency of listing operations by reducing the number of service IDs that need to be processed. Service ID groups don't integrate with access management, so they cannot be used in IAM policies to control access.
 
-You can assign any identity access to view or manage a service ID by using access management tags. For more information, see [Attaching tags to a service ID](/docs/iam?topic=iam-attaching-and-detaching-tags-on-a-resource&interface=ui#am-tags-serviceid-ui).
+You can assign any identity access to view or manage a service ID by using access management tags. For more information, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).
 {: tip}
 
 If **Restrict service ID creation** is enabled in your IAM account settings, then everyone in the account, including account owners, is blocked from creating service IDs unless they are assigned explicit access. For more information, see [Restricting users from creating service IDs](/docs/iam?topic=iam-restrict-service-id-create).

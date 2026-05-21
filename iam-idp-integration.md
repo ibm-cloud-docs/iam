@@ -2,7 +2,7 @@
 copyright:
 
   years: 2020, 2026
-lastupdated: "2026-04-06"
+lastupdated: "2026-05-06"
 
 keywords: identity provider, IdP, App ID, IAM, integration, IdP SSO, third-party authentication, dynamic rules, external identity provider, single sign on
 
@@ -115,7 +115,7 @@ If you no longer need to use an IdP, you can unconsume it. Unconsuming an IdP re
 #### Reviewing IdP statuses
 {: #review-idp-statuses}
 
-1. Go to **Manage** > **Access (IAM)** > **Identity providers** in the {{site.data.keyword.cloud_notm}} console and select an existing IdP that is in the **Ready to use** state, or create a new IdP as described in [Enabling and connecting your identity provider with the {{site.data.keyword.cloud_notm}} SAML SP](/docs/account?topic=account-ibm-idp-integration#cloud-sp-idp).
+1. Go to **Manage** > **Access (IAM)** > **Identity providers** in the {{site.data.keyword.cloud_notm}} console and select an existing IdP that is in the **Ready to use** state, or create a new IdP as described in [Enabling and connecting your identity provider with the {{site.data.keyword.cloud_notm}} SAML SP](/docs/iam?topic=iam-ibm-idp-integration#cloud-sp-idp).
 1. Click the **Details** tab to view the IdP status.
     - **Inactive**: IdPs with an inactive tag are globally disabled by their owner. Click **Actions** > **Enable** to enable it.
     - **Login will fail**: The IdP is not active. Click **Actions** > **Enable** and turn on the **Enable for account login** toggle to enable it.

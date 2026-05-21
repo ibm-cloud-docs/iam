@@ -3,7 +3,7 @@
 copyright:
 
   years: 2023, 2026
-lastupdated: "2026-04-06"
+lastupdated: "2026-05-06"
 
 keywords: context-based restrictions, protecting catalog resources, security, catalog management, security, workloads
 
@@ -91,13 +91,13 @@ Secrets Manager
 :   If you have a rule that protects Secrets Manager and you’re [onboarding a product with Secrets Manager](/docs/account?topic=account-create-private-catalog&interface=ui#add-public-repo-ui), add your IP address and the Catalog Management service to a network zone as a service reference.
 
 Schematics
-:   If you’re using a [target account](/docs/iam?topic=iam-catalog-service-authorization&interface=ui) to validate a product and you have a rule protecting Schematics in the target account, add the Catalog Management service to a network zone as a service reference.
+:   If you're using a [target account](/docs/iam?topic=iam-create-trusted-profile&interface=ui#create-profile-services) to validate a product and you have a rule protecting Schematics in the target account, add the Catalog Management service to a network zone as a service reference.
 
 Similarly, if you have a rule that targets the Catalog Management Service, add the Schematics service as a service reference in the network zone.
 {: important}
 
 IAM Identity
-:   If you have a rule scoped to protect the entire IAM Identity service or scoped to the [trusted profile that you use for validation](/docs/iam?topic=iam-catalog-cross-validation&interface=ui#target-trusted-profile), add the Catalog Management service to a network zone as a service reference so that the validation flow still works.
+:   If you have a rule scoped to protect the entire IAM Identity service or scoped to the [trusted profile that you use for validation](/docs/iam?topic=iam-create-trusted-profile&interface=ui#create-profile-services), add the Catalog Management service to a network zone as a service reference so that the validation flow still works.
 
 Make sure to add that network zone to your context-based restriction rule. This way, the two services can continue to communicate.
 {: tip}

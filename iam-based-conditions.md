@@ -3,7 +3,7 @@
 copyright:
 
   years: 2023, 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-05-06"
 
 keywords: access policy, access, policy, restriction, time based restriction, time based, time based conditions, conditions, resource attribute
 
@@ -224,7 +224,7 @@ For more information about time-based conditions for access policies, see [Condi
 {: #before-you-begin-time-based-api}
 {: api}
 
-Make sure that you call the `v2/policies` URI, which is `https://iam.coud.ibm.com/v2/policies`, so that you can use conditions in your access policies. For more information, see the [IAM Policy Management API](/apidocs/iam-policy-management) and [change log](/docs/account?topic=account-api-change-log).
+Make sure that you call the `v2/policies` URI, which is `https://iam.coud.ibm.com/v2/policies`, so that you can use conditions in your access policies. For more information, see the [IAM Policy Management API](/apidocs/iam-policy-management) and [change log](/docs/iam?topic=iam-api-change-log).
 
 ## Creating a temporary time-based condition by using the API
 {: #iam-time-based-temp-api}
@@ -905,7 +905,7 @@ For more information about how Cloud Object Storage uses resource attribute-base
 {: #before-you-begin-resource-based-api}
 {: api}
 
-Make sure that you call the `v2/policies` URI, which is `https://iam.coud.ibm.com/v2/policies`, so that you can use conditions in your access policies. For more information, see the [IAM Policy Management API](/apidocs/iam-policy-management) and [change log](/docs/account?topic=account-api-change-log).
+Make sure that you call the `v2/policies` URI, which is `https://iam.coud.ibm.com/v2/policies`, so that you can use conditions in your access policies. For more information, see the [IAM Policy Management API](/apidocs/iam-policy-management) and [change log](/docs/iam?topic=iam-api-change-log).
 
 ## Creating resource attribute-based conditions by using the API
 {: #create-resource-attribute-conditio-api}
