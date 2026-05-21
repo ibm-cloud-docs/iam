@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-04-15"
+lastupdated: "2026-05-21"
 
 keywords: application programming interface key, API key, API, classic infrastructure API key, IBM Cloud API key, leaked API key, API key protection
 
@@ -65,6 +65,7 @@ Implementing the following best practices for API keys can help to increase the 
 - Keep security contacts updated to receive timely notifications.
 - Monitor {{site.data.keyword.atracker_short}} for suspicious API key usage.
 - Set expiration dates on API keys when appropriate.
+- Configure the leaked action setting to automatically disable or delete an API key if it's discovered in a leak.
 
 ## Working with API keys
 {: #work-with-apikeys}
