@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-05-21"
 
 keywords: frequently asked questions, cbr faqs, cbr and iam, context-based restrictions, access restrictions
 
@@ -56,3 +56,9 @@ As an administrator, you manage users, applications, and workflows that depend o
 {: faq}
 
 Currently, {{site.data.keyword.cloud_notm}} does not support GEO-based account access control through Context-based restrictions. This is a known limitation within the platform, and such a functionality is not available now.
+
+## Can I manage context-based restrictions with Terraform?
+{: #faq-terraform-cbr}
+{: faq}
+
+Yes. Implement zero-trust security with the [Context-Based Restrictions module](https://registry.terraform.io/modules/terraform-ibm-modules/cbr/ibm/latest){: external} for automated zone and rule management. Review [Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for security patterns.

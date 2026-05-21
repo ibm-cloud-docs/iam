@@ -3,7 +3,7 @@
 copyright:
 
   years: 2023, 2026
-lastupdated: "2026-05-06"
+lastupdated: "2026-05-21"
 
 keywords: context-based restrictions, protecting catalog resources, security, catalog management, security, workloads
 
@@ -304,3 +304,31 @@ To create a network zone, use the Terraform resource [cbr_zone](https://registry
     }
     ```
     {: codeblock}
+
+Alternatively, you can also use [Terraform IBM Modules (TIM) for CBR Zone](https://registry.terraform.io/modules/terraform-ibm-modules/cbr/ibm/latest/submodules/cbr-zone-module) to create a zone for context-based restrictions or update addresses in an existing zone. Learn about [Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim).
+{: note}
+
+The following example demonstrates using the module to create a network zone with the Catalog Management service reference:
+
+```terraform
+module "cbr" {
+  source  = "terraform-ibm-modules/cbr/ibm"
+  version = "X.X.X" # Replace with the latest version
+
+  cbr_zones = [
+    {
+      name             = "catalog-zone"
+      zone_description = "Allow catalogs to interact with other services"
+      addresses = [
+        {
+          type  = "serviceRef"
+          value = "globalcatalog-collection"
+        }
+      ]
+    }
+  ]
+}
+```
+{: codeblock}
+
+For additional configuration options and rule creation examples, see the [Context-Based Restrictions module documentation](https://registry.terraform.io/modules/terraform-ibm-modules/cbr/ibm/latest){: external}.

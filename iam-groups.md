@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-05-21"
 
 keywords: access groups, access group, create group, assign access to group, administrator, administrator role, streamlined access, efficient permissions
 
@@ -177,6 +177,9 @@ Use the following steps to create access groups by using Terraform:
    {: codeblock}
 
    You can also specify the description of the access group on the `description` option. For more information, see the argument reference details on the [Terraform Identity and Access Management (IAM)](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group){: external} page.
+
+Streamline access management by grouping users and service IDs with the [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for [IAM Access Groups](https://registry.terraform.io/modules/terraform-ibm-modules/iam-access-group/ibm/latest){: external}.
+{: tip}
 
 1. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://developer.hashicorp.com/terraform/cli/init){: external}.
 
@@ -482,6 +485,30 @@ After you set up your group, use the following steps to assign access to it by u
    {: codeblock}
 
    For more information, see the argument reference details on the [Terraform Identity and Access Management (IAM)](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group_policy){: external} page.
+
+You can also use the [IAM Access Groups module](https://registry.terraform.io/modules/terraform-ibm-modules/iam-access-group/ibm/latest){: external} to manage access groups and policies at scale. The following example demonstrates using the module:
+
+   ```terraform
+   module "access_group" {
+     source  = "terraform-ibm-modules/iam-access-group/ibm"
+     version = "latest"
+     
+     access_group_name        = "my-access-group"
+     access_group_description = "Access group for team members"
+     
+     policies = [
+       {
+         roles = ["Viewer"]
+         resources = [{
+           service = "cloud-object-storage"
+         }]
+       }
+     ]
+   }
+   ```
+   {: codeblock}
+
+   For more information about Terraform IBM Modules, see [About Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim).
 
 1. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://developer.hashicorp.com/terraform/cli/init){: external}.
 
@@ -934,6 +961,7 @@ Members can be users, service IDs, and trusted profiles.
    ```
    {: codeblock}
 
+Manage group membership programmatically with the [IAM Access Groups module](https://registry.terraform.io/modules/terraform-ibm-modules/iam-access-group/ibm/latest){: external} for automated user provisioning. Explore [Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for member management.
 
 1. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://developer.hashicorp.com/terraform/cli/init){: external}.
 

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-05-21"
 
 keywords: dynamic rules,access groups,specific identity attributes,identity provider,federated ID,
 
@@ -74,6 +74,39 @@ To create a rule by using Terraform, follow these steps:
    {: codeblock}
 
    For more information, see the argument reference details in the [Terraform documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group_dynamic_rule) page.
+
+Automate dynamic membership with the [IAM Access Groups module](https://registry.terraform.io/modules/terraform-ibm-modules/iam-access-group/ibm/latest){: external} for federated user management. Learn about [Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim).
+{: tip}
+
+   The following example demonstrates using the Terraform IBM Modules (TIM) to create an access group with dynamic rules:
+
+   ```terraform
+   module "access_group" {
+     source  = "terraform-ibm-modules/iam-access-group/ibm"
+     version = "X.X.X" # Replace with the latest version
+     
+     access_group_name        = "federated-managers"
+     access_group_description = "Access group for federated managers"
+     
+     dynamic_rules = [
+       {
+         name              = "manager-rule"
+         expiration        = 12
+         identity_provider = "https://idp.example.org/SAML2"
+         conditions = [
+           {
+             claim    = "isManager"
+             operator = "EQUALS"
+             value    = "true"
+           }
+         ]
+       }
+     ]
+   }
+   ```
+   {: codeblock}
+
+   For more configuration options and examples, see the [IAM Access Groups module documentation](https://registry.terraform.io/modules/terraform-ibm-modules/iam-access-group/ibm/latest){: external}.
 
 1. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://developer.hashicorp.com/terraform/cli/init){: external}.
 
