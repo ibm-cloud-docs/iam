@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-05-21"
+lastupdated: "2026-05-22"
 
 keywords: service iam roles, service iam actions, account management roles, iam roles
 
@@ -8651,7 +8651,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
 {: #actions-table74}
 
-## instructlab
+## Red Hat AI Inference
 {: #instructlab-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `instructlab` for the service name.
@@ -8663,7 +8663,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Operator | As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. | `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.update`, `resource-controller.broker.retrieve`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
 | Viewer | As a viewer, you can view service instances, but you can't modify them. | `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `iam.role.read`, `resource-controller.broker.retrieve`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.subscription.retrieve` |
 {: row-headers}
-{: caption="Platform roles - instructlab" caption-side="top"}
+{: caption="Platform roles - Red Hat AI Inference" caption-side="top"}
 {: tab-title="Platform roles"}
 {: tab-group="instructlab"}
 {: class="simple-tab-table"}
@@ -8678,7 +8678,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Service Configuration Reader | The ability to read services configuration for Governance management. | `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
 | Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. | `instructlab.taxonomy.read`, `instructlab.taxonomy.create`, `instructlab.taxonomy.list`, `instructlab.taxonomy.delete`, `instructlab.sdgdata.read`, `instructlab.sdgdata.list`, `instructlab.sdgdata.create`, `instructlab.sdgdata.delete`, `instructlab.sdgdata.stop`, `instructlab.model.read`, `instructlab.model.list`, `instructlab.model.create`, `instructlab.model.delete`, `instructlab.model.stop`, `instructlab.inference.create`, `instructlab.inference.read`, `instructlab.inference.list`, `instructlab.inference-model.read`, `instructlab.inference-model.list`, `instructlab.inference.delete`, `instructlab.inference-session.read`, `instructlab.inference-session.list`, `instructlab.inference-session.delete`, `instructlab.inference-session.update`, `instructlab.inference-model.create`, `instructlab.inference-model.delete`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 {: row-headers}
-{: caption="Service roles - instructlab" caption-side="top"}
+{: caption="Service roles - Red Hat AI Inference" caption-side="top"}
 {: tab-title="Service roles"}
 {: tab-group="instructlab"}
 {: class="simple-tab-table"}
@@ -8765,7 +8765,7 @@ Review the available platform and service roles and the actions mapped to each t
 | `resource-controller.key.manager_delete` | | Key Manager |
 | `resource-controller.key.manager_update` | | Key Manager |
 | `resource-controller.key.manager_retrieve` | | Key Manager |
-{: caption="Service actions - instructlab" caption-side="top"}
+{: caption="Service actions - Red Hat AI Inference" caption-side="top"}
 {: tab-title="Actions"}
 {: tab-group="instructlab"}
 {: class="simple-tab-table"}
