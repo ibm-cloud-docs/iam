@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-05-21"
 
 keywords: restrict api keys, block users from creating api keys, restrict api key creation
 
@@ -92,6 +92,9 @@ Enabling this setting affects only the creation of user API keys. It does not af
       {: pre}
 
 For more information, see the [Terraform documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_account_settings#restrict_create_platform_apikey).
+
+Enforce API key policies with the [IAM Account Settings module](https://registry.terraform.io/modules/terraform-ibm-modules/iam-account-settings/ibm/latest){: external} for centralized security controls. Discover [Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for account governance.
+{: tip}
 
 Now that the setting is enabled to restrict users from creating API keys, you can assign the required access to enable specific users to continue creating user API keys. Remember, the account owner is also required to be assigned this explicit access.
 {: important}

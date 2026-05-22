@@ -3,7 +3,7 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-05-21"
 
 keywords: resource access, assign access, IAM access policy, access to resource groups, edit access, remove access, administrator, administrator role
 
@@ -543,6 +543,9 @@ To assign access to resources by using Terraform, use the following steps:
 
    You can specify the name of the service for which you want to assign access to on the `service` option. For more information, see the argument reference details on the [Terraform Identity and Access Management (IAM)](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_user_policy){: external} page.
 
+   Control resource access with the [IAM Access Groups module](https://registry.terraform.io/modules/terraform-ibm-modules/iam-access-group/ibm/latest){: external} for policy-based permissions. Learn about [Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for access strategies.
+   {: tip}
+
 1. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://developer.hashicorp.com/terraform/cli/init){: external}.
 
    ```bash
@@ -594,6 +597,9 @@ To assign access within a resource group by using Terraform, use the following s
    {: codeblock}
 
    You can specify the ID of the resource group that you want to assign access to on the `resource_group_id` option. For more information, see the argument reference details on the [Terraform Identity and Access Management (IAM)](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_user_policy){: external} page.
+
+   Scope access to resource groups using the [IAM Access Groups module](https://registry.terraform.io/modules/terraform-ibm-modules/iam-access-group/ibm/latest){: external} for granular control. Review [Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for resource group policies.
+   {: tip}
 
 1. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://developer.hashicorp.com/terraform/cli/init){: external}.
 

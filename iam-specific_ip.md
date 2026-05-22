@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-05-21"
 
 keywords: specific IP addresses, IP addresses, restrict IP access, IP address access, allow IP access
 
@@ -113,6 +113,9 @@ To restrict all users to using only specific IP addresses, complete the followin
       {: pre}
 
 For more information, see the [Terraform documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_account_settings#allowed_ip_addresses).
+
+Strengthen network security by restricting account access to trusted IPs with [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for [IAM Account Settings](https://registry.terraform.io/modules/terraform-ibm-modules/iam-account-settings/ibm/latest){: external}.
+{: tip}
 
 You can enter a single IP address `17.5.7.8`, an IP address range `17.5.7.8 - 17.5.9.5`, or IP subnets `17.5.7.8.0/16`, or a [network zone](/docs/iam?topic=iam-context-restrictions-whatis#network-zones-whatis) `networkZoneName`. Use IPv4 or IPv6 addresses, and separate multiple values with a comma.
 {: note}

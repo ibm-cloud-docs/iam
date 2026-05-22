@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-05-06"
+lastupdated: "2026-05-21"
 
 keywords: frequently asked questions, iam faqs, administrator, administrator role
 
@@ -339,6 +339,12 @@ For more information, see [Using Trusted Profiles in your Kubernetes and OpenShi
 {: faq}
 
 To view a list of dynamic members in an access group, go to **Manage** > **Access (IAM)** > **Access groups** in the {{site.data.keyword.cloud_notm}} console. Select an access group and click **Users**. Dynamically added users are indicated by the type `Dynamic`. For more information, see [Viewing dynamic members of access groups](/docs/iam?topic=iam-rules#view-dynamic-users)
+
+## Can I automate access group management with Terraform?
+{: #faq-terraform-access-group}
+{: faq}
+
+Yes. Simplify access management with the [IAM Access Groups module](https://registry.terraform.io/modules/terraform-ibm-modules/iam-access-group/ibm/latest){: external} for centralized group and policy administration. Explore [Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim).
 
 ## How do I find inactive users, service IDs, trusted profiles, and API keys in my account?
 {: #unused-identities}
