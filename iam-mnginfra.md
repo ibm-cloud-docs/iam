@@ -33,6 +33,7 @@ Support center account management access is recommended for users that work with
 The following graphic shows how classic infrastructure permissions are assigned per user. You can grant each user access to a classic infrastructure service or device by selecting from the granular permission options to customize each user's access.
 
 
+
 To view and assign these permissions, go to **Manage** > **Access (IAM)** > **Users** in the {{site.data.keyword.cloud_notm}} console. Then, select a user's name from the list that you can manage access for, and click **Classic infrastructure**.
 
 ### Migrated classic infrastructure permissions
