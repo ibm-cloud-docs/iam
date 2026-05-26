@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-05-22"
+lastupdated: "2026-05-26"
 
 keywords: service iam roles, service iam actions, account management roles, iam roles
 
@@ -15765,7 +15765,7 @@ Review the available platform and service roles and the actions mapped to each t
 | `project.job-run.retrieve-all` | The ability to view a project job's runs. | Administrator, Editor, Operator, Viewer |
 | `project.job-run.retrieve` | The ability to view a project job run | Administrator, Editor, Operator, Viewer |
 | `project.job-run.delete` | The ability to delete a project job run | Administrator |
-| `project.compliance.retrieve-zones` | The Ability to view Compliance instance zones. | Administrator, Editor, Operator, Viewer |
+| `project.compliance.retrieve-zones` | The ability to view a compliance instance zones. | Administrator, Editor, Operator, Viewer |
 | `global-search-tagging.resource.read` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
 | `resource-controller.instance.retrieve` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
 | `cbr.rule.read` | | Administrator, Editor, Operator, Viewer |
