@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-06-02"
+lastupdated: "2026-06-03"
 
 keywords: service iam roles, service iam actions, account management roles, iam roles
 
@@ -19381,99 +19381,6 @@ Review the available platform and service roles and the actions mapped to each t
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
 {: #actions-table187}
 
-## WebSphere Application Server
-{: #websphereappsvr-roles}
-
-Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `websphereappsvr` for the service name.
-
-| Role | Description | Actions |
-| ----- | :----- | :----- |
-| Administrator | As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. | `websphereappsvr.dashboard.view`, `global-search-tagging.resource.read`, `global-search-tagging.tag.attach-user-tag`, `global-search-tagging.tag.detach-user-tag`, `global-search-tagging.tag.attach-access-tag`, `global-search-tagging.tag.detach-access-tag`, `cbr.rule.read`, `cbr.rule.create`, `cbr.rule.update`, `cbr.rule.delete`, `iam.delegationPolicy.create`, `iam.delegationPolicy.update`, `iam.policy.read`, `iam.policy.create`, `iam.policy.update`, `iam.policy.delete`, `iam.service.read`, `iam.role.read`, `iam.role.assign`, `resource-controller.credential.retrieve_all`, `resource-controller.broker.create`, `resource-controller.broker.update`, `resource-controller.broker.delete`, `resource-controller.broker.retrieve`, `resource-controller.instance.create`, `resource-controller.instance.delete`, `resource-controller.instance.update_plan`, `resource-controller.instance.update_onetime_credentials_off`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.instance.retrieve_history`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.create`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.group.delete`, `resource-controller.subscription.retrieve` |
-| Editor | As an editor, you can perform all platform actions except for managing the account and assigning access policies. | `websphereappsvr.dashboard.view`, `global-search-tagging.resource.read`, `global-search-tagging.tag.attach-user-tag`, `global-search-tagging.tag.detach-user-tag`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.create`, `resource-controller.broker.update`, `resource-controller.broker.delete`, `resource-controller.broker.retrieve`, `resource-controller.instance.create`, `resource-controller.instance.delete`, `resource-controller.instance.update_plan`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.create`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
-| Operator | As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. | `websphereappsvr.dashboard.view`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.update`, `resource-controller.broker.retrieve`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
-| Viewer | As a viewer, you can view service instances, but you can't modify them. | `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `iam.role.read`, `resource-controller.broker.retrieve`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.subscription.retrieve` |
-{: row-headers}
-{: caption="Platform roles - WebSphere Application Server" caption-side="top"}
-{: tab-title="Platform roles"}
-{: tab-group="websphereappsvr"}
-{: class="simple-tab-table"}
-{: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table188}
-
-| Role | Description | Actions |
-| ----- | :----- | :----- |
-| Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. | `resource-controller.key.manager_create`, `resource-controller.key.manager_delete`, `resource-controller.key.manager_update`, `resource-controller.key.manager_retrieve` |
-| Service Configuration Reader | The ability to read services configuration for Governance management. | `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
-{: row-headers}
-{: caption="Service roles - WebSphere Application Server" caption-side="top"}
-{: tab-title="Service roles"}
-{: tab-group="websphereappsvr"}
-{: class="simple-tab-table"}
-{: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table188}
-
-| Action | Description | Roles |
-| ----- | :----- | :----- |
-| `websphereappsvr.dashboard.view` |  | Administrator, Editor, Operator |
-| `global-search-tagging.resource.read` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
-| `resource-controller.instance.retrieve` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
-| `cbr.rule.read` | | Administrator, Editor, Operator, Viewer |
-| `iam.policy.read` | | Administrator, Editor, Operator, Viewer |
-| `iam.role.read` | | Administrator, Viewer |
-| `resource-controller.broker.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `resource-controller.alias.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `resource-controller.binding.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `resource-controller.key.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `resource-controller.quota.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `resource-controller.group.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `resource-controller.subscription.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `global-search-tagging.tag.attach-user-tag` | | Administrator, Editor |
-| `global-search-tagging.tag.detach-user-tag` | | Administrator, Editor |
-| `global-search-tagging.tag.attach-access-tag` | | Administrator |
-| `global-search-tagging.tag.detach-access-tag` | | Administrator |
-| `cbr.rule.create` | | Administrator |
-| `cbr.rule.update` | | Administrator |
-| `cbr.rule.delete` | | Administrator |
-| `iam.delegationPolicy.create` | | Administrator |
-| `iam.delegationPolicy.update` | | Administrator |
-| `iam.policy.create` | | Administrator |
-| `iam.policy.update` | | Administrator |
-| `iam.policy.delete` | | Administrator |
-| `iam.service.read` | | Administrator |
-| `iam.role.assign` | | Administrator |
-| `resource-controller.credential.retrieve_all` | | Administrator |
-| `resource-controller.broker.create` | | Administrator, Editor |
-| `resource-controller.broker.update` | | Administrator, Editor, Operator |
-| `resource-controller.broker.delete` | | Administrator, Editor |
-| `resource-controller.instance.create` | | Administrator, Editor |
-| `resource-controller.instance.delete` | | Administrator, Editor |
-| `resource-controller.instance.update_plan` | | Administrator, Editor |
-| `resource-controller.instance.update_onetime_credentials_off` | | Administrator |
-| `resource-controller.alias.create` | | Administrator, Editor, Operator |
-| `resource-controller.alias.delete` | | Administrator, Editor, Operator |
-| `resource-controller.binding.create` | | Administrator, Editor, Operator |
-| `resource-controller.binding.delete` | | Administrator, Editor, Operator |
-| `resource-controller.key.create` | | Administrator, Editor, Operator |
-| `resource-controller.key.delete` | | Administrator, Editor, Operator |
-| `resource-controller.instance.update` | | Administrator, Editor, Operator |
-| `resource-controller.alias.update` | | Administrator, Editor, Operator |
-| `resource-controller.binding.update` | | Administrator, Editor, Operator |
-| `resource-controller.key.update` | | Administrator, Editor, Operator |
-| `resource-controller.instance.retrieve_history` | | Administrator |
-| `resource-controller.group.create` | | Administrator, Editor |
-| `resource-controller.group.update` | | Administrator, Editor, Operator |
-| `resource-controller.group.delete` | | Administrator |
-| `resource-controller.key.manager_create` | | Key Manager |
-| `resource-controller.key.manager_delete` | | Key Manager |
-| `resource-controller.key.manager_update` | | Key Manager |
-| `resource-controller.key.manager_retrieve` | | Key Manager |
-{: caption="Service actions - WebSphere Application Server" caption-side="top"}
-{: tab-title="Actions"}
-{: tab-group="websphereappsvr"}
-{: class="simple-tab-table"}
-{: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table188}
-
 ## Annotator for Clinical Data
 {: #wh-acd-roles}
 
@@ -19491,7 +19398,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="wh-acd"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table189}
+{: #platform-roles-table188}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19506,7 +19413,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="wh-acd"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table189}
+{: #service-roles-table188}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19576,4 +19483,4 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="wh-acd"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table189}
+{: #actions-table188}
