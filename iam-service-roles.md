@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-06-03"
+lastupdated: "2026-06-04"
 
 keywords: service iam roles, service iam actions, account management roles, iam roles
 
@@ -1010,9 +1010,10 @@ Review the available platform and service roles and the actions mapped to each t
 | Configuration Aggregator Reader | As a Configuration Aggregator Reader, you have permission to query for the configuration metadata of resources | `apprapp.config-aggregator.query` |
 | Configuration Update Reporter | As a Configuration Update Reporter, you have permissions to report the change in Cloud resource configuration to Configuration aggregator.  | `apprapp.config-aggregator-atevents.ingest` |
 | Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. | `resource-controller.key.manager_create`, `resource-controller.key.manager_delete`, `resource-controller.key.manager_update`, `resource-controller.key.manager_retrieve` |
-| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `apprapp.dashboard.view`, `apprapp.collections.list`, `apprapp.collections.create`, `apprapp.collections.update`, `apprapp.collections.delete`, `apprapp.features.list`, `apprapp.features.create`, `apprapp.features.update`, `apprapp.features.delete`, `apprapp.segments.list`, `apprapp.segments.update`, `apprapp.segments.create`, `apprapp.segments.delete`, `apprapp.features.patch`, `apprapp.features.toggle`, `apprapp.properties.list`, `apprapp.properties.update`, `apprapp.properties.create`, `apprapp.properties.delete`, `apprapp.properties.patch`, `apprapp.environments.create`, `apprapp.environments.update`, `apprapp.environments.delete`, `apprapp.environments.list`, `apprapp.instances.export`, `apprapp.instances.import`, `apprapp.gitconfigs.create`, `apprapp.gitconfigs.update`, `apprapp.gitconfigs.delete`, `apprapp.gitconfigs.view`, `apprapp.gitconfigs.promote`, `apprapp.usage.create`, `apprapp.sse.view`, `apprapp.originconfigs.update`, `apprapp.originconfigs.list`, `apprapp.gitconfigs.restore`, `apprapp.integrations.create`, `apprapp.integrations.list`, `apprapp.integrations.delete`, `apprapp.workflowconfigs.create`, `apprapp.workflowconfigs.update`, `apprapp.workflowconfigs.list`, `apprapp.workflowconfigs.delete`, `apprapp.changerequest.create`, `apprapp.config.import`, `apprapp.config.export`, `apprapp.config.action`, `apprapp.config-aggregator-settings.update`, `apprapp.config-aggregator-settings.list`, `apprapp.config-aggregator-status.read`, `apprapp.config-aggregator.query`, `apprapp.metrics.list`, `apprapp.metrics.create`, `apprapp.metrics.update`, `apprapp.metrics.delete`, `apprapp.experiments.list`, `apprapp.experiments.create`, `apprapp.experiments.update`, `apprapp.experiments.delete`, `apprapp.iterations.list`, `apprapp.analytics.create`, `apprapp.analytics.list`, `apprapp.config-aggregator-scope.read`, `apprapp.clientsdk-apikey.encrypt`, `apprapp.config-aggregator.reconcile`, `apprapp.features-rules.list`, `apprapp.features-rules.create`, `apprapp.features-rules.patch`, `apprapp.features-rules.delete`, `apprapp.features-rules-order.patch`, `apprapp.variations.list`, `apprapp.variations.create`, `apprapp.variations.update`, `apprapp.variations.delete`, `apprapp.experiments-statistics.read`, `apprapp.config.status`, `apprapp.config-aggregator-atevents.ingest`, `apprapp.features-rules-rollout-action.patch`, `apprapp.features-rollout-action.patch`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
-| Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. | `apprapp.dashboard.view`, `apprapp.collections.list`, `apprapp.features.list`, `apprapp.segments.list`, `apprapp.properties.list`, `apprapp.environments.list`, `apprapp.gitconfigs.view`, `apprapp.usage.create`, `apprapp.sse.view`, `apprapp.originconfigs.list`, `apprapp.integrations.list`, `apprapp.workflowconfigs.list`, `apprapp.config.export`, `apprapp.config-aggregator-settings.list`, `apprapp.config-aggregator-status.read`, `apprapp.metrics.list`, `apprapp.experiments.list`, `apprapp.iterations.list`, `apprapp.analytics.create`, `apprapp.config-aggregator-scope.read`, `apprapp.features-rules.list`, `apprapp.variations.list`, `apprapp.experiments-statistics.read`, `apprapp.config.status`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
+| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `apprapp.dashboard.view`, `apprapp.collections.list`, `apprapp.collections.create`, `apprapp.collections.update`, `apprapp.collections.delete`, `apprapp.features.list`, `apprapp.features.create`, `apprapp.features.update`, `apprapp.features.delete`, `apprapp.segments.list`, `apprapp.segments.update`, `apprapp.segments.create`, `apprapp.segments.delete`, `apprapp.features.patch`, `apprapp.features.toggle`, `apprapp.properties.list`, `apprapp.properties.update`, `apprapp.properties.create`, `apprapp.properties.delete`, `apprapp.properties.patch`, `apprapp.environments.create`, `apprapp.environments.update`, `apprapp.environments.delete`, `apprapp.environments.list`, `apprapp.instances.export`, `apprapp.instances.import`, `apprapp.gitconfigs.create`, `apprapp.gitconfigs.update`, `apprapp.gitconfigs.delete`, `apprapp.gitconfigs.view`, `apprapp.gitconfigs.promote`, `apprapp.usage.create`, `apprapp.sse.view`, `apprapp.originconfigs.update`, `apprapp.originconfigs.list`, `apprapp.gitconfigs.restore`, `apprapp.integrations.create`, `apprapp.integrations.list`, `apprapp.integrations.delete`, `apprapp.workflowconfigs.create`, `apprapp.workflowconfigs.update`, `apprapp.workflowconfigs.list`, `apprapp.workflowconfigs.delete`, `apprapp.changerequest.create`, `apprapp.config.import`, `apprapp.config.export`, `apprapp.config.action`, `apprapp.config-aggregator-settings.update`, `apprapp.config-aggregator-settings.list`, `apprapp.config-aggregator-status.read`, `apprapp.config-aggregator.query`, `apprapp.metrics.list`, `apprapp.metrics.create`, `apprapp.metrics.update`, `apprapp.metrics.delete`, `apprapp.experiments.list`, `apprapp.experiments.create`, `apprapp.experiments.update`, `apprapp.experiments.delete`, `apprapp.iterations.list`, `apprapp.analytics.create`, `apprapp.analytics.list`, `apprapp.config-aggregator-scope.read`, `apprapp.clientsdk-apikey.encrypt`, `apprapp.config-aggregator.reconcile`, `apprapp.features-rules.list`, `apprapp.features-rules.create`, `apprapp.features-rules.patch`, `apprapp.features-rules.delete`, `apprapp.features-rules-order.patch`, `apprapp.variations.list`, `apprapp.variations.create`, `apprapp.variations.update`, `apprapp.variations.delete`, `apprapp.experiments-statistics.read`, `apprapp.config.status`, `apprapp.config-aggregator-atevents.ingest`, `apprapp.features-rules-rollout-action.patch`, `apprapp.features-rollout-action.patch`, `apprapp.workflow-configs.list`, `apprapp.workflow-configs.create`, `apprapp.workflow-configs.update`, `apprapp.workflow-configs.delete`, `apprapp.workflow-configs.toggle`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
+| Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. | `apprapp.dashboard.view`, `apprapp.collections.list`, `apprapp.features.list`, `apprapp.segments.list`, `apprapp.properties.list`, `apprapp.environments.list`, `apprapp.gitconfigs.view`, `apprapp.usage.create`, `apprapp.sse.view`, `apprapp.originconfigs.list`, `apprapp.integrations.list`, `apprapp.workflowconfigs.list`, `apprapp.config.export`, `apprapp.config-aggregator-settings.list`, `apprapp.config-aggregator-status.read`, `apprapp.metrics.list`, `apprapp.experiments.list`, `apprapp.iterations.list`, `apprapp.analytics.create`, `apprapp.config-aggregator-scope.read`, `apprapp.features-rules.list`, `apprapp.variations.list`, `apprapp.experiments-statistics.read`, `apprapp.config.status`, `apprapp.workflow-configs.list`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 | Service Configuration Reader | The ability to read services configuration for Governance management. | `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
+| Workflow operator | As a workflow operator, you have permissions beyond the reader role, allowing you to create workflows that initiate an approval process using ServiceNow. | `apprapp.dashboard.view`, `apprapp.collections.list`, `apprapp.features.list`, `apprapp.segments.list`, `apprapp.properties.list`, `apprapp.environments.list`, `apprapp.gitconfigs.view`, `apprapp.sse.view`, `apprapp.originconfigs.list`, `apprapp.integrations.list`, `apprapp.config.export`, `apprapp.config-aggregator-settings.list`, `apprapp.metrics.list`, `apprapp.experiments.list`, `apprapp.iterations.list`, `apprapp.config-aggregator-scope.read`, `apprapp.features-rules.list`, `apprapp.experiments-statistics.read`, `apprapp.config.status`, `apprapp.workflow-configs.list`, `apprapp.workflow-configs.create`, `apprapp.workflow-configs.update`, `apprapp.workflow-configs.delete`, `apprapp.workflow-configs.toggle` |
 | Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. | `apprapp.dashboard.view`, `apprapp.collections.list`, `apprapp.features.list`, `apprapp.segments.list`, `apprapp.segments.update`, `apprapp.segments.create`, `apprapp.segments.delete`, `apprapp.features.patch`, `apprapp.features.toggle`, `apprapp.properties.list`, `apprapp.properties.patch`, `apprapp.environments.list`, `apprapp.gitconfigs.view`, `apprapp.usage.create`, `apprapp.sse.view`, `apprapp.originconfigs.list`, `apprapp.integrations.list`, `apprapp.workflowconfigs.list`, `apprapp.config.export`, `apprapp.config-aggregator-settings.list`, `apprapp.config-aggregator-status.read`, `apprapp.metrics.list`, `apprapp.experiments.list`, `apprapp.iterations.list`, `apprapp.analytics.create`, `apprapp.config-aggregator-scope.read`, `apprapp.features-rules.list`, `apprapp.features-rules.create`, `apprapp.features-rules.patch`, `apprapp.features-rules-order.patch`, `apprapp.variations.list`, `apprapp.experiments-statistics.read`, `apprapp.config.status`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 {: row-headers}
 {: caption="Service roles - App Configuration" caption-side="top"}
@@ -1024,22 +1025,22 @@ Review the available platform and service roles and the actions mapped to each t
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
-| `apprapp.dashboard.view` | Dashboard view | Administrator, Config Operator, Editor, Manager, Operator, Reader, Writer |
-| `apprapp.collections.list` | List collections | Client SDK, Config Operator, Manager, Reader, Writer |
+| `apprapp.dashboard.view` | Dashboard view | Administrator, Config Operator, Editor, Manager, Operator, Reader, Workflow operator, Writer |
+| `apprapp.collections.list` | List collections | Client SDK, Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.collections.create` | Create collections | Manager |
 | `apprapp.collections.update` | Update collections | Manager |
 | `apprapp.collections.delete` | Delete collections  | Manager |
-| `apprapp.features.list` | List features | Config Operator, Manager, Reader, Writer |
+| `apprapp.features.list` | List features | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.features.create` | Create Features | Manager |
 | `apprapp.features.update` | Update features | Manager |
 | `apprapp.features.delete` | Delete features | Manager |
-| `apprapp.segments.list` | List segments | Config Operator, Manager, Reader, Writer |
+| `apprapp.segments.list` | List segments | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.segments.update` | Update segments | Manager, Writer |
 | `apprapp.segments.create` | Create segments | Manager, Writer |
 | `apprapp.segments.delete` | Delete segments | Manager, Writer |
 | `apprapp.features.patch` | Patch features | Manager, Writer |
 | `apprapp.features.toggle` | Toggle feature | Config Operator, Manager, Writer |
-| `apprapp.properties.list` | List properties | Config Operator, Manager, Reader, Writer |
+| `apprapp.properties.list` | List properties | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.properties.update` | Update properties | Manager |
 | `apprapp.properties.create` | Create properties | Manager |
 | `apprapp.properties.delete` | Delete properties | Manager |
@@ -1047,21 +1048,21 @@ Review the available platform and service roles and the actions mapped to each t
 | `apprapp.environments.create` | Create environments | Manager |
 | `apprapp.environments.update` | Update environments | Manager |
 | `apprapp.environments.delete` | Delete environments | Manager |
-| `apprapp.environments.list` | List environments | Config Operator, Manager, Reader, Writer |
+| `apprapp.environments.list` | List environments | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.instances.export` | Export instance resources to a JSON | Manager |
 | `apprapp.instances.import` | Import instance resources from a JSON | Manager |
 | `apprapp.gitconfigs.create` | Create git configuration | Manager |
 | `apprapp.gitconfigs.update` | Update git configurations | Manager |
 | `apprapp.gitconfigs.delete` | Delete GIT configuration | Manager |
-| `apprapp.gitconfigs.view` | GET a GIT configuration | Config Operator, Manager, Reader, Writer |
+| `apprapp.gitconfigs.view` | GET a GIT configuration | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.gitconfigs.promote` | Promote configuration | Manager |
 | `apprapp.usage.create` | Usage posting | Client SDK, Config Operator, Manager, Reader, Writer |
-| `apprapp.sse.view` | SSE connect | Client SDK, Config Operator, Manager, Reader, Writer |
+| `apprapp.sse.view` | SSE connect | Client SDK, Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.originconfigs.update` | Update origin configuration for allowlisting CORS policy for Browser clients SDKs | Manager |
-| `apprapp.originconfigs.list` | List origin configuration for allowlisting CORS policy for Browser clients SDKs | Config Operator, Manager, Reader, Writer |
+| `apprapp.originconfigs.list` | List origin configuration for allowlisting CORS policy for Browser clients SDKs | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.gitconfigs.restore` | Restore configuration | Manager |
 | `apprapp.integrations.create` | Create a integration between App Configuration and an external service | Manager |
-| `apprapp.integrations.list` | List integrations between App Configuration and external services | Config Operator, Manager, Reader, Writer |
+| `apprapp.integrations.list` | List integrations between App Configuration and external services | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.integrations.delete` | Delete the integration between App Configuration and an external service | Manager |
 | `apprapp.workflowconfigs.create` | Create workflow configuration for service now integration for CR approval | Manager |
 | `apprapp.workflowconfigs.update` | Update workflow configuration for service now integration for CR approval | Manager |
@@ -1069,27 +1070,27 @@ Review the available platform and service roles and the actions mapped to each t
 | `apprapp.workflowconfigs.delete` | Delete the workflow configuration for service now integration for CR approval | Manager |
 | `apprapp.changerequest.create` | API endpoint to listen to service-now events | Manager |
 | `apprapp.config.import` | Import the configuration of the instance | Manager |
-| `apprapp.config.export` | Export the configuration of the instance | Client SDK, Config Operator, Manager, Reader, Writer |
+| `apprapp.config.export` | Export the configuration of the instance | Client SDK, Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.config.action` | Perform actions on the configuration of the instance like promote, restore to git | Manager |
 | `apprapp.config-aggregator-settings.update` | Update the settings for the Configuration aggregator | Manager |
-| `apprapp.config-aggregator-settings.list` | Retrieve the settings for the Configuration aggregator | Config Operator, Manager, Reader, Writer |
+| `apprapp.config-aggregator-settings.list` | Retrieve the settings for the Configuration aggregator | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.config-aggregator-status.read` | Retrieve the status of resource collection for the Configuration aggregator | Config Operator, Manager, Reader, Writer |
 | `apprapp.config-aggregator.query` | Query API to retrieve resource metadata from Config Aggregator | Configuration Aggregator Reader, Manager |
-| `apprapp.metrics.list` | The ability to see metrics. | Config Operator, Manager, Reader, Writer |
+| `apprapp.metrics.list` | The ability to see metrics. | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.metrics.create` | The ability to create metrics. | Manager |
 | `apprapp.metrics.update` | The ability to edit or update existing metrics. | Manager |
 | `apprapp.metrics.delete` | The ability to delete existing metrics. | Manager |
-| `apprapp.experiments.list` | The ability to see experiments. | Config Operator, Manager, Reader, Writer |
+| `apprapp.experiments.list` | The ability to see experiments. | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.experiments.create` | The ability to create experiments. | Manager |
 | `apprapp.experiments.update` | The ability to edit or update existing experiments. | Manager |
 | `apprapp.experiments.delete` | The ability to delete existing experiments. | Manager |
-| `apprapp.iterations.list` | The ability to view iterations of an experiment. | Config Operator, Manager, Reader, Writer |
+| `apprapp.iterations.list` | The ability to view iterations of an experiment. | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.analytics.create` | The ability to submit featureflag evaluation & metric events for an ongoing experiment. | Client SDK, Config Operator, Manager, Reader, Writer |
 | `apprapp.analytics.list` | The ability to view or download the metadata associated with the experiment. | Manager |
-| `apprapp.config-aggregator-scope.read` | Retrieve the account scope of resource collection for the Configuration aggregator | Config Operator, Manager, Reader, Writer |
+| `apprapp.config-aggregator-scope.read` | Retrieve the account scope of resource collection for the Configuration aggregator | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.clientsdk-apikey.encrypt` | The ability to obtain the encrypted ClientSDK apikey for a given plain ClientSDK apikey. | Manager |
 | `apprapp.config-aggregator.reconcile` | Perform the reconciliation of the resources metadata | Manager |
-| `apprapp.features-rules.list` | The ability to list targeting rules of a feature flag. | Config Operator, Manager, Reader, Writer |
+| `apprapp.features-rules.list` | The ability to list targeting rules of a feature flag. | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.features-rules.create` | The ability to create a new rule in feature flag's targeting. | Manager, Writer |
 | `apprapp.features-rules.patch` | The ability to update an existing rule in feature flag's targeting. | Manager, Writer |
 | `apprapp.features-rules.delete` | The ability to delete an existing rule from feature flag's targeting. | Manager |
@@ -1098,11 +1099,16 @@ Review the available platform and service roles and the actions mapped to each t
 | `apprapp.variations.create` | The ability to create variations of a feature flag. | Manager |
 | `apprapp.variations.update` | The ability to edit or update existing variation of a feature flag. | Manager |
 | `apprapp.variations.delete` | The ability to delete existing variations of a feature flag. | Manager |
-| `apprapp.experiments-statistics.read` | The ability to view the graphical representation of experiment's analytical results. | Config Operator, Manager, Reader, Writer |
-| `apprapp.config.status` | The ability to view the status of import or export operation. | Config Operator, Manager, Reader, Writer |
+| `apprapp.experiments-statistics.read` | The ability to view the graphical representation of experiment's analytical results. | Config Operator, Manager, Reader, Workflow operator, Writer |
+| `apprapp.config.status` | The ability to view the status of import or export operation. | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.config-aggregator-atevents.ingest` | Internal use only. The ability to ingest events from Activity tracker to Configuration Aggregator. | Configuration Update Reporter, Manager |
 | `apprapp.features-rules-rollout-action.patch` | The ability to update or edit rollout configuration of any existing feature flag rule. | Manager |
 | `apprapp.features-rollout-action.patch` | The ability to update or edit rollout configuration of existing feature flags. | Manager |
+| `apprapp.workflow-configs.list` | List workflow configurations | Manager, Reader, Workflow operator |
+| `apprapp.workflow-configs.create` | Create workflow configurations | Manager, Workflow operator |
+| `apprapp.workflow-configs.update` | Update workflow configurations | Manager, Workflow operator |
+| `apprapp.workflow-configs.delete` | Delete workflow configurations | Manager, Workflow operator |
+| `apprapp.workflow-configs.toggle` | Enable/Disable workflow configurations | Manager, Workflow operator |
 | `global-search-tagging.resource.read` | | Administrator, Editor, Manager, Operator, Reader, Service Configuration Reader, Viewer, Writer |
 | `resource-controller.instance.retrieve` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
 | `cbr.rule.read` | | Administrator, Editor, Manager, Operator, Reader, Viewer, Writer |
