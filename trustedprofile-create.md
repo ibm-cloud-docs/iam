@@ -3,9 +3,9 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-05-06"
+lastupdated: "2026-06-30"
 
-keywords: trusted profile, identity and access management, federated users, compute resources, IAM trusted profile, trust relationship, establish trust, trust policy, trusted entity, assume access, apply access, access group, service IDs, IBM Cloud services, CRN, cloud resource name, workload identity, without credentials
+keywords: trusted profile, identity and access management, federated users, compute resources, IAM trusted profile, trust relationship, establish trust, trust policy, trusted entity, assume access, apply access, access group, service IDs, IBM Cloud services, CRN, cloud resource name, workload identity, without credentials, Power Virtual Server, PowerVS
 
 subcollection: iam
 
@@ -58,13 +58,11 @@ Complete the following steps to define which federated users can access specific
       {: tip}
 
 1. You can create the trusted profile before you add details by selecting **Decide later**. Or, establish trust by completing the following steps:
-   1. Select **Federated users** as a trusted entity type from the list.<production>
-   1. Select **Users federated by IBMid** or **Users federated by {{site.data.keyword.cloud_notm}} App ID** as the authentication method and input the default identity provider (IdP) you enabled in step 1.
+   1. Select **Federated users** as a trusted entity type from the list.
+   1. Select **Users federated by IBMid**, **Users federated by {{site.data.keyword.cloud_notm}} App ID**, or **Users federated by {{site.data.keyword.cloud_notm}} SAML** as the authentication method and input the default identity provider (IdP) you enabled in step 1.
 
       If the users that you are creating a trusted profile for use {{site.data.keyword.appid_full_notm}}, create the trusted profile as an App ID user, and likewise for IBMid. This way, your own SAML attributes can give you an idea of how to structure the trusted profile conditions. Other users with the same IdP can have different SAML attributes. Use your own attributes only as a hint. To use attributes in a claim that are different than your own, input them manually.
-      {: tip}</production><idp>
-
-      1. Select **Users federated by IBMid**, **Users federated by {{site.data.keyword.cloud_notm}} App ID**, or **Users federated by {{site.data.keyword.cloud_notm}} SAML** as the authentication method and input the default identity provider (IdP) you enabled in step 1.</idp>
+      {: tip}
 
    1. Add conditions based on your IdP data to define how and when federated users can apply the profile.
       * By clicking **Add a condition**, you can define multiple conditions. Federated users must meet all the conditions to be included in the trusted profile. For more information about the fields that are used to create conditions, see [IAM condition properties](/docs/iam?topic=iam-iam-condition-properties).
@@ -79,7 +77,30 @@ Complete the following steps to define which federated users can access specific
 For more information about the fields that are used to create conditions for trusted profiles, see [IAM condition properties](/docs/iam?topic=iam-iam-condition-properties).
 {: tip}
 
+## Establishing trust with non-federated users in the console
+{: #create-profile-user-ui}
+{: ui}
 
+Complete the following steps to define which non-federated users can apply a trusted profile that you create:
+
+1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Trusted profiles**.
+1. Click **Create profile**.
+1. Describe your profile by providing a name and a description, then click **Continue**.
+
+      In the description, provide a list of actions available for this trusted profile.
+      {: tip}
+
+1. You can create the trusted profile before you add details by selecting **Decide later**. Or, establish trust by completing the following steps:
+   1. Select **Individual users** as a trusted entity type.
+      1. Select individual users from the list of users in your account and click **Add to profile**.
+      1. Or, click **Add manually** to specify users in a different account.
+         1. Enter a description for the user in another account.
+         1. Enter the IAMid of the user in a different account.
+         1. Enter the acount ID for the user in a different account.
+         1. Click **Add**.
+1. Click **Continue**.
+1. (Optional) [Assign access to the trusted profile](/docs/iam?topic=iam-create-trusted-profile#tp-access).
+1. Or, click **Create** without assigning any access.
 
 ## Establishing trust with compute resources in the console
 {: #create-profile-compute}
@@ -109,7 +130,35 @@ Complete the following steps to set up better control over granting access to co
 For more information about the fields that are used to create conditions for trusted profiles, see [IAM condition properties](/docs/iam?topic=iam-iam-condition-properties).
 {: tip}
 
-## Establishing trust with {{site.data.keyword.cloud_notm}} services in the console
+## Establishing trust with Power Virtual Server compute resources by using the console
+{: #create-profile-powervs}
+{: ui}
+
+Complete the following steps to set up access control for applications running on Power Virtual Server instances.
+
+1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Trusted profiles**.
+1. Click **Create profile**.
+1. Describe your profile by providing a name and a description, and click **Continue**.
+1. You can create the trusted profile before you add details by selecting **Decide later**. Or, establish trust by completing the following steps:
+   1. Select **Compute resources** and select **Power Virtual Server** from the compute service type list.
+   1. If you select the option for **All service resources**, you can define multiple conditions to filter resources by clicking **Add a condition**. These conditions are based on attributes from the instance identity token, such as:
+      * Workspace CRN (`workspaces.crn`)
+      * Subnet CRN (`subnets.crn`)
+      * Instance CRN (`iaas.crn`)
+      * Instance name (`iaas.name`)
+      * Account ID (`iaas.account_id`)
+      * Zone (`iaas.zone`)
+      * Region (`iaas.region`)
+      * Resource group ID (`iaas.resource_group_id`)
+      
+      These conditions apply to all existing and future resources. Resources must meet all the conditions to be included in the trusted profile.
+   1. If you select **Specific resources**, you can establish trust with one or more existing Power Virtual Server instances directly without conditions.
+
+1. Click **Continue**.
+1. (Optional) Assign access to the trusted profile.
+1. Or, click **Create** without assigning any access.
+
+## Establishing trust with {{site.data.keyword.cloud_notm}} services by using the console
 {: #create-profile-services}
 {: ui}
 
@@ -247,6 +296,32 @@ Complete the following steps to define which federated users can access specific
 
    For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_policy_create).
 
+## Establishing trust with non-federated users by using the CLI
+{: #create-profile-user-cli}
+{: cli}
+
+Complete the following steps to define which non-federated users can apply a specific trusted profile:
+
+1. Create a trusted profile by running the following command:
+
+   ```bash
+   ibmcloud iam trusted-profile-create my-profile -d "sample trusted profile for non-federated users"
+   ```
+   {: codeblock}
+
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_create).
+
+1. To connect the trusted profile to a non-federated user identity, run the following command:
+
+   ```bash
+   ibmcloud iam trusted-profile-identity-create my-profile --id UserIAMid12345 --id-type USER
+   ```
+   {: codeblock}
+
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_identity_create).
+
+1. Assign access to the trusted profile. For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_policy_create).
+
 ## Establishing trust with compute resources by using the CLI
 {: #create-profile-compute-cli}
 {: cli}
@@ -287,6 +362,41 @@ Complete the following steps to set up better control over granting access to co
 
    ```bash
    ibmcloud iam trusted-profile-policy-create --roles Viewer
+   ```
+   {: codeblock}
+
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_policy_create).
+
+## Establishing trust with Power Virtual Server compute resources by using the CLI
+{: #create-profile-powervs-cli}
+{: cli}
+
+Complete the following steps to set up access control for applications running on Power Virtual Server instances.
+
+1. Create a trusted profile by running the following command:
+
+   ```bash
+   ibmcloud iam trusted-profile-create sample-powervs-profile -d "sample trusted profile for Power Virtual Server resources"
+   ```
+   {: codeblock}
+
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_create).
+
+1. Create conditions for your trusted profile by using the `ibmcloud iam trusted-profile-rule-create` command. You can use claims from the Power Virtual Server instance identity token:
+
+   ```bash
+   ibmcloud iam trusted-profile-rule-create sample-powervs-profile --name powervs-rule --type Profile-CR --conditions claim:iaas.region,operator:EQUALS,value:us-south --conditions claim:iaas.account_id,operator:EQUALS,value:YOUR_ACCOUNT_ID --cr-type PVS
+   ```
+   {: codeblock}
+
+   Available claims include: `workspaces.crn`, `subnets.crn`, `iaas.crn`, `iaas.name`, `iaas.account_id`, `iaas.zone`, `iaas.region`, and `iaas.resource_group_id`.
+
+   For more information, see the [CLI reference](/docs/iam?topic=iam-ibmcloud_commands_iam#ibmcloud_iam_trusted_profile_rule_create).
+
+1. Create an access policy by running the following command:
+
+   ```bash
+   ibmcloud iam trusted-profile-policy-create sample-powervs-profile --roles Viewer
    ```
    {: codeblock}
 
@@ -407,6 +517,45 @@ Complete the following steps to define which federated users can access specific
 
 1. (Optional) [Assign access to the trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=api#tp-access-api).
 
+## Establishing trust with non-federated users by using the API
+{: #create-profile-user-api}
+{: cli}
+
+Complete the following steps to define which non-federated users can apply a specific trusted profile:
+
+1. Create a trusted profile by specifying your account ID.
+
+   ```bash
+   curl -X POST 'https://iam.cloud.ibm.com/v1/profiles' -H 'Authorization: Bearer TOKEN' -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{
+   "name": "My Nice Profile",
+   "description": "My Nice Profile - desc",
+   "account_id": "ACCOUNT_ID"
+   }'
+   ```
+   {: codeblock}
+
+   In the description, provide a list of actions available for this trusted profile.
+   {: tip}
+
+1. Update the list of identities that can assume the trusted profile. For non-federated users, set the `type` attribute to `user`. For more information, see the [IAM Identity Services API](/apidocs/iam-identity-token-api#set-profile-identities).
+
+   ```bash
+      curl -X PUT "https://iam.cloud.ibm.com/v1/profiles/PROFILE_ID/identities" --header "Authorization: Bearer $TOKEN" --header "If-Match: <value of etag header from GET request>" --header "Content-Type: application/json" --header "Accept: application/json" --data '{
+        "identities": [
+            {
+                "iam_id": "IBMid-665002HHL3",
+                "identifier": "IBMid-665002HHL3
+                "type": "user",
+                "description": "member of main account"
+                "accounts": ["36d797c19715462e8a0eaeacefe82f8b"]
+            }
+        ]
+    }'
+   ```
+   {: codeblock}
+
+1. (Optional) [Assign access to the trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=api#tp-access-api).
+
 ## Establishing trust with compute resources with the API
 {: #create-profile-compute-api}
 {: api}
@@ -467,6 +616,49 @@ Complete the following steps to set up better control over granting access to co
       }'
       ```
       {: codeblock}
+
+1. (Optional) [Assign access to the trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=api#tp-access-api).
+
+## Establishing trust with Power Virtual Server compute resources by using the API
+{: #create-profile-powervs-api}
+{: api}
+
+Complete the following steps to set up access control for applications running on Power Virtual Server instances.
+
+1. Create a trusted profile by specifying your account ID.
+
+   ```bash
+   curl -X POST 'https://iam.cloud.ibm.com/v1/profiles' -H 'Authorization: Bearer TOKEN' -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{
+   "name": "My PowerVS Profile",
+   "description": "My PowerVS Profile - desc",
+   "account_id": "ACCOUNT_ID"
+   }'
+   ```
+   {: codeblock}
+
+1. Create a claim rule for your trusted profile. For Power Virtual Server resources, set the `type` attribute to `Profile-CR` and the `cr_type` attribute to `PVS`. You can use claims from the Power Virtual Server instance identity token. For more information, see the [IAM Identity Services API](/apidocs/iam-identity-token-api#create-claim-rule).
+
+   ```bash
+   curl -X POST 'https://iam.cloud.ibm.com/v1/profiles/PROFILE_ID/rules' \
+     -H 'Authorization: Bearer TOKEN' \
+     -H 'Content-Type: application/json' \
+     -H 'Accept: application/json' \
+     -d '{
+     "type": "Profile-CR",
+     "cr_type": "PVS",
+     "expiration": 43200,
+     "conditions": [
+       {
+         "claim": "region",
+         "operator": "EQUALS",
+         "value": "\"eu-de\""
+       }
+     ]
+   }'
+   ```
+   {: codeblock}
+
+   Available claims include: `workspaces.crn`, `subnets.crn`, `iaas.crn`, `iaas.name`, `iaas.account_id`, `iaas.zone`, `iaas.region`, and `iaas.resource_group_id`.
 
 1. (Optional) [Assign access to the trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=api#tp-access-api).
 

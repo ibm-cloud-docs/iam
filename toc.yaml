@@ -31,6 +31,7 @@ toc:
       - iam-quickstart.md
       - trustedprofile-compute-tutorial.md
       - trustedprofile-fed-tutorial.md
+      - trustedprofile-powervs-tutorial.md
       - context-restrictions-tutorial.md
   - navgroup:
       id: howto
@@ -80,6 +81,7 @@ toc:
           - trustedprofile-manage.md
           - trustedprofile-iam-token.md
           - trustedprofile-monitor.md
+          - powervs-instance-identity.md
       - topicgroup:
           label: Context-based restrictions
           topics:
