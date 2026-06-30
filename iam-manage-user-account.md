@@ -2,7 +2,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-05-06"
+lastupdated: "2026-06-22"
 
 keywords: invite, invite users, invitation access, vpn-only user, remove user, delete user, IBMid change, credentials, ID, new ID
 
@@ -350,7 +350,7 @@ You can cancel an invitation for any users that are shown in a Processing or Pen
 {: #accepting-invitations-ui}
 {: ui}
 
-If the invited user is already a member of {{site.data.keyword.cloud_notm}}, they receive an invitation link in their notifications and by email. On the [Notifications page](https://cloud.ibm.com/user/notifications){: external}, users can use the search field to locate an invitation or filter by the notification type called `account`. For more information, see [Managing invitation notifications](/docs/account?topic=account-email-prefs#invite-notifications) and [Viewing notifications](/docs/account?topic=account-viewing-cloud-status#view-notifications).
+If the invited user is already a member of {{site.data.keyword.cloud_notm}}, they receive an invitation link in their notifications and by email. On the [Notifications page](https://cloud.ibm.com/user/notifications){: external}, users can use the search field to locate an invitation or filter by the notification type called `account`. For more information, see [Managing invitation notifications](/docs/support?topic=support-email-prefs#invite-notifications) and [Viewing notifications](/docs/support?topic=support-viewing-notifications).
 
 ## Accepting invitations by using the CLI
 {: #cli-accepting}
