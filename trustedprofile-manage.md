@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-07-10"
 
 keywords: trusted profile, federated users, granting access, update trusted profile, compute resource, IAM trusted profile, trust relationship, establish trust,  trust policy, trusted entity, assume access, apply access, remove trusted profile
 
@@ -38,6 +38,39 @@ To update trusted profiles, go to **Manage** > **Access (IAM)** in the {{site.da
 {: #description}
 
 Click the name of the trusted profile that you want to update, and select **Actions** > **Edit**. Enter the new name and description, and click **Apply**.
+
+### Improving profile discoverability
+{: #profile-discoverability}
+
+When federated users log in, the [profile selection page](/docs/iam?topic=iam-create-trusted-profile#profile-selection-experience) lets them search by profile name, account name, and description, and filter by account or type. How you name and describe your profiles directly affects how quickly users can find the right one.
+
+**Use clear, descriptive names**
+:   - Indicate the profile's purpose or role (for example, "Developer - Production Access" or "On-premises owner")
+    - Avoid generic names like "Profile 1" or "Test Profile"
+    - Keep names concise but meaningful
+
+**Provide detailed descriptions**
+:   - Explain what access the profile grants
+    - List key actions or resources the profile can access
+    - Include any important limitations or restrictions
+    - Descriptions are searchable, so include relevant keywords
+
+**Consider multi-account scenarios**
+:   - If you manage profiles across multiple accounts, include the account name or business unit in the description
+    - Use consistent naming conventions across similar roles in different accounts
+    - This helps users quickly identify the right profile when they have access to many accounts
+
+**Optimize for search**
+:   - Users can search by profile name, account name, and description
+    - Include keywords that users might search for
+    - Think about how users will describe the access they need
+
+**Set appropriate session durations**
+:   - Choose durations that balance security with user convenience
+    - Use shorter durations (1-2 hours) for high-privilege profiles
+    - Use longer durations for routine access profiles
+
+By following these practices, you make it easier for users to find the right profile, especially in organizations with many profiles across multiple accounts.
 
 ### Redefining the trust relationship
 {: #trust}

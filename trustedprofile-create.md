@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-07-10"
 
 keywords: trusted profile, identity and access management, federated users, compute resources, IAM trusted profile, trust relationship, establish trust, trust policy, trusted entity, assume access, apply access, access group, service IDs, IBM Cloud services, CRN, cloud resource name, workload identity, without credentials, Power Virtual Server, PowerVS
 
@@ -77,6 +77,64 @@ Complete the following steps to define which federated users can access specific
 For more information about the fields that are used to create conditions for trusted profiles, see [IAM condition properties](/docs/iam?topic=iam-iam-condition-properties).
 {: tip}
 
+## Understanding the profile selection experience
+{: #profile-selection-experience}
+{: ui}
+
+After federated users authenticate, they are presented with the profile selection page, which lists all trusted profiles available to them. The profile selection interface provides multiple ways to find and apply the appropriate profile.
+
+### Accessing the profile selection page
+{: #accessing-profile-selection}
+
+The profile selection page appears automatically after authentication when trusted profiles are available for your identity.
+
+### Viewing profiles
+{: #viewing-profiles}
+
+Switch between two view modes to find profiles efficiently:
+
+**Grid view**
+:   Displays profiles as tiles showing the trusted profile name, account name, profile description, profile type (Individual or Federated), session duration, and pin status. Grid view is useful when you have a smaller number of profiles or want to see more details at a glance.
+
+**List view**
+:   Displays profiles in a table format with columns for pin status, account name, trusted profile name, description, type, duration, and an action button. List view is more efficient when scanning through many profiles.
+
+### Searching and filtering profiles
+{: #searching-filtering-profiles}
+
+The search bar performs a full-text search across trusted profile name, account name, and profile description, making it easy to find profiles even if you only remember part of the name or a keyword from the description.
+
+Filter profiles by:
+- **Accounts**: Show profiles from specific accounts only
+- **Type**: Filter by Individual or Federated profile types
+- **Pinned**: View only profiles that have been pinned for quick access
+
+### Pinning profiles for quick access
+{: #pinning-profiles}
+
+Pin frequently used profiles to make them easier to find:
+
+1. Click the pin icon next to a profile in either Grid or List view.
+2. Pinned profiles appear at the top of the list.
+3. Use the **Pinned** filter to view only your pinned profiles.
+
+### Continuing without a profile
+{: #continue-without-profile}
+
+To access the account without applying a trusted profile, click **Continue** at the top of the profile selection page. You can access the account with base permissions (access group memberships and individual policies) without using a trusted profile identity.
+
+### Switching profiles after login
+{: #switching-after-login}
+
+After applying a profile, you can switch to a different profile without logging out:
+
+1. Click your profile badge in the upper right corner of the console.
+2. View available profiles in the current account.
+3. Click a profile name to switch to that profile, or click **View all** to access the full profile selection page.
+4. To return to your own user identity, click **Switch to [your name]**.
+
+Profile switches take effect immediately, and the console updates to reflect the new profile's permissions.
+
 ## Establishing trust with non-federated users in the console
 {: #create-profile-user-ui}
 {: ui}
@@ -84,7 +142,7 @@ For more information about the fields that are used to create conditions for tru
 Complete the following steps to define which non-federated users can apply a trusted profile that you create:
 
 1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Trusted profiles**.
-1. Click **Create profile**.
+1. Click **Create**.
 1. Describe your profile by providing a name and a description, then click **Continue**.
 
       In the description, provide a list of actions available for this trusted profile.
@@ -96,7 +154,7 @@ Complete the following steps to define which non-federated users can apply a tru
       1. Or, click **Add manually** to specify users in a different account.
          1. Enter a description for the user in another account.
          1. Enter the IAMid of the user in a different account.
-         1. Enter the acount ID for the user in a different account.
+         1. Enter the account ID for the user in a different account.
          1. Click **Add**.
 1. Click **Continue**.
 1. (Optional) [Assign access to the trusted profile](/docs/iam?topic=iam-create-trusted-profile#tp-access).
@@ -519,7 +577,7 @@ Complete the following steps to define which federated users can access specific
 
 ## Establishing trust with non-federated users by using the API
 {: #create-profile-user-api}
-{: cli}
+{: api}
 
 Complete the following steps to define which non-federated users can apply a specific trusted profile:
 
@@ -544,9 +602,9 @@ Complete the following steps to define which non-federated users can apply a spe
         "identities": [
             {
                 "iam_id": "IBMid-665002HHL3",
-                "identifier": "IBMid-665002HHL3
+                "identifier": "IBMid-665002HHL3",
                 "type": "user",
-                "description": "member of main account"
+                "description": "member of main account",
                 "accounts": ["36d797c19715462e8a0eaeacefe82f8b"]
             }
         ]
