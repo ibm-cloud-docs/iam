@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-07-10"
 
 keywords: federated ID, password, enterprise SSO, single sign-on ID, API key login, one-time passcode login, temporary credential, to login, logging in, trusted profiles
 
@@ -44,6 +44,25 @@ After you log in, you are directed to the {{site.data.keyword.cloud_notm}} dashb
 
 Account administrators use trusted profiles to manage specific access for account users. Each profile includes a different set of access policies that map to the roles or actions that you need to be productive. For example, a developer might use access group membership to do their daily work, but at some point during the week they might need to do some operations work in production environments. In this case, the developer would authenticate themselves and then take explicit action to apply a trusted profile that has the access policies they need to do operations work in production.
 
+### Applying a trusted profile
+{: #apply-profile}
+
+After you log in with a federated ID, the profile selection page displays all trusted profiles available to you. You can:
+
+- **Search** profiles by trusted profile name, account name, or description
+- **Filter** by account, profile type (Individual or Federated), or pinned profiles
+- **Switch views** between Grid view (detailed tiles) and List view (table format)
+- **Pin profiles** to mark frequently used profiles so they appear at the top of the list
+
+Click **Use** next to the profile you want to apply, or click **Continue** to access the account with base permissions only.
+
+For more information, see [Understanding the profile selection experience](/docs/iam?topic=iam-create-trusted-profile#profile-selection-experience).
+
+### Switching profiles after login
+{: #switch-profiles-after-login}
+
+After you are logged in, you can switch between trusted profiles without logging out by using the profile switcher in the upper right corner of the console. From the profile switcher, you can view your current profile, switch to other profiles in the current account, switch back to your own user identity, and access profile details and CLI login information.
+
 ### Applying trusted profiles as an IBMid user
 {: #login-ibmid-users}
 
@@ -52,7 +71,7 @@ If you are an IBMid user, complete the following steps to log in to the {{site.d
 1. Go to the [{{site.data.keyword.cloud_notm}} login page](/login).
 2. Enter your IBMid, or if you are using single sign-on (SSO), enter your company email address, and click **Continue**.
 3. Enter your password.
-4. In the {{site.data.keyword.cloud_notm}} console, go to the account switcher and select the trusted profile that your account administrator created for you.
+4. On the profile selection page, browse or search for the profile you want. Use the Grid or List view toggle, the search bar, or filters to narrow your options. Click **Use** next to the profile you want to apply, or click **Continue** to proceed without applying a profile.
 
 ### Applying trusted profiles as an {{site.data.keyword.appid_short}} user
 {: #login-appid-users}
@@ -65,7 +84,8 @@ If you are an {{site.data.keyword.appid_short}} user, complete the following ste
     {: tip}
 
 2. Enter your credentials and log in.
-3. In the {{site.data.keyword.cloud_notm}} console, go to the account switcher and select the trusted profile that your account administrator created for you.<idp>
+3. On the profile selection page, browse or search for the profile you want, and click **Use**. Or click **Continue** to proceed without applying a profile.
+<idp>
 
 ### Applying trusted profiles as a user federated with {{site.data.keyword.cloud_notm}} SAML
 {: #login-federated-saml}
@@ -78,7 +98,8 @@ If you are a user federated with {{site.data.keyword.cloud_notm}} SAML, complete
     {: tip}
 
 2. Enter your credentials and log in.
-3. In the {{site.data.keyword.cloud_notm}} console, go to the account switcher and select the trusted profile that your account administrator created for you.</idp>
+3. On the profile selection page, browse or search for the profile you want, and click **Use**. Or click **Continue** to proceed without applying a profile.
+</idp>
 
 ## Using the CLI to log in
 {: #usingthecli_login}
