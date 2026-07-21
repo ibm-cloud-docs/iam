@@ -3,7 +3,7 @@
 copyright:
 
   years: 2022, 2026
-lastupdated: "2026-05-06"
+lastupdated: "2026-07-21"
 
 keywords: users level of access, user control, access control, permissions, manage access, access management, platform management tasks, assign roles, fine-grained access, least privilege
 
@@ -115,3 +115,8 @@ For example, you can create an access group called `Storage Administrators`. Whe
 This is a simple example, but the approach can be applied to any job, role, or responsibility in an organization. The access policies assigned to the access group can be fine-grained allowing for use cases like storage administrator of all storage in a specific resource group, and even for only a specific storage type.
 
 For more information about getting up and running quickly with {{site.data.keyword.cloud_notm}} IAM by setting up access groups for quick access assignments, inviting users to your account, and managing their access, see [Assigning access to resources](/docs/iam?topic=iam-access-getstarted).
+
+## IAM policy eventual consistency
+{: #iam-policy-eventual-consistency}
+
+IAM access policy changes, including creation, modification, and deletion are eventually consistent and might not take effect immediately across all regions. When you are creating a new policy to grant access, allow up to 60 seconds before the policy is reliably active across all {{site.data.keyword.cloud_notm}} regions. In practice, propagation is often faster, but 60 seconds is the recommended minimum wait when you are running automated workflows such as **Create Resource** > **Create Policy** > **Perform Authorization**. Conversely, when you are removing a policy to revoke access, propagation can take up to 10 minutes due to client-side caching of permit decisions. If automated tests or pipelines intermittently receive `403 AccessDenied` errors immediately after a policy is created, expect this behavior during the propagation window. Introduce an appropriate wait between policy creation and the first authorization call.
