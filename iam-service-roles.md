@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-07-30"
+lastupdated: "2026-07-31"
 
 keywords: service iam roles, service iam actions, account management roles, iam roles
 
@@ -16288,7 +16288,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
 {: #actions-table156}
 
-## Quantum Services
+## Quantum Compute
 {: #quantum-computing-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `quantum-computing` for the service name.
@@ -16300,7 +16300,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Operator | As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. | `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.update`, `resource-controller.broker.retrieve`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
 | Viewer | As a viewer, you can view service instances, but you can't modify them. | `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `iam.role.read`, `resource-controller.broker.retrieve`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.subscription.retrieve` |
 {: row-headers}
-{: caption="Platform roles - Quantum Services" caption-side="top"}
+{: caption="Platform roles - Quantum Compute" caption-side="top"}
 {: tab-title="Platform roles"}
 {: tab-group="quantum-computing"}
 {: class="simple-tab-table"}
@@ -16316,7 +16316,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Service Configuration Reader | The ability to read services configuration for Governance management. | `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
 | Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. | `quantum-computing.job.create`, `quantum-computing.job.read`, `quantum-computing.job.cancel`, `quantum-computing.device.read`, `quantum-computing.job.update`, `quantum-computing.session.read`, `quantum-computing.session.update`, `quantum-computing.instance.read`, `quantum-computing.session.create`, `quantum-computing.workload.list`, `quantum-computing.direct-access-backend.list`, `quantum-computing.direct-access-job.cancel`, `quantum-computing.direct-access-job.create`, `quantum-computing.direct-access-job.delete`, `quantum-computing.direct-access-job.list`, `quantum-computing.account-analytics-usage.read`, `quantum-computing.account-analytics-filters.read`, `quantum-computing.direct-access-backend.read`, `quantum-computing.direct-access-backend-configuration.read`, `quantum-computing.direct-access-backend-properties.read`, `quantum-computing.instance-usage.read`, `quantum-computing.composer-qpy-to-qasm.create`, `quantum-computing.composer-simulation.create`, `quantum-computing.composer-transpile.create`, `quantum-computing.direct-access-job.read`, `quantum-computing.direct-access-lease.create`, `quantum-computing.direct-access-lease.delete`, `quantum-computing.direct-access-lease.get`, `quantum-computing.function.list`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 {: row-headers}
-{: caption="Service roles - Quantum Services" caption-side="top"}
+{: caption="Service roles - Quantum Compute" caption-side="top"}
 {: tab-title="Service roles"}
 {: tab-group="quantum-computing"}
 {: class="simple-tab-table"}
@@ -16415,7 +16415,7 @@ Review the available platform and service roles and the actions mapped to each t
 | `resource-controller.key.manager_delete` | | Key Manager |
 | `resource-controller.key.manager_update` | | Key Manager |
 | `resource-controller.key.manager_retrieve` | | Key Manager |
-{: caption="Service actions - Quantum Services" caption-side="top"}
+{: caption="Service actions - Quantum Compute" caption-side="top"}
 {: tab-title="Actions"}
 {: tab-group="quantum-computing"}
 {: class="simple-tab-table"}
