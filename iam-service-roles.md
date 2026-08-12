@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-07-11"
+lastupdated: "2026-07-31"
 
 keywords: service iam roles, service iam actions, account management roles, iam roles
 
@@ -6714,7 +6714,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Event Source Manager | Custom role to handle source integration with the event-notifications service | `event-notifications.dashboard.view`, `event-notifications.sources.create`, `event-notifications.sources.read`, `event-notifications.sources.update`, `event-notifications.sources.delete`, `event-notifications.sources.list`, `event-notifications.sources.lookup.read`, `event-notifications.notifications.post`, `event-notifications.counts.get`, `event-notifications.events.create`, `event-notifications.events.read`, `event-notifications.events.list`, `event-notifications.events.delete`, `event-notifications.severities.create`, `event-notifications.severities.read`, `event-notifications.severities.list`, `event-notifications.severities.delete`, `event-notifications.integrations.create`, `event-notifications.integrations.update`, `event-notifications.integrations.read`, `event-notifications.integrations.list`, `event-notifications.integrations.delete`, `event-notifications.notifications.get` |
 | Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. | `resource-controller.key.manager_create`, `resource-controller.key.manager_delete`, `resource-controller.key.manager_update`, `resource-controller.key.manager_retrieve` |
 | Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `event-notifications.dashboard.view`, `event-notifications.sources.create`, `event-notifications.sources.read`, `event-notifications.sources.update`, `event-notifications.sources.delete`, `event-notifications.sources.list`, `event-notifications.sources.lookup.read`, `event-notifications.topics.create`, `event-notifications.topics.read`, `event-notifications.topics.update`, `event-notifications.topics.delete`, `event-notifications.topics.list`, `event-notifications.rules.create`, `event-notifications.rules.read`, `event-notifications.rules.update`, `event-notifications.rules.delete`, `event-notifications.rules.list`, `event-notifications.destinations.create`, `event-notifications.destinations.read`, `event-notifications.destinations.update`, `event-notifications.destinations.delete`, `event-notifications.destinations.list`, `event-notifications.subscriptions.create`, `event-notifications.subscriptions.read`, `event-notifications.subscriptions.update`, `event-notifications.subscriptions.delete`, `event-notifications.subscriptions.list`, `event-notifications.notifications.post`, `event-notifications.counts.get`, `event-notifications.events.create`, `event-notifications.events.read`, `event-notifications.events.list`, `event-notifications.publickey.read`, `event-notifications.severities.list`, `event-notifications.devices.create`, `event-notifications.devices.read`, `event-notifications.devices.update`, `event-notifications.devices.delete`, `event-notifications.devices.list`, `event-notifications.tag-subscriptions.list`, `event-notifications.tag-subscriptions.devices.list`, `event-notifications.tag-subscriptions.create`, `event-notifications.tag-subscriptions.delete`, `event-notifications.channel-groups.create`, `event-notifications.channel-groups.read`, `event-notifications.channel-groups.list`, `event-notifications.channel-groups.update`, `event-notifications.channel-groups.delete`, `event-notifications.channels.create`, `event-notifications.channels.read`, `event-notifications.channels.list`, `event-notifications.channels.update`, `event-notifications.channels.delete`, `event-notifications.integrations.create`, `event-notifications.integrations.update`, `event-notifications.integrations.read`, `event-notifications.integrations.list`, `event-notifications.integrations.delete`, `event-notifications.templates.create`, `event-notifications.templates.read`, `event-notifications.templates.list`, `event-notifications.templates.update`, `event-notifications.templates.delete`, `event-notifications.pre-defined-templates.list`, `event-notifications.pre-defined-templates.read`, `event-notifications.notifications.get`, `event-notifications.delivery.create`, `event-notifications.smtp-config.create`, `event-notifications.smtp-config.read`, `event-notifications.smtp-config.list`, `event-notifications.smtp-config.update`, `event-notifications.smtp-config.delete`, `event-notifications.smtp-user.create`, `event-notifications.smtp-user.read`, `event-notifications.smtp-user.list`, `event-notifications.smtp-user.update`, `event-notifications.smtp-user.delete`, `event-notifications.metrics.read`, `event-notifications.smtp.send`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
-| Pool ID Manager | Custom role is to manage apis related to pool id for sms | `event-notifications.internal.sources.lookup.read`, `event-notifications.pre-defined-templates.create`, `event-notifications.pre-defined-templates.update`, `event-notifications.pre-defined-templates.delete`, `event-notifications.pool-id-mapping.create`, `event-notifications.pool-id-mapping.delete`, `event-notifications.pool-id-mapping.update`, `event-notifications.smtp-config.enable` |
+| Pool ID Manager | Custom role is to manage apis related to pool id for sms | `event-notifications.internal.sources.lookup.read`, `event-notifications.pre-defined-templates.create`, `event-notifications.pre-defined-templates.update`, `event-notifications.pre-defined-templates.delete`, `event-notifications.pool-id-mapping.create`, `event-notifications.pool-id-mapping.delete`, `event-notifications.pool-id-mapping.update`, `event-notifications.smtp-config.enable`, `event-notifications.internal.recipient-limit.update`, `event-notifications.internal.custom-opt-in.create`, `event-notifications.internal.custom-opt-in.delete` |
 | Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. | `event-notifications.dashboard.view`, `event-notifications.sources.read`, `event-notifications.sources.list`, `event-notifications.sources.lookup.read`, `event-notifications.topics.read`, `event-notifications.topics.list`, `event-notifications.rules.read`, `event-notifications.rules.list`, `event-notifications.destinations.read`, `event-notifications.destinations.list`, `event-notifications.subscriptions.read`, `event-notifications.subscriptions.list`, `event-notifications.counts.get`, `event-notifications.events.read`, `event-notifications.events.list`, `event-notifications.publickey.read`, `event-notifications.severities.list`, `event-notifications.devices.list`, `event-notifications.tag-subscriptions.list`, `event-notifications.tag-subscriptions.devices.list`, `event-notifications.channel-groups.read`, `event-notifications.channel-groups.list`, `event-notifications.channels.read`, `event-notifications.channels.list`, `event-notifications.integrations.list`, `event-notifications.templates.read`, `event-notifications.templates.list`, `event-notifications.pre-defined-templates.list`, `event-notifications.pre-defined-templates.read`, `event-notifications.notifications.get`, `event-notifications.smtp-config.read`, `event-notifications.smtp-config.list`, `event-notifications.smtp-user.read`, `event-notifications.smtp-user.list`, `event-notifications.metrics.read`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 | SMTP Manager | Custom role is to manage SMTP Configurations | `event-notifications.smtp-config.create`, `event-notifications.smtp-config.read`, `event-notifications.smtp-config.list`, `event-notifications.smtp-config.update`, `event-notifications.smtp-config.delete`, `event-notifications.smtp-user.create`, `event-notifications.smtp-user.read`, `event-notifications.smtp-user.list`, `event-notifications.smtp-user.update`, `event-notifications.smtp-user.delete` |
 | SMTP Sender | Custom role to send emails using SMTP interface | `event-notifications.smtp.send` |
@@ -6827,6 +6827,9 @@ Review the available platform and service roles and the actions mapped to each t
 | `event-notifications.smtp-config.enable` | This internal API is to manage EN Authorization  | Pool ID Manager |
 | `event-notifications.metrics.read` | This API is to get metrics for resources in Event Notifications | Administrator, Manager, Reader, Writer |
 | `event-notifications.smtp.send` | This action is to send an email via SMTP interface | Administrator, Manager, SMTP Sender |
+| `event-notifications.internal.recipient-limit.update` | This is used to update recipient limit | Pool ID Manager |
+| `event-notifications.internal.custom-opt-in.create` | This is used to create custom opt in | Pool ID Manager |
+| `event-notifications.internal.custom-opt-in.delete` | This is used to delete custom opt in | Pool ID Manager |
 | `global-search-tagging.resource.read` | | Administrator, Editor, Manager, Operator, Reader, Service Configuration Reader, Viewer, Writer |
 | `resource-controller.instance.retrieve` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
 | `cbr.rule.read` | | Administrator, Editor, Manager, Operator, Reader, Viewer, Writer |
@@ -15069,7 +15072,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Role | Description | Actions |
 | ----- | :----- | :----- |
 | Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. | `resource-controller.key.manager_create`, `resource-controller.key.manager_delete`, `resource-controller.key.manager_update`, `resource-controller.key.manager_retrieve` |
-| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `power-iaas.dashboard.view`, `power-iaas.cloud-instance.modify`, `power-iaas.cloud-instance.read`, `power-iaas.pod-capacity.view`, `power-iaas.cloud-connection-vpc.list`, `power-iaas.cloud-connection.read`, `power-iaas.cloud-connection.list`, `power-iaas.cloud-connection.create`, `power-iaas.cloud-connection.update`, `power-iaas.cloud-connection.delete`, `power-iaas.cloud-connection-network.update`, `power-iaas.cloud-connection-network.delete`, `power-iaas.cloud-instance.list`, `power-iaas.cos-image.read`, `power-iaas.cos-image.create`, `power-iaas.event.read`, `power-iaas.event.list`, `power-iaas.image-export.create`, `power-iaas.image-export.read`, `power-iaas.stock-image.read`, `power-iaas.stock-image.list`, `power-iaas.cloud-instance-image.read`, `power-iaas.cloud-instance-image.list`, `power-iaas.cloud-instance-image.create`, `power-iaas.cloud-instance-image.delete`, `power-iaas.job.read`, `power-iaas.job.list`, `power-iaas.job.delete`, `power-iaas.network-port.delete`, `power-iaas.network-port.read`, `power-iaas.network-port.list`, `power-iaas.network-port.create`, `power-iaas.network-port.update`, `power-iaas.network.delete`, `power-iaas.network.read`, `power-iaas.network.list`, `power-iaas.network.create`, `power-iaas.network.update`, `power-iaas.pvm-instance-console.create`, `power-iaas.pvm-instance-console.read`, `power-iaas.pvm-instance-console.update`, `power-iaas.pvm-instance-network.delete`, `power-iaas.pvm-instance-network.read`, `power-iaas.pvm-instance-network.list`, `power-iaas.pvm-instance-network.create`, `power-iaas.pvm-instance.read`, `power-iaas.pvm-instance.delete`, `power-iaas.pvm-instance.list`, `power-iaas.pvm-instance.create`, `power-iaas.pvm-instance.update`, `power-iaas.pvm-instance.action`, `power-iaas.pvm-instance.operation`, `power-iaas.pvm-instance-capture.create`, `power-iaas.pvm-instance-capture.read`, `power-iaas.pvm-instance-clone.create`, `power-iaas.pvm-instance-snapshot.create`, `power-iaas.pvm-instance-snapshot.list`, `power-iaas.pvm-instance-snapshot.restore`, `power-iaas.placement-group.read`, `power-iaas.placement-group.list`, `power-iaas.placement-group.delete`, `power-iaas.placement-group.create`, `power-iaas.placement-group-member.create`, `power-iaas.placement-group-member.delete`, `power-iaas.shared-processor-pool.create`, `power-iaas.shared-processor-pool.delete`, `power-iaas.shared-processor-pool.list`, `power-iaas.shared-processor-pool.read`, `power-iaas.shared-processor-pool.update`, `power-iaas.spp-placement-group.create`, `power-iaas.spp-placement-group.read`, `power-iaas.spp-placement-group.list`, `power-iaas.spp-placement-group-member.create`, `power-iaas.spp-placement-group-member.delete`, `power-iaas.spp-placement-group.delete`, `power-iaas.sap.read`, `power-iaas.sap.list`, `power-iaas.sap.create`, `power-iaas.dhcp-service.read`, `power-iaas.dhcp-service.list`, `power-iaas.dhcp-service.delete`, `power-iaas.dhcp-service.create`, `power-iaas.cloud-instance-snapshot.read`, `power-iaas.cloud-instance-snapshot.list`, `power-iaas.cloud-instance-snapshot.update`, `power-iaas.cloud-instance-snapshot.delete`, `power-iaas.storage-capacity-type.list`, `power-iaas.storage-capacity-type.read`, `power-iaas.storage-capacity-pool.list`, `power-iaas.storage-capacity-pool.read`, `power-iaas.storage-tier.read`, `power-iaas.system-pool.list`, `power-iaas.task.read`, `power-iaas.task.delete`, `power-iaas.volume-clone.create`, `power-iaas.volume-clone.read`, `power-iaas.volume-clone.list`, `power-iaas.volume-clone.start`, `power-iaas.volume-clone.execute`, `power-iaas.volume-clone.cancel`, `power-iaas.volume-clone.delete`, `power-iaas.cloud-instance-volume.create`, `power-iaas.pvm-instance-volume.delete`, `power-iaas.volume-group.list`, `power-iaas.volume-group.read`, `power-iaas.volume-group.delete`, `power-iaas.volume-group.create`, `power-iaas.volume-group.update`, `power-iaas.volume-group.action`, `power-iaas.volume-group-remote-copy.read`, `power-iaas.volume-group-storage.read`, `power-iaas.volume-onboarding.list`, `power-iaas.volume-onboarding.read`, `power-iaas.volume-onboarding.create`, `power-iaas.cloud-instance-volume.read`, `power-iaas.cloud-instance-volume.list`, `power-iaas.cloud-instance-volume.update`, `power-iaas.cloud-instance-volume.delete`, `power-iaas.pvm-instance-volume.list`, `power-iaas.pvm-instance-volume.read`, `power-iaas.pvm-instance-volume.create`, `power-iaas.pvm-instance-volume.update`, `power-iaas.pvm-instance-boot-volume.update`, `power-iaas.volume-remote-copy.read`, `power-iaas.volume-flash-copy.read`, `power-iaas.vpn-connection-network.delete`, `power-iaas.vpn-connection-network.read`, `power-iaas.vpn-connection-network.update`, `power-iaas.vpn-connection-peer-subnet.delete`, `power-iaas.vpn-connection-peer-subnet.read`, `power-iaas.vpn-connection-peer-subnet.update`, `power-iaas.vpn-connection-ike-policy.delete`, `power-iaas.vpn-connection-ike-policy.read`, `power-iaas.vpn-connection-ike-policy.list`, `power-iaas.vpn-connection-ike-policy.create`, `power-iaas.vpn-connection-ike-policy.update`, `power-iaas.vpn-connection-ipsec-policy.delete`, `power-iaas.vpn-connection-ipsec-policy.read`, `power-iaas.vpn-connection-ipsec-policy.list`, `power-iaas.vpn-connection-ipsec-policy.create`, `power-iaas.vpn-connection-ipsec-policy.update`, `power-iaas.vpn-connection.delete`, `power-iaas.vpn-connection.read`, `power-iaas.vpn-connection.list`, `power-iaas.vpn-connection.create`, `power-iaas.vpn-connection.update`, `power-iaas.disaster-recovery.read`, `power-iaas.available-hosts.list`, `power-iaas.host-group.create`, `power-iaas.host-group.list`, `power-iaas.host-group.read`, `power-iaas.cloud-instance-volume.action`, `power-iaas.tenant-sshkey.list`, `power-iaas.tenant-sshkey.create`, `power-iaas.tenant-sshkey.read`, `power-iaas.tenant-sshkey.update`, `power-iaas.tenant-sshkey.delete`, `power-iaas.tenant.read`, `power-iaas.tenant.update`, `power-iaas.host-group.update`, `power-iaas.host.create`, `power-iaas.host.delete`, `power-iaas.host.list`, `power-iaas.host.read`, `power-iaas.host.update`, `power-iaas.per-connection.migrate`, `power-iaas.snapshot.list`, `power-iaas.snapshot.read`, `power-iaas.network-address-group.create`, `power-iaas.network-address-group.list`, `power-iaas.network-address-group.read`, `power-iaas.network-address-group.update`, `power-iaas.network-address-group.delete`, `power-iaas.network-security-group.list`, `power-iaas.network-security-group.create`, `power-iaas.network-security-group.enable`, `power-iaas.network-security-group.delete`, `power-iaas.network-security-group.read`, `power-iaas.network-security-group.update`, `power-iaas.network-interfaces.list`, `power-iaas.network-interfaces.create`, `power-iaas.network-interfaces.delete`, `power-iaas.network-interfaces.read`, `power-iaas.network-interfaces.update`, `power-iaas.datacenter-private.read`, `power-iaas.datacenter-private.list`, `power-iaas.virtual-serial-number.read`, `power-iaas.virtual-serial-number.list`, `power-iaas.network-security-group.clone`, `power-iaas.workspace.read`, `power-iaas.workspace.list`, `power-iaas.pvm-instance-vpmem-volume.list`, `power-iaas.pvm-instance-vpmem-volume.create`, `power-iaas.pvm-instance-vpmem-volume.read`, `power-iaas.pvm-instance-vpmem-volume.delete`, `power-iaas.pvm-instance-virtual-serial-number.create`, `power-iaas.pvm-instance-virtual-serial-number.read`, `power-iaas.pvm-instance-virtual-serial-number.update`, `power-iaas.pvm-instance-virtual-serial-number.delete`, `power-iaas.pvm-instance-vpmem-volume.update`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
+| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `power-iaas.dashboard.view`, `power-iaas.cloud-instance.modify`, `power-iaas.cloud-instance.read`, `power-iaas.pod-capacity.view`, `power-iaas.cloud-connection-vpc.list`, `power-iaas.cloud-connection.read`, `power-iaas.cloud-connection.list`, `power-iaas.cloud-connection.create`, `power-iaas.cloud-connection.update`, `power-iaas.cloud-connection.delete`, `power-iaas.cloud-connection-network.update`, `power-iaas.cloud-connection-network.delete`, `power-iaas.cloud-instance.list`, `power-iaas.cos-image.read`, `power-iaas.cos-image.create`, `power-iaas.event.read`, `power-iaas.event.list`, `power-iaas.image-export.create`, `power-iaas.image-export.read`, `power-iaas.stock-image.read`, `power-iaas.stock-image.list`, `power-iaas.cloud-instance-image.read`, `power-iaas.cloud-instance-image.list`, `power-iaas.cloud-instance-image.create`, `power-iaas.cloud-instance-image.delete`, `power-iaas.job.read`, `power-iaas.job.list`, `power-iaas.job.delete`, `power-iaas.network-port.delete`, `power-iaas.network-port.read`, `power-iaas.network-port.list`, `power-iaas.network-port.create`, `power-iaas.network-port.update`, `power-iaas.network.delete`, `power-iaas.network.read`, `power-iaas.network.list`, `power-iaas.network.create`, `power-iaas.network.update`, `power-iaas.pvm-instance-console.create`, `power-iaas.pvm-instance-console.read`, `power-iaas.pvm-instance-console.update`, `power-iaas.pvm-instance-network.delete`, `power-iaas.pvm-instance-network.read`, `power-iaas.pvm-instance-network.list`, `power-iaas.pvm-instance-network.create`, `power-iaas.pvm-instance.read`, `power-iaas.pvm-instance.delete`, `power-iaas.pvm-instance.list`, `power-iaas.pvm-instance.create`, `power-iaas.pvm-instance.update`, `power-iaas.pvm-instance.action`, `power-iaas.pvm-instance.operation`, `power-iaas.pvm-instance-capture.create`, `power-iaas.pvm-instance-capture.read`, `power-iaas.pvm-instance-snapshot.create`, `power-iaas.pvm-instance-snapshot.list`, `power-iaas.pvm-instance-snapshot.restore`, `power-iaas.placement-group.read`, `power-iaas.placement-group.list`, `power-iaas.placement-group.delete`, `power-iaas.placement-group.create`, `power-iaas.placement-group-member.create`, `power-iaas.placement-group-member.delete`, `power-iaas.shared-processor-pool.create`, `power-iaas.shared-processor-pool.delete`, `power-iaas.shared-processor-pool.list`, `power-iaas.shared-processor-pool.read`, `power-iaas.shared-processor-pool.update`, `power-iaas.spp-placement-group.create`, `power-iaas.spp-placement-group.read`, `power-iaas.spp-placement-group.list`, `power-iaas.spp-placement-group-member.create`, `power-iaas.spp-placement-group-member.delete`, `power-iaas.spp-placement-group.delete`, `power-iaas.sap.read`, `power-iaas.sap.list`, `power-iaas.sap.create`, `power-iaas.dhcp-service.read`, `power-iaas.dhcp-service.list`, `power-iaas.dhcp-service.delete`, `power-iaas.dhcp-service.create`, `power-iaas.cloud-instance-snapshot.read`, `power-iaas.cloud-instance-snapshot.list`, `power-iaas.cloud-instance-snapshot.update`, `power-iaas.cloud-instance-snapshot.delete`, `power-iaas.storage-capacity-type.list`, `power-iaas.storage-capacity-type.read`, `power-iaas.storage-capacity-pool.list`, `power-iaas.storage-capacity-pool.read`, `power-iaas.storage-tier.read`, `power-iaas.system-pool.list`, `power-iaas.task.read`, `power-iaas.task.delete`, `power-iaas.volume-clone.create`, `power-iaas.volume-clone.read`, `power-iaas.volume-clone.list`, `power-iaas.volume-clone.start`, `power-iaas.volume-clone.execute`, `power-iaas.volume-clone.cancel`, `power-iaas.volume-clone.delete`, `power-iaas.cloud-instance-volume.create`, `power-iaas.pvm-instance-volume.delete`, `power-iaas.volume-group.list`, `power-iaas.volume-group.read`, `power-iaas.volume-group.delete`, `power-iaas.volume-group.create`, `power-iaas.volume-group.update`, `power-iaas.volume-group.action`, `power-iaas.volume-group-remote-copy.read`, `power-iaas.volume-group-storage.read`, `power-iaas.volume-onboarding.list`, `power-iaas.volume-onboarding.read`, `power-iaas.volume-onboarding.create`, `power-iaas.cloud-instance-volume.read`, `power-iaas.cloud-instance-volume.list`, `power-iaas.cloud-instance-volume.update`, `power-iaas.cloud-instance-volume.delete`, `power-iaas.pvm-instance-volume.list`, `power-iaas.pvm-instance-volume.read`, `power-iaas.pvm-instance-volume.create`, `power-iaas.pvm-instance-volume.update`, `power-iaas.pvm-instance-boot-volume.update`, `power-iaas.volume-remote-copy.read`, `power-iaas.volume-flash-copy.read`, `power-iaas.vpn-connection-network.delete`, `power-iaas.vpn-connection-network.read`, `power-iaas.vpn-connection-network.update`, `power-iaas.vpn-connection-peer-subnet.delete`, `power-iaas.vpn-connection-peer-subnet.read`, `power-iaas.vpn-connection-peer-subnet.update`, `power-iaas.vpn-connection-ike-policy.delete`, `power-iaas.vpn-connection-ike-policy.read`, `power-iaas.vpn-connection-ike-policy.list`, `power-iaas.vpn-connection-ike-policy.create`, `power-iaas.vpn-connection-ike-policy.update`, `power-iaas.vpn-connection-ipsec-policy.delete`, `power-iaas.vpn-connection-ipsec-policy.read`, `power-iaas.vpn-connection-ipsec-policy.list`, `power-iaas.vpn-connection-ipsec-policy.create`, `power-iaas.vpn-connection-ipsec-policy.update`, `power-iaas.vpn-connection.delete`, `power-iaas.vpn-connection.read`, `power-iaas.vpn-connection.list`, `power-iaas.vpn-connection.create`, `power-iaas.vpn-connection.update`, `power-iaas.disaster-recovery.read`, `power-iaas.available-hosts.list`, `power-iaas.host-group.create`, `power-iaas.host-group.list`, `power-iaas.host-group.read`, `power-iaas.cloud-instance-volume.action`, `power-iaas.tenant-sshkey.list`, `power-iaas.tenant-sshkey.create`, `power-iaas.tenant-sshkey.read`, `power-iaas.tenant-sshkey.update`, `power-iaas.tenant-sshkey.delete`, `power-iaas.tenant.read`, `power-iaas.tenant.update`, `power-iaas.host-group.update`, `power-iaas.host.create`, `power-iaas.host.delete`, `power-iaas.host.list`, `power-iaas.host.read`, `power-iaas.host.update`, `power-iaas.per-connection.migrate`, `power-iaas.snapshot.list`, `power-iaas.snapshot.read`, `power-iaas.network-address-group.create`, `power-iaas.network-address-group.list`, `power-iaas.network-address-group.read`, `power-iaas.network-address-group.update`, `power-iaas.network-address-group.delete`, `power-iaas.network-security-group.list`, `power-iaas.network-security-group.create`, `power-iaas.network-security-group.enable`, `power-iaas.network-security-group.delete`, `power-iaas.network-security-group.read`, `power-iaas.network-security-group.update`, `power-iaas.network-interfaces.list`, `power-iaas.network-interfaces.create`, `power-iaas.network-interfaces.delete`, `power-iaas.network-interfaces.read`, `power-iaas.network-interfaces.update`, `power-iaas.datacenter-private.read`, `power-iaas.datacenter-private.list`, `power-iaas.virtual-serial-number.read`, `power-iaas.virtual-serial-number.list`, `power-iaas.network-security-group.clone`, `power-iaas.workspace.read`, `power-iaas.workspace.list`, `power-iaas.pvm-instance-vpmem-volume.list`, `power-iaas.pvm-instance-vpmem-volume.create`, `power-iaas.pvm-instance-vpmem-volume.read`, `power-iaas.pvm-instance-vpmem-volume.delete`, `power-iaas.pvm-instance-virtual-serial-number.create`, `power-iaas.pvm-instance-virtual-serial-number.read`, `power-iaas.pvm-instance-virtual-serial-number.update`, `power-iaas.pvm-instance-virtual-serial-number.delete`, `power-iaas.pvm-instance-vpmem-volume.update`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 | Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. | `power-iaas.dashboard.view`, `power-iaas.cloud-instance.read`, `power-iaas.cloud-connection-vpc.list`, `power-iaas.cloud-connection.read`, `power-iaas.cloud-connection.list`, `power-iaas.cloud-instance.list`, `power-iaas.cos-image.read`, `power-iaas.event.read`, `power-iaas.event.list`, `power-iaas.image-export.read`, `power-iaas.stock-image.read`, `power-iaas.stock-image.list`, `power-iaas.cloud-instance-image.read`, `power-iaas.cloud-instance-image.list`, `power-iaas.job.read`, `power-iaas.job.list`, `power-iaas.network-port.read`, `power-iaas.network-port.list`, `power-iaas.network.read`, `power-iaas.network.list`, `power-iaas.pvm-instance-console.read`, `power-iaas.pvm-instance-network.read`, `power-iaas.pvm-instance-network.list`, `power-iaas.pvm-instance.read`, `power-iaas.pvm-instance.list`, `power-iaas.pvm-instance-capture.read`, `power-iaas.pvm-instance-snapshot.list`, `power-iaas.placement-group.read`, `power-iaas.placement-group.list`, `power-iaas.shared-processor-pool.list`, `power-iaas.shared-processor-pool.read`, `power-iaas.spp-placement-group.read`, `power-iaas.spp-placement-group.list`, `power-iaas.sap.read`, `power-iaas.sap.list`, `power-iaas.dhcp-service.read`, `power-iaas.dhcp-service.list`, `power-iaas.cloud-instance-snapshot.read`, `power-iaas.cloud-instance-snapshot.list`, `power-iaas.storage-capacity-type.list`, `power-iaas.storage-capacity-type.read`, `power-iaas.storage-capacity-pool.list`, `power-iaas.storage-capacity-pool.read`, `power-iaas.storage-tier.read`, `power-iaas.system-pool.list`, `power-iaas.task.read`, `power-iaas.volume-clone.read`, `power-iaas.volume-clone.list`, `power-iaas.volume-group.list`, `power-iaas.volume-group.read`, `power-iaas.volume-group-remote-copy.read`, `power-iaas.volume-group-storage.read`, `power-iaas.volume-onboarding.list`, `power-iaas.volume-onboarding.read`, `power-iaas.cloud-instance-volume.read`, `power-iaas.cloud-instance-volume.list`, `power-iaas.pvm-instance-volume.list`, `power-iaas.pvm-instance-volume.read`, `power-iaas.volume-remote-copy.read`, `power-iaas.volume-flash-copy.read`, `power-iaas.vpn-connection-network.read`, `power-iaas.vpn-connection-peer-subnet.read`, `power-iaas.vpn-connection-ike-policy.read`, `power-iaas.vpn-connection-ike-policy.list`, `power-iaas.vpn-connection-ipsec-policy.read`, `power-iaas.vpn-connection-ipsec-policy.list`, `power-iaas.vpn-connection.read`, `power-iaas.vpn-connection.list`, `power-iaas.disaster-recovery.read`, `power-iaas.available-hosts.list`, `power-iaas.host-group.list`, `power-iaas.host-group.read`, `power-iaas.tenant-sshkey.list`, `power-iaas.tenant-sshkey.read`, `power-iaas.tenant.read`, `power-iaas.host.list`, `power-iaas.host.read`, `power-iaas.snapshot.list`, `power-iaas.snapshot.read`, `power-iaas.network-address-group.list`, `power-iaas.network-address-group.read`, `power-iaas.network-security-group.list`, `power-iaas.network-security-group.read`, `power-iaas.network-interfaces.list`, `power-iaas.network-interfaces.read`, `power-iaas.datacenter-private.read`, `power-iaas.datacenter-private.list`, `power-iaas.virtual-serial-number.read`, `power-iaas.virtual-serial-number.list`, `power-iaas.workspace.read`, `power-iaas.workspace.list`, `power-iaas.pvm-instance-vpmem-volume.list`, `power-iaas.pvm-instance-vpmem-volume.read`, `power-iaas.pvm-instance-virtual-serial-number.read`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 | Service Configuration Reader | The ability to read services configuration for Governance management. | `power-iaas.route.dashboard.view`, `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
 {: row-headers}
@@ -15136,7 +15139,6 @@ Review the available platform and service roles and the actions mapped to each t
 | `power-iaas.pvm-instance.operation` | The ability to perform an operation on a pvm instance | Manager |
 | `power-iaas.pvm-instance-capture.create` | The ability to create a pvm instance capture job | Manager |
 | `power-iaas.pvm-instance-capture.read` | The ability to get the latest pvm instance capture job | Manager, Reader |
-| `power-iaas.pvm-instance-clone.create` | The ability to clone a pvm instance | Manager |
 | `power-iaas.pvm-instance-snapshot.create` | The ability to create a snapshot of a pvm instance | Manager |
 | `power-iaas.pvm-instance-snapshot.list` | The ability to list all snapshots for a pvm instance | Manager, Reader |
 | `power-iaas.pvm-instance-snapshot.restore` | The ability to restores a snapshot for a pvm instance | Manager |
@@ -15412,7 +15414,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Role | Description | Actions |
 | ----- | :----- | :----- |
 | Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. | `resource-controller.key.manager_create`, `resource-controller.key.manager_delete`, `resource-controller.key.manager_update`, `resource-controller.key.manager_retrieve` |
-| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `power-iaas.dashboard.view`, `power-iaas.cloud-instance.modify`, `power-iaas.cloud-instance.read`, `power-iaas.pod-capacity.view`, `power-iaas.cloud-connection-vpc.list`, `power-iaas.cloud-connection.read`, `power-iaas.cloud-connection.list`, `power-iaas.cloud-connection.create`, `power-iaas.cloud-connection.update`, `power-iaas.cloud-connection.delete`, `power-iaas.cloud-connection-network.update`, `power-iaas.cloud-connection-network.delete`, `power-iaas.cloud-instance.list`, `power-iaas.cos-image.read`, `power-iaas.cos-image.create`, `power-iaas.event.read`, `power-iaas.event.list`, `power-iaas.image-export.create`, `power-iaas.image-export.read`, `power-iaas.stock-image.read`, `power-iaas.stock-image.list`, `power-iaas.cloud-instance-image.read`, `power-iaas.cloud-instance-image.list`, `power-iaas.cloud-instance-image.create`, `power-iaas.cloud-instance-image.delete`, `power-iaas.job.read`, `power-iaas.job.list`, `power-iaas.job.delete`, `power-iaas.network-port.delete`, `power-iaas.network-port.read`, `power-iaas.network-port.list`, `power-iaas.network-port.create`, `power-iaas.network-port.update`, `power-iaas.network.delete`, `power-iaas.network.read`, `power-iaas.network.list`, `power-iaas.network.create`, `power-iaas.network.update`, `power-iaas.pvm-instance-console.create`, `power-iaas.pvm-instance-console.read`, `power-iaas.pvm-instance-console.update`, `power-iaas.pvm-instance-network.delete`, `power-iaas.pvm-instance-network.read`, `power-iaas.pvm-instance-network.list`, `power-iaas.pvm-instance-network.create`, `power-iaas.pvm-instance.read`, `power-iaas.pvm-instance.delete`, `power-iaas.pvm-instance.list`, `power-iaas.pvm-instance.create`, `power-iaas.pvm-instance.update`, `power-iaas.pvm-instance.action`, `power-iaas.pvm-instance.operation`, `power-iaas.pvm-instance-capture.create`, `power-iaas.pvm-instance-capture.read`, `power-iaas.pvm-instance-clone.create`, `power-iaas.pvm-instance-snapshot.create`, `power-iaas.pvm-instance-snapshot.list`, `power-iaas.pvm-instance-snapshot.restore`, `power-iaas.placement-group.read`, `power-iaas.placement-group.list`, `power-iaas.placement-group.delete`, `power-iaas.placement-group.create`, `power-iaas.placement-group-member.create`, `power-iaas.placement-group-member.delete`, `power-iaas.shared-processor-pool.create`, `power-iaas.shared-processor-pool.delete`, `power-iaas.shared-processor-pool.list`, `power-iaas.shared-processor-pool.read`, `power-iaas.shared-processor-pool.update`, `power-iaas.spp-placement-group.create`, `power-iaas.spp-placement-group.read`, `power-iaas.spp-placement-group.list`, `power-iaas.spp-placement-group-member.create`, `power-iaas.spp-placement-group-member.delete`, `power-iaas.spp-placement-group.delete`, `power-iaas.sap.read`, `power-iaas.sap.list`, `power-iaas.sap.create`, `power-iaas.dhcp-service.read`, `power-iaas.dhcp-service.list`, `power-iaas.dhcp-service.delete`, `power-iaas.dhcp-service.create`, `power-iaas.cloud-instance-snapshot.read`, `power-iaas.cloud-instance-snapshot.list`, `power-iaas.cloud-instance-snapshot.update`, `power-iaas.cloud-instance-snapshot.delete`, `power-iaas.storage-capacity-type.list`, `power-iaas.storage-capacity-type.read`, `power-iaas.storage-capacity-pool.list`, `power-iaas.storage-capacity-pool.read`, `power-iaas.storage-tier.read`, `power-iaas.system-pool.list`, `power-iaas.task.read`, `power-iaas.task.delete`, `power-iaas.volume-clone.create`, `power-iaas.volume-clone.read`, `power-iaas.volume-clone.list`, `power-iaas.volume-clone.start`, `power-iaas.volume-clone.execute`, `power-iaas.volume-clone.cancel`, `power-iaas.volume-clone.delete`, `power-iaas.cloud-instance-volume.create`, `power-iaas.pvm-instance-volume.delete`, `power-iaas.volume-group.list`, `power-iaas.volume-group.read`, `power-iaas.volume-group.delete`, `power-iaas.volume-group.create`, `power-iaas.volume-group.update`, `power-iaas.volume-group.action`, `power-iaas.volume-group-remote-copy.read`, `power-iaas.volume-group-storage.read`, `power-iaas.volume-onboarding.list`, `power-iaas.volume-onboarding.read`, `power-iaas.volume-onboarding.create`, `power-iaas.cloud-instance-volume.read`, `power-iaas.cloud-instance-volume.list`, `power-iaas.cloud-instance-volume.update`, `power-iaas.cloud-instance-volume.delete`, `power-iaas.pvm-instance-volume.list`, `power-iaas.pvm-instance-volume.read`, `power-iaas.pvm-instance-volume.create`, `power-iaas.pvm-instance-volume.update`, `power-iaas.pvm-instance-boot-volume.update`, `power-iaas.volume-remote-copy.read`, `power-iaas.volume-flash-copy.read`, `power-iaas.vpn-connection-network.delete`, `power-iaas.vpn-connection-network.read`, `power-iaas.vpn-connection-network.update`, `power-iaas.vpn-connection-peer-subnet.delete`, `power-iaas.vpn-connection-peer-subnet.read`, `power-iaas.vpn-connection-peer-subnet.update`, `power-iaas.vpn-connection-ike-policy.delete`, `power-iaas.vpn-connection-ike-policy.read`, `power-iaas.vpn-connection-ike-policy.list`, `power-iaas.vpn-connection-ike-policy.create`, `power-iaas.vpn-connection-ike-policy.update`, `power-iaas.vpn-connection-ipsec-policy.delete`, `power-iaas.vpn-connection-ipsec-policy.read`, `power-iaas.vpn-connection-ipsec-policy.list`, `power-iaas.vpn-connection-ipsec-policy.create`, `power-iaas.vpn-connection-ipsec-policy.update`, `power-iaas.vpn-connection.delete`, `power-iaas.vpn-connection.read`, `power-iaas.vpn-connection.list`, `power-iaas.vpn-connection.create`, `power-iaas.vpn-connection.update`, `power-iaas.disaster-recovery.read`, `power-iaas.available-hosts.list`, `power-iaas.host-group.create`, `power-iaas.host-group.list`, `power-iaas.host-group.read`, `power-iaas.cloud-instance-volume.action`, `power-iaas.tenant-sshkey.list`, `power-iaas.tenant-sshkey.create`, `power-iaas.tenant-sshkey.read`, `power-iaas.tenant-sshkey.update`, `power-iaas.tenant-sshkey.delete`, `power-iaas.tenant.read`, `power-iaas.tenant.update`, `power-iaas.host-group.update`, `power-iaas.host.create`, `power-iaas.host.delete`, `power-iaas.host.list`, `power-iaas.host.read`, `power-iaas.host.update`, `power-iaas.per-connection.migrate`, `power-iaas.snapshot.list`, `power-iaas.snapshot.read`, `power-iaas.network-address-group.create`, `power-iaas.network-address-group.list`, `power-iaas.network-address-group.read`, `power-iaas.network-address-group.update`, `power-iaas.network-address-group.delete`, `power-iaas.network-security-group.list`, `power-iaas.network-security-group.create`, `power-iaas.network-security-group.enable`, `power-iaas.network-security-group.delete`, `power-iaas.network-security-group.read`, `power-iaas.network-security-group.update`, `power-iaas.network-interfaces.list`, `power-iaas.network-interfaces.create`, `power-iaas.network-interfaces.delete`, `power-iaas.network-interfaces.read`, `power-iaas.network-interfaces.update`, `power-iaas.datacenter-private.read`, `power-iaas.datacenter-private.list`, `power-iaas.virtual-serial-number.read`, `power-iaas.virtual-serial-number.list`, `power-iaas.network-security-group.clone`, `power-iaas.workspace.read`, `power-iaas.workspace.list`, `power-iaas.pvm-instance-vpmem-volume.list`, `power-iaas.pvm-instance-vpmem-volume.create`, `power-iaas.pvm-instance-vpmem-volume.read`, `power-iaas.pvm-instance-vpmem-volume.delete`, `power-iaas.pvm-instance-virtual-serial-number.create`, `power-iaas.pvm-instance-virtual-serial-number.read`, `power-iaas.pvm-instance-virtual-serial-number.update`, `power-iaas.pvm-instance-virtual-serial-number.delete`, `power-iaas.pvm-instance-vpmem-volume.update`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
+| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `power-iaas.dashboard.view`, `power-iaas.cloud-instance.modify`, `power-iaas.cloud-instance.read`, `power-iaas.pod-capacity.view`, `power-iaas.cloud-connection-vpc.list`, `power-iaas.cloud-connection.read`, `power-iaas.cloud-connection.list`, `power-iaas.cloud-connection.create`, `power-iaas.cloud-connection.update`, `power-iaas.cloud-connection.delete`, `power-iaas.cloud-connection-network.update`, `power-iaas.cloud-connection-network.delete`, `power-iaas.cloud-instance.list`, `power-iaas.cos-image.read`, `power-iaas.cos-image.create`, `power-iaas.event.read`, `power-iaas.event.list`, `power-iaas.image-export.create`, `power-iaas.image-export.read`, `power-iaas.stock-image.read`, `power-iaas.stock-image.list`, `power-iaas.cloud-instance-image.read`, `power-iaas.cloud-instance-image.list`, `power-iaas.cloud-instance-image.create`, `power-iaas.cloud-instance-image.delete`, `power-iaas.job.read`, `power-iaas.job.list`, `power-iaas.job.delete`, `power-iaas.network-port.delete`, `power-iaas.network-port.read`, `power-iaas.network-port.list`, `power-iaas.network-port.create`, `power-iaas.network-port.update`, `power-iaas.network.delete`, `power-iaas.network.read`, `power-iaas.network.list`, `power-iaas.network.create`, `power-iaas.network.update`, `power-iaas.pvm-instance-console.create`, `power-iaas.pvm-instance-console.read`, `power-iaas.pvm-instance-console.update`, `power-iaas.pvm-instance-network.delete`, `power-iaas.pvm-instance-network.read`, `power-iaas.pvm-instance-network.list`, `power-iaas.pvm-instance-network.create`, `power-iaas.pvm-instance.read`, `power-iaas.pvm-instance.delete`, `power-iaas.pvm-instance.list`, `power-iaas.pvm-instance.create`, `power-iaas.pvm-instance.update`, `power-iaas.pvm-instance.action`, `power-iaas.pvm-instance.operation`, `power-iaas.pvm-instance-capture.create`, `power-iaas.pvm-instance-capture.read`, `power-iaas.pvm-instance-snapshot.create`, `power-iaas.pvm-instance-snapshot.list`, `power-iaas.pvm-instance-snapshot.restore`, `power-iaas.placement-group.read`, `power-iaas.placement-group.list`, `power-iaas.placement-group.delete`, `power-iaas.placement-group.create`, `power-iaas.placement-group-member.create`, `power-iaas.placement-group-member.delete`, `power-iaas.shared-processor-pool.create`, `power-iaas.shared-processor-pool.delete`, `power-iaas.shared-processor-pool.list`, `power-iaas.shared-processor-pool.read`, `power-iaas.shared-processor-pool.update`, `power-iaas.spp-placement-group.create`, `power-iaas.spp-placement-group.read`, `power-iaas.spp-placement-group.list`, `power-iaas.spp-placement-group-member.create`, `power-iaas.spp-placement-group-member.delete`, `power-iaas.spp-placement-group.delete`, `power-iaas.sap.read`, `power-iaas.sap.list`, `power-iaas.sap.create`, `power-iaas.dhcp-service.read`, `power-iaas.dhcp-service.list`, `power-iaas.dhcp-service.delete`, `power-iaas.dhcp-service.create`, `power-iaas.cloud-instance-snapshot.read`, `power-iaas.cloud-instance-snapshot.list`, `power-iaas.cloud-instance-snapshot.update`, `power-iaas.cloud-instance-snapshot.delete`, `power-iaas.storage-capacity-type.list`, `power-iaas.storage-capacity-type.read`, `power-iaas.storage-capacity-pool.list`, `power-iaas.storage-capacity-pool.read`, `power-iaas.storage-tier.read`, `power-iaas.system-pool.list`, `power-iaas.task.read`, `power-iaas.task.delete`, `power-iaas.volume-clone.create`, `power-iaas.volume-clone.read`, `power-iaas.volume-clone.list`, `power-iaas.volume-clone.start`, `power-iaas.volume-clone.execute`, `power-iaas.volume-clone.cancel`, `power-iaas.volume-clone.delete`, `power-iaas.cloud-instance-volume.create`, `power-iaas.pvm-instance-volume.delete`, `power-iaas.volume-group.list`, `power-iaas.volume-group.read`, `power-iaas.volume-group.delete`, `power-iaas.volume-group.create`, `power-iaas.volume-group.update`, `power-iaas.volume-group.action`, `power-iaas.volume-group-remote-copy.read`, `power-iaas.volume-group-storage.read`, `power-iaas.volume-onboarding.list`, `power-iaas.volume-onboarding.read`, `power-iaas.volume-onboarding.create`, `power-iaas.cloud-instance-volume.read`, `power-iaas.cloud-instance-volume.list`, `power-iaas.cloud-instance-volume.update`, `power-iaas.cloud-instance-volume.delete`, `power-iaas.pvm-instance-volume.list`, `power-iaas.pvm-instance-volume.read`, `power-iaas.pvm-instance-volume.create`, `power-iaas.pvm-instance-volume.update`, `power-iaas.pvm-instance-boot-volume.update`, `power-iaas.volume-remote-copy.read`, `power-iaas.volume-flash-copy.read`, `power-iaas.vpn-connection-network.delete`, `power-iaas.vpn-connection-network.read`, `power-iaas.vpn-connection-network.update`, `power-iaas.vpn-connection-peer-subnet.delete`, `power-iaas.vpn-connection-peer-subnet.read`, `power-iaas.vpn-connection-peer-subnet.update`, `power-iaas.vpn-connection-ike-policy.delete`, `power-iaas.vpn-connection-ike-policy.read`, `power-iaas.vpn-connection-ike-policy.list`, `power-iaas.vpn-connection-ike-policy.create`, `power-iaas.vpn-connection-ike-policy.update`, `power-iaas.vpn-connection-ipsec-policy.delete`, `power-iaas.vpn-connection-ipsec-policy.read`, `power-iaas.vpn-connection-ipsec-policy.list`, `power-iaas.vpn-connection-ipsec-policy.create`, `power-iaas.vpn-connection-ipsec-policy.update`, `power-iaas.vpn-connection.delete`, `power-iaas.vpn-connection.read`, `power-iaas.vpn-connection.list`, `power-iaas.vpn-connection.create`, `power-iaas.vpn-connection.update`, `power-iaas.disaster-recovery.read`, `power-iaas.available-hosts.list`, `power-iaas.host-group.create`, `power-iaas.host-group.list`, `power-iaas.host-group.read`, `power-iaas.cloud-instance-volume.action`, `power-iaas.tenant-sshkey.list`, `power-iaas.tenant-sshkey.create`, `power-iaas.tenant-sshkey.read`, `power-iaas.tenant-sshkey.update`, `power-iaas.tenant-sshkey.delete`, `power-iaas.tenant.read`, `power-iaas.tenant.update`, `power-iaas.host-group.update`, `power-iaas.host.create`, `power-iaas.host.delete`, `power-iaas.host.list`, `power-iaas.host.read`, `power-iaas.host.update`, `power-iaas.per-connection.migrate`, `power-iaas.snapshot.list`, `power-iaas.snapshot.read`, `power-iaas.network-address-group.create`, `power-iaas.network-address-group.list`, `power-iaas.network-address-group.read`, `power-iaas.network-address-group.update`, `power-iaas.network-address-group.delete`, `power-iaas.network-security-group.list`, `power-iaas.network-security-group.create`, `power-iaas.network-security-group.enable`, `power-iaas.network-security-group.delete`, `power-iaas.network-security-group.read`, `power-iaas.network-security-group.update`, `power-iaas.network-interfaces.list`, `power-iaas.network-interfaces.create`, `power-iaas.network-interfaces.delete`, `power-iaas.network-interfaces.read`, `power-iaas.network-interfaces.update`, `power-iaas.datacenter-private.read`, `power-iaas.datacenter-private.list`, `power-iaas.virtual-serial-number.read`, `power-iaas.virtual-serial-number.list`, `power-iaas.network-security-group.clone`, `power-iaas.workspace.read`, `power-iaas.workspace.list`, `power-iaas.pvm-instance-vpmem-volume.list`, `power-iaas.pvm-instance-vpmem-volume.create`, `power-iaas.pvm-instance-vpmem-volume.read`, `power-iaas.pvm-instance-vpmem-volume.delete`, `power-iaas.pvm-instance-virtual-serial-number.create`, `power-iaas.pvm-instance-virtual-serial-number.read`, `power-iaas.pvm-instance-virtual-serial-number.update`, `power-iaas.pvm-instance-virtual-serial-number.delete`, `power-iaas.pvm-instance-vpmem-volume.update`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 | Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. | `power-iaas.dashboard.view`, `power-iaas.cloud-instance.read`, `power-iaas.cloud-connection-vpc.list`, `power-iaas.cloud-connection.read`, `power-iaas.cloud-connection.list`, `power-iaas.cloud-instance.list`, `power-iaas.cos-image.read`, `power-iaas.event.read`, `power-iaas.event.list`, `power-iaas.image-export.read`, `power-iaas.stock-image.read`, `power-iaas.stock-image.list`, `power-iaas.cloud-instance-image.read`, `power-iaas.cloud-instance-image.list`, `power-iaas.job.read`, `power-iaas.job.list`, `power-iaas.network-port.read`, `power-iaas.network-port.list`, `power-iaas.network.read`, `power-iaas.network.list`, `power-iaas.pvm-instance-console.read`, `power-iaas.pvm-instance-network.read`, `power-iaas.pvm-instance-network.list`, `power-iaas.pvm-instance.read`, `power-iaas.pvm-instance.list`, `power-iaas.pvm-instance-capture.read`, `power-iaas.pvm-instance-snapshot.list`, `power-iaas.placement-group.read`, `power-iaas.placement-group.list`, `power-iaas.shared-processor-pool.list`, `power-iaas.shared-processor-pool.read`, `power-iaas.spp-placement-group.read`, `power-iaas.spp-placement-group.list`, `power-iaas.sap.read`, `power-iaas.sap.list`, `power-iaas.dhcp-service.read`, `power-iaas.dhcp-service.list`, `power-iaas.cloud-instance-snapshot.read`, `power-iaas.cloud-instance-snapshot.list`, `power-iaas.storage-capacity-type.list`, `power-iaas.storage-capacity-type.read`, `power-iaas.storage-capacity-pool.list`, `power-iaas.storage-capacity-pool.read`, `power-iaas.storage-tier.read`, `power-iaas.system-pool.list`, `power-iaas.task.read`, `power-iaas.volume-clone.read`, `power-iaas.volume-clone.list`, `power-iaas.volume-group.list`, `power-iaas.volume-group.read`, `power-iaas.volume-group-remote-copy.read`, `power-iaas.volume-group-storage.read`, `power-iaas.volume-onboarding.list`, `power-iaas.volume-onboarding.read`, `power-iaas.cloud-instance-volume.read`, `power-iaas.cloud-instance-volume.list`, `power-iaas.pvm-instance-volume.list`, `power-iaas.pvm-instance-volume.read`, `power-iaas.volume-remote-copy.read`, `power-iaas.volume-flash-copy.read`, `power-iaas.vpn-connection-network.read`, `power-iaas.vpn-connection-peer-subnet.read`, `power-iaas.vpn-connection-ike-policy.read`, `power-iaas.vpn-connection-ike-policy.list`, `power-iaas.vpn-connection-ipsec-policy.read`, `power-iaas.vpn-connection-ipsec-policy.list`, `power-iaas.vpn-connection.read`, `power-iaas.vpn-connection.list`, `power-iaas.disaster-recovery.read`, `power-iaas.available-hosts.list`, `power-iaas.host-group.list`, `power-iaas.host-group.read`, `power-iaas.tenant-sshkey.list`, `power-iaas.tenant-sshkey.read`, `power-iaas.tenant.read`, `power-iaas.host.list`, `power-iaas.host.read`, `power-iaas.snapshot.list`, `power-iaas.snapshot.read`, `power-iaas.network-address-group.list`, `power-iaas.network-address-group.read`, `power-iaas.network-security-group.list`, `power-iaas.network-security-group.read`, `power-iaas.network-interfaces.list`, `power-iaas.network-interfaces.read`, `power-iaas.datacenter-private.read`, `power-iaas.datacenter-private.list`, `power-iaas.virtual-serial-number.read`, `power-iaas.virtual-serial-number.list`, `power-iaas.workspace.read`, `power-iaas.workspace.list`, `power-iaas.pvm-instance-vpmem-volume.list`, `power-iaas.pvm-instance-vpmem-volume.read`, `power-iaas.pvm-instance-virtual-serial-number.read`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 | Service Configuration Reader | The ability to read services configuration for Governance management. | `power-iaas.route.dashboard.view`, `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
 {: row-headers}
@@ -15532,7 +15534,6 @@ Review the available platform and service roles and the actions mapped to each t
 | `power-iaas.pvm-instance.operation` | | Manager |
 | `power-iaas.pvm-instance-capture.create` | | Manager |
 | `power-iaas.pvm-instance-capture.read` | | Manager, Reader |
-| `power-iaas.pvm-instance-clone.create` | | Manager |
 | `power-iaas.pvm-instance-snapshot.create` | | Manager |
 | `power-iaas.pvm-instance-snapshot.list` | | Manager, Reader |
 | `power-iaas.pvm-instance-snapshot.restore` | | Manager |
@@ -16287,7 +16288,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
 {: #actions-table156}
 
-## Quantum Services
+## Quantum Compute
 {: #quantum-computing-roles}
 
 Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `quantum-computing` for the service name.
@@ -16299,7 +16300,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Operator | As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. | `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.update`, `resource-controller.broker.retrieve`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
 | Viewer | As a viewer, you can view service instances, but you can't modify them. | `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `iam.role.read`, `resource-controller.broker.retrieve`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.subscription.retrieve` |
 {: row-headers}
-{: caption="Platform roles - Quantum Services" caption-side="top"}
+{: caption="Platform roles - Quantum Compute" caption-side="top"}
 {: tab-title="Platform roles"}
 {: tab-group="quantum-computing"}
 {: class="simple-tab-table"}
@@ -16315,7 +16316,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Service Configuration Reader | The ability to read services configuration for Governance management. | `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
 | Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. | `quantum-computing.job.create`, `quantum-computing.job.read`, `quantum-computing.job.cancel`, `quantum-computing.device.read`, `quantum-computing.job.update`, `quantum-computing.session.read`, `quantum-computing.session.update`, `quantum-computing.instance.read`, `quantum-computing.session.create`, `quantum-computing.workload.list`, `quantum-computing.direct-access-backend.list`, `quantum-computing.direct-access-job.cancel`, `quantum-computing.direct-access-job.create`, `quantum-computing.direct-access-job.delete`, `quantum-computing.direct-access-job.list`, `quantum-computing.account-analytics-usage.read`, `quantum-computing.account-analytics-filters.read`, `quantum-computing.direct-access-backend.read`, `quantum-computing.direct-access-backend-configuration.read`, `quantum-computing.direct-access-backend-properties.read`, `quantum-computing.instance-usage.read`, `quantum-computing.composer-qpy-to-qasm.create`, `quantum-computing.composer-simulation.create`, `quantum-computing.composer-transpile.create`, `quantum-computing.direct-access-job.read`, `quantum-computing.direct-access-lease.create`, `quantum-computing.direct-access-lease.delete`, `quantum-computing.direct-access-lease.get`, `quantum-computing.function.list`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 {: row-headers}
-{: caption="Service roles - Quantum Services" caption-side="top"}
+{: caption="Service roles - Quantum Compute" caption-side="top"}
 {: tab-title="Service roles"}
 {: tab-group="quantum-computing"}
 {: class="simple-tab-table"}
@@ -16414,7 +16415,7 @@ Review the available platform and service roles and the actions mapped to each t
 | `resource-controller.key.manager_delete` | | Key Manager |
 | `resource-controller.key.manager_update` | | Key Manager |
 | `resource-controller.key.manager_retrieve` | | Key Manager |
-{: caption="Service actions - Quantum Services" caption-side="top"}
+{: caption="Service actions - Quantum Compute" caption-side="top"}
 {: tab-title="Actions"}
 {: tab-group="quantum-computing"}
 {: class="simple-tab-table"}
@@ -17042,99 +17043,6 @@ Review the available platform and service roles and the actions mapped to each t
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
 {: #actions-table162}
 
-## IBM Security Verify
-{: #security-verify-roles}
-
-Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `security-verify` for the service name.
-
-| Role | Description | Actions |
-| ----- | :----- | :----- |
-| Administrator | As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. | `security-verify.dashboard.view`, `global-search-tagging.resource.read`, `global-search-tagging.tag.attach-user-tag`, `global-search-tagging.tag.detach-user-tag`, `global-search-tagging.tag.attach-access-tag`, `global-search-tagging.tag.detach-access-tag`, `cbr.rule.read`, `cbr.rule.create`, `cbr.rule.update`, `cbr.rule.delete`, `iam.delegationPolicy.create`, `iam.delegationPolicy.update`, `iam.policy.read`, `iam.policy.create`, `iam.policy.update`, `iam.policy.delete`, `iam.service.read`, `iam.role.read`, `iam.role.assign`, `resource-controller.credential.retrieve_all`, `resource-controller.broker.create`, `resource-controller.broker.update`, `resource-controller.broker.delete`, `resource-controller.broker.retrieve`, `resource-controller.instance.create`, `resource-controller.instance.delete`, `resource-controller.instance.update_plan`, `resource-controller.instance.update_onetime_credentials_off`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.instance.retrieve_history`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.create`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.group.delete`, `resource-controller.subscription.retrieve` |
-| Editor | As an editor, you can perform all platform actions except for managing the account and assigning access policies. | `security-verify.dashboard.view`, `global-search-tagging.resource.read`, `global-search-tagging.tag.attach-user-tag`, `global-search-tagging.tag.detach-user-tag`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.create`, `resource-controller.broker.update`, `resource-controller.broker.delete`, `resource-controller.broker.retrieve`, `resource-controller.instance.create`, `resource-controller.instance.delete`, `resource-controller.instance.update_plan`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.create`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
-| Operator | As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. | `security-verify.dashboard.view`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.update`, `resource-controller.broker.retrieve`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
-| Viewer | As a viewer, you can view service instances, but you can't modify them. | `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `iam.role.read`, `resource-controller.broker.retrieve`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.subscription.retrieve` |
-{: row-headers}
-{: caption="Platform roles - IBM Security Verify" caption-side="top"}
-{: tab-title="Platform roles"}
-{: tab-group="security-verify"}
-{: class="simple-tab-table"}
-{: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table163}
-
-| Role | Description | Actions |
-| ----- | :----- | :----- |
-| Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. | `resource-controller.key.manager_create`, `resource-controller.key.manager_delete`, `resource-controller.key.manager_update`, `resource-controller.key.manager_retrieve` |
-| Service Configuration Reader | The ability to read services configuration for Governance management. | `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
-{: row-headers}
-{: caption="Service roles - IBM Security Verify" caption-side="top"}
-{: tab-title="Service roles"}
-{: tab-group="security-verify"}
-{: class="simple-tab-table"}
-{: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table163}
-
-| Action | Description | Roles |
-| ----- | :----- | :----- |
-| `security-verify.dashboard.view` |  | Administrator, Editor, Operator |
-| `global-search-tagging.resource.read` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
-| `resource-controller.instance.retrieve` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
-| `cbr.rule.read` | | Administrator, Editor, Operator, Viewer |
-| `iam.policy.read` | | Administrator, Editor, Operator, Viewer |
-| `iam.role.read` | | Administrator, Viewer |
-| `resource-controller.broker.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `resource-controller.alias.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `resource-controller.binding.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `resource-controller.key.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `resource-controller.quota.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `resource-controller.group.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `resource-controller.subscription.retrieve` | | Administrator, Editor, Operator, Viewer |
-| `global-search-tagging.tag.attach-user-tag` | | Administrator, Editor |
-| `global-search-tagging.tag.detach-user-tag` | | Administrator, Editor |
-| `global-search-tagging.tag.attach-access-tag` | | Administrator |
-| `global-search-tagging.tag.detach-access-tag` | | Administrator |
-| `cbr.rule.create` | | Administrator |
-| `cbr.rule.update` | | Administrator |
-| `cbr.rule.delete` | | Administrator |
-| `iam.delegationPolicy.create` | | Administrator |
-| `iam.delegationPolicy.update` | | Administrator |
-| `iam.policy.create` | | Administrator |
-| `iam.policy.update` | | Administrator |
-| `iam.policy.delete` | | Administrator |
-| `iam.service.read` | | Administrator |
-| `iam.role.assign` | | Administrator |
-| `resource-controller.credential.retrieve_all` | | Administrator |
-| `resource-controller.broker.create` | | Administrator, Editor |
-| `resource-controller.broker.update` | | Administrator, Editor, Operator |
-| `resource-controller.broker.delete` | | Administrator, Editor |
-| `resource-controller.instance.create` | | Administrator, Editor |
-| `resource-controller.instance.delete` | | Administrator, Editor |
-| `resource-controller.instance.update_plan` | | Administrator, Editor |
-| `resource-controller.instance.update_onetime_credentials_off` | | Administrator |
-| `resource-controller.alias.create` | | Administrator, Editor, Operator |
-| `resource-controller.alias.delete` | | Administrator, Editor, Operator |
-| `resource-controller.binding.create` | | Administrator, Editor, Operator |
-| `resource-controller.binding.delete` | | Administrator, Editor, Operator |
-| `resource-controller.key.create` | | Administrator, Editor, Operator |
-| `resource-controller.key.delete` | | Administrator, Editor, Operator |
-| `resource-controller.instance.update` | | Administrator, Editor, Operator |
-| `resource-controller.alias.update` | | Administrator, Editor, Operator |
-| `resource-controller.binding.update` | | Administrator, Editor, Operator |
-| `resource-controller.key.update` | | Administrator, Editor, Operator |
-| `resource-controller.instance.retrieve_history` | | Administrator |
-| `resource-controller.group.create` | | Administrator, Editor |
-| `resource-controller.group.update` | | Administrator, Editor, Operator |
-| `resource-controller.group.delete` | | Administrator |
-| `resource-controller.key.manager_create` | | Key Manager |
-| `resource-controller.key.manager_delete` | | Key Manager |
-| `resource-controller.key.manager_update` | | Key Manager |
-| `resource-controller.key.manager_retrieve` | | Key Manager |
-{: caption="Service actions - IBM Security Verify" caption-side="top"}
-{: tab-title="Actions"}
-{: tab-group="security-verify"}
-{: class="simple-tab-table"}
-{: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table163}
-
 ## Simulated Instruments Analytics API
 {: #sia-roles}
 
@@ -17152,7 +17060,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sia"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table164}
+{: #platform-roles-table163}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17165,7 +17073,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sia"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table164}
+{: #service-roles-table163}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17228,7 +17136,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sia"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table164}
+{: #actions-table163}
 
 ## Skytap On IBM Cloud
 {: #skytap-roles}
@@ -17247,7 +17155,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="skytap"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table165}
+{: #platform-roles-table164}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17259,7 +17167,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="skytap"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table165}
+{: #service-roles-table164}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17321,7 +17229,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="skytap"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table165}
+{: #actions-table164}
 
 ## Software Billing
 {: #software-billing-roles}
@@ -17340,7 +17248,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="software-billing"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table166}
+{: #platform-roles-table165}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17352,7 +17260,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="software-billing"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table166}
+{: #service-roles-table165}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17414,7 +17322,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="software-billing"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table166}
+{: #actions-table165}
 
 ## software-defined-storage
 {: #software-defined-storage-roles}
@@ -17433,7 +17341,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="software-defined-storage"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table167}
+{: #platform-roles-table166}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17446,7 +17354,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="software-defined-storage"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table167}
+{: #service-roles-table166}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17524,7 +17432,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="software-defined-storage"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table167}
+{: #actions-table166}
 
 ## Speech to Text
 {: #speech-to-text-roles}
@@ -17543,7 +17451,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="speech-to-text"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table168}
+{: #platform-roles-table167}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17558,7 +17466,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="speech-to-text"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table168}
+{: #service-roles-table167}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17625,7 +17533,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="speech-to-text"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table168}
+{: #actions-table167}
 
 ## sql-query
 {: #sql-query-roles}
@@ -17644,7 +17552,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sql-query"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table169}
+{: #platform-roles-table168}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17659,7 +17567,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sql-query"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table169}
+{: #service-roles-table168}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17725,7 +17633,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sql-query"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table169}
+{: #actions-table168}
 
 ## streaming-analytics
 {: #streaming-analytics-roles}
@@ -17744,7 +17652,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="streaming-analytics"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table170}
+{: #platform-roles-table169}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17760,7 +17668,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="streaming-analytics"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table170}
+{: #service-roles-table169}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17836,7 +17744,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="streaming-analytics"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table170}
+{: #actions-table169}
 
 ## Support Center
 {: #support-roles}
@@ -17855,7 +17763,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="support"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table171}
+{: #platform-roles-table170}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17867,7 +17775,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="support"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table171}
+{: #service-roles-table170}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17932,7 +17840,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="support"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table171}
+{: #actions-table170}
 
 ## IBM Cloud Monitoring with Sysdig
 {: #sysdig-monitor-roles}
@@ -17951,7 +17859,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sysdig-monitor"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table172}
+{: #platform-roles-table171}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17967,7 +17875,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sysdig-monitor"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table172}
+{: #service-roles-table171}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18093,7 +18001,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sysdig-monitor"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table172}
+{: #actions-table171}
 
 ## IBM Cloud Security
 {: #sysdig-secure-roles}
@@ -18112,7 +18020,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sysdig-secure"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table173}
+{: #platform-roles-table172}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18127,7 +18035,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sysdig-secure"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table173}
+{: #service-roles-table172}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18191,7 +18099,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sysdig-secure"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table173}
+{: #actions-table172}
 
 ## Text to Speech
 {: #text-to-speech-roles}
@@ -18210,7 +18118,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="text-to-speech"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table174}
+{: #platform-roles-table173}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18225,7 +18133,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="text-to-speech"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table174}
+{: #service-roles-table173}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18292,7 +18200,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="text-to-speech"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table174}
+{: #actions-table173}
 
 ## Toolchain
 {: #toolchain-roles}
@@ -18311,7 +18219,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="toolchain"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table175}
+{: #platform-roles-table174}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18325,7 +18233,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="toolchain"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table175}
+{: #service-roles-table174}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18395,7 +18303,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="toolchain"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table175}
+{: #actions-table174}
 
 ## Transit Gateway
 {: #transit-roles}
@@ -18414,7 +18322,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="transit"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table176}
+{: #platform-roles-table175}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18427,7 +18335,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="transit"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table176}
+{: #service-roles-table175}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18495,7 +18403,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="transit"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table176}
+{: #actions-table175}
 
 ## Transit Gateway
 {: #transit.gateway-roles}
@@ -18514,7 +18422,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="transit.gateway"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table177}
+{: #platform-roles-table176}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18527,7 +18435,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="transit.gateway"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table177}
+{: #service-roles-table176}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18592,7 +18500,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="transit.gateway"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table177}
+{: #actions-table176}
 
 ## IBM Cloud Platform User Management Service
 {: #user-management-roles}
@@ -18611,7 +18519,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="user-management"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table178}
+{: #platform-roles-table177}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18624,7 +18532,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="user-management"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table178}
+{: #service-roles-table177}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18698,7 +18606,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="user-management"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table178}
+{: #actions-table177}
 
 ## validation-is-a
 {: #validation-is-a-roles}
@@ -18717,7 +18625,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="validation-is-a"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table179}
+{: #platform-roles-table178}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18729,7 +18637,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="validation-is-a"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table179}
+{: #service-roles-table178}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18791,7 +18699,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="validation-is-a"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table179}
+{: #actions-table178}
 
 ## validation-is-b
 {: #validation-is-b-roles}
@@ -18810,7 +18718,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="validation-is-b"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table180}
+{: #platform-roles-table179}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18822,7 +18730,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="validation-is-b"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table180}
+{: #service-roles-table179}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18884,7 +18792,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="validation-is-b"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table180}
+{: #actions-table179}
 
 ## VMware Solutions on VPC
 {: #vmware-roles}
@@ -18909,7 +18817,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware-solutions"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table182}
+{: #platform-roles-table181}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18932,7 +18840,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware-solutions"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table182}
+{: #service-roles-table181}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19013,7 +18921,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware-solutions"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table182}
+{: #actions-table181}
 
 ## VMware Cloud Director
 {: #vmware.directorsite-roles}
@@ -19032,7 +18940,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware.directorsite"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table183}
+{: #platform-roles-table182}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19055,7 +18963,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware.directorsite"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table183}
+{: #service-roles-table182}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19140,7 +19048,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware.directorsite"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table183}
+{: #actions-table182}
 
 ## VMware Usage Meters
 {: #vmware.usage-meter-roles}
@@ -19159,7 +19067,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware.usage-meter"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table184}
+{: #platform-roles-table183}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19174,7 +19082,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware.usage-meter"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table184}
+{: #service-roles-table183}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19237,7 +19145,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware.usage-meter"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table184}
+{: #actions-table183}
 
 ## Organization Virtual Data Center
 {: #vmware.vdc-roles}
@@ -19262,7 +19170,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="voiceagent"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table186}
+{: #platform-roles-table185}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19277,7 +19185,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="voiceagent"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table186}
+{: #service-roles-table185}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19345,7 +19253,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="voiceagent"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table186}
+{: #actions-table185}
 
 ## watsonx.data integration
 {: #watsonx-data-integration-roles}
@@ -19364,7 +19272,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-data-integration"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table187}
+{: #platform-roles-table186}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19377,7 +19285,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-data-integration"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table187}
+{: #service-roles-table186}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19439,7 +19347,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-data-integration"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table187}
+{: #actions-table186}
 
 ##  IBM watsonx BI Assistant
 {: #watsonx-intelligence-roles}
@@ -19458,7 +19366,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-intelligence"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table188}
+{: #platform-roles-table187}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19473,7 +19381,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-intelligence"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table188}
+{: #service-roles-table187}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19538,7 +19446,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-intelligence"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table188}
+{: #actions-table187}
 
 ## watsonx Orchestrate
 {: #watsonx-orchestrate-roles}
@@ -19557,7 +19465,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-orchestrate"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table189}
+{: #platform-roles-table188}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19572,7 +19480,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-orchestrate"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table189}
+{: #service-roles-table188}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19650,7 +19558,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-orchestrate"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table189}
+{: #actions-table188}
 
 ## Annotator for Clinical Data
 {: #wh-acd-roles}
@@ -19669,7 +19577,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="wh-acd"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table190}
+{: #platform-roles-table189}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19684,7 +19592,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="wh-acd"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table190}
+{: #service-roles-table189}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19754,4 +19662,4 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="wh-acd"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table190}
+{: #actions-table189}
