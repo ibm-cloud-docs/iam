@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-08-12"
 
 keywords: Context based restriction, rule, context, network zone, IBM Cloud restrictions, IBM Cloud context restriction, IBM Cloud access, access control, resource access, endpoint type, layered security, reduce attack surface
 
@@ -133,9 +133,7 @@ The following is a list of services that you can add to a network zone as a serv
 | [Cloud {{site.data.keyword.cos_short}}](/docs/cloud-object-storage?topic=cloud-object-storage-setting-a-firewall) | IAM-enabled | `cloud-object-storage` |
 | [{{site.data.keyword.codeengineshort}}](/docs/codeengine?topic=codeengine-cbr) | IAM-enabled | `codeengine` |
 | [{{site.data.keyword.databases-for-cassandra}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | `databases-for-cassandra` |
-| [{{site.data.keyword.databases-for-enterprisedb}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | `databases-for-enterprisedb` |
 | [{{site.data.keyword.databases-for-elasticsearch}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | `databases-for-elasticsearch` |
-| [{{site.data.keyword.databases-for-etcd}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | `databases-for-etcd` |
 | [{{site.data.keyword.databases-for-mongodb}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | `databases-for-mongodb` |
 | [{{site.data.keyword.databases-for-mysql}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | `databases-for-mysql` |
 | [{{site.data.keyword.databases-for-postgresql}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | `databases-for-postgresql` |
@@ -251,9 +249,7 @@ You can create context-based restrictions for the following services if you are 
 | [{{site.data.keyword.registryshort}}](/docs/Registry?topic=Registry-iam&interface=ui#iam_cbr) | IAM-enabled | No | `container-registry` |
 | [Context-based restrictions Service](/docs/iam?topic=iam-context-restrictions-update) | Account Management | No | `context-based-restrictions` |
 | [{{site.data.keyword.databases-for-cassandra}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | Yes | `databases-for-cassandra` |
-| [{{site.data.keyword.databases-for-enterprisedb}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | Yes | `databases-for-enterprisedb` |
 | [{{site.data.keyword.databases-for-elasticsearch}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | Yes | `databases-for-elasticsearch` |
-| [{{site.data.keyword.databases-for-etcd}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | Yes | `databases-for-etcd` |
 | [{{site.data.keyword.databases-for-mongodb}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | Yes | `databases-for-mongodb` |
 | [{{site.data.keyword.databases-for-mysql}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | Yes | `databases-for-mysql` |
 | [{{site.data.keyword.databases-for-postgresql}}](/docs/cloud-databases?topic=cloud-databases-cbr) | IAM-enabled | Yes | `databases-for-postgresql` |
