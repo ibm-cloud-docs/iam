@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-08-12"
+lastupdated: "2026-08-13"
 
 keywords: Context based restriction, rule, context, network zone, IBM Cloud restrictions, IBM Cloud context restriction, IBM Cloud access, access control, resource access, endpoint type, layered security, reduce attack surface
 
@@ -268,6 +268,7 @@ You can create context-based restrictions for the following services if you are 
 | [{{site.data.keyword.keymanagementserviceshort}}](/docs/key-protect?topic=key-protect-access-control-with-cbr) | IAM-enabled | No | `kms` |
 | [{{site.data.keyword.containershort}}](/docs/containers?topic=containers-cbr&interface=ui) / [{{site.data.keyword.redhat_openshift_notm}}](/docs/openshift?topic=openshift-cbr&interface=ui) | IAM-enabled | Yes | `containers-kubernetes` |
 | MQ | IAM-enabled | Yes | `mqcloud` |
+| [{{site.data.keyword.quantum_compute_short}}](https://quantum.cloud.ibm.com/docs/guides/context-based-restrictions){: external} | IAM-enabled | No | `quantum-computing` |
 | [{{site.data.keyword.messages-for-rabbitmq}}](/docs/cloud-databases?topic=cloud-databases-cbr)  | IAM-enabled | Yes | `messages-for-rabbitmq` |
 | [{{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-access-control-cbr&interface=ui) | IAM-enabled | No | `schematics` |
 | [{{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager?topic=secrets-manager-access-control-cbr) | IAM-enabled | No | `secrets-manager` |
