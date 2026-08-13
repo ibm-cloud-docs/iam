@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1200.81 605.13">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #6929c4;
+        font-size: 10px;
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12 {
+        isolation: isolate;
+      }
+
+      .st0, .st1, .st4, .st11 {
+        font-family: IBMPlexSans, 'IBM Plex Sans';
+      }
+
+      .st13, .st14 {
+        stroke-width: 1.5px;
+      }
+
+      .st13, .st14, .st15, .st16 {
+        fill: none;
+      }
+
+      .st13, .st17, .st18 {
+        stroke: #24a148;
+      }
+
+      .st1 {
+        fill: #6f6f6f;
+      }
+
+      .st1, .st4, .st5 {
+        font-size: 12px;
+      }
+
+      .st19 {
+        fill: #8a3ffc;
+      }
+
+      .st14, .st20 {
+        stroke: #0f62fe;
+      }
+
+      .st2 {
+        font-size: 16px;
+      }
+
+      .st2, .st3, .st6, .st8, .st9, .st10, .st12 {
+        font-family: IBMPlexSans-SemiBold, 'IBM Plex Sans';
+        font-weight: 600;
+      }
+
+      .st2, .st21 {
+        fill: #fff;
+      }
+
+      .st15, .st22 {
+        stroke: #8a3ffc;
+      }
+
+      .st15, .st16 {
+        stroke-dasharray: 4 4;
+      }
+
+      .st23, .st17 {
+        fill: #defbe6;
+      }
+
+      .st3 {
+        fill: #0043ce;
+      }
+
+      .st3, .st6, .st8, .st9, .st10, .st12 {
+        font-size: 14px;
+      }
+
+      .st24 {
+        fill: #1192e8;
+      }
+
+      .st4, .st5 {
+        fill: #525252;
+      }
+
+      .st25 {
+        stroke: #0072c3;
+      }
+
+      .st25, .st8 {
+        fill: #e5f6ff;
+      }
+
+      .st25, .st18 {
+        stroke-width: 3px;
+      }
+
+      .st5 {
+        font-family: IBMPlexSans-Medium, 'IBM Plex Sans';
+        font-weight: 500;
+      }
+
+      .st6, .st26 {
+        fill: #d0e2ff;
+      }
+
+      .st22 {
+        fill: #f6f2ff;
+      }
+
+      .st22, .st17, .st16, .st20 {
+        stroke-width: 2px;
+      }
+
+      .st27 {
+        fill: #0f62fe;
+      }
+
+      .st9 {
+        fill: #002d9c;
+      }
+
+      .st28 {
+        fill: #24a148;
+      }
+
+      .st16 {
+        stroke: #e0e0e0;
+      }
+
+      .st20 {
+        fill: #edf5ff;
+      }
+
+      .st10, .st11 {
+        fill: #0e6027;
+      }
+
+      .st11 {
+        font-size: 11px;
+      }
+
+      .st12 {
+        fill: #e8daff;
+      }
+
+      .st18 {
+        fill: #a7f0ba;
+      }
+    </style>
+  </defs>
+  <rect class="st21" x="0" width="1200.81" height="605.13"/>
+  <rect class="st24" x="20.41" y="57.19" width="200" height="70" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st2" transform="translate(87.09 87.19)"><tspan x="0" y="0">End User</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st6" transform="translate(89.54 107.19)"><tspan x="0" y="0">(Browser)</tspan></text>
+    </g>
+  </g>
+  <rect class="st27" x="260.41" y="57.19" width="200" height="70" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st2" transform="translate(321.81 87.19)"><tspan x="0" y="0">IBM Cloud</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st6" transform="translate(335.09 107.19)"><tspan x="0" y="0">Console</tspan></text>
+    </g>
+  </g>
+  <rect class="st27" x="500.41" y="57.19" width="200" height="70" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st2" transform="translate(561.81 87.19)"><tspan x="0" y="0">IBM Cloud</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st6" transform="translate(587.43 107.19)"><tspan x="0" y="0">IAM</tspan></text>
+    </g>
+  </g>
+  <rect class="st19" x="740.41" y="57.19" width="200" height="70" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st2" transform="translate(814.65 87.19)"><tspan x="0" y="0">App ID</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st12" transform="translate(812.78 107.19)"><tspan x="0" y="0">Instance</tspan></text>
+    </g>
+  </g>
+  <rect class="st24" x="980.41" y="57.19" width="200" height="70" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st2" transform="translate(1040.4 87.19)"><tspan x="0" y="0">Federation</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st8" transform="translate(1069.34 107.19)"><tspan x="0" y="0">IdP</tspan></text>
+    </g>
+  </g>
+  <line class="st16" x1="120.41" y1="127.19" x2="120.41" y2="561.16"/>
+  <line class="st16" x1="360.41" y1="127.19" x2="360.41" y2="561.16"/>
+  <line class="st16" x1="600.41" y1="127.19" x2="600.41" y2="561.16"/>
+  <line class="st16" x1="840.41" y1="127.19" x2="840.41" y2="561.16"/>
+  <line class="st16" x1="1080.41" y1="127.19" x2="1080.41" y2="561.16"/>
+  <rect class="st26" x="20.41" y="157.19" width="1160" height="36" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st3" transform="translate(436.8 180.19)"><tspan x="0" y="0">Phase 1: Outbound - Browser Redirects to Login</tspan></text>
+    </g>
+  </g>
+  <rect class="st25" x="40.41" y="217.19" width="160" height="50" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st5" transform="translate(82.52 237.19)"><tspan x="0" y="0">1. Navigate to</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st1" transform="translate(80.51 255.19)"><tspan x="0" y="0">cloud.ibm.com</tspan></text>
+    </g>
+  </g>
+  <g>
+    <line class="st14" x1="200.41" y1="238.31" x2="273.09" y2="238.31"/>
+    <polygon class="st27" points="271.6 243.4 280.41 238.31 271.6 233.23 271.6 243.4"/>
+  </g>
+  <rect class="st20" x="280.41" y="217.19" width="160" height="50" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st5" transform="translate(321.6 237.19)"><tspan x="0" y="0">2. Detect auth</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st1" transform="translate(340.16 255.19)"><tspan x="0" y="0">needed</tspan></text>
+    </g>
+  </g>
+  <rect class="st20" x="520.41" y="217.19" width="160" height="50" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st5" transform="translate(553.4 237.19)"><tspan x="0" y="0">3. Check account</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st1" transform="translate(554.88 255.19)"><tspan x="0" y="0">federation config</tspan></text>
+    </g>
+  </g>
+  <rect class="st22" x="760.41" y="217.19" width="160" height="50" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st5" transform="translate(798.53 237.19)"><tspan x="0" y="0">4. Create SAML</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st1" transform="translate(819.77 255.19)"><tspan x="0" y="0">request</tspan></text>
+    </g>
+  </g>
+  <rect class="st25" x="1000.41" y="207.19" width="160" height="70" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st9" transform="translate(1031.5 229.19)"><tspan x="0" y="0">5. User Login</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st1" transform="translate(1034.48 247.19)"><tspan x="0" y="0">Enter credentials</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st1" transform="translate(1019.69 263.19)"><tspan x="0" y="0">Create SAML assertion</tspan></text>
+    </g>
+  </g>
+  <rect class="st23" x="20.41" y="321.76" width="1160" height="36" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st10" transform="translate(416.52 344.76)"><tspan x="0" y="0">Phase 2: Return- Browser Redirects Back with Tokens</tspan></text>
+    </g>
+  </g>
+  <polygon class="st28" points="920.41 430.38 915.41 433.38 920.41 436.38 920.41 430.38"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st11" transform="translate(931.46 426.38)"><tspan x="0" y="0">SAML Assertion</tspan></text>
+    </g>
+  </g>
+  <rect class="st17" x="760.41" y="413.38" width="160" height="50" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st5" transform="translate(794.22 433.38)"><tspan x="0" y="0">6. Validate SAML</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st1" transform="translate(794.56 451.38)"><tspan x="0" y="0">Create auth code</tspan></text>
+    </g>
+  </g>
+  <rect class="st17" x="520.41" y="413.38" width="160" height="50" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st5" transform="translate(552.45 433.38)"><tspan x="0" y="0">7. Exchange code</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st1" transform="translate(573.38 451.38)"><tspan x="0" y="0">for tokens</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <text class="st0" transform="translate(663.35 394.57)"><tspan x="0" y="0">IAM exchanges auth code</tspan></text>
+  </g>
+  <g class="st7">
+    <text class="st0" transform="translate(653.55 486.33)"><tspan x="0" y="0">App ID returns access tokens</tspan></text>
+  </g>
+  <rect class="st17" x="280.41" y="416.38" width="160" height="50" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st5" transform="translate(303.08 436.38)"><tspan x="0" y="0">8. Authentication flow</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <text class="st4" transform="translate(332.95 451.52)"><tspan x="0" y="0">Complete</tspan></text>
+  </g>
+  <g>
+    <line class="st15" x1="451.64" y1="475.37" x2="515.9" y2="475.37"/>
+    <polygon class="st19" points="452.81 479.36 445.9 475.37 452.81 471.38 452.81 479.36"/>
+  </g>
+  <g>
+    <line class="st15" x1="513.62" y1="409.36" x2="449.36" y2="409.36"/>
+    <polygon class="st19" points="512.45 405.37 519.36 409.36 512.45 413.35 512.45 405.37"/>
+  </g>
+  <g class="st7">
+    <text class="st0" transform="translate(419.31 397.82)"><tspan x="0" y="0">Console exchanges auth code</tspan></text>
+  </g>
+  <g class="st7">
+    <text class="st0" transform="translate(422.93 490.96)"><tspan x="0" y="0">IAM returns OAuth2 tokens</tspan></text>
+  </g>
+  <rect class="st18" x="40.41" y="416.38" width="160" height="50" rx="4" ry="4"/>
+  <g class="st7">
+    <g class="st7">
+      <text class="st10" transform="translate(73.29 436.38)"><tspan x="0" y="0">9. Logged In</tspan></text>
+    </g>
+  </g>
+  <g class="st7">
+    <g class="st7">
+      <text class="st1" transform="translate(79.26 454.38)"><tspan x="0" y="0">Access granted</tspan></text>
+    </g>
+  </g>
+  <g>
+    <line class="st14" x1="440.41" y1="239.74" x2="513.09" y2="239.74"/>
+    <polygon class="st27" points="511.6 244.82 520.41 239.74 511.6 234.65 511.6 244.82"/>
+  </g>
+  <g>
+    <line class="st14" x1="681.45" y1="239.74" x2="754.13" y2="239.74"/>
+    <polygon class="st27" points="752.64 244.82 761.45 239.74 752.64 234.65 752.64 244.82"/>
+  </g>
+  <g>
+    <line class="st14" x1="919.36" y1="239.74" x2="992.04" y2="239.74"/>
+    <polygon class="st27" points="990.55 244.82 999.36 239.74 990.55 234.65 990.55 244.82"/>
+  </g>
+  <g>
+    <polyline class="st13" points="1072.76 277.19 1073.75 437.13 999.05 437.13 926.37 437.13"/>
+    <polygon class="st28" points="927.86 430.8 919.05 437.13 927.86 443.46 927.86 430.8"/>
+  </g>
+  <g>
+    <line class="st13" x1="760.41" y1="438.38" x2="687.72" y2="438.38"/>
+    <polygon class="st28" points="689.21 433.29 680.41 438.38 689.21 443.46 689.21 433.29"/>
+  </g>
+  <g>
+    <line class="st13" x1="520.41" y1="441.38" x2="447.72" y2="441.38"/>
+    <polygon class="st28" points="449.21 436.29 440.41 441.38 449.21 446.46 449.21 436.29"/>
+  </g>
+  <g>
+    <line class="st13" x1="280.41" y1="441.38" x2="207.72" y2="441.38"/>
+    <polygon class="st28" points="209.21 436.29 200.41 441.38 209.21 446.46 209.21 436.29"/>
+  </g>
+  <g>
+    <line class="st15" x1="694.81" y1="470.37" x2="759.07" y2="470.37"/>
+    <polygon class="st19" points="695.97 474.36 689.07 470.37 695.97 466.38 695.97 474.36"/>
+  </g>
+  <line class="st15" x1="750.91" y1="403.81" x2="686.65" y2="403.81"/>
+  <polygon class="st19" points="749.74 399.82 756.65 403.81 749.74 407.8 749.74 399.82"/>
+  <polygon class="st19" points="691.77 407.8 684.86 403.81 691.77 399.82 691.77 407.8"/>
+  <polygon class="st19" points="454.48 413.35 447.57 409.36 454.48 405.37 454.48 413.35"/>
+</svg>
