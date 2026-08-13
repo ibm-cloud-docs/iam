@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1200.81 605.13">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #6929c4;
+        font-size: 10px;
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10 {
+        isolation: isolate;
+      }
+
+      .st0, .st1, .st3, .st10 {
+        font-family: IBMPlexSans, 'IBM Plex Sans';
+      }
+
+      .st11, .st12 {
+        stroke-width: 1.5px;
+      }
+
+      .st11, .st12, .st13, .st14 {
+        fill: none;
+      }
+
+      .st11, .st15, .st16 {
+        stroke: #24a148;
+      }
+
+      .st1 {
+        fill: #6f6f6f;
+      }
+
+      .st1, .st3, .st4 {
+        font-size: 12px;
+      }
+
+      .st17 {
+        fill: #8a3ffc;
+      }
+
+      .st12 {
+        stroke: #0f62fe;
+      }
+
+      .st2 {
+        font-size: 16px;
+      }
+
+      .st2, .st5, .st7, .st8, .st9 {
+        font-family: IBMPlexSans-SemiBold, 'IBM Plex Sans';
+        font-weight: 600;
+      }
+
+      .st2, .st18 {
+        fill: #fff;
+      }
+
+      .st13 {
+        stroke: #8a3ffc;
+      }
+
+      .st13, .st14 {
+        stroke-dasharray: 4 4;
+      }
+
+      .st19, .st15 {
+        fill: #defbe6;
+      }
+
+      .st20 {
+        fill: #1192e8;
+      }
+
+      .st3, .st4 {
+        fill: #525252;
+      }
+
+      .st21 {
+        stroke: #0072c3;
+      }
+
+      .st21, .st7 {
+        fill: #e5f6ff;
+      }
+
+      .st21, .st16 {
+        stroke-width: 3px;
+      }
+
+      .st4 {
+        font-family: IBMPlexSans-Medium, 'IBM Plex Sans';
+        font-weight: 500;
+      }
+
+      .st5 {
+        fill: #d0e2ff;
+      }
+
+      .st5, .st7, .st8, .st9 {
+        font-size: 14px;
+      }
+
+      .st22 {
+        fill: #0f62fe;
+      }
+
+      .st8 {
+        fill: #002d9c;
+      }
+
+      .st23 {
+        fill: #24a148;
+      }
+
+      .st15, .st14 {
+        stroke-width: 2px;
+      }
+
+      .st14 {
+        stroke: #e0e0e0;
+      }
+
+      .st9, .st10 {
+        fill: #0e6027;
+      }
+
+      .st10 {
+        font-size: 11px;
+      }
+
+      .st16 {
+        fill: #a7f0ba;
+      }
+    </style>
+  </defs>
+  <rect class="st18" width="1200.81" height="605.13"/>
+  <rect class="st20" x="20.41" y="57.19" width="200" height="70" rx="4" ry="4"/>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st2" transform="translate(87.09 87.19)"><tspan x="0" y="0">End User</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st5" transform="translate(89.54 107.19)"><tspan x="0" y="0">(Browser)</tspan></text>
+      </g>
+    </g>
+  </g>
+  <line class="st14" x1="120.41" y1="126.19" x2="120.41" y2="596.16"/>
+  <rect class="st22" x="340.41" y="57.19" width="200" height="70" rx="4" ry="4"/>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st2" transform="translate(401.81 87.19)"><tspan x="0" y="0">IBM Cloud</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st5" transform="translate(415.09 107.19)"><tspan x="0" y="0">Console</tspan></text>
+      </g>
+    </g>
+  </g>
+  <line class="st14" x1="440.41" y1="126.19" x2="440.41" y2="596.16"/>
+  <rect class="st22" x="660.41" y="57.19" width="200" height="70" rx="4" ry="4"/>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st2" transform="translate(721.81 87.19)"><tspan x="0" y="0">IBM Cloud</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st5" transform="translate(747.43 107.19)"><tspan x="0" y="0">IAM</tspan></text>
+      </g>
+    </g>
+  </g>
+  <line class="st14" x1="760.41" y1="126.19" x2="760.41" y2="596.16"/>
+  <rect class="st20" x="980.41" y="57.19" width="200" height="70" rx="4" ry="4"/>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st2" transform="translate(1040.4 87.19)"><tspan x="0" y="0">Federation</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st7" transform="translate(1069.34 107.19)"><tspan x="0" y="0">IdP</tspan></text>
+      </g>
+    </g>
+  </g>
+  <line class="st14" x1="1080.41" y1="126.19" x2="1080.41" y2="596.16"/>
+  <g>
+    <rect class="st21" x="40.41" y="167.19" width="160" height="70" rx="4" ry="4"/>
+    <g class="st6">
+      <g class="st6">
+        <g class="st6">
+          <text class="st8" transform="translate(71.5 196.81)"><tspan x="0" y="0">1. User Login</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st6">
+      <g class="st6">
+        <g class="st6">
+          <text class="st1" transform="translate(73.91 218.35)"><tspan x="0" y="0">Enter credentials</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <rect class="st19" x="20.41" y="267.69" width="1160" height="36" rx="4" ry="4"/>
+  <g class="st6">
+    <g class="st6">
+      <text class="st9" transform="translate(499.34 290.69)"><tspan x="0" y="0">Browser is Redirected with Tokens</tspan></text>
+    </g>
+  </g>
+  <polygon class="st23" points="840.41 339.8 835.41 342.8 840.41 345.8 840.41 339.8"/>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st10" transform="translate(862.2 338.62)"><tspan x="0" y="0">SAML Assertion</tspan></text>
+      </g>
+    </g>
+  </g>
+  <rect class="st15" x="680.41" y="322.8" width="160" height="50" rx="4" ry="4"/>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st4" transform="translate(714.22 342.8)"><tspan x="0" y="0">3. Validate SAML</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st1" transform="translate(714.56 360.8)"><tspan x="0" y="0">Create auth code</tspan></text>
+      </g>
+    </g>
+  </g>
+  <rect class="st15" x="680.41" y="411.14" width="160" height="50" rx="4" ry="4"/>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st4" transform="translate(695.93 431.99)"><tspan x="0" y="0">6. IAM provides Tokens</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st1" transform="translate(714.56 449.14)"><tspan x="0" y="0">Create auth code</tspan></text>
+      </g>
+    </g>
+  </g>
+  <rect class="st15" x="40.41" y="332.33" width="160" height="50" rx="4" ry="4"/>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st4" transform="translate(72.45 352.33)"><tspan x="0" y="0">4. Send Auth code</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st1" transform="translate(84.13 369.51)"><tspan x="0" y="0">to IBM console</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st6">
+    <g class="st6">
+      <text class="st0" transform="translate(561.07 544.42)"><tspan x="0" y="0">IAM returns access tokens</tspan></text>
+    </g>
+  </g>
+  <rect class="st15" x="355.39" y="526.83" width="160" height="50" rx="4" ry="4"/>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st4" transform="translate(378.06 546.83)"><tspan x="0" y="0">7. Authentication flow</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st6">
+    <g class="st6">
+      <text class="st3" transform="translate(407.93 561.97)"><tspan x="0" y="0">Complete</tspan></text>
+    </g>
+  </g>
+  <g>
+    <line class="st13" x1="622.89" y1="426.84" x2="558.63" y2="426.84"/>
+    <polygon class="st17" points="621.72 422.85 628.63 426.84 621.72 430.83 621.72 422.85"/>
+  </g>
+  <g class="st6">
+    <g class="st6">
+      <text class="st0" transform="translate(528.58 415.3)"><tspan x="0" y="0">Console exchanges auth code</tspan></text>
+    </g>
+  </g>
+  <rect class="st16" x="40.41" y="526.38" width="160" height="50" rx="4" ry="4"/>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st9" transform="translate(73.29 546.38)"><tspan x="0" y="0">8. Logged In</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st1" transform="translate(79.26 564.38)"><tspan x="0" y="0">Access granted</tspan></text>
+      </g>
+    </g>
+  </g>
+  <line class="st11" x1="680.41" y1="347.8" x2="200.41" y2="347.8"/>
+  <polygon class="st23" points="208.29 342.71 199.49 347.8 208.29 352.88 208.29 342.71"/>
+  <g>
+    <line class="st11" x1="755.39" y1="551.83" x2="522.7" y2="551.83"/>
+    <polygon class="st23" points="524.19 546.74 515.39 551.83 524.19 556.91 524.19 546.74"/>
+  </g>
+  <g>
+    <line class="st11" x1="354.61" y1="551.83" x2="208.54" y2="551.83"/>
+    <polygon class="st23" points="210.03 546.74 201.23 551.83 210.03 556.91 210.03 546.74"/>
+  </g>
+  <g>
+    <line class="st13" x1="602.33" y1="528.46" x2="666.59" y2="528.46"/>
+    <polygon class="st17" points="603.49 532.45 596.59 528.46 603.49 524.47 603.49 532.45"/>
+  </g>
+  <polygon class="st17" points="563.75 430.83 556.84 426.84 563.75 422.85 563.75 430.83"/>
+  <g>
+    <rect class="st21" x="1000.41" y="167.19" width="160" height="70" rx="4" ry="4"/>
+    <g class="st6">
+      <g class="st6">
+        <text class="st8" transform="translate(1029.23 187.22)"><tspan x="0" y="0">2. Create SAML </tspan></text>
+        <text class="st8" transform="translate(1029.23 204.02)"><tspan x="0" y="0" xml:space="preserve">        assertion</tspan></text>
+      </g>
+    </g>
+    <g class="st6">
+      <g class="st6">
+        <text class="st1" transform="translate(1023.97 222.16)"><tspan x="0" y="0">Redirect the browser</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g>
+    <line class="st12" x1="203.89" y1="202.19" x2="986.35" y2="202.19"/>
+    <polygon class="st22" points="984.82 207.43 993.89 202.19 984.82 196.95 984.82 207.43"/>
+  </g>
+  <g>
+    <line class="st11" x1="848.91" y1="349.73" x2="1070.08" y2="349.73"/>
+    <polygon class="st23" points="850.45 354.97 841.38 349.73 850.45 344.49 850.45 354.97"/>
+  </g>
+  <g>
+    <polyline class="st11" points="352.34 441.14 129.29 441.14 359.88 441.14"/>
+    <polygon class="st23" points="350.81 435.9 359.88 441.14 350.81 446.37 350.81 435.9"/>
+  </g>
+  <g>
+    <polyline class="st11" points="672.87 438.68 522.36 438.68 680.41 438.68"/>
+    <polygon class="st23" points="671.34 433.44 680.41 438.68 671.34 443.91 671.34 433.44"/>
+  </g>
+  <line class="st11" x1="1070.08" y1="349.73" x2="1070.08" y2="240.39"/>
+  <line class="st11" x1="755.39" y1="551.83" x2="755.39" y2="461.79"/>
+  <line class="st11" x1="129.29" y1="441.14" x2="129.29" y2="381.65"/>
+  <rect class="st15" x="360.41" y="416.14" width="160" height="50" rx="4" ry="4"/>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st4" transform="translate(392.45 436.14)"><tspan x="0" y="0">5. Exchange code</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st6">
+    <g class="st6">
+      <g class="st6">
+        <text class="st1" transform="translate(413.38 454.14)"><tspan x="0" y="0">for tokens</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
