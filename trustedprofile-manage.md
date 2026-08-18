@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-07-10"
+lastupdated: "2026-08-18"
 
 keywords: trusted profile, federated users, granting access, update trusted profile, compute resource, IAM trusted profile, trust relationship, establish trust,  trust policy, trusted entity, assume access, apply access, remove trusted profile
 
@@ -155,7 +155,7 @@ You can update a trusted profile from your account by using the CLI. For more in
 1. Update the trusted profile by running the following command. Specify the ID or the name of the trusted profile that you would like to update and rename.
 
    ```bash
-   ibmcloud iam trusted-profile-update <IDorName> -n <NewName> ...
+   ibmcloud iam trusted-profile-update ID_OR_NAME -n NEW_NAME ...
    ```
    {: codeblock}
 

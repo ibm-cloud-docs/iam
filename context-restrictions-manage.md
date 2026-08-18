@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-08-18"
 
 keywords: update network access, network access rule, network zone
 
@@ -471,7 +471,13 @@ You can remove a rule on your cloud resources by completing the following steps:
 You can remove a rule on your cloud resources by completing the following steps:
 1. Retrieve the rule ID for the rule that you want to delete by using the [context-based restrictions rules](/docs/iam?topic=iam-cbr-plugin&interface=cli#cbr-cli-rules-command) command. You can narrow the results of the list by specifying attributes as command options.
    ```sh
-   ibmcloud cbr rules --serviceName "iam-identity"
+   ibmcloud cbr rules --service-name "iam-identity"
+   ```
+   {: pre}
+
+   You can also filter by service group ID:
+   ```sh
+   ibmcloud cbr rules --service-group-id iam
    ```
    {: pre}
 
