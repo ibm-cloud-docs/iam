@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-07-10"
+lastupdated: "2026-08-18"
 
 keywords: federated ID, password, enterprise SSO, single sign-on ID, API key login, one-time passcode login, temporary credential, to login, logging in, trusted profiles
 
@@ -167,7 +167,7 @@ The required API key is the {{site.data.keyword.cloud_notm}} API key that is use
    * Call the API key directly:
 
       ```bash
-      ibmcloud login --apikey <api_key_string>
+      ibmcloud login --apikey API_KEY_STRING
 
       ```
       {: pre}

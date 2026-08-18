@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-08-13"
+lastupdated: "2026-08-14"
 
 keywords: service iam roles, service iam actions, account management roles, iam roles
 
@@ -17352,7 +17352,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Role | Description | Actions |
 | ----- | :----- | :----- |
 | Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. | `resource-controller.key.manager_create`, `resource-controller.key.manager_delete`, `resource-controller.key.manager_update`, `resource-controller.key.manager_retrieve` |
-| Manager | As a manager, you have permissions beyond the editor role to complete privileged actions as defined by the service. You can create, update, delete and view service level resources such as volumes, hosts, snapshots and S3 credentials. | `software-defined-storage.volume.create`, `software-defined-storage.volume.read`, `software-defined-storage.volume.update`, `software-defined-storage.volume.delete`, `software-defined-storage.host.create`, `software-defined-storage.host.read`, `software-defined-storage.host.update`, `software-defined-storage.host.delete`, `software-defined-storage.host.unmap`, `software-defined-storage.host.map`, `software-defined-storage.s3-credential.create`, `software-defined-storage.s3-credential.get`, `software-defined-storage.s3-credential.delete`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
+| Manager | As a manager, you have permissions beyond the editor role to complete privileged actions as defined by the service. You can create, update, delete and view service level resources such as volumes, hosts, snapshots and S3 credentials. | `software-defined-storage.volume.create`, `software-defined-storage.volume.read`, `software-defined-storage.volume.update`, `software-defined-storage.volume.delete`, `software-defined-storage.host.create`, `software-defined-storage.host.read`, `software-defined-storage.host.update`, `software-defined-storage.host.delete`, `software-defined-storage.host.unmap`, `software-defined-storage.host.map`, `software-defined-storage.s3-credential.create`, `software-defined-storage.s3-credential.get`, `software-defined-storage.s3-credential.delete`, `software-defined-storage.cluster.update`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 | Service Configuration Reader | The ability to read services configuration for Governance management. | `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
 {: row-headers}
 {: caption="Service roles - software-defined-storage" caption-side="top"}
@@ -17381,6 +17381,7 @@ Review the available platform and service roles and the actions mapped to each t
 | `software-defined-storage.certificate.inspect` | Inspect certificate | Administrator, Editor, Operator, Viewer |
 | `software-defined-storage.certificate.delete` | Delete certificates | Administrator, Editor, Operator |
 | `software-defined-storage.certificate.create` | Create certificate | Administrator, Editor, Operator |
+| `software-defined-storage.cluster.update` | This action allows the user to update the properties of a ROKS cluster such as quota | Manager |
 | `global-search-tagging.resource.read` | | Administrator, Editor, Manager, Operator, Service Configuration Reader, Viewer |
 | `resource-controller.instance.retrieve` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
 | `cbr.rule.read` | | Administrator, Editor, Manager, Operator, Viewer |
