@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-08-14"
+lastupdated: "2026-08-22"
 
 keywords: service iam roles, service iam actions, account management roles, iam roles
 
@@ -3379,6 +3379,7 @@ Review the available platform and service roles and the actions mapped to each t
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
+| Contributor | As a contributor, you can perform most platform actions except for delete actions such as delete backup and delete scheduled scaling. | `dashdb.console.manage-users`, `dashdb.console.monitor`, `dashdb.console.scale`, `dashdb.console.backup`, `dashdb.console.restore`, `dashdb.console.settings`, `GET /v4/:platform/deployments/:deployment_id/configuration`, `dashdb.console.view-settings`, `GET /v4/:platform/deployables`, `GET /v4/:platform/regions`, `GET /v4/:platform/tasks/:task_id`, `GET /v4/:platform/task_infos/:task_id`, `GET /v4/:platform/backups/:backup_id`, `GET /v4/:platform/deployments/:deployment_id`, `PATCH /v4/:platform/deployments/:deployment_id`, `GET /v4/:platform/deployables/:deployable_id/groups`, `GET /v4/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v4/:platform/deployments/:deployment_id/tasks`, `GET /v4/:platform/deployments/:deployment_id/task_infos`, `GET /v4/:platform/deployments/:deployment_id/backups`, `POST /v4/:platform/deployments/:deployment_id/backups`, `GET /v4/:platform/deployments/:deployment_id/remotes`, `PATCH /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration/schema`, `GET /v4/:platform/deployments/:deployment_id/groups`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v4/:platform/deployments/:deployment_id/users`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id`, `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `PUT /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v4/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v4/:platform/deployments/:deployment_id/groups/member`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v4/:platform/deployments/:deployment_id/describe_updates`, `POST /v4/:platform/deployments/:deployment_id/db_updates`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/password`, `GET /v4/:platform/deployments/:deployment_id/check_updates`, `PATCH /v4/:platform/deployments/:deployment_id/billable`, `PATCH /v4/:platform/deployments/:deployment_id/migrated`, `POST /v4/:platform/deployments/:deployment_id/dr_take_over`, `GET /v4/:platform/deployments/:deployment_id/get_dr`, `GET /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployables`, `GET /v5/:platform/regions`, `GET /v5/:platform/tasks/:task_id`, `GET /v5/:platform/task_infos/:task_id`, `GET /v5/:platform/backups/:backup_id`, `GET /v5/:platform/deployments/:deployment_id`, `PATCH /v5/:platform/deployments/:deployment_id`, `GET /v5/:platform/deployables/:deployable_id/groups`, `GET /v5/:platform/deployments/:deployment_id/tasks`, `GET /v5/:platform/deployments/:deployment_id/task_infos`, `GET /v5/:platform/deployments/:deployment_id/backups`, `POST /v5/:platform/deployments/:deployment_id/backups`, `GET /v5/:platform/deployments/:deployment_id/remotes`, `PATCH /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployments/:deployment_id/configuration/schema`, `GET /v5/:platform/deployments/:deployment_id/groups`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v5/:platform/deployments/:deployment_id/users`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id`, `GET /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `PUT /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v5/:platform/deployments/:deployment_id/groups/member`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v5/:platform/deployments/:deployment_id/describe_updates`, `POST /v5/:platform/deployments/:deployment_id/db_updates`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/password`, `GET /v5/:platform/deployments/:deployment_id/check_updates`, `PATCH /v5/:platform/deployments/:deployment_id/billable`, `GET /v4/:platform/deployments/:deployment_id/privatelink/allowlist`, `PATCH /v4/:platform/deployments/:deployment_id/privatelink/allowlist`, `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/schedule_scaling`, `POST /v4/:platform/deployments/:deployment_id/groups/:group_id/schedule_scaling`, `PATCH /v4/:platform/deployments/:deployment_id/switch_license`, `POST /v4/:platform/deployments/:deployment_id/db2audit/install_v3`, `POST /v4/:platform/deployments/:deployment_id/db2audit/process_report`, `GET /v4/:platform/deployments/:deployment_id/db2audit/version`, `GET /v4/:platform/deployments/:deployment_id/db2audit/alias`, `GET /v5/:platform/deployments/:deployment_id/replication`, `PUT /v5/:platform/deployments/:deployment_id/replication/:id`, `GET /v5/:platform/deployments/:deployment_id/encryption`, `PUT /v5/:platform/deployments/:deployment_id/encryption/:id`, `POST /v5/:platform/deployments/:deployment_id/user_policy`, `PATCH /v5/:platform/deployments/:deployment_id/user_policy`, `GET /v4/:platform/deployments/:deployment_id/backup_records`, `POST /v4/:platform/deployments/:deployment_id/hibernate`, `POST /v5/:platform/deployments/:deployment_id/hibernate`, `dashdb.console.pause`, `dashdb.console.resume`, `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/scale_infos`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow`, `PATCH /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/get_scheduled_update`, `POST /v4/:platform/deployments/:id/maintenancewindow/schedule_update`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formation_update_history`, `dashdb.formation_update_histories.list` |
 | Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. | `resource-controller.key.manager_create`, `resource-controller.key.manager_delete`, `resource-controller.key.manager_update`, `resource-controller.key.manager_retrieve` |
 | Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `dashdb.console.access`, `dashdb.console.manage-users`, `dashdb.console.monitor`, `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/scale_infos`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formation_update_history`, `dashdb.formation_update_histories.list`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 | Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. | `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/scale_infos`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
@@ -3395,135 +3396,135 @@ Review the available platform and service roles and the actions mapped to each t
 | Action | Description | Roles |
 | ----- | :----- | :----- |
 | `dashdb.console.access` | dashdb.console.access | Manager, Writer |
-| `dashdb.console.manage-users` | Allows management of users for database access such as creating new users or assign and IAM user or service id to a database user. | Administrator, Manager |
-| `dashdb.console.monitor` | Allows viewing of metrics and information that allow you to understand the resources your database is using or workload it is running. | Administrator, Manager, Operator, Viewer, Writer |
-| `dashdb.console.scale` | scale operation | Administrator, Editor, Operator |
-| `dashdb.console.backup` | backup operation | Administrator, Editor, Operator |
-| `dashdb.console.restore` | restore operation | Administrator, Editor, Operator |
-| `dashdb.console.settings` | set configuration | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/configuration` | Get deployment configuration | Administrator, Editor, Operator, Viewer |
-| `dashdb.console.view-settings` | view database settings | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/deployables` | Read Deployables | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/regions` | Read discover available regions | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/tasks/:task_id` | Read a Task | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/task_infos/:task_id` | Read a Task metadata | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/backups/:backup_id` | Read a backup | Administrator, Editor, Operator, Viewer |
+| `dashdb.console.manage-users` | Allows management of users for database access such as creating new users or assign and IAM user or service id to a database user. | Administrator, Contributor, Manager |
+| `dashdb.console.monitor` | Allows viewing of metrics and information that allow you to understand the resources your database is using or workload it is running. | Administrator, Contributor, Manager, Operator, Viewer, Writer |
+| `dashdb.console.scale` | scale operation | Administrator, Contributor, Editor, Operator |
+| `dashdb.console.backup` | backup operation | Administrator, Contributor, Editor, Operator |
+| `dashdb.console.restore` | restore operation | Administrator, Contributor, Editor, Operator |
+| `dashdb.console.settings` | set configuration | Administrator, Contributor, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/configuration` | Get deployment configuration | Administrator, Contributor, Editor, Operator, Viewer |
+| `dashdb.console.view-settings` | view database settings | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/deployables` | Read Deployables | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/regions` | Read discover available regions | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/tasks/:task_id` | Read a Task | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/task_infos/:task_id` | Read a Task metadata | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/backups/:backup_id` | Read a backup | Administrator, Contributor, Editor, Operator, Viewer |
 | `DELETE /v4/:platform/backups/:backup_id` | Delete a backup | Administrator, Editor, Operator |
 | `DELETE /v4/:platform/deployments/:deployment_id/backups/:backup_id` | Delete a backup | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id` | Read a Deployment | Administrator, Editor, Operator, Viewer |
-| `PATCH /v4/:platform/deployments/:deployment_id` | Update a Deployment | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployables/:deployable_id/groups` | Read deployable group | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/deployments/:deployment_id/point_in_time_recovery_data` | Read all deployment point-in-time-recovery data | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/deployments/:deployment_id/tasks` | Read all deployment tasks | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/deployments/:deployment_id/task_infos` | Read all deployment tasks metadata | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/deployments/:deployment_id/backups` | Read all deployment backups | Administrator, Editor, Operator, Viewer |
-| `POST /v4/:platform/deployments/:deployment_id/backups` | Create an on-demand backup | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/remotes` | Read all deployment remotes | Administrator, Editor, Operator, Viewer |
+| `GET /v4/:platform/deployments/:deployment_id` | Read a Deployment | Administrator, Contributor, Editor, Operator, Viewer |
+| `PATCH /v4/:platform/deployments/:deployment_id` | Update a Deployment | Administrator, Contributor, Editor, Operator |
+| `GET /v4/:platform/deployables/:deployable_id/groups` | Read deployable group | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/deployments/:deployment_id/point_in_time_recovery_data` | Read all deployment point-in-time-recovery data | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/deployments/:deployment_id/tasks` | Read all deployment tasks | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/deployments/:deployment_id/task_infos` | Read all deployment tasks metadata | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/deployments/:deployment_id/backups` | Read all deployment backups | Administrator, Contributor, Editor, Operator, Viewer |
+| `POST /v4/:platform/deployments/:deployment_id/backups` | Create an on-demand backup | Administrator, Contributor, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/remotes` | Read all deployment remotes | Administrator, Contributor, Editor, Operator, Viewer |
 | `DELETE /v4/:platform/deployments/:deployment_id/management/database_connections` | Kill all database connections | Administrator, Editor, Operator |
-| `PATCH /v4/:platform/deployments/:deployment_id/configuration` | Update deployment configuration | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/configuration/schema` | Read deployment configuration schema | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/deployments/:deployment_id/groups` | Read Groups | Administrator, Editor, Operator, Viewer |
-| `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id` | Update a group | Administrator, Editor, Operator |
-| `POST /v4/:platform/deployments/:deployment_id/users` | Create a Db2 database user | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/users/:user_id` | Read a Db2 database user | Administrator, Editor, Operator, Viewer |
-| `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id` | Update a Db2 database user | Administrator, Editor, Operator |
+| `PATCH /v4/:platform/deployments/:deployment_id/configuration` | Update deployment configuration | Administrator, Contributor, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/configuration/schema` | Read deployment configuration schema | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/deployments/:deployment_id/groups` | Read Groups | Administrator, Contributor, Editor, Operator, Viewer |
+| `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id` | Update a group | Administrator, Contributor, Editor, Operator |
+| `POST /v4/:platform/deployments/:deployment_id/users` | Create a Db2 database user | Administrator, Contributor, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/users/:user_id` | Read a Db2 database user | Administrator, Contributor, Editor, Operator, Viewer |
+| `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id` | Update a Db2 database user | Administrator, Contributor, Editor, Operator |
 | `DELETE /v4/:platform/deployments/:deployment_id/users/:user_id` | Remove a Db2 database user | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling` | Read autoscaling configuration | Administrator, Editor, Operator, Viewer |
-| `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling` | Update autoscaling configuration | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections` | Read deployment user connections | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type` | Read deployment user connections | Administrator, Editor, Operator, Viewer |
-| `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections` | Create deployment user connection | Administrator, Editor, Operator, Viewer |
-| `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type` | Create deployment user connection | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses` | Read whitelisted IP addresses | Administrator, Editor, Operator, Viewer |
-| `POST /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses` | Create whitelisted IP addresses | Administrator, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling` | Read autoscaling configuration | Administrator, Contributor, Editor, Operator, Viewer |
+| `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling` | Update autoscaling configuration | Administrator, Contributor, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections` | Read deployment user connections | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type` | Read deployment user connections | Administrator, Contributor, Editor, Operator, Viewer |
+| `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections` | Create deployment user connection | Administrator, Contributor, Editor, Operator, Viewer |
+| `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type` | Create deployment user connection | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses` | Read whitelisted IP addresses | Administrator, Contributor, Editor, Operator, Viewer |
+| `POST /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses` | Create whitelisted IP addresses | Administrator, Contributor, Editor, Operator |
 | `DELETE /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id` | Remove a whitelisted IP address | Administrator, Editor, Operator |
-| `PUT /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses` | Bulk add whitelist IP addresses | Administrator, Editor, Operator |
-| `POST /v4/:platform/deployments/:deployment_id/inplace_restores` | Perform in place database restore | Administrator, Editor, Operator |
-| `PATCH /v4/:platform/deployments/:deployment_id/groups/member` | Update scaling member configuration | Administrator, Editor, Operator |
-| `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/adminpassword` | Update admin password | Administrator, Editor, Operator |
-| `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/locked` | Update user locked state | Administrator, Editor, Operator |
-| `POST /v4/:platform/deployments/:deployment_id/describe_updates` | Get db updates | Administrator, Editor, Operator, Viewer |
-| `POST /v4/:platform/deployments/:deployment_id/db_updates` | Create db update | Administrator, Editor, Operator |
-| `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/password` | Update password | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/check_updates` | Check deployment for available updates | Administrator, Editor, Operator, Viewer |
-| `PATCH /v4/:platform/deployments/:deployment_id/billable` | Set billable annotation to true | Administrator, Editor, Operator |
-| `PATCH /v4/:platform/deployments/:deployment_id/migrated` | Set migration flag to false | Administrator, Editor, Operator |
-| `POST /v4/:platform/deployments/:deployment_id/dr_take_over` | dr_take_over | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/get_dr` | get_dr | Administrator, Editor, Operator |
-| `GET /v5/:platform/deployments/:deployment_id/configuration` | Get deployment configuration | Administrator, Editor, Operator, Viewer |
-| `GET /v5/:platform/deployables` | Read Deployables | Administrator, Editor, Operator, Viewer |
-| `GET /v5/:platform/regions` | Read discover available regions | Administrator, Editor, Operator, Viewer |
-| `GET /v5/:platform/tasks/:task_id` | Read a Task | Administrator, Editor, Operator, Viewer |
-| `GET /v5/:platform/task_infos/:task_id` | Read a Task metadata | Administrator, Editor, Operator, Viewer |
-| `GET /v5/:platform/backups/:backup_id` | Read a backup | Administrator, Editor, Operator, Viewer |
+| `PUT /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses` | Bulk add whitelist IP addresses | Administrator, Contributor, Editor, Operator |
+| `POST /v4/:platform/deployments/:deployment_id/inplace_restores` | Perform in place database restore | Administrator, Contributor, Editor, Operator |
+| `PATCH /v4/:platform/deployments/:deployment_id/groups/member` | Update scaling member configuration | Administrator, Contributor, Editor, Operator |
+| `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/adminpassword` | Update admin password | Administrator, Contributor, Editor, Operator |
+| `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/locked` | Update user locked state | Administrator, Contributor, Editor, Operator |
+| `POST /v4/:platform/deployments/:deployment_id/describe_updates` | Get db updates | Administrator, Contributor, Editor, Operator, Viewer |
+| `POST /v4/:platform/deployments/:deployment_id/db_updates` | Create db update | Administrator, Contributor, Editor, Operator |
+| `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/password` | Update password | Administrator, Contributor, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/check_updates` | Check deployment for available updates | Administrator, Contributor, Editor, Operator, Viewer |
+| `PATCH /v4/:platform/deployments/:deployment_id/billable` | Set billable annotation to true | Administrator, Contributor, Editor, Operator |
+| `PATCH /v4/:platform/deployments/:deployment_id/migrated` | Set migration flag to false | Administrator, Contributor, Editor, Operator |
+| `POST /v4/:platform/deployments/:deployment_id/dr_take_over` | dr_take_over | Administrator, Contributor, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/get_dr` | get_dr | Administrator, Contributor, Editor, Operator |
+| `GET /v5/:platform/deployments/:deployment_id/configuration` | Get deployment configuration | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v5/:platform/deployables` | Read Deployables | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v5/:platform/regions` | Read discover available regions | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v5/:platform/tasks/:task_id` | Read a Task | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v5/:platform/task_infos/:task_id` | Read a Task metadata | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v5/:platform/backups/:backup_id` | Read a backup | Administrator, Contributor, Editor, Operator, Viewer |
 | `DELETE /v5/:platform/backups/:backup_id` | Delete a backup | Administrator, Editor, Operator |
-| `GET /v5/:platform/deployments/:deployment_id` | Read a Deployment | Administrator, Editor, Operator, Viewer |
-| `PATCH /v5/:platform/deployments/:deployment_id` | Update a Deployment | Administrator, Editor, Operator |
-| `GET /v5/:platform/deployables/:deployable_id/groups` | Read deployable group | Administrator, Editor, Operator, Viewer |
-| `GET /v5/:platform/deployments/:deployment_id/tasks` | Read all deployment tasks | Administrator, Editor, Operator, Viewer |
-| `GET /v5/:platform/deployments/:deployment_id/task_infos` | Read all deployment tasks metadata | Administrator, Editor, Operator, Viewer |
-| `GET /v5/:platform/deployments/:deployment_id/backups` | Read all deployment backups | Administrator, Editor, Operator, Viewer |
-| `POST /v5/:platform/deployments/:deployment_id/backups` | Create an on-demand backup | Administrator, Editor, Operator |
-| `GET /v5/:platform/deployments/:deployment_id/remotes` | Read all deployment remotes | Administrator, Editor, Operator, Viewer |
+| `GET /v5/:platform/deployments/:deployment_id` | Read a Deployment | Administrator, Contributor, Editor, Operator, Viewer |
+| `PATCH /v5/:platform/deployments/:deployment_id` | Update a Deployment | Administrator, Contributor, Editor, Operator |
+| `GET /v5/:platform/deployables/:deployable_id/groups` | Read deployable group | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v5/:platform/deployments/:deployment_id/tasks` | Read all deployment tasks | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v5/:platform/deployments/:deployment_id/task_infos` | Read all deployment tasks metadata | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v5/:platform/deployments/:deployment_id/backups` | Read all deployment backups | Administrator, Contributor, Editor, Operator, Viewer |
+| `POST /v5/:platform/deployments/:deployment_id/backups` | Create an on-demand backup | Administrator, Contributor, Editor, Operator |
+| `GET /v5/:platform/deployments/:deployment_id/remotes` | Read all deployment remotes | Administrator, Contributor, Editor, Operator, Viewer |
 | `DELETE /v5/:platform/deployments/:deployment_id/management/database_connections` | Kill all database connections | Administrator, Editor, Operator |
-| `PATCH /v5/:platform/deployments/:deployment_id/configuration` | Update deployment configuration | Administrator, Editor, Operator |
-| `GET /v5/:platform/deployments/:deployment_id/configuration/schema` | Read deployment configuration schema | Administrator, Editor, Operator, Viewer |
-| `GET /v5/:platform/deployments/:deployment_id/groups` | Read Groups | Administrator, Editor, Operator, Viewer |
-| `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id` | Update a group | Administrator, Editor, Operator |
-| `POST /v5/:platform/deployments/:deployment_id/users` | Create a Db2 database user | Administrator, Editor, Operator |
-| `GET /v5/:platform/deployments/:deployment_id/users/:user_id` | Read a Db2 database user | Administrator, Editor, Operator, Viewer |
-| `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id` | Update a Db2 database user | Administrator, Editor, Operator |
+| `PATCH /v5/:platform/deployments/:deployment_id/configuration` | Update deployment configuration | Administrator, Contributor, Editor, Operator |
+| `GET /v5/:platform/deployments/:deployment_id/configuration/schema` | Read deployment configuration schema | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v5/:platform/deployments/:deployment_id/groups` | Read Groups | Administrator, Contributor, Editor, Operator, Viewer |
+| `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id` | Update a group | Administrator, Contributor, Editor, Operator |
+| `POST /v5/:platform/deployments/:deployment_id/users` | Create a Db2 database user | Administrator, Contributor, Editor, Operator |
+| `GET /v5/:platform/deployments/:deployment_id/users/:user_id` | Read a Db2 database user | Administrator, Contributor, Editor, Operator, Viewer |
+| `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id` | Update a Db2 database user | Administrator, Contributor, Editor, Operator |
 | `DELETE /v5/:platform/deployments/:deployment_id/users/:user_id` | Remove a Db2 database user | Administrator, Editor, Operator |
-| `GET /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling` | Read autoscaling configuration | Administrator, Editor, Operator, Viewer |
-| `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling` | Update autoscaling configuration | Administrator, Editor, Operator |
-| `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections` | Read deployment user connections | Administrator, Editor, Operator, Viewer |
-| `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type` | Read deployment user connections | Administrator, Editor, Operator, Viewer |
-| `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections` | Create deployment user connection | Administrator, Editor, Operator, Viewer |
-| `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type` | Create deployment user connection | Administrator, Editor, Operator, Viewer |
-| `GET /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses` | Read whitelisted IP addresses | Administrator, Editor, Operator, Viewer |
-| `POST /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses` | Create whitelisted IP addresses | Administrator, Editor, Operator |
+| `GET /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling` | Read autoscaling configuration | Administrator, Contributor, Editor, Operator, Viewer |
+| `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling` | Update autoscaling configuration | Administrator, Contributor, Editor, Operator |
+| `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections` | Read deployment user connections | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type` | Read deployment user connections | Administrator, Contributor, Editor, Operator, Viewer |
+| `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections` | Create deployment user connection | Administrator, Contributor, Editor, Operator, Viewer |
+| `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type` | Create deployment user connection | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses` | Read whitelisted IP addresses | Administrator, Contributor, Editor, Operator, Viewer |
+| `POST /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses` | Create whitelisted IP addresses | Administrator, Contributor, Editor, Operator |
 | `DELETE /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id` | Remove a whitelisted IP address | Administrator, Editor, Operator |
-| `PUT /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses` | Bulk add whitelist IP addresses | Administrator, Editor, Operator |
-| `POST /v5/:platform/deployments/:deployment_id/inplace_restores` | Perform in place database restore | Administrator, Editor, Operator |
-| `PATCH /v5/:platform/deployments/:deployment_id/groups/member` | Update scaling member configuration | Administrator, Editor, Operator |
-| `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/adminpassword` | Update admin password | Administrator, Editor, Operator |
-| `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/locked` | Update user locked state | Administrator, Editor, Operator |
-| `POST /v5/:platform/deployments/:deployment_id/describe_updates` | Get db updates | Administrator, Editor, Operator, Viewer |
-| `POST /v5/:platform/deployments/:deployment_id/db_updates` | Create db update | Administrator, Editor, Operator |
-| `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/password` | Update password | Administrator, Editor, Operator |
-| `GET /v5/:platform/deployments/:deployment_id/check_updates` | Check deployment for available updates | Administrator, Editor, Operator, Viewer |
-| `PATCH /v5/:platform/deployments/:deployment_id/billable` | Set billable annotation to true | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/privatelink/allowlist` | Read Privatelink allowlist of principals | Administrator, Editor, Operator, Viewer |
-| `PATCH /v4/:platform/deployments/:deployment_id/privatelink/allowlist` | Patch Privatelink allowlist principals | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/schedule_scaling` | Read scheduled scaling configuration | Administrator, Editor, Operator, Viewer |
-| `POST /v4/:platform/deployments/:deployment_id/groups/:group_id/schedule_scaling` | Update scheduled scaling | Administrator, Editor, Operator |
+| `PUT /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses` | Bulk add whitelist IP addresses | Administrator, Contributor, Editor, Operator |
+| `POST /v5/:platform/deployments/:deployment_id/inplace_restores` | Perform in place database restore | Administrator, Contributor, Editor, Operator |
+| `PATCH /v5/:platform/deployments/:deployment_id/groups/member` | Update scaling member configuration | Administrator, Contributor, Editor, Operator |
+| `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/adminpassword` | Update admin password | Administrator, Contributor, Editor, Operator |
+| `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/locked` | Update user locked state | Administrator, Contributor, Editor, Operator |
+| `POST /v5/:platform/deployments/:deployment_id/describe_updates` | Get db updates | Administrator, Contributor, Editor, Operator, Viewer |
+| `POST /v5/:platform/deployments/:deployment_id/db_updates` | Create db update | Administrator, Contributor, Editor, Operator |
+| `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/password` | Update password | Administrator, Contributor, Editor, Operator |
+| `GET /v5/:platform/deployments/:deployment_id/check_updates` | Check deployment for available updates | Administrator, Contributor, Editor, Operator, Viewer |
+| `PATCH /v5/:platform/deployments/:deployment_id/billable` | Set billable annotation to true | Administrator, Contributor, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/privatelink/allowlist` | Read Privatelink allowlist of principals | Administrator, Contributor, Editor, Operator, Viewer |
+| `PATCH /v4/:platform/deployments/:deployment_id/privatelink/allowlist` | Patch Privatelink allowlist principals | Administrator, Contributor, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/schedule_scaling` | Read scheduled scaling configuration | Administrator, Contributor, Editor, Operator, Viewer |
+| `POST /v4/:platform/deployments/:deployment_id/groups/:group_id/schedule_scaling` | Update scheduled scaling | Administrator, Contributor, Editor, Operator |
 | `DELETE /v4/:platform/deployments/:deployment_id/groups/:group_id/schedule_scaling` | Delete scheduled scaling | Administrator, Editor, Operator |
-| `PATCH /v4/:platform/deployments/:deployment_id/switch_license` | switch license type or term | Administrator, Editor, Operator |
-| `POST /v4/:platform/deployments/:deployment_id/db2audit/install_v3` | Install Db2 audit v3 | Administrator, Editor, Operator |
-| `POST /v4/:platform/deployments/:deployment_id/db2audit/process_report` | Process db2 archived audit logs into a human-readable csv format | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/deployments/:deployment_id/db2audit/version` | Retrieve Db2 audit version | Administrator, Editor, Operator, Viewer |
-| `GET /v4/:platform/deployments/:deployment_id/db2audit/alias` | Retrieve Db2 audit storage alias | Administrator, Editor, Operator, Viewer |
-| `GET /v5/:platform/deployments/:deployment_id/replication` | Retrieve replication status | Administrator, Editor, Operator, Viewer |
-| `PUT /v5/:platform/deployments/:deployment_id/replication/:id` | Activate/deactivate replication | Administrator, Editor, Operator |
-| `GET /v5/:platform/deployments/:deployment_id/encryption` | Retrieve wired encryption status | Administrator, Editor, Operator, Viewer |
-| `PUT /v5/:platform/deployments/:deployment_id/encryption/:id` | Enable/disable wired encryption | Administrator, Editor, Operator |
-| `POST /v5/:platform/deployments/:deployment_id/user_policy` | Create user policy | Administrator, Editor, Operator |
-| `PATCH /v5/:platform/deployments/:deployment_id/user_policy` | Update existing user policy | Administrator, Editor, Operator |
+| `PATCH /v4/:platform/deployments/:deployment_id/switch_license` | switch license type or term | Administrator, Contributor, Editor, Operator |
+| `POST /v4/:platform/deployments/:deployment_id/db2audit/install_v3` | Install Db2 audit v3 | Administrator, Contributor, Editor, Operator |
+| `POST /v4/:platform/deployments/:deployment_id/db2audit/process_report` | Process db2 archived audit logs into a human-readable csv format | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/deployments/:deployment_id/db2audit/version` | Retrieve Db2 audit version | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v4/:platform/deployments/:deployment_id/db2audit/alias` | Retrieve Db2 audit storage alias | Administrator, Contributor, Editor, Operator, Viewer |
+| `GET /v5/:platform/deployments/:deployment_id/replication` | Retrieve replication status | Administrator, Contributor, Editor, Operator, Viewer |
+| `PUT /v5/:platform/deployments/:deployment_id/replication/:id` | Activate/deactivate replication | Administrator, Contributor, Editor, Operator |
+| `GET /v5/:platform/deployments/:deployment_id/encryption` | Retrieve wired encryption status | Administrator, Contributor, Editor, Operator, Viewer |
+| `PUT /v5/:platform/deployments/:deployment_id/encryption/:id` | Enable/disable wired encryption | Administrator, Contributor, Editor, Operator |
+| `POST /v5/:platform/deployments/:deployment_id/user_policy` | Create user policy | Administrator, Contributor, Editor, Operator |
+| `PATCH /v5/:platform/deployments/:deployment_id/user_policy` | Update existing user policy | Administrator, Contributor, Editor, Operator |
 | `DELETE /v5/:platform/deployments/:deployment_id/user_policy` | Delete existing user policy | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/backup_records` | Read all backup history records | Administrator, Editor, Operator, Viewer |
-| `POST /v4/:platform/deployments/:deployment_id/hibernate` | Pause the instance through a disablement | Administrator, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/backup_records` | Read all backup history records | Administrator, Contributor, Editor, Operator, Viewer |
+| `POST /v4/:platform/deployments/:deployment_id/hibernate` | Pause the instance through a disablement | Administrator, Contributor, Editor, Operator |
 | `DELETE /v4/:platform/deployments/:deployment_id/hibernate` | Resume the instance by removing a disablement | Administrator, Editor, Operator |
-| `POST /v5/:platform/deployments/:deployment_id/hibernate` | Pause the instance through a disablement | Administrator, Editor, Operator |
+| `POST /v5/:platform/deployments/:deployment_id/hibernate` | Pause the instance through a disablement | Administrator, Contributor, Editor, Operator |
 | `DELETE /v5/:platform/deployments/:deployment_id/hibernate` | Resume the instance by removing a disablement | Administrator, Editor, Operator |
-| `dashdb.console.pause` | Pause the instance | Administrator, Editor, Operator |
-| `dashdb.console.resume` | Resume the instance | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/scale_infos` | Get scale information for current instance | Administrator, Editor, Manager, Operator, Reader, Viewer, Writer |
-| `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow` | Get the current maintenance window configuration for a deployment. | Administrator, Editor, Operator |
-| `PATCH /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow` | Update the maintenance window configuration. | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/get_scheduled_update` | Get the currently scheduled update for a deployment. | Administrator, Editor, Operator |
-| `POST /v4/:platform/deployments/:id/maintenancewindow/schedule_update` | Schedule a new update run. | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formation_update_history` | Get the update history  | Administrator, Editor, Manager, Operator, Writer |
-| `dashdb.formation_update_histories.list` | Get history of formation updates | Administrator, Editor, Manager, Operator |
+| `dashdb.console.pause` | Pause the instance | Administrator, Contributor, Editor, Operator |
+| `dashdb.console.resume` | Resume the instance | Administrator, Contributor, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/scale_infos` | Get scale information for current instance | Administrator, Contributor, Editor, Manager, Operator, Reader, Viewer, Writer |
+| `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow` | Get the current maintenance window configuration for a deployment. | Administrator, Contributor, Editor, Operator |
+| `PATCH /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow` | Update the maintenance window configuration. | Administrator, Contributor, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/get_scheduled_update` | Get the currently scheduled update for a deployment. | Administrator, Contributor, Editor, Operator |
+| `POST /v4/:platform/deployments/:id/maintenancewindow/schedule_update` | Schedule a new update run. | Administrator, Contributor, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formation_update_history` | Get the update history  | Administrator, Contributor, Editor, Manager, Operator, Writer |
+| `dashdb.formation_update_histories.list` | Get history of formation updates | Administrator, Contributor, Editor, Manager, Operator |
 | `global-search-tagging.resource.read` | | Administrator, Editor, Manager, Operator, Reader, Service Configuration Reader, Viewer, Writer |
 | `resource-controller.instance.retrieve` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
 | `cbr.rule.read` | | Administrator, Editor, Manager, Operator, Reader, Viewer, Writer |
