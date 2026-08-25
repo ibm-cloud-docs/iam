@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-08-25"
 
 keywords: network-level access, network security strategy
 subcollection: iam
@@ -64,11 +64,11 @@ Now, Xander can use the network zone that he created in a rule.
 1. Click **Continue**.
 1. Name the rule `Management team`
 1. Set the enforcement to **Report only** so that you can monitor the impact of the rule before you enable it.
-   You can update the enforcement at any time after you create the rule. For more information, see [Updating context-based restrictions](/docs/iam?topic=iam-context-restrictions-update).
-   {: note}
-
 1. Click **Continue**.
 1. Then, click **Create**.
+
+  You can update the enforcement at any time after you create the rule. For more information, see [Updating context-based restrictions](/docs/iam?topic=iam-context-restrictions-update).
+  {: note}
 
 Xander is logging and monitoring policy management requests by using report-only mode. Since the management team has the correct access policies and use allowed IP addresses, they are authorized to execute policy management operations. All policy management requests that come from IP addresses that don't match the conext that Xander defined are denied when the rule is enabled.
 
