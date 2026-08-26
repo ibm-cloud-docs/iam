@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-07-10"
+lastupdated: "2026-08-26"
 
 keywords: trusted profile, identity and access management, federated users, compute resources, IAM trusted profile, trust relationship, establish trust, trust policy, trusted entity, assume access, apply access, access group, service IDs, IBM Cloud services, CRN, cloud resource name, workload identity, without credentials, Power Virtual Server, PowerVS
 
@@ -307,7 +307,7 @@ You can assign classic infrastructure access only if your account is linked to a
 1. Click **Create**.
 
 ## Customizing the console experience
-{: ##customize-console-experience}
+{: #customize-console-experience}
 {: ui}
 
 As a trusted profile administrator, you can customize which navigation items appear in the {{site.data.keyword.cloud_notm}} console banner for users who apply a trusted profile. This capability helps streamline the console experience by hiding navigation elements that users don't need access to and preventing users from exploring areas where they lack permissions.
