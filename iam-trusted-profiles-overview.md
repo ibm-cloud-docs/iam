@@ -3,7 +3,7 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-07-10"
+lastupdated: "2026-08-28"
 
 keywords: trusted profiles, federated users, compute resources, identity provider, SSO, single sign-on, workload identity, enterprise templates, centralized management, least-privilege access, Power Virtual Server, PowerVS
 
@@ -105,6 +105,6 @@ For more information, see [How enterprise-managed IAM works](/docs/enterprise-ma
 ## Next steps
 {: #trusted-profiles-next-steps}
 
-* [Create a trusted profile for federated users](/docs/iam?topic=iam-trustedprofile-fed-tutorial).
+* [Create a trusted profile for federated users](/docs/iam?topic=iam-create-trusted-profile&interface=ui).
 * [Create a trusted profile for compute resources](/docs/iam?topic=iam-trustedprofile-compute-tutorial).
-* Learn about [authentication features](/docs/iam?topic=iam-authentication-features).
+* Learn about [authentication features](/docs/iam?topic=iam-types).
