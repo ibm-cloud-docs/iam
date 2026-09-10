@@ -2,7 +2,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-06-22"
+lastupdated: "2026-09-10"
 
 keywords: invite, invite users, invitation access, vpn-only user, remove user, delete user, IBMid change, credentials, ID, new ID
 
@@ -83,7 +83,7 @@ Users cannot be automatically invited in enterprise-managed accounts and must be
 1. Select **Add** to save the access assignment to the invitation.
 1. After you add all the necessary access assignments, click **Invite**.
 
-You can cancel an invitation for any users that are shown in a Processing or Pending state in the Status column of the [Users page](/iam/users). If an invited user did not receive an invitation, you can resend the invitation to any user in a Pending state. You can add more policies and permissions only after a user accepts the invitation.
+You can cancel an invitation for any users that are shown in a **Processing** or **Pending** state in the **Status** column of the [Users page](/iam/users). If an invited user did not receive an invitation, you can resend the invitation to any user in a **Pending** state. You can add more policies and permissions only after a user accepts the invitation.
 {: note}
 
 ## Adding VPN-only users
@@ -341,10 +341,27 @@ After inviting new users to join your account, {{site.data.keyword.cloud_notm}} 
 The invitation expires after 30 days. New users to {{site.data.keyword.cloud_notm}} can accept an invitation only by using the invitation link that they received through email.
 {: note}
 
-You can cancel an invitation for any users that are shown in a Processing or Pending state in the Status column of the [Users page](/iam/users). If an invited user did not receive an invitation, you can resend the invitation to any user in a Pending state.
+On the **Users** page, the available action depends on the user's current status, as shown in the following table:
+
+| Status | Action |
+|--------|--------|
+| Invalid | Reactivate |
+| Suspended | Reactivate |
+| Error while deleting | Retry |
+| Invite failed | Resend invite |
+| Pending | Resend invite |
+{: caption="User status and corresponding actions" caption-side="bottom"}
+
+The **Status** filter continues to display **Pending**. In the **Users** table, invitation-related statuses are displayed as **Invite expires in # days** or **Invite expired** to indicate the current state of the invitation.
+{: note}
+
+You can cancel an invitation for any users that are shown in a **Processing** or **Pending** state in the **Status** column of the [Users page](/iam/users). If an invited user did not receive an invitation, you can resend the invitation to any user in a **Pending** state.
+
 1. Go to the [Users page](/iam/users).
-1. Locate the row for the user in `Processing` or `Pending` state.
-1. Click the **Actions** icon ![More Actions icon](../icons/action-menu-icon.svg "Actions"), then choose to **Resend invite** or **Cancel invite**.
+2. Locate the row for the user in **Processing** or **Pending** state.
+3. Click the **Actions** icon ![More Actions icon](../icons/action-menu-icon.svg "Actions"), then choose to **Resend invite** or **Cancel invite**.
+
+When you click **Resend invite**, a confirmation message appears. The message depends on whether the invitation is expired or is active. Click **Resend** to send a new invitation email, or **Cancel** to close the dialog.
 
 ## Accepting invitations in the console
 {: #accepting-invitations-ui}
