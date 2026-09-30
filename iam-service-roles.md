@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-09-29"
+lastupdated: "2026-09-30"
 
 keywords: service iam roles, service iam actions, account management roles, iam roles
 
@@ -13182,8 +13182,8 @@ Review the available platform and service roles and the actions mapped to each t
 | Matching Reader | As a Matching Reader, you can perform read actions in the Matching microservice. | `mdm-oc.dashboard.view`, `mdm-oc.matching.read`, `mdm-oc.migration.manage` |
 | Matching Writer | As a Matching Writer, you can perform read and write actions in the Matching microservice. | `mdm-oc.dashboard.view`, `mdm-oc.matching.read`, `mdm-oc.matching.write`, `mdm-oc.migration.manage` |
 | Migration Manager | As a Migration Manager, you can perform manage actions in Migration microservice | `mdm-oc.migration.write`, `mdm-oc.migration.read`, `mdm-oc.migration.manage` |
-| Migration Reader | As a Migration Reader, you can perform Reader actions in Migration microservice | `mdm-oc.data.read`, `mdm-oc.migration.write`, `mdm-oc.migration.read` |
-| Migration Writer | As a Migration Writer, you can perform writer actions in Migration microservice | `mdm-oc.data.read`, `mdm-oc.migration.write`, `mdm-oc.migration.read` |
+| Migration Reader | As a Migration Reader, you can perform Reader actions in Migration microservice | `mdm-oc.migration.read` |
+| Migration Writer | As a Migration Writer, you can perform writer actions in Migration microservice | `mdm-oc.migration.write`, `mdm-oc.migration.read` |
 | Model Manager | As a Model Manager, you can perform manage actions in the Model microservice. | `mdm-oc.dashboard.view`, `mdm-oc.model.read`, `mdm-oc.model.write`, `mdm-oc.model.manage` |
 | Model Reader | As a Model Reader, you can perform read actions in the Model microservice. | `mdm-oc.dashboard.view`, `mdm-oc.model.read` |
 | Model Writer | As a Model Writer you can perform write actions in the Model microservice. | `mdm-oc.dashboard.view`, `mdm-oc.model.read`, `mdm-oc.model.write` |
@@ -13204,7 +13204,7 @@ Review the available platform and service roles and the actions mapped to each t
 | Action | Description | Roles |
 | ----- | :----- | :----- |
 | `mdm-oc.dashboard.view` | View Dashboard | Administrator, Configurator Manager, Configurator Reader, Data Engineer, Data Manager, Data Reader, Data Steward, Data Writer, Editor, Entity Viewer, Job Reader, Job Writer, Manager, Matching Manager, Matching Reader, Matching Writer, Model Manager, Model Reader, Model Writer, Operator, Pair Analysis Reader, Pair Analysis Writer, Publisher User, Reader, Viewer, Writer |
-| `mdm-oc.data.read` | Read access to the Master Data Management Data microservice. | Administrator, Data Engineer, Data Manager, Data Reader, Data Steward, Data Writer, Editor, Entity Viewer, Manager, Migration Reader, Migration Writer, Operator, Publisher User, Reader, Viewer, Writer |
+| `mdm-oc.data.read` | Read access to the Master Data Management Data microservice. | Administrator, Data Engineer, Data Manager, Data Reader, Data Steward, Data Writer, Editor, Entity Viewer, Manager, Operator, Publisher User, Reader, Viewer, Writer |
 | `mdm-oc.data.write` | Write access to the Master Data Management Data microservice. | Administrator, Data Engineer, Data Manager, Data Steward, Data Writer, Manager, Publisher User, Writer |
 | `mdm-oc.data.manage` | Manage access to the Master Data Management Data microservice. | Administrator, Data Engineer, Data Manager, Manager, Publisher User |
 | `mdm-oc.matching.read` | Read access to the Master Data Management Matching microservice. | Administrator, Data Engineer, Data Steward, Editor, Entity Viewer, Manager, Matching Manager, Matching Reader, Matching Writer, Operator, Reader, Viewer, Writer |
@@ -13220,7 +13220,7 @@ Review the available platform and service roles and the actions mapped to each t
 | `mdm-oc.job.read` | Read access to the Master Data Management Job microservice. | Administrator, Data Engineer, Data Steward, Editor, Entity Viewer, Job Reader, Job Writer, Manager, Operator, Publisher User, Reader, Viewer, Writer |
 | `mdm-oc.model.manage` | Manage access to the Master Data Management Model microservice. | Administrator, Data Engineer, Manager, Model Manager, Publisher User |
 | `mdm-oc.matching.datasteward` | Data Steward access to the Master Data Management. | Administrator, Data Engineer, Data Steward, Manager |
-| `mdm-oc.migration.write` | Write access for Master Data Management Migration microservice | Migration Manager, Migration Reader, Migration Writer |
+| `mdm-oc.migration.write` | Write access for Master Data Management Migration microservice | Migration Manager, Migration Writer |
 | `mdm-oc.migration.read` | Read access for Master Data Management Migration microservice | Migration Manager, Migration Reader, Migration Writer |
 | `mdm-oc.migration.manage` | Manage access for Master Data Management Migration microservice | Matching Reader, Matching Writer, Migration Manager |
 | `global-search-tagging.resource.read` | | Administrator, Editor, Manager, Operator, Reader, Service Configuration Reader, Viewer, Writer |
@@ -19622,10 +19622,10 @@ Review the available platform and service roles and the actions mapped to each t
 | Role | Description | Actions |
 | ----- | :----- | :----- |
 | Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. | `resource-controller.key.manager_create`, `resource-controller.key.manager_delete`, `resource-controller.key.manager_update`, `resource-controller.key.manager_retrieve` |
-| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `watsonx-orchestrate.skill.run`, `watsonx-orchestrate.assistant.legacy`, `watsonx-orchestrate.skill.write`, `watsonx-orchestrate.skill.read`, `watsonx-orchestrate.assistant.write`, `watsonx-orchestrate.assistant.read`, `watsonx-orchestrate.assistant.list`, `watsonx-orchestrate.assistant.default`, `watsonx-orchestrate.logs.read`, `watsonx-orchestrate.environment.write`, `watsonx-orchestrate.environment.read`, `watsonx-orchestrate.release.write`, `watsonx-orchestrate.dashboard.view`, `watsonx-orchestrate.credentials.write`, `watsonx-orchestrate.workspace.manage`, `watsonx-orchestrate.workspace.read`, `watsonx-orchestrate.workspace.write`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
+| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `watsonx-orchestrate.skill.run`, `watsonx-orchestrate.assistant.legacy`, `watsonx-orchestrate.skill.write`, `watsonx-orchestrate.skill.read`, `watsonx-orchestrate.assistant.write`, `watsonx-orchestrate.assistant.read`, `watsonx-orchestrate.assistant.list`, `watsonx-orchestrate.assistant.default`, `watsonx-orchestrate.logs.read`, `watsonx-orchestrate.environment.write`, `watsonx-orchestrate.environment.read`, `watsonx-orchestrate.release.write`, `watsonx-orchestrate.dashboard.view`, `watsonx-orchestrate.credentials.write`, `watsonx-orchestrate.workspace.manage`, `watsonx-orchestrate.workspace.read`, `watsonx-orchestrate.workspace.write`, `watsonx-orchestrate.dashboard.use`, `watsonx-orchestrate.analytics.use`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 | Service Configuration Reader | The ability to read services configuration for Governance management. | `watsonx-orchestrate.dashboard.view`, `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
 | WO User | As a user, you have permission to interact with assistants. | `watsonx-orchestrate.skill.run`, `watsonx-orchestrate.assistant.list`, `watsonx-orchestrate.dashboard.view` |
-| Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. | `watsonx-orchestrate.skill.run`, `watsonx-orchestrate.skill.write`, `watsonx-orchestrate.skill.read`, `watsonx-orchestrate.assistant.write`, `watsonx-orchestrate.assistant.read`, `watsonx-orchestrate.assistant.list`, `watsonx-orchestrate.assistant.default`, `watsonx-orchestrate.environment.write`, `watsonx-orchestrate.environment.read`, `watsonx-orchestrate.release.write`, `watsonx-orchestrate.dashboard.view`, `watsonx-orchestrate.workspace.read`, `watsonx-orchestrate.workspace.write`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
+| Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. | `watsonx-orchestrate.skill.run`, `watsonx-orchestrate.skill.write`, `watsonx-orchestrate.skill.read`, `watsonx-orchestrate.assistant.write`, `watsonx-orchestrate.assistant.read`, `watsonx-orchestrate.assistant.list`, `watsonx-orchestrate.assistant.default`, `watsonx-orchestrate.environment.write`, `watsonx-orchestrate.environment.read`, `watsonx-orchestrate.release.write`, `watsonx-orchestrate.dashboard.view`, `watsonx-orchestrate.workspace.read`, `watsonx-orchestrate.workspace.write`, `watsonx-orchestrate.dashboard.use`, `watsonx-orchestrate.analytics.use`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 {: row-headers}
 {: caption="Service roles - watsonx Orchestrate" caption-side="top"}
 {: tab-title="Service roles"}
@@ -19653,6 +19653,8 @@ Review the available platform and service roles and the actions mapped to each t
 | `watsonx-orchestrate.workspace.manage` | watsonx-orchestrate.workspace.manage | Manager |
 | `watsonx-orchestrate.workspace.read` | watsonx-orchestrate.workspace.read | Manager, Writer |
 | `watsonx-orchestrate.workspace.write` | watsonx-orchestrate.workspace.write | Manager, Writer |
+| `watsonx-orchestrate.dashboard.use` | Can open and view an dashboard | Manager, Writer |
+| `watsonx-orchestrate.analytics.use` | Can open and view an analytics | Manager, Writer |
 | `global-search-tagging.resource.read` | | Administrator, Editor, Manager, Operator, Service Configuration Reader, Viewer, Writer |
 | `resource-controller.instance.retrieve` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
 | `cbr.rule.read` | | Administrator, Editor, Manager, Operator, Viewer, Writer |
