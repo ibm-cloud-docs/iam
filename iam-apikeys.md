@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-05-21"
+lastupdated: "2026-10-06"
 
 keywords: application programming interface key, API key, API, classic infrastructure API key, IBM Cloud API key, leaked API key, API key protection
 
@@ -25,6 +25,8 @@ To view your API keys, go to **Manage > Access (IAM) > API keys** in the {{site.
 {: #ibm-cloud-api-keys}
 
 {{site.data.keyword.cloud}} API keys are associated with a user's identity. Each API key that a user creates has the same access that the user is assigned across all accounts where they are a member. Because the API key inherits all user access, it can provide the ability to access resources in any account where the user has permissions. For this reason, user API keys must be treated similarly to a username and password and must never be shared.
+
+For new accounts, the External Identity Interactions setting defaults to **Limited**, which restricts API keys from accessing resources in accounts other than the one where they were created, unless that account is in your allowlist. For more information, see [Managing external identity interactions](/docs/iam?topic=iam-cross-acct).
 
 ### Using functional IDs
 {: #functional-ids}

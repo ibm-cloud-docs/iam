@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-10-06"
 
 keywords: API key, user API keys, IBM Cloud API keys, manage user keys, create API key
 
@@ -19,7 +19,9 @@ subcollection: iam
 A federated user or nonfederated user can create an API key to use in the CLI or as part of automation to log in as your user identity. You can use the console, CLI, or API to manage your {{site.data.keyword.cloud}} API keys by listing your keys, creating keys, update keys, or delete keys.
 {: shortdesc}
 
-The API key inherits all assigned access for the user identity for which it is created, and the access is not limited to just the account where the API key is created because it inherits any policies that are assigned to the user. So, if the user has access to resources from multiple accounts, then the API key inherits the access from all accounts. Therefore, it is possible that a user's API key can be used to generate a token and access resources that a user has access to outside of the account where the API key was created.
+The API key inherits all assigned access for the user identity for which it is created, and the access is not limited to just the account where the API key is created because it inherits any policies that are assigned to the user. So, if the user has access to resources from multiple accounts, then the API key inherits the access from all accounts. Whether that access can be exercised outside the account where the API key was created depends on the External Identity Interactions setting.
+
+For new accounts, the External Identity Interactions setting defaults to **Limited**, which blocks this cross-account access unless the originating account is in your allowlist. For more information, see [Managing external identity interactions](/docs/iam?topic=iam-cross-acct).
 
 
 

@@ -3,7 +3,7 @@
 copyright:
 
    years: 2021, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-10-06"
 
 keywords: cross-account restriction, cross-account resource, resource sharing across account, cross-account, cross account
 
@@ -16,8 +16,12 @@ subcollection: iam
 # Managing external identity interactions
 {: #cross-acct}
 
-By default, users with an IAM access policy on resources in an account can access those resources from any account, not just the one that owns the resource. A user's API key can be used to generate a token and access resources that the user has access to outside of the account where the API key was created. User API keys contain the identity's permissions across all accounts that they are a member of. You can require users to access resources in your account only when authenticated in your account or accounts that you specify.
+User API keys contain the identity's permissions across all accounts that they are a member of. The External Identity Interactions setting controls whether users can access resources in your account when they are authenticated in a different account.
 {: shortdesc}
+
+New accounts are created with the External Identity Interactions setting defaulting to **Limited**, which restricts users to accessing resources in your account only when they are authenticated in your account or in accounts that you specify. This secure-by-default posture closes the gap between the default behavior and the security requirements of regulated workloads such as SAP-RISE.
+
+Accounts that existed before this change retain their current setting and are not automatically migrated to **Limited**.
 
 You can monitor how limiting access to resources in your account affects users without enforcing it by using report-only mode. This way, you can identify gaps in your access policies and make sure that users have the access they need. For the best experience, turn on report-only mode for at least 30 days before you limit access to resources in your account.
 
