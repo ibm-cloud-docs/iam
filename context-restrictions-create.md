@@ -100,7 +100,7 @@ By creating network zones, you establish a list of allowed locations where an ac
 
 By creating network zones, you establish a list of allowed locations where an access request originates. A set of one or more network locations can be specified by IP addresses such as individual addresses, ranges or subnets, VPC IDs, and service references. After you create a network zone, you can add it to a rule.
 
-To create a network zone, call the [Context-based restrictions API](/docs/apis/context-based-restrictions#create-zon) as shown in the following example:
+To create a network zone, call the [Context-based restrictions API](/docs/apis/context-based-restrictions#create-zone) as shown in the following example:
 
 ```sh
 curl -X POST --location --header "Authorization: Bearer {iam_token}" --header "Accept: application/json" --header "Content-Type: application/json" --data '{ "name": "an example of zone", "description": "this is an example of zone", "account_id": "12ab34cd56ef78ab90cd12ef34ab56cd", "addresses": [ { "type": "ipAddress", "value": "169.23.56.234" }, { "type": "ipRange", "value": "169.23.22.0-169.23.22.255" }, { "type": "subnet", "value": "192.0.2.0/24" }, { "type": "vpc", "value": "crn:v1:bluemix:public:is:us-south:a/12ab34cd56ef78ab90cd12ef34ab56cd::vpc:r134-d98a1702-b39a-449a-86d4-ef8dbacf281e" }, { "type": "serviceRef", "ref": { "account_id": "12ab34cd56ef78ab90cd12ef34ab56cd", "service_name": "cloud-object-storage" } } ], "excluded": [ { "type": "ipAddress", "value": "169.23.22.127" } ] }' "{base_url}/v1/zones"
