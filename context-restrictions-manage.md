@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-08-18"
+lastupdated: "2026-10-23"
 
 keywords: update network access, network access rule, network zone
 
@@ -68,9 +68,9 @@ ibmcloud cbr rule-update 30fd58c9b75f40e854b89c432318b4a2 --description 'Example
 {: #context-restrictions-update-rules-api}
 {: api}
 
-To update restrictions to your cloud resources by creating rules, call the [Context-based restrictions API](/apidocs/context-based-restrictions?code=node#replace-rule).
+To update restrictions to your cloud resources by creating rules, call the [Context-based restrictions API](/docs/apis/context-based-restrictions?code=node#replace-rule).
 
-1. [Get the rule](/apidocs/context-based-restrictions?code=go#get-rule) that you want to replace. In in response body, copy the rule ID and in the response headers copy the ETag header.
+1. [Get the rule](/docs/apis/context-based-restrictions?code=go#get-rule) that you want to replace. In in response body, copy the rule ID and in the response headers copy the ETag header.
     ```sh
     curl -X GET --location --header "Authorization: Bearer {iam_token}" --header "Accept: application/json" "https://cbr.cloud.ibm.com/v1/rules/{rule_id}"
     ```
@@ -302,7 +302,7 @@ To update a network zone, complete the following steps.
 {: api}
 
 To update a network zone, complete the following steps.
-1. [Get the zone](/apidocs/context-based-restrictions?code=go#get-zone) that you want to replace. In the response body, copy the zone ID and in the response headers copy the ETag header.
+1. [Get the zone](/docs/apis/context-based-restrictions?code=go#get-zone) that you want to replace. In the response body, copy the zone ID and in the response headers copy the ETag header.
     ```sh
    curl -X GET --location --header "Authorization: Bearer {iam_token}" --header "Accept: application/json" "https://cbr.cloud.ibm.com/v1/zones/{zone_id}"
    ```
@@ -358,7 +358,7 @@ To update a network zone, complete the following steps.
    {: codeblock}
    {: go}
 
-2.  Update the network zone by using the [Replace zone](/apidocs/context-based-restrictions?code=go#replace-zone) method.
+2.  Update the network zone by using the [Replace zone](/docs/apis/context-based-restrictions?code=go#replace-zone) method.
     The ETag value is required in the replace request’s `If-Match` header.
     {: tip}
 

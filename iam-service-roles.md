@@ -3,7 +3,7 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-10-07"
+lastupdated: "2026-10-24"
 
 keywords: service iam roles, service iam actions, account management roles, iam roles
 
@@ -1077,7 +1077,7 @@ Review the available platform and service roles and the actions mapped to each t
 | `apprapp.config.action` | Perform actions on the configuration of the instance like promote, restore to git | Manager |
 | `apprapp.config-aggregator-settings.update` | Update the settings for the Configuration aggregator | Manager |
 | `apprapp.config-aggregator-settings.list` | Retrieve the settings for the Configuration aggregator | Config Operator, Manager, Reader, Workflow operator, Writer |
-| `apprapp.config-aggregator-status.read` | Retrieve the status of resource collection for the Configuration aggregator | Config Operator, Manager, Reader, Writer |
+| `apprapp.config-aggregator-status.read` | Retrieve the status of 'resource_collection' or 'realtime_config' for the Configuration aggregator. | Config Operator, Manager, Reader, Writer |
 | `apprapp.config-aggregator.query` | Query API to retrieve resource metadata from Config Aggregator | Configuration Aggregator Reader, Manager |
 | `apprapp.metrics.list` | The ability to see metrics. | Config Operator, Manager, Reader, Workflow operator, Writer |
 | `apprapp.metrics.create` | The ability to create metrics. | Manager |
@@ -3603,10 +3603,10 @@ Review the available platform and service roles and the actions mapped to each t
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
-| Administrator | As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. | `POST /v4/:platform/deployments/:deployment_id/external_backups`, `PATCH /v4/:platform/deployments/:deployment_id/ext_restore`, `POST /v4/:platform/deployments/:deployment_id/ext_restore`, `POST /v4/:platform/deployments/:deployment_id/ext_restore_rollforward`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status/:external_restore_status_id`, `dashdb-for-transactions.console.manage-users`, `dashdb-for-transactions.console.monitor`, `dashdb-for-transactions.console.clone`, `dashdb-for-transactions.console.scale`, `dashdb-for-transactions.console.backup`, `dashdb-for-transactions.console.restore`, `dashdb-for-transactions.console.settings`, `dashdb-for-transactions.console.view-settings`, `GET /v4/:platform/deployables`, `GET /v4/:platform/regions`, `GET /v4/:platform/tasks/:task_id`, `GET /v4/:platform/backups/:backup_id`, `GET /v4/:platform/deployments/:deployment_id`, `PATCH /v4/:platform/deployments/:deployment_id`, `GET /v4/:platform/deployables/:deployable_id/groups`, `GET /v4/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v4/:platform/deployments/:deployment_id/tasks`, `GET /v4/:platform/deployments/:deployment_id/backups`, `POST /v4/:platform/deployments/:deployment_id/backups`, `GET /v4/:platform/deployments/:deployment_id/remotes`, `DELETE /v4/:platform/deployments/:deployment_id/management/database_connections`, `PATCH /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration/schema`, `GET /v4/:platform/deployments/:deployment_id/groups`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v4/:platform/deployments/:deployment_id/users`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id`, `DELETE /v4/:platform/deployments/:deployment_id/users/:user_id`, `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `DELETE /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id`, `PUT /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `GET /2017-12/:platform/tasks/:task_id`, `GET /2017-12/:platform/backups/:backup_id`, `GET /2017-12/:platform/deployments/:deployment_id`, `DELETE /2017-12/:platform/deployments/:deployment_id`, `GET /2017-12/:platform/deployments/:deployment_id/tasks`, `GET /2017-12/:platform/deployments/:deployment_id/backups`, `POST /2017-12/:platform/clusters/:cluster_id/deployments`, `POST /v4/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v4/:platform/deployments/:deployment_id/groups/member`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v4/:platform/deployments/:deployment_id/describe_updates`, `POST /v4/:platform/deployments/:deployment_id/db_updates`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/password`, `PATCH /v4/:platform/deployments/:deployment_id/billable`, `PATCH /v4/:platform/deployments/:deployment_id/migrated`, `GET /v4/:platform/deployments/:deployment_id/check_updates`, `POST /v4/:platform/deployments/:deployment_id/dr_take_over`, `GET /v4/:platform/deployments/:deployment_id/get_dr`, `POST /v4/:platform/deployments/:deployment_id/resyncs`, `GET /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployables`, `GET /v5/:platform/regions`, `GET /v5/:platform/tasks/:task_id`, `GET /v5/:platform/task_infos/:task_id`, `GET /v5/:platform/backups/:backup_id`, `GET /v5/:platform/deployments/:deployment_id`, `PATCH /v5/:platform/deployments/:deployment_id`, `GET /v5/:platform/deployables/:deployable_id/groups`, `GET /v5/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v5/:platform/deployments/:deployment_id/tasks`, `GET /v5/:platform/deployments/:deployment_id/task_infos`, `GET /v5/:platform/deployments/:deployment_id/backups`, `POST /v5/:platform/deployments/:deployment_id/backups`, `GET /v5/:platform/deployments/:deployment_id/remotes`, `DELETE /v5/:platform/deployments/:deployment_id/management/database_connections`, `PATCH /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployments/:deployment_id/configuration/schema`, `GET /v5/:platform/deployments/:deployment_id/groups`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v5/:platform/deployments/:deployment_id/users`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id`, `DELETE /v5/:platform/deployments/:deployment_id/users/:user_id`, `GET /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `DELETE /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id`, `PUT /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v5/:platform/deployments/:deployment_id/groups/member`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v5/:platform/deployments/:deployment_id/describe_updates`, `POST /v5/:platform/deployments/:deployment_id/db_updates`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/password`, `GET /v5/:platform/deployments/:deployment_id/check_updates`, `PATCH /v5/:platform/deployments/:deployment_id/billable`, `PATCH /v5/:platform/deployments/:deployment_id/migrated`, `POST /v5/:platform/deployments/:deployment_id/dr_take_over`, `GET /v5/:platform/deployments/:deployment_id/get_dr`, `POST /v5/:platform/deployments/:deployment_id/resyncs`, `POST /v4/:platform/deployments/:deployment_id/configure_sets`, `POST /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/configure_sets`, `GET /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/task_infos`, `GET /v4/:platform/task_infos/:task_id`, `POST /v4/:platform/deployments/:deployment_id/rebalance`, `POST /v4/:platform/deployments/:deployment_id/reducemax`, `POST /v4/:platform/deployments/:deployment_id/configure_iks_worker`, `POST /hyperwarp_messages`, `POST /v4/:platform/deployments/:deployment_id/hibernate`, `DELETE /v4/:platform/deployments/:deployment_id/hibernate`, `GET /v4/:platform/deployments/:deployment_id/db2audit/version`, `GET /v4/:platform/deployments/:deployment_id/db2audit/alias`, `POST /v4/:platform/deployments/:deployment_id/db2audit/install_v3`, `POST /v4/:platform/deployments/:deployment_id/db2audit/process_report`, `PATCH /v6/:platform/deployments/:deployment_id/availability`, `GET /v4/:platform/deployments/:deployment_id/iops_range`, `GET /v4/:platform/deployments/:deployment_id/instance_types`, `PATCH /v5/:platform/deployments/:deployment_id/availability`, `POST /v4/:platform/deployments/:deployment_id/external_restore`, `POST /v4/:platform/deployments/:deployment_id/custom_setting`, `POST /v4/:platform/deployments/:deployment_id/external_rollforward`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_source_migration`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/source_resource_number`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/add_source_annotation`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/source_annotation`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/can_finalize`, `GET /v4/:platform/deployments/:deployment_id/get_license`, `PUT /v4/:platform/deployments/:deployment_id/update_db2_licenses`, `dashdb-for-transactions.console.pause`, `dashdb-for-transactions.console.resume`, `GET /v4/:platform/deployments/:deployment_id/external_backups`, `GET /v4/:platform/deployments/:deployment_id/cos_info`, `GET /v6/:platform/deployments/:deployment_id/groups`, `POST /v4/:platform/deployments/:deployment_id/maintenancewindow/schedule_update`, `GET /v4/:platform/deployments/:id/maintenancewindow/get_scheduled_update`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formation_update_history`, `POST /v4/:platform/deployments/:deployment_id/db2upgrade/upgrade`, `PATCH /v4/:platform/deployments/:deployment_id/timezone`, `PATCH /v4/:platform/deployments/:deployment_id/premium_enablement`, `global-search-tagging.resource.read`, `global-search-tagging.tag.attach-user-tag`, `global-search-tagging.tag.detach-user-tag`, `global-search-tagging.tag.attach-access-tag`, `global-search-tagging.tag.detach-access-tag`, `cbr.rule.read`, `cbr.rule.create`, `cbr.rule.update`, `cbr.rule.delete`, `iam.delegationPolicy.create`, `iam.delegationPolicy.update`, `iam.policy.read`, `iam.policy.create`, `iam.policy.update`, `iam.policy.delete`, `iam.service.read`, `iam.role.read`, `iam.role.assign`, `resource-controller.credential.retrieve_all`, `resource-controller.broker.create`, `resource-controller.broker.update`, `resource-controller.broker.delete`, `resource-controller.broker.retrieve`, `resource-controller.instance.create`, `resource-controller.instance.delete`, `resource-controller.instance.update_plan`, `resource-controller.instance.update_onetime_credentials_off`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.instance.retrieve_history`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.create`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.group.delete`, `resource-controller.subscription.retrieve` |
-| Editor | As an editor, you can perform all platform actions except for managing the account and assigning access policies. | `POST /v4/:platform/deployments/:deployment_id/external_backups`, `PATCH /v4/:platform/deployments/:deployment_id/ext_restore`, `POST /v4/:platform/deployments/:deployment_id/ext_restore`, `POST /v4/:platform/deployments/:deployment_id/ext_restore_rollforward`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status/:external_restore_status_id`, `dashdb-for-transactions.console.monitor`, `dashdb-for-transactions.console.clone`, `dashdb-for-transactions.console.scale`, `dashdb-for-transactions.console.backup`, `dashdb-for-transactions.console.restore`, `dashdb-for-transactions.console.settings`, `dashdb-for-transactions.console.view-settings`, `GET /v4/:platform/deployables`, `GET /v4/:platform/regions`, `GET /v4/:platform/tasks/:task_id`, `GET /v4/:platform/backups/:backup_id`, `GET /v4/:platform/deployments/:deployment_id`, `PATCH /v4/:platform/deployments/:deployment_id`, `GET /v4/:platform/deployables/:deployable_id/groups`, `GET /v4/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v4/:platform/deployments/:deployment_id/tasks`, `GET /v4/:platform/deployments/:deployment_id/backups`, `POST /v4/:platform/deployments/:deployment_id/backups`, `GET /v4/:platform/deployments/:deployment_id/remotes`, `DELETE /v4/:platform/deployments/:deployment_id/management/database_connections`, `PATCH /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration/schema`, `GET /v4/:platform/deployments/:deployment_id/groups`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v4/:platform/deployments/:deployment_id/users`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id`, `DELETE /v4/:platform/deployments/:deployment_id/users/:user_id`, `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `DELETE /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id`, `PUT /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `GET /2017-12/:platform/tasks/:task_id`, `GET /2017-12/:platform/backups/:backup_id`, `GET /2017-12/:platform/deployments/:deployment_id`, `DELETE /2017-12/:platform/deployments/:deployment_id`, `GET /2017-12/:platform/deployments/:deployment_id/tasks`, `GET /2017-12/:platform/deployments/:deployment_id/backups`, `POST /2017-12/:platform/clusters/:cluster_id/deployments`, `POST /v4/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v4/:platform/deployments/:deployment_id/groups/member`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v4/:platform/deployments/:deployment_id/describe_updates`, `POST /v4/:platform/deployments/:deployment_id/db_updates`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/password`, `PATCH /v4/:platform/deployments/:deployment_id/billable`, `PATCH /v4/:platform/deployments/:deployment_id/migrated`, `GET /v4/:platform/deployments/:deployment_id/check_updates`, `POST /v4/:platform/deployments/:deployment_id/dr_take_over`, `GET /v4/:platform/deployments/:deployment_id/get_dr`, `POST /v4/:platform/deployments/:deployment_id/resyncs`, `GET /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployables`, `GET /v5/:platform/regions`, `GET /v5/:platform/tasks/:task_id`, `GET /v5/:platform/task_infos/:task_id`, `GET /v5/:platform/backups/:backup_id`, `GET /v5/:platform/deployments/:deployment_id`, `PATCH /v5/:platform/deployments/:deployment_id`, `GET /v5/:platform/deployables/:deployable_id/groups`, `GET /v5/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v5/:platform/deployments/:deployment_id/tasks`, `GET /v5/:platform/deployments/:deployment_id/task_infos`, `GET /v5/:platform/deployments/:deployment_id/backups`, `POST /v5/:platform/deployments/:deployment_id/backups`, `GET /v5/:platform/deployments/:deployment_id/remotes`, `DELETE /v5/:platform/deployments/:deployment_id/management/database_connections`, `PATCH /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployments/:deployment_id/configuration/schema`, `GET /v5/:platform/deployments/:deployment_id/groups`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v5/:platform/deployments/:deployment_id/users`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id`, `DELETE /v5/:platform/deployments/:deployment_id/users/:user_id`, `GET /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `DELETE /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id`, `PUT /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v5/:platform/deployments/:deployment_id/groups/member`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v5/:platform/deployments/:deployment_id/describe_updates`, `POST /v5/:platform/deployments/:deployment_id/db_updates`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/password`, `GET /v5/:platform/deployments/:deployment_id/check_updates`, `PATCH /v5/:platform/deployments/:deployment_id/billable`, `PATCH /v5/:platform/deployments/:deployment_id/migrated`, `POST /v5/:platform/deployments/:deployment_id/dr_take_over`, `GET /v5/:platform/deployments/:deployment_id/get_dr`, `POST /v5/:platform/deployments/:deployment_id/resyncs`, `POST /v4/:platform/deployments/:deployment_id/configure_sets`, `POST /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/configure_sets`, `GET /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/task_infos`, `GET /v4/:platform/task_infos/:task_id`, `POST /v4/:platform/deployments/:deployment_id/rebalance`, `POST /v4/:platform/deployments/:deployment_id/reducemax`, `POST /v4/:platform/deployments/:deployment_id/configure_iks_worker`, `POST /hyperwarp_messages`, `POST /v4/:platform/deployments/:deployment_id/hibernate`, `DELETE /v4/:platform/deployments/:deployment_id/hibernate`, `GET /v4/:platform/deployments/:deployment_id/db2audit/version`, `GET /v4/:platform/deployments/:deployment_id/db2audit/alias`, `POST /v4/:platform/deployments/:deployment_id/db2audit/install_v3`, `POST /v4/:platform/deployments/:deployment_id/db2audit/process_report`, `PATCH /v6/:platform/deployments/:deployment_id/availability`, `GET /v4/:platform/deployments/:deployment_id/iops_range`, `GET /v4/:platform/deployments/:deployment_id/instance_types`, `PATCH /v5/:platform/deployments/:deployment_id/availability`, `POST /v4/:platform/deployments/:deployment_id/external_restore`, `POST /v4/:platform/deployments/:deployment_id/custom_setting`, `POST /v4/:platform/deployments/:deployment_id/external_rollforward`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_source_migration`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/source_resource_number`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/add_source_annotation`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/source_annotation`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/can_finalize`, `GET /v4/:platform/deployments/:deployment_id/get_license`, `PUT /v4/:platform/deployments/:deployment_id/update_db2_licenses`, `dashdb-for-transactions.console.pause`, `dashdb-for-transactions.console.resume`, `GET /v4/:platform/deployments/:deployment_id/external_backups`, `GET /v4/:platform/deployments/:deployment_id/cos_info`, `GET /v6/:platform/deployments/:deployment_id/groups`, `POST /v4/:platform/deployments/:deployment_id/maintenancewindow/schedule_update`, `GET /v4/:platform/deployments/:id/maintenancewindow/get_scheduled_update`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formation_update_history`, `PATCH /v4/:platform/deployments/:deployment_id/timezone`, `PATCH /v4/:platform/deployments/:deployment_id/premium_enablement`, `global-search-tagging.resource.read`, `global-search-tagging.tag.attach-user-tag`, `global-search-tagging.tag.detach-user-tag`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.create`, `resource-controller.broker.update`, `resource-controller.broker.delete`, `resource-controller.broker.retrieve`, `resource-controller.instance.create`, `resource-controller.instance.delete`, `resource-controller.instance.update_plan`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.create`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
-| Operator | As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. | `POST /v4/:platform/deployments/:deployment_id/external_backups`, `PATCH /v4/:platform/deployments/:deployment_id/ext_restore`, `POST /v4/:platform/deployments/:deployment_id/ext_restore`, `POST /v4/:platform/deployments/:deployment_id/ext_restore_rollforward`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status/:external_restore_status_id`, `dashdb-for-transactions.console.monitor`, `dashdb-for-transactions.console.scale`, `dashdb-for-transactions.console.backup`, `dashdb-for-transactions.console.restore`, `dashdb-for-transactions.console.settings`, `dashdb-for-transactions.console.view-settings`, `GET /v4/:platform/deployables`, `GET /v4/:platform/regions`, `GET /v4/:platform/tasks/:task_id`, `GET /v4/:platform/backups/:backup_id`, `GET /v4/:platform/deployments/:deployment_id`, `PATCH /v4/:platform/deployments/:deployment_id`, `GET /v4/:platform/deployables/:deployable_id/groups`, `GET /v4/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v4/:platform/deployments/:deployment_id/tasks`, `GET /v4/:platform/deployments/:deployment_id/backups`, `POST /v4/:platform/deployments/:deployment_id/backups`, `GET /v4/:platform/deployments/:deployment_id/remotes`, `DELETE /v4/:platform/deployments/:deployment_id/management/database_connections`, `PATCH /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration/schema`, `GET /v4/:platform/deployments/:deployment_id/groups`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v4/:platform/deployments/:deployment_id/users`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id`, `DELETE /v4/:platform/deployments/:deployment_id/users/:user_id`, `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `DELETE /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id`, `PUT /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `GET /2017-12/:platform/tasks/:task_id`, `GET /2017-12/:platform/backups/:backup_id`, `GET /2017-12/:platform/deployments/:deployment_id`, `DELETE /2017-12/:platform/deployments/:deployment_id`, `GET /2017-12/:platform/deployments/:deployment_id/tasks`, `GET /2017-12/:platform/deployments/:deployment_id/backups`, `POST /2017-12/:platform/clusters/:cluster_id/deployments`, `POST /v4/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v4/:platform/deployments/:deployment_id/groups/member`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v4/:platform/deployments/:deployment_id/describe_updates`, `POST /v4/:platform/deployments/:deployment_id/db_updates`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/password`, `PATCH /v4/:platform/deployments/:deployment_id/billable`, `PATCH /v4/:platform/deployments/:deployment_id/migrated`, `GET /v4/:platform/deployments/:deployment_id/check_updates`, `POST /v4/:platform/deployments/:deployment_id/dr_take_over`, `GET /v4/:platform/deployments/:deployment_id/get_dr`, `POST /v4/:platform/deployments/:deployment_id/resyncs`, `GET /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployables`, `GET /v5/:platform/regions`, `GET /v5/:platform/tasks/:task_id`, `GET /v5/:platform/task_infos/:task_id`, `GET /v5/:platform/backups/:backup_id`, `GET /v5/:platform/deployments/:deployment_id`, `PATCH /v5/:platform/deployments/:deployment_id`, `GET /v5/:platform/deployables/:deployable_id/groups`, `GET /v5/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v5/:platform/deployments/:deployment_id/tasks`, `GET /v5/:platform/deployments/:deployment_id/task_infos`, `GET /v5/:platform/deployments/:deployment_id/backups`, `POST /v5/:platform/deployments/:deployment_id/backups`, `GET /v5/:platform/deployments/:deployment_id/remotes`, `DELETE /v5/:platform/deployments/:deployment_id/management/database_connections`, `PATCH /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployments/:deployment_id/configuration/schema`, `GET /v5/:platform/deployments/:deployment_id/groups`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v5/:platform/deployments/:deployment_id/users`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id`, `DELETE /v5/:platform/deployments/:deployment_id/users/:user_id`, `GET /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `DELETE /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id`, `PUT /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v5/:platform/deployments/:deployment_id/groups/member`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v5/:platform/deployments/:deployment_id/describe_updates`, `POST /v5/:platform/deployments/:deployment_id/db_updates`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/password`, `GET /v5/:platform/deployments/:deployment_id/check_updates`, `PATCH /v5/:platform/deployments/:deployment_id/billable`, `PATCH /v5/:platform/deployments/:deployment_id/migrated`, `POST /v5/:platform/deployments/:deployment_id/dr_take_over`, `GET /v5/:platform/deployments/:deployment_id/get_dr`, `POST /v5/:platform/deployments/:deployment_id/resyncs`, `POST /v4/:platform/deployments/:deployment_id/configure_sets`, `POST /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/configure_sets`, `GET /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/task_infos`, `GET /v4/:platform/task_infos/:task_id`, `POST /v4/:platform/deployments/:deployment_id/rebalance`, `POST /v4/:platform/deployments/:deployment_id/reducemax`, `POST /v4/:platform/deployments/:deployment_id/configure_iks_worker`, `POST /hyperwarp_messages`, `POST /v4/:platform/deployments/:deployment_id/hibernate`, `DELETE /v4/:platform/deployments/:deployment_id/hibernate`, `GET /v4/:platform/deployments/:deployment_id/db2audit/version`, `GET /v4/:platform/deployments/:deployment_id/db2audit/alias`, `POST /v4/:platform/deployments/:deployment_id/db2audit/install_v3`, `POST /v4/:platform/deployments/:deployment_id/db2audit/process_report`, `PATCH /v6/:platform/deployments/:deployment_id/availability`, `GET /v4/:platform/deployments/:deployment_id/iops_range`, `GET /v4/:platform/deployments/:deployment_id/instance_types`, `PATCH /v5/:platform/deployments/:deployment_id/availability`, `POST /v4/:platform/deployments/:deployment_id/external_restore`, `POST /v4/:platform/deployments/:deployment_id/custom_setting`, `POST /v4/:platform/deployments/:deployment_id/external_rollforward`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_source_migration`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/source_resource_number`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/add_source_annotation`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/source_annotation`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/can_finalize`, `GET /v4/:platform/deployments/:deployment_id/get_license`, `PUT /v4/:platform/deployments/:deployment_id/update_db2_licenses`, `dashdb-for-transactions.console.pause`, `dashdb-for-transactions.console.resume`, `GET /v4/:platform/deployments/:deployment_id/external_backups`, `GET /v4/:platform/deployments/:deployment_id/cos_info`, `GET /v6/:platform/deployments/:deployment_id/groups`, `POST /v4/:platform/deployments/:deployment_id/maintenancewindow/schedule_update`, `GET /v4/:platform/deployments/:id/maintenancewindow/get_scheduled_update`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formation_update_history`, `POST /v4/:platform/deployments/:deployment_id/db2upgrade/upgrade`, `PATCH /v4/:platform/deployments/:deployment_id/timezone`, `PATCH /v4/:platform/deployments/:deployment_id/premium_enablement`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.update`, `resource-controller.broker.retrieve`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
-| Viewer | As a viewer, you can view service instances, but you can't modify them. | `GET /v4/:platform/deployments/:deployment_id/external_restore_status`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status/:external_restore_status_id`, `dashdb-for-transactions.console.monitor`, `dashdb-for-transactions.console.view-settings`, `GET /v4/:platform/deployables`, `GET /v4/:platform/regions`, `GET /v4/:platform/tasks/:task_id`, `GET /v4/:platform/backups/:backup_id`, `GET /v4/:platform/deployments/:deployment_id`, `GET /v4/:platform/deployables/:deployable_id/groups`, `GET /v4/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v4/:platform/deployments/:deployment_id/tasks`, `GET /v4/:platform/deployments/:deployment_id/backups`, `GET /v4/:platform/deployments/:deployment_id/remotes`, `GET /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration/schema`, `GET /v4/:platform/deployments/:deployment_id/groups`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id`, `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `GET /2017-12/:platform/tasks/:task_id`, `GET /2017-12/:platform/backups/:backup_id`, `GET /2017-12/:platform/deployments/:deployment_id`, `GET /2017-12/:platform/deployments/:deployment_id/tasks`, `GET /2017-12/:platform/deployments/:deployment_id/backups`, `POST /v4/:platform/deployments/:deployment_id/describe_updates`, `GET /v4/:platform/deployments/:deployment_id/check_updates`, `GET /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployables`, `GET /v5/:platform/regions`, `GET /v5/:platform/tasks/:task_id`, `GET /v5/:platform/task_infos/:task_id`, `GET /v5/:platform/backups/:backup_id`, `GET /v5/:platform/deployments/:deployment_id`, `GET /v5/:platform/deployables/:deployable_id/groups`, `GET /v5/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v5/:platform/deployments/:deployment_id/tasks`, `GET /v5/:platform/deployments/:deployment_id/task_infos`, `GET /v5/:platform/deployments/:deployment_id/backups`, `GET /v5/:platform/deployments/:deployment_id/remotes`, `GET /v5/:platform/deployments/:deployment_id/configuration/schema`, `GET /v5/:platform/deployments/:deployment_id/groups`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id`, `GET /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/describe_updates`, `GET /v5/:platform/deployments/:deployment_id/check_updates`, `POST /v4/:platform/deployments/:deployment_id/configure_sets`, `POST /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/configure_sets`, `GET /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/task_infos`, `GET /v4/:platform/task_infos/:task_id`, `POST /v4/:platform/deployments/:deployment_id/rebalance`, `POST /v4/:platform/deployments/:deployment_id/reducemax`, `POST /v4/:platform/deployments/:deployment_id/configure_iks_worker`, `GET /v4/:platform/deployments/:deployment_id/db2audit/version`, `GET /v4/:platform/deployments/:deployment_id/db2audit/alias`, `POST /v4/:platform/deployments/:deployment_id/db2audit/install_v3`, `POST /v4/:platform/deployments/:deployment_id/db2audit/process_report`, `PATCH /v6/:platform/deployments/:deployment_id/availability`, `GET /v4/:platform/deployments/:deployment_id/iops_range`, `GET /v4/:platform/deployments/:deployment_id/instance_types`, `PATCH /v5/:platform/deployments/:deployment_id/availability`, `POST /v4/:platform/deployments/:deployment_id/external_restore`, `POST /v4/:platform/deployments/:deployment_id/custom_setting`, `POST /v4/:platform/deployments/:deployment_id/external_rollforward`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_source_migration`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/source_resource_number`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/add_source_annotation`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/source_annotation`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/can_finalize`, `GET /v4/:platform/deployments/:deployment_id/external_backups`, `GET /v4/:platform/deployments/:deployment_id/cos_info`, `GET /v6/:platform/deployments/:deployment_id/groups`, `GET /v4/:platform/deployments/:id/maintenancewindow/get_scheduled_update`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formation_update_history`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `iam.role.read`, `resource-controller.broker.retrieve`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.subscription.retrieve` |
+| Administrator | As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. | `POST /v4/:platform/deployments/:deployment_id/external_backups`, `PATCH /v4/:platform/deployments/:deployment_id/ext_restore`, `POST /v4/:platform/deployments/:deployment_id/ext_restore`, `POST /v4/:platform/deployments/:deployment_id/ext_restore_rollforward`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status/:external_restore_status_id`, `dashdb-for-transactions.console.manage-users`, `dashdb-for-transactions.console.monitor`, `dashdb-for-transactions.console.clone`, `dashdb-for-transactions.console.scale`, `dashdb-for-transactions.console.backup`, `dashdb-for-transactions.console.restore`, `dashdb-for-transactions.console.settings`, `dashdb-for-transactions.console.view-settings`, `GET /v4/:platform/deployables`, `GET /v4/:platform/regions`, `GET /v4/:platform/tasks/:task_id`, `GET /v4/:platform/backups/:backup_id`, `GET /v4/:platform/deployments/:deployment_id`, `PATCH /v4/:platform/deployments/:deployment_id`, `GET /v4/:platform/deployables/:deployable_id/groups`, `GET /v4/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v4/:platform/deployments/:deployment_id/tasks`, `GET /v4/:platform/deployments/:deployment_id/backups`, `POST /v4/:platform/deployments/:deployment_id/backups`, `GET /v4/:platform/deployments/:deployment_id/remotes`, `DELETE /v4/:platform/deployments/:deployment_id/management/database_connections`, `PATCH /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration/schema`, `GET /v4/:platform/deployments/:deployment_id/groups`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v4/:platform/deployments/:deployment_id/users`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id`, `DELETE /v4/:platform/deployments/:deployment_id/users/:user_id`, `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `DELETE /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id`, `PUT /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `GET /2017-12/:platform/tasks/:task_id`, `GET /2017-12/:platform/backups/:backup_id`, `GET /2017-12/:platform/deployments/:deployment_id`, `DELETE /2017-12/:platform/deployments/:deployment_id`, `GET /2017-12/:platform/deployments/:deployment_id/tasks`, `GET /2017-12/:platform/deployments/:deployment_id/backups`, `POST /2017-12/:platform/clusters/:cluster_id/deployments`, `POST /v4/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v4/:platform/deployments/:deployment_id/groups/member`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v4/:platform/deployments/:deployment_id/describe_updates`, `POST /v4/:platform/deployments/:deployment_id/db_updates`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/password`, `PATCH /v4/:platform/deployments/:deployment_id/billable`, `PATCH /v4/:platform/deployments/:deployment_id/migrated`, `GET /v4/:platform/deployments/:deployment_id/check_updates`, `POST /v4/:platform/deployments/:deployment_id/dr_take_over`, `GET /v4/:platform/deployments/:deployment_id/get_dr`, `POST /v4/:platform/deployments/:deployment_id/resyncs`, `GET /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployables`, `GET /v5/:platform/regions`, `GET /v5/:platform/tasks/:task_id`, `GET /v5/:platform/task_infos/:task_id`, `GET /v5/:platform/backups/:backup_id`, `GET /v5/:platform/deployments/:deployment_id`, `PATCH /v5/:platform/deployments/:deployment_id`, `GET /v5/:platform/deployables/:deployable_id/groups`, `GET /v5/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v5/:platform/deployments/:deployment_id/tasks`, `GET /v5/:platform/deployments/:deployment_id/task_infos`, `GET /v5/:platform/deployments/:deployment_id/backups`, `POST /v5/:platform/deployments/:deployment_id/backups`, `GET /v5/:platform/deployments/:deployment_id/remotes`, `DELETE /v5/:platform/deployments/:deployment_id/management/database_connections`, `PATCH /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployments/:deployment_id/configuration/schema`, `GET /v5/:platform/deployments/:deployment_id/groups`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v5/:platform/deployments/:deployment_id/users`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id`, `DELETE /v5/:platform/deployments/:deployment_id/users/:user_id`, `GET /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `DELETE /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id`, `PUT /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v5/:platform/deployments/:deployment_id/groups/member`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v5/:platform/deployments/:deployment_id/describe_updates`, `POST /v5/:platform/deployments/:deployment_id/db_updates`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/password`, `GET /v5/:platform/deployments/:deployment_id/check_updates`, `PATCH /v5/:platform/deployments/:deployment_id/billable`, `PATCH /v5/:platform/deployments/:deployment_id/migrated`, `POST /v5/:platform/deployments/:deployment_id/dr_take_over`, `GET /v5/:platform/deployments/:deployment_id/get_dr`, `POST /v5/:platform/deployments/:deployment_id/resyncs`, `POST /v4/:platform/deployments/:deployment_id/configure_sets`, `POST /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/configure_sets`, `GET /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/task_infos`, `GET /v4/:platform/task_infos/:task_id`, `POST /v4/:platform/deployments/:deployment_id/rebalance`, `POST /v4/:platform/deployments/:deployment_id/reducemax`, `POST /v4/:platform/deployments/:deployment_id/configure_iks_worker`, `POST /hyperwarp_messages`, `POST /v4/:platform/deployments/:deployment_id/hibernate`, `DELETE /v4/:platform/deployments/:deployment_id/hibernate`, `GET /v4/:platform/deployments/:deployment_id/db2audit/version`, `GET /v4/:platform/deployments/:deployment_id/db2audit/alias`, `POST /v4/:platform/deployments/:deployment_id/db2audit/install_v3`, `POST /v4/:platform/deployments/:deployment_id/db2audit/process_report`, `PATCH /v6/:platform/deployments/:deployment_id/availability`, `GET /v4/:platform/deployments/:deployment_id/iops_range`, `GET /v4/:platform/deployments/:deployment_id/instance_types`, `PATCH /v5/:platform/deployments/:deployment_id/availability`, `POST /v4/:platform/deployments/:deployment_id/external_restore`, `POST /v4/:platform/deployments/:deployment_id/custom_setting`, `POST /v4/:platform/deployments/:deployment_id/external_rollforward`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_source_migration`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/source_resource_number`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/add_source_annotation`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/source_annotation`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/can_finalize`, `GET /v4/:platform/deployments/:deployment_id/get_license`, `PUT /v4/:platform/deployments/:deployment_id/update_db2_licenses`, `dashdb-for-transactions.console.pause`, `dashdb-for-transactions.console.resume`, `GET /v4/:platform/deployments/:deployment_id/external_backups`, `GET /v4/:platform/deployments/:deployment_id/cos_info`, `GET /v6/:platform/deployments/:deployment_id/groups`, `POST /v4/:platform/deployments/:deployment_id/maintenancewindow/schedule_update`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/get_scheduled_update`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formation_update_history`, `POST /v4/:platform/deployments/:deployment_id/db2upgrade/upgrade`, `PATCH /v4/:platform/deployments/:deployment_id/timezone`, `PATCH /v4/:platform/deployments/:deployment_id/premium_enablement`, `dashdb-for-transactions.console.db2upgrade`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow`, `PUT /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow`, `PATCH /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formationupdates`, `PUT /v4/:platform/deployments/:deployment_id/maintenancewindow/formationupdates/:id`, `PATCH /v4/:platform/deployments/:deployment_id/maintenancewindow/formationupdates/:id`, `POST /v4/:platform/deployments/:deployment_id/create_dr_node`, `global-search-tagging.resource.read`, `global-search-tagging.tag.attach-user-tag`, `global-search-tagging.tag.detach-user-tag`, `global-search-tagging.tag.attach-access-tag`, `global-search-tagging.tag.detach-access-tag`, `cbr.rule.read`, `cbr.rule.create`, `cbr.rule.update`, `cbr.rule.delete`, `iam.delegationPolicy.create`, `iam.delegationPolicy.update`, `iam.policy.read`, `iam.policy.create`, `iam.policy.update`, `iam.policy.delete`, `iam.service.read`, `iam.role.read`, `iam.role.assign`, `resource-controller.credential.retrieve_all`, `resource-controller.broker.create`, `resource-controller.broker.update`, `resource-controller.broker.delete`, `resource-controller.broker.retrieve`, `resource-controller.instance.create`, `resource-controller.instance.delete`, `resource-controller.instance.update_plan`, `resource-controller.instance.update_onetime_credentials_off`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.instance.retrieve_history`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.create`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.group.delete`, `resource-controller.subscription.retrieve` |
+| Editor | As an editor, you can perform all platform actions except for managing the account and assigning access policies. | `POST /v4/:platform/deployments/:deployment_id/external_backups`, `PATCH /v4/:platform/deployments/:deployment_id/ext_restore`, `POST /v4/:platform/deployments/:deployment_id/ext_restore`, `POST /v4/:platform/deployments/:deployment_id/ext_restore_rollforward`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status/:external_restore_status_id`, `dashdb-for-transactions.console.monitor`, `dashdb-for-transactions.console.clone`, `dashdb-for-transactions.console.scale`, `dashdb-for-transactions.console.backup`, `dashdb-for-transactions.console.restore`, `dashdb-for-transactions.console.settings`, `dashdb-for-transactions.console.view-settings`, `GET /v4/:platform/deployables`, `GET /v4/:platform/regions`, `GET /v4/:platform/tasks/:task_id`, `GET /v4/:platform/backups/:backup_id`, `GET /v4/:platform/deployments/:deployment_id`, `PATCH /v4/:platform/deployments/:deployment_id`, `GET /v4/:platform/deployables/:deployable_id/groups`, `GET /v4/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v4/:platform/deployments/:deployment_id/tasks`, `GET /v4/:platform/deployments/:deployment_id/backups`, `POST /v4/:platform/deployments/:deployment_id/backups`, `GET /v4/:platform/deployments/:deployment_id/remotes`, `DELETE /v4/:platform/deployments/:deployment_id/management/database_connections`, `PATCH /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration/schema`, `GET /v4/:platform/deployments/:deployment_id/groups`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v4/:platform/deployments/:deployment_id/users`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id`, `DELETE /v4/:platform/deployments/:deployment_id/users/:user_id`, `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `DELETE /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id`, `PUT /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `GET /2017-12/:platform/tasks/:task_id`, `GET /2017-12/:platform/backups/:backup_id`, `GET /2017-12/:platform/deployments/:deployment_id`, `DELETE /2017-12/:platform/deployments/:deployment_id`, `GET /2017-12/:platform/deployments/:deployment_id/tasks`, `GET /2017-12/:platform/deployments/:deployment_id/backups`, `POST /2017-12/:platform/clusters/:cluster_id/deployments`, `POST /v4/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v4/:platform/deployments/:deployment_id/groups/member`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v4/:platform/deployments/:deployment_id/describe_updates`, `POST /v4/:platform/deployments/:deployment_id/db_updates`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/password`, `PATCH /v4/:platform/deployments/:deployment_id/billable`, `PATCH /v4/:platform/deployments/:deployment_id/migrated`, `GET /v4/:platform/deployments/:deployment_id/check_updates`, `POST /v4/:platform/deployments/:deployment_id/dr_take_over`, `GET /v4/:platform/deployments/:deployment_id/get_dr`, `POST /v4/:platform/deployments/:deployment_id/resyncs`, `GET /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployables`, `GET /v5/:platform/regions`, `GET /v5/:platform/tasks/:task_id`, `GET /v5/:platform/task_infos/:task_id`, `GET /v5/:platform/backups/:backup_id`, `GET /v5/:platform/deployments/:deployment_id`, `PATCH /v5/:platform/deployments/:deployment_id`, `GET /v5/:platform/deployables/:deployable_id/groups`, `GET /v5/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v5/:platform/deployments/:deployment_id/tasks`, `GET /v5/:platform/deployments/:deployment_id/task_infos`, `GET /v5/:platform/deployments/:deployment_id/backups`, `POST /v5/:platform/deployments/:deployment_id/backups`, `GET /v5/:platform/deployments/:deployment_id/remotes`, `DELETE /v5/:platform/deployments/:deployment_id/management/database_connections`, `PATCH /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployments/:deployment_id/configuration/schema`, `GET /v5/:platform/deployments/:deployment_id/groups`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v5/:platform/deployments/:deployment_id/users`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id`, `DELETE /v5/:platform/deployments/:deployment_id/users/:user_id`, `GET /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `DELETE /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id`, `PUT /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v5/:platform/deployments/:deployment_id/groups/member`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v5/:platform/deployments/:deployment_id/describe_updates`, `POST /v5/:platform/deployments/:deployment_id/db_updates`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/password`, `GET /v5/:platform/deployments/:deployment_id/check_updates`, `PATCH /v5/:platform/deployments/:deployment_id/billable`, `PATCH /v5/:platform/deployments/:deployment_id/migrated`, `POST /v5/:platform/deployments/:deployment_id/dr_take_over`, `GET /v5/:platform/deployments/:deployment_id/get_dr`, `POST /v5/:platform/deployments/:deployment_id/resyncs`, `POST /v4/:platform/deployments/:deployment_id/configure_sets`, `POST /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/configure_sets`, `GET /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/task_infos`, `GET /v4/:platform/task_infos/:task_id`, `POST /v4/:platform/deployments/:deployment_id/rebalance`, `POST /v4/:platform/deployments/:deployment_id/reducemax`, `POST /v4/:platform/deployments/:deployment_id/configure_iks_worker`, `POST /hyperwarp_messages`, `POST /v4/:platform/deployments/:deployment_id/hibernate`, `DELETE /v4/:platform/deployments/:deployment_id/hibernate`, `GET /v4/:platform/deployments/:deployment_id/db2audit/version`, `GET /v4/:platform/deployments/:deployment_id/db2audit/alias`, `POST /v4/:platform/deployments/:deployment_id/db2audit/install_v3`, `POST /v4/:platform/deployments/:deployment_id/db2audit/process_report`, `PATCH /v6/:platform/deployments/:deployment_id/availability`, `GET /v4/:platform/deployments/:deployment_id/iops_range`, `GET /v4/:platform/deployments/:deployment_id/instance_types`, `PATCH /v5/:platform/deployments/:deployment_id/availability`, `POST /v4/:platform/deployments/:deployment_id/external_restore`, `POST /v4/:platform/deployments/:deployment_id/custom_setting`, `POST /v4/:platform/deployments/:deployment_id/external_rollforward`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_source_migration`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/source_resource_number`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/add_source_annotation`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/source_annotation`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/can_finalize`, `GET /v4/:platform/deployments/:deployment_id/get_license`, `PUT /v4/:platform/deployments/:deployment_id/update_db2_licenses`, `dashdb-for-transactions.console.pause`, `dashdb-for-transactions.console.resume`, `GET /v4/:platform/deployments/:deployment_id/external_backups`, `GET /v4/:platform/deployments/:deployment_id/cos_info`, `GET /v6/:platform/deployments/:deployment_id/groups`, `POST /v4/:platform/deployments/:deployment_id/maintenancewindow/schedule_update`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/get_scheduled_update`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formation_update_history`, `PATCH /v4/:platform/deployments/:deployment_id/timezone`, `PATCH /v4/:platform/deployments/:deployment_id/premium_enablement`, `dashdb-for-transactions.console.db2upgrade`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow`, `PUT /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow`, `PATCH /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formationupdates`, `PUT /v4/:platform/deployments/:deployment_id/maintenancewindow/formationupdates/:id`, `PATCH /v4/:platform/deployments/:deployment_id/maintenancewindow/formationupdates/:id`, `POST /v4/:platform/deployments/:deployment_id/create_dr_node`, `global-search-tagging.resource.read`, `global-search-tagging.tag.attach-user-tag`, `global-search-tagging.tag.detach-user-tag`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.create`, `resource-controller.broker.update`, `resource-controller.broker.delete`, `resource-controller.broker.retrieve`, `resource-controller.instance.create`, `resource-controller.instance.delete`, `resource-controller.instance.update_plan`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.create`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
+| Operator | As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. | `POST /v4/:platform/deployments/:deployment_id/external_backups`, `PATCH /v4/:platform/deployments/:deployment_id/ext_restore`, `POST /v4/:platform/deployments/:deployment_id/ext_restore`, `POST /v4/:platform/deployments/:deployment_id/ext_restore_rollforward`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status/:external_restore_status_id`, `dashdb-for-transactions.console.monitor`, `dashdb-for-transactions.console.scale`, `dashdb-for-transactions.console.backup`, `dashdb-for-transactions.console.restore`, `dashdb-for-transactions.console.settings`, `dashdb-for-transactions.console.view-settings`, `GET /v4/:platform/deployables`, `GET /v4/:platform/regions`, `GET /v4/:platform/tasks/:task_id`, `GET /v4/:platform/backups/:backup_id`, `GET /v4/:platform/deployments/:deployment_id`, `PATCH /v4/:platform/deployments/:deployment_id`, `GET /v4/:platform/deployables/:deployable_id/groups`, `GET /v4/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v4/:platform/deployments/:deployment_id/tasks`, `GET /v4/:platform/deployments/:deployment_id/backups`, `POST /v4/:platform/deployments/:deployment_id/backups`, `GET /v4/:platform/deployments/:deployment_id/remotes`, `DELETE /v4/:platform/deployments/:deployment_id/management/database_connections`, `PATCH /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration/schema`, `GET /v4/:platform/deployments/:deployment_id/groups`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v4/:platform/deployments/:deployment_id/users`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id`, `DELETE /v4/:platform/deployments/:deployment_id/users/:user_id`, `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `DELETE /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id`, `PUT /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `GET /2017-12/:platform/tasks/:task_id`, `GET /2017-12/:platform/backups/:backup_id`, `GET /2017-12/:platform/deployments/:deployment_id`, `DELETE /2017-12/:platform/deployments/:deployment_id`, `GET /2017-12/:platform/deployments/:deployment_id/tasks`, `GET /2017-12/:platform/deployments/:deployment_id/backups`, `POST /2017-12/:platform/clusters/:cluster_id/deployments`, `POST /v4/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v4/:platform/deployments/:deployment_id/groups/member`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v4/:platform/deployments/:deployment_id/describe_updates`, `POST /v4/:platform/deployments/:deployment_id/db_updates`, `PATCH /v4/:platform/deployments/:deployment_id/users/:user_id/password`, `PATCH /v4/:platform/deployments/:deployment_id/billable`, `PATCH /v4/:platform/deployments/:deployment_id/migrated`, `GET /v4/:platform/deployments/:deployment_id/check_updates`, `POST /v4/:platform/deployments/:deployment_id/dr_take_over`, `GET /v4/:platform/deployments/:deployment_id/get_dr`, `POST /v4/:platform/deployments/:deployment_id/resyncs`, `GET /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployables`, `GET /v5/:platform/regions`, `GET /v5/:platform/tasks/:task_id`, `GET /v5/:platform/task_infos/:task_id`, `GET /v5/:platform/backups/:backup_id`, `GET /v5/:platform/deployments/:deployment_id`, `PATCH /v5/:platform/deployments/:deployment_id`, `GET /v5/:platform/deployables/:deployable_id/groups`, `GET /v5/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v5/:platform/deployments/:deployment_id/tasks`, `GET /v5/:platform/deployments/:deployment_id/task_infos`, `GET /v5/:platform/deployments/:deployment_id/backups`, `POST /v5/:platform/deployments/:deployment_id/backups`, `GET /v5/:platform/deployments/:deployment_id/remotes`, `DELETE /v5/:platform/deployments/:deployment_id/management/database_connections`, `PATCH /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployments/:deployment_id/configuration/schema`, `GET /v5/:platform/deployments/:deployment_id/groups`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id`, `POST /v5/:platform/deployments/:deployment_id/users`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id`, `DELETE /v5/:platform/deployments/:deployment_id/users/:user_id`, `GET /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `PATCH /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `DELETE /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id`, `PUT /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/inplace_restores`, `PATCH /v5/:platform/deployments/:deployment_id/groups/member`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/adminpassword`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/locked`, `POST /v5/:platform/deployments/:deployment_id/describe_updates`, `POST /v5/:platform/deployments/:deployment_id/db_updates`, `PATCH /v5/:platform/deployments/:deployment_id/users/:user_id/password`, `GET /v5/:platform/deployments/:deployment_id/check_updates`, `PATCH /v5/:platform/deployments/:deployment_id/billable`, `PATCH /v5/:platform/deployments/:deployment_id/migrated`, `POST /v5/:platform/deployments/:deployment_id/dr_take_over`, `GET /v5/:platform/deployments/:deployment_id/get_dr`, `POST /v5/:platform/deployments/:deployment_id/resyncs`, `POST /v4/:platform/deployments/:deployment_id/configure_sets`, `POST /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/configure_sets`, `GET /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/task_infos`, `GET /v4/:platform/task_infos/:task_id`, `POST /v4/:platform/deployments/:deployment_id/rebalance`, `POST /v4/:platform/deployments/:deployment_id/reducemax`, `POST /v4/:platform/deployments/:deployment_id/configure_iks_worker`, `POST /hyperwarp_messages`, `POST /v4/:platform/deployments/:deployment_id/hibernate`, `DELETE /v4/:platform/deployments/:deployment_id/hibernate`, `GET /v4/:platform/deployments/:deployment_id/db2audit/version`, `GET /v4/:platform/deployments/:deployment_id/db2audit/alias`, `POST /v4/:platform/deployments/:deployment_id/db2audit/install_v3`, `POST /v4/:platform/deployments/:deployment_id/db2audit/process_report`, `PATCH /v6/:platform/deployments/:deployment_id/availability`, `GET /v4/:platform/deployments/:deployment_id/iops_range`, `GET /v4/:platform/deployments/:deployment_id/instance_types`, `PATCH /v5/:platform/deployments/:deployment_id/availability`, `POST /v4/:platform/deployments/:deployment_id/external_restore`, `POST /v4/:platform/deployments/:deployment_id/custom_setting`, `POST /v4/:platform/deployments/:deployment_id/external_rollforward`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_source_migration`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/source_resource_number`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/add_source_annotation`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/source_annotation`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/can_finalize`, `GET /v4/:platform/deployments/:deployment_id/get_license`, `PUT /v4/:platform/deployments/:deployment_id/update_db2_licenses`, `dashdb-for-transactions.console.pause`, `dashdb-for-transactions.console.resume`, `GET /v4/:platform/deployments/:deployment_id/external_backups`, `GET /v4/:platform/deployments/:deployment_id/cos_info`, `GET /v6/:platform/deployments/:deployment_id/groups`, `POST /v4/:platform/deployments/:deployment_id/maintenancewindow/schedule_update`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/get_scheduled_update`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formation_update_history`, `POST /v4/:platform/deployments/:deployment_id/db2upgrade/upgrade`, `PATCH /v4/:platform/deployments/:deployment_id/timezone`, `PATCH /v4/:platform/deployments/:deployment_id/premium_enablement`, `dashdb-for-transactions.console.db2upgrade`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow`, `PUT /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow`, `PATCH /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formationupdates`, `PUT /v4/:platform/deployments/:deployment_id/maintenancewindow/formationupdates/:id`, `PATCH /v4/:platform/deployments/:deployment_id/maintenancewindow/formationupdates/:id`, `POST /v4/:platform/deployments/:deployment_id/create_dr_node`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.update`, `resource-controller.broker.retrieve`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
+| Viewer | As a viewer, you can view service instances, but you can't modify them. | `GET /v4/:platform/deployments/:deployment_id/external_restore_status`, `GET /v4/:platform/deployments/:deployment_id/external_restore_status/:external_restore_status_id`, `dashdb-for-transactions.console.monitor`, `dashdb-for-transactions.console.view-settings`, `GET /v4/:platform/deployables`, `GET /v4/:platform/regions`, `GET /v4/:platform/tasks/:task_id`, `GET /v4/:platform/backups/:backup_id`, `GET /v4/:platform/deployments/:deployment_id`, `GET /v4/:platform/deployables/:deployable_id/groups`, `GET /v4/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v4/:platform/deployments/:deployment_id/tasks`, `GET /v4/:platform/deployments/:deployment_id/backups`, `GET /v4/:platform/deployments/:deployment_id/remotes`, `GET /v4/:platform/deployments/:deployment_id/configuration`, `GET /v4/:platform/deployments/:deployment_id/configuration/schema`, `GET /v4/:platform/deployments/:deployment_id/groups`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id`, `GET /v4/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v4/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v4/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `GET /2017-12/:platform/tasks/:task_id`, `GET /2017-12/:platform/backups/:backup_id`, `GET /2017-12/:platform/deployments/:deployment_id`, `GET /2017-12/:platform/deployments/:deployment_id/tasks`, `GET /2017-12/:platform/deployments/:deployment_id/backups`, `POST /v4/:platform/deployments/:deployment_id/describe_updates`, `GET /v4/:platform/deployments/:deployment_id/check_updates`, `GET /v5/:platform/deployments/:deployment_id/configuration`, `GET /v5/:platform/deployables`, `GET /v5/:platform/regions`, `GET /v5/:platform/tasks/:task_id`, `GET /v5/:platform/task_infos/:task_id`, `GET /v5/:platform/backups/:backup_id`, `GET /v5/:platform/deployments/:deployment_id`, `GET /v5/:platform/deployables/:deployable_id/groups`, `GET /v5/:platform/deployments/:deployment_id/point_in_time_recovery_data`, `GET /v5/:platform/deployments/:deployment_id/tasks`, `GET /v5/:platform/deployments/:deployment_id/task_infos`, `GET /v5/:platform/deployments/:deployment_id/backups`, `GET /v5/:platform/deployments/:deployment_id/remotes`, `GET /v5/:platform/deployments/:deployment_id/configuration/schema`, `GET /v5/:platform/deployments/:deployment_id/groups`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id`, `GET /v5/:platform/deployments/:deployment_id/groups/:group_id/autoscaling`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `GET /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections`, `POST /v5/:platform/deployments/:deployment_id/users/:user_id/connections/:endpoint_type`, `GET /v5/:platform/deployments/:deployment_id/whitelists/ip_addresses`, `POST /v5/:platform/deployments/:deployment_id/describe_updates`, `GET /v5/:platform/deployments/:deployment_id/check_updates`, `POST /v4/:platform/deployments/:deployment_id/configure_sets`, `POST /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/configure_sets`, `GET /v5/:platform/deployments/:deployment_id/configure_sets`, `GET /v4/:platform/deployments/:deployment_id/task_infos`, `GET /v4/:platform/task_infos/:task_id`, `POST /v4/:platform/deployments/:deployment_id/rebalance`, `POST /v4/:platform/deployments/:deployment_id/reducemax`, `POST /v4/:platform/deployments/:deployment_id/configure_iks_worker`, `GET /v4/:platform/deployments/:deployment_id/db2audit/version`, `GET /v4/:platform/deployments/:deployment_id/db2audit/alias`, `POST /v4/:platform/deployments/:deployment_id/db2audit/install_v3`, `POST /v4/:platform/deployments/:deployment_id/db2audit/process_report`, `PATCH /v6/:platform/deployments/:deployment_id/availability`, `GET /v4/:platform/deployments/:deployment_id/iops_range`, `GET /v4/:platform/deployments/:deployment_id/instance_types`, `PATCH /v5/:platform/deployments/:deployment_id/availability`, `POST /v4/:platform/deployments/:deployment_id/external_restore`, `POST /v4/:platform/deployments/:deployment_id/custom_setting`, `POST /v4/:platform/deployments/:deployment_id/external_rollforward`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_migration`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/finalize_db2_source_migration`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/source_resource_number`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/add_source_annotation`, `POST /v4/:platform/deployments/:deployment_id/clustermigration/source_annotation`, `GET /v4/:platform/deployments/:deployment_id/clustermigration/can_finalize`, `GET /v4/:platform/deployments/:deployment_id/external_backups`, `GET /v4/:platform/deployments/:deployment_id/cos_info`, `GET /v6/:platform/deployments/:deployment_id/groups`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/get_scheduled_update`, `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formation_update_history`, `PATCH /v4/:platform/deployments/:deployment_id/premium_enablement`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `iam.role.read`, `resource-controller.broker.retrieve`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.subscription.retrieve` |
 {: row-headers}
 {: caption="Platform roles - Db2 on Cloud" caption-side="top"}
 {: tab-title="Platform roles"}
@@ -3783,11 +3783,19 @@ Review the available platform and service roles and the actions mapped to each t
 | `GET /v4/:platform/deployments/:deployment_id/cos_info` | get cos_info | Administrator, Editor, Operator, Viewer |
 | `GET /v6/:platform/deployments/:deployment_id/groups` | Read Groups. | Administrator, Editor, Operator, Viewer |
 | `POST /v4/:platform/deployments/:deployment_id/maintenancewindow/schedule_update` | Schedule update | Administrator, Editor, Operator |
-| `GET /v4/:platform/deployments/:id/maintenancewindow/get_scheduled_update` | Get scheduled update | Administrator, Editor, Operator, Viewer |
+| `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/get_scheduled_update` | Get scheduled update | Administrator, Editor, Operator, Viewer |
 | `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formation_update_history` | get formation update history | Administrator, Editor, Operator, Viewer |
 | `POST /v4/:platform/deployments/:deployment_id/db2upgrade/upgrade` | upgrade db2 | Administrator, Manager, Operator |
 | `PATCH /v4/:platform/deployments/:deployment_id/timezone` | update timezone | Administrator, Editor, Operator |
-| `PATCH /v4/:platform/deployments/:deployment_id/premium_enablement` | enable/disable premium license | Administrator, Editor, Operator |
+| `PATCH /v4/:platform/deployments/:deployment_id/premium_enablement` | enable/disable premium license | Administrator, Editor, Operator, Viewer |
+| `dashdb-for-transactions.console.db2upgrade` | db2upgrade | Administrator, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow` | Retrieves info on users' maintenance window | Administrator, Editor, Operator |
+| `PUT /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow` | Updates users' maintenance window | Administrator, Editor, Operator |
+| `PATCH /v4/:platform/deployments/:deployment_id/maintenancewindow/maintenancewindow` | Updates users' maintenance window | Administrator, Editor, Operator |
+| `GET /v4/:platform/deployments/:deployment_id/maintenancewindow/formationupdates` | Retrieves info on users' scheduled updates | Administrator, Editor, Operator |
+| `PUT /v4/:platform/deployments/:deployment_id/maintenancewindow/formationupdates/:id` | Reschedules users maintenance window | Administrator, Editor, Operator |
+| `PATCH /v4/:platform/deployments/:deployment_id/maintenancewindow/formationupdates/:id` | Reschedules users maintenance window | Administrator, Editor, Operator |
+| `POST /v4/:platform/deployments/:deployment_id/create_dr_node` | create dr node | Administrator, Editor, Operator |
 | `global-search-tagging.resource.read` | | Administrator, Editor, Manager, Operator, Service Configuration Reader, Viewer |
 | `resource-controller.instance.retrieve` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
 | `cbr.rule.read` | | Administrator, Editor, Manager, Operator, Viewer |
@@ -14492,6 +14500,99 @@ Review the available platform and service roles and the actions mapped to each t
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
 {: #actions-table128}
 
+## paver
+{: #paver-roles}
+
+Review the available platform and service roles and the actions mapped to each to help you assign access. If you're using the CLI or API to assign access, use `paver` for the service name.
+
+| Role | Description | Actions |
+| ----- | :----- | :----- |
+| Administrator | As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. | `paver.dashboard.view`, `global-search-tagging.resource.read`, `global-search-tagging.tag.attach-user-tag`, `global-search-tagging.tag.detach-user-tag`, `global-search-tagging.tag.attach-access-tag`, `global-search-tagging.tag.detach-access-tag`, `cbr.rule.read`, `cbr.rule.create`, `cbr.rule.update`, `cbr.rule.delete`, `iam.delegationPolicy.create`, `iam.delegationPolicy.update`, `iam.policy.read`, `iam.policy.create`, `iam.policy.update`, `iam.policy.delete`, `iam.service.read`, `iam.role.read`, `iam.role.assign`, `resource-controller.credential.retrieve_all`, `resource-controller.broker.create`, `resource-controller.broker.update`, `resource-controller.broker.delete`, `resource-controller.broker.retrieve`, `resource-controller.instance.create`, `resource-controller.instance.delete`, `resource-controller.instance.update_plan`, `resource-controller.instance.update_onetime_credentials_off`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.instance.retrieve_history`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.create`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.group.delete`, `resource-controller.subscription.retrieve` |
+| Editor | As an editor, you can perform all platform actions except for managing the account and assigning access policies. | `paver.dashboard.view`, `global-search-tagging.resource.read`, `global-search-tagging.tag.attach-user-tag`, `global-search-tagging.tag.detach-user-tag`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.create`, `resource-controller.broker.update`, `resource-controller.broker.delete`, `resource-controller.broker.retrieve`, `resource-controller.instance.create`, `resource-controller.instance.delete`, `resource-controller.instance.update_plan`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.create`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
+| Operator | As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard. | `paver.dashboard.view`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `resource-controller.broker.update`, `resource-controller.broker.retrieve`, `resource-controller.alias.create`, `resource-controller.alias.delete`, `resource-controller.binding.create`, `resource-controller.binding.delete`, `resource-controller.key.create`, `resource-controller.key.delete`, `resource-controller.instance.update`, `resource-controller.alias.update`, `resource-controller.binding.update`, `resource-controller.key.update`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.group.update`, `resource-controller.subscription.retrieve` |
+| Viewer | As a viewer, you can view service instances, but you can't modify them. | `paver.dashboard.view`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read`, `iam.role.read`, `resource-controller.broker.retrieve`, `resource-controller.instance.retrieve`, `resource-controller.alias.retrieve`, `resource-controller.binding.retrieve`, `resource-controller.key.retrieve`, `resource-controller.quota.retrieve`, `resource-controller.group.retrieve`, `resource-controller.subscription.retrieve` |
+{: row-headers}
+{: caption="Platform roles - paver" caption-side="top"}
+{: tab-title="Platform roles"}
+{: tab-group="paver"}
+{: class="simple-tab-table"}
+{: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
+{: #platform-roles-table129}
+
+| Role | Description | Actions |
+| ----- | :----- | :----- |
+| Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. | `resource-controller.key.manager_create`, `resource-controller.key.manager_delete`, `resource-controller.key.manager_update`, `resource-controller.key.manager_retrieve` |
+| Service Configuration Reader | The ability to read services configuration for Governance management. | `paver.dashboard.view`, `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
+{: row-headers}
+{: caption="Service roles - paver" caption-side="top"}
+{: tab-title="Service roles"}
+{: tab-group="paver"}
+{: class="simple-tab-table"}
+{: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
+{: #service-roles-table129}
+
+| Action | Description | Roles |
+| ----- | :----- | :----- |
+| `paver.dashboard.view` | View Dashboard | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
+| `global-search-tagging.resource.read` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
+| `resource-controller.instance.retrieve` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
+| `cbr.rule.read` | | Administrator, Editor, Operator, Viewer |
+| `iam.policy.read` | | Administrator, Editor, Operator, Viewer |
+| `iam.role.read` | | Administrator, Viewer |
+| `resource-controller.broker.retrieve` | | Administrator, Editor, Operator, Viewer |
+| `resource-controller.alias.retrieve` | | Administrator, Editor, Operator, Viewer |
+| `resource-controller.binding.retrieve` | | Administrator, Editor, Operator, Viewer |
+| `resource-controller.key.retrieve` | | Administrator, Editor, Operator, Viewer |
+| `resource-controller.quota.retrieve` | | Administrator, Editor, Operator, Viewer |
+| `resource-controller.group.retrieve` | | Administrator, Editor, Operator, Viewer |
+| `resource-controller.subscription.retrieve` | | Administrator, Editor, Operator, Viewer |
+| `global-search-tagging.tag.attach-user-tag` | | Administrator, Editor |
+| `global-search-tagging.tag.detach-user-tag` | | Administrator, Editor |
+| `global-search-tagging.tag.attach-access-tag` | | Administrator |
+| `global-search-tagging.tag.detach-access-tag` | | Administrator |
+| `cbr.rule.create` | | Administrator |
+| `cbr.rule.update` | | Administrator |
+| `cbr.rule.delete` | | Administrator |
+| `iam.delegationPolicy.create` | | Administrator |
+| `iam.delegationPolicy.update` | | Administrator |
+| `iam.policy.create` | | Administrator |
+| `iam.policy.update` | | Administrator |
+| `iam.policy.delete` | | Administrator |
+| `iam.service.read` | | Administrator |
+| `iam.role.assign` | | Administrator |
+| `resource-controller.credential.retrieve_all` | | Administrator |
+| `resource-controller.broker.create` | | Administrator, Editor |
+| `resource-controller.broker.update` | | Administrator, Editor, Operator |
+| `resource-controller.broker.delete` | | Administrator, Editor |
+| `resource-controller.instance.create` | | Administrator, Editor |
+| `resource-controller.instance.delete` | | Administrator, Editor |
+| `resource-controller.instance.update_plan` | | Administrator, Editor |
+| `resource-controller.instance.update_onetime_credentials_off` | | Administrator |
+| `resource-controller.alias.create` | | Administrator, Editor, Operator |
+| `resource-controller.alias.delete` | | Administrator, Editor, Operator |
+| `resource-controller.binding.create` | | Administrator, Editor, Operator |
+| `resource-controller.binding.delete` | | Administrator, Editor, Operator |
+| `resource-controller.key.create` | | Administrator, Editor, Operator |
+| `resource-controller.key.delete` | | Administrator, Editor, Operator |
+| `resource-controller.instance.update` | | Administrator, Editor, Operator |
+| `resource-controller.alias.update` | | Administrator, Editor, Operator |
+| `resource-controller.binding.update` | | Administrator, Editor, Operator |
+| `resource-controller.key.update` | | Administrator, Editor, Operator |
+| `resource-controller.instance.retrieve_history` | | Administrator |
+| `resource-controller.group.create` | | Administrator, Editor |
+| `resource-controller.group.update` | | Administrator, Editor, Operator |
+| `resource-controller.group.delete` | | Administrator |
+| `resource-controller.key.manager_create` | | Key Manager |
+| `resource-controller.key.manager_delete` | | Key Manager |
+| `resource-controller.key.manager_update` | | Key Manager |
+| `resource-controller.key.manager_retrieve` | | Key Manager |
+{: caption="Service actions - paver" caption-side="top"}
+{: tab-title="Actions"}
+{: tab-group="paver"}
+{: class="simple-tab-table"}
+{: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
+{: #actions-table129}
+
 ## Personality Insights
 {: #personality-insights-roles}
 
@@ -14509,7 +14610,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="personality-insights"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table129}
+{: #platform-roles-table130}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -14524,7 +14625,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="personality-insights"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table129}
+{: #service-roles-table130}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -14588,7 +14689,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="personality-insights"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table129}
+{: #actions-table130}
 
 ## Planning Analytics
 {: #planning-analytics-roles}
@@ -14607,7 +14708,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="planning-analytics"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table130}
+{: #platform-roles-table131}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -14620,7 +14721,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="planning-analytics"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table130}
+{: #service-roles-table131}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -14683,7 +14784,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="planning-analytics"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table130}
+{: #actions-table131}
 
 ## Watson Machine Learning
 {: #pm-20-roles}
@@ -14702,7 +14803,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="pm-20"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table131}
+{: #platform-roles-table132}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -14716,7 +14817,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="pm-20"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table131}
+{: #service-roles-table132}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -14779,7 +14880,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="pm-20"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table131}
+{: #actions-table132}
 
 ## Portworx Enterprise
 {: #portworx-roles}
@@ -14798,7 +14899,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="portworx"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table132}
+{: #platform-roles-table133}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -14810,7 +14911,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="portworx"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table132}
+{: #service-roles-table133}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -14872,7 +14973,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="portworx"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table132}
+{: #actions-table133}
 
 ## Portworx Test
 {: #portworx-test-roles}
@@ -14891,7 +14992,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="portworx-test"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table133}
+{: #platform-roles-table134}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -14903,7 +15004,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="portworx-test"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table133}
+{: #service-roles-table134}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -14965,7 +15066,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="portworx-test"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table133}
+{: #actions-table134}
 
 ## PowerAI
 {: #power-ai-roles}
@@ -14984,7 +15085,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-ai"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table134}
+{: #platform-roles-table135}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -14996,7 +15097,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-ai"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table134}
+{: #service-roles-table135}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -15058,7 +15159,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-ai"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table134}
+{: #actions-table135}
 
 ## HA and DR Automation for PowerVS
 {: #power-dr-automation-roles}
@@ -15077,7 +15178,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-dr-automation"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table135}
+{: #platform-roles-table136}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -15092,7 +15193,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-dr-automation"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table135}
+{: #service-roles-table136}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -15170,7 +15271,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-dr-automation"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table135}
+{: #actions-table136}
 
 ## Power Enterprise Pools Metered Capacity Integration
 {: #power-enterprise-pools-connector-roles}
@@ -15189,7 +15290,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-enterprise-pools-connector"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table136}
+{: #platform-roles-table137}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -15201,7 +15302,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-enterprise-pools-connector"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table136}
+{: #service-roles-table137}
 
 ## Workspace for Power Virtual Server
 {: #power-iaas-roles}
@@ -15220,7 +15321,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-iaas"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table137}
+{: #platform-roles-table138}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -15234,7 +15335,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-iaas"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table137}
+{: #service-roles-table138}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -15495,7 +15596,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-iaas"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table137}
+{: #actions-table138}
 
 ## Dedicated Host for Power Virtual Server
 {: #power-iaas.dedicated-host-roles}
@@ -15562,7 +15663,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-iaas.route"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table146}
+{: #platform-roles-table147}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -15576,7 +15677,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-iaas.route"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table146}
+{: #service-roles-table147}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -15837,7 +15938,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="power-iaas.route"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table146}
+{: #actions-table147}
 
 ## Shared Processor Pool for Power Virtual Server
 {: #power-iaas.shared-processor-pool-roles}
@@ -15892,7 +15993,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="primaryio-hdm-workload-migrator"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table153}
+{: #platform-roles-table154}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -15904,7 +16005,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="primaryio-hdm-workload-migrator"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table153}
+{: #service-roles-table154}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -15966,7 +16067,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="primaryio-hdm-workload-migrator"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table153}
+{: #actions-table154}
 
 ## Privileged Access Gateway
 {: #privileged-access-gateway-roles}
@@ -15985,7 +16086,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="privileged-access-gateway"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table154}
+{: #platform-roles-table155}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -16000,7 +16101,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="privileged-access-gateway"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table154}
+{: #service-roles-table155}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -16094,7 +16195,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="privileged-access-gateway"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table154}
+{: #actions-table155}
 
 ## Product Lifecycle
 {: #product-lifecycle-roles}
@@ -16113,7 +16214,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="product-lifecycle"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table155}
+{: #platform-roles-table156}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -16127,7 +16228,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="product-lifecycle"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table155}
+{: #service-roles-table156}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -16196,7 +16297,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="product-lifecycle"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table155}
+{: #actions-table156}
 
 ## Project
 {: #project-roles}
@@ -16215,7 +16316,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="project"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table156}
+{: #platform-roles-table157}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -16227,7 +16328,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="project"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table156}
+{: #service-roles-table157}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -16346,7 +16447,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="project"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table156}
+{: #actions-table157}
 
 ## PX-Backup By Portworx
 {: #px-backup-roles}
@@ -16365,7 +16466,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="px-backup"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table157}
+{: #platform-roles-table158}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -16377,7 +16478,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="px-backup"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table157}
+{: #service-roles-table158}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -16439,7 +16540,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="px-backup"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table157}
+{: #actions-table158}
 
 ## Quantum Compute
 {: #quantum-computing-roles}
@@ -16458,23 +16559,23 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="quantum-computing"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table158}
+{: #platform-roles-table159}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
-| Account Reader | As an account reader, you can perform read-only account actions. This role should typically be granted in a policy that applies to all resources in the account for the Qiskit Runtime service. | `quantum-computing.account-configuration.read`, `quantum-computing.account-analytics-usage.read`, `quantum-computing.account-analytics-filters.read`, `quantum-computing.account-promotions.read` |
+| Account Reader | As an account reader, you can perform read-only account actions. This role should typically be granted in a policy that applies to all resources in the account for the Quantum Compute service. | `quantum-computing.account-configuration.read`, `quantum-computing.account-analytics-usage.read`, `quantum-computing.account-analytics-filters.read`, `quantum-computing.account-promotions.read` |
 | Key Manager | As an key manager, the service can perform platform actions required to manage resource keys, such as creating a new resource key for a resource instance. | `resource-controller.key.manager_create`, `resource-controller.key.manager_delete`, `resource-controller.key.manager_update`, `resource-controller.key.manager_retrieve` |
-| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `quantum-computing.job.create`, `quantum-computing.job.read`, `quantum-computing.job.delete`, `quantum-computing.job.cancel`, `quantum-computing.device.read`, `quantum-computing.job.update`, `quantum-computing.session.read`, `quantum-computing.session.update`, `quantum-computing.instance.configuration.read`, `quantum-computing.instance.configuration.update`, `quantum-computing.instance.read`, `quantum-computing.session.create`, `quantum-computing.account-configuration.read`, `quantum-computing.workload.list`, `quantum-computing.direct-access-backend.list`, `quantum-computing.direct-access-job.cancel`, `quantum-computing.direct-access-job.create`, `quantum-computing.direct-access-job.delete`, `quantum-computing.direct-access-job.list`, `quantum-computing.account-analytics-usage.read`, `quantum-computing.account-analytics-filters.read`, `quantum-computing.direct-access-backend.read`, `quantum-computing.direct-access-backend-configuration.read`, `quantum-computing.direct-access-backend-properties.read`, `quantum-computing.instance-usage.read`, `quantum-computing.composer-qpy-to-qasm.create`, `quantum-computing.composer-simulation.create`, `quantum-computing.composer-transpile.create`, `quantum-computing.direct-access-job.read`, `quantum-computing.direct-access-lease.create`, `quantum-computing.direct-access-lease.delete`, `quantum-computing.direct-access-lease.get`, `quantum-computing.account-promotions.read`, `quantum-computing.account-promotions.create`, `quantum-computing.backend-lane-configuration.update`, `quantum-computing.backend-lane-configuration.list`, `quantum-computing.direct-access-lane-configuration.list`, `quantum-computing.function.list`, `quantum-computing.function.read`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
-| Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. | `quantum-computing.job.read`, `quantum-computing.device.read`, `quantum-computing.session.read`, `quantum-computing.instance.read`, `quantum-computing.workload.list`, `quantum-computing.direct-access-backend.list`, `quantum-computing.direct-access-job.list`, `quantum-computing.account-analytics-usage.read`, `quantum-computing.account-analytics-filters.read`, `quantum-computing.direct-access-backend.read`, `quantum-computing.direct-access-backend-configuration.read`, `quantum-computing.direct-access-backend-properties.read`, `quantum-computing.instance-usage.read`, `quantum-computing.composer-qpy-to-qasm.create`, `quantum-computing.composer-simulation.create`, `quantum-computing.composer-transpile.create`, `quantum-computing.direct-access-job.read`, `quantum-computing.direct-access-lease.get`, `quantum-computing.function.list`, `quantum-computing.function.read`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
+| Manager | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources. | `quantum-computing.job.create`, `quantum-computing.job.read`, `quantum-computing.job.delete`, `quantum-computing.job.cancel`, `quantum-computing.device.read`, `quantum-computing.job.update`, `quantum-computing.session.read`, `quantum-computing.session.update`, `quantum-computing.instance.configuration.read`, `quantum-computing.instance.configuration.update`, `quantum-computing.instance.read`, `quantum-computing.session.create`, `quantum-computing.account-configuration.read`, `quantum-computing.workload.list`, `quantum-computing.direct-access-backend.list`, `quantum-computing.direct-access-job.cancel`, `quantum-computing.direct-access-job.create`, `quantum-computing.direct-access-job.delete`, `quantum-computing.direct-access-job.list`, `quantum-computing.account-analytics-usage.read`, `quantum-computing.account-analytics-filters.read`, `quantum-computing.direct-access-backend.read`, `quantum-computing.direct-access-backend-configuration.read`, `quantum-computing.direct-access-backend-properties.read`, `quantum-computing.instance-usage.read`, `quantum-computing.composer-qpy-to-qasm.create`, `quantum-computing.composer-simulation.create`, `quantum-computing.composer-transpile.create`, `quantum-computing.direct-access-job.read`, `quantum-computing.direct-access-lease.create`, `quantum-computing.direct-access-lease.delete`, `quantum-computing.direct-access-lease.get`, `quantum-computing.account-promotions.read`, `quantum-computing.account-promotions.create`, `quantum-computing.backend-lane-configuration.update`, `quantum-computing.backend-lane-configuration.list`, `quantum-computing.direct-access-lane-configuration.list`, `quantum-computing.function.list`, `quantum-computing.function.read`, `quantum-computing.account-usage.read`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
+| Reader | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. | `quantum-computing.job.read`, `quantum-computing.device.read`, `quantum-computing.session.read`, `quantum-computing.instance.read`, `quantum-computing.workload.list`, `quantum-computing.direct-access-backend.list`, `quantum-computing.direct-access-job.list`, `quantum-computing.account-analytics-usage.read`, `quantum-computing.account-analytics-filters.read`, `quantum-computing.direct-access-backend.read`, `quantum-computing.direct-access-backend-configuration.read`, `quantum-computing.direct-access-backend-properties.read`, `quantum-computing.instance-usage.read`, `quantum-computing.composer-qpy-to-qasm.create`, `quantum-computing.composer-simulation.create`, `quantum-computing.composer-transpile.create`, `quantum-computing.direct-access-job.read`, `quantum-computing.direct-access-lease.get`, `quantum-computing.direct-access-lane-configuration.list`, `quantum-computing.function.list`, `quantum-computing.function.read`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 | Service Configuration Reader | The ability to read services configuration for Governance management. | `global-search-tagging.resource.read`, `resource-controller.instance.retrieve` |
-| Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. | `quantum-computing.job.create`, `quantum-computing.job.read`, `quantum-computing.job.cancel`, `quantum-computing.device.read`, `quantum-computing.job.update`, `quantum-computing.session.read`, `quantum-computing.session.update`, `quantum-computing.instance.read`, `quantum-computing.session.create`, `quantum-computing.workload.list`, `quantum-computing.direct-access-backend.list`, `quantum-computing.direct-access-job.cancel`, `quantum-computing.direct-access-job.create`, `quantum-computing.direct-access-job.delete`, `quantum-computing.direct-access-job.list`, `quantum-computing.account-analytics-usage.read`, `quantum-computing.account-analytics-filters.read`, `quantum-computing.direct-access-backend.read`, `quantum-computing.direct-access-backend-configuration.read`, `quantum-computing.direct-access-backend-properties.read`, `quantum-computing.instance-usage.read`, `quantum-computing.composer-qpy-to-qasm.create`, `quantum-computing.composer-simulation.create`, `quantum-computing.composer-transpile.create`, `quantum-computing.direct-access-job.read`, `quantum-computing.direct-access-lease.create`, `quantum-computing.direct-access-lease.delete`, `quantum-computing.direct-access-lease.get`, `quantum-computing.function.list`, `quantum-computing.function.read`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
+| Writer | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. | `quantum-computing.job.create`, `quantum-computing.job.read`, `quantum-computing.job.cancel`, `quantum-computing.device.read`, `quantum-computing.job.update`, `quantum-computing.session.read`, `quantum-computing.session.update`, `quantum-computing.instance.read`, `quantum-computing.session.create`, `quantum-computing.workload.list`, `quantum-computing.direct-access-backend.list`, `quantum-computing.direct-access-job.cancel`, `quantum-computing.direct-access-job.create`, `quantum-computing.direct-access-job.delete`, `quantum-computing.direct-access-job.list`, `quantum-computing.account-analytics-usage.read`, `quantum-computing.account-analytics-filters.read`, `quantum-computing.direct-access-backend.read`, `quantum-computing.direct-access-backend-configuration.read`, `quantum-computing.direct-access-backend-properties.read`, `quantum-computing.instance-usage.read`, `quantum-computing.composer-qpy-to-qasm.create`, `quantum-computing.composer-simulation.create`, `quantum-computing.composer-transpile.create`, `quantum-computing.direct-access-job.read`, `quantum-computing.direct-access-lease.create`, `quantum-computing.direct-access-lease.delete`, `quantum-computing.direct-access-lease.get`, `quantum-computing.direct-access-lane-configuration.list`, `quantum-computing.function.list`, `quantum-computing.function.read`, `global-search-tagging.resource.read`, `cbr.rule.read`, `iam.policy.read` |
 {: row-headers}
 {: caption="Service roles - Quantum Compute" caption-side="top"}
 {: tab-title="Service roles"}
 {: tab-group="quantum-computing"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table158}
+{: #service-roles-table159}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -16514,9 +16615,10 @@ Review the available platform and service roles and the actions mapped to each t
 | `quantum-computing.account-promotions.create` | Create an account promotion. | Manager |
 | `quantum-computing.backend-lane-configuration.update` | Update the lanes management configuration for the backend. Only available for on-prem QPUs. | Manager |
 | `quantum-computing.backend-lane-configuration.list` | List the lanes management configuration for the backend. Only available for on-prem QPUs. | Manager |
-| `quantum-computing.direct-access-lane-configuration.list` | List the lanes management configuration for the backend via Quantum System API. Only available for on-prem QPUs. | Manager |
+| `quantum-computing.direct-access-lane-configuration.list` | List the lanes management configuration for the backend via Quantum System API. Only available for on-prem QPUs. | Manager, Reader, Writer |
 | `quantum-computing.function.list` | Access to instance allowed functions and their associated data | Manager, Reader, Writer |
 | `quantum-computing.function.read` | Access to the details of a Qiskit Function job replicated in the service | Manager, Reader, Writer |
+| `quantum-computing.account-usage.read` | Get the aggregated usage for an account segmented by plan and subscription. | Manager |
 | `global-search-tagging.resource.read` | | Administrator, Editor, Manager, Operator, Reader, Service Configuration Reader, Viewer, Writer |
 | `resource-controller.instance.retrieve` | | Administrator, Editor, Operator, Service Configuration Reader, Viewer |
 | `cbr.rule.read` | | Administrator, Editor, Manager, Operator, Reader, Viewer, Writer |
@@ -16574,7 +16676,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="quantum-computing"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table158}
+{: #actions-table159}
 
 ## Robin CNS
 {: #robin-storage-roles}
@@ -16593,7 +16695,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="robin-storage"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table159}
+{: #platform-roles-table160}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -16605,7 +16707,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="robin-storage"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table159}
+{: #service-roles-table160}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -16667,7 +16769,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="robin-storage"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table159}
+{: #actions-table160}
 
 ## IBM Cloud Satellite
 {: #satellite-roles}
@@ -16686,7 +16788,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="satellite"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table160}
+{: #platform-roles-table161}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -16705,7 +16807,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="satellite"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table160}
+{: #service-roles-table161}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -16816,7 +16918,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="satellite"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table160}
+{: #actions-table161}
 
 ## Satellite Infrastructure Services 
 {: #satellite-iaas-roles}
@@ -16835,7 +16937,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="satellite-iaas"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table161}
+{: #platform-roles-table162}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -16849,7 +16951,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="satellite-iaas"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table161}
+{: #service-roles-table162}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -16914,7 +17016,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="satellite-iaas"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table161}
+{: #actions-table162}
 
 ## Schematics
 {: #schematics-roles}
@@ -16933,7 +17035,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="schematics"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table162}
+{: #platform-roles-table163}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -16948,7 +17050,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="schematics"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table162}
+{: #service-roles-table163}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17042,7 +17144,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="schematics"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table162}
+{: #actions-table163}
 
 ## Secrets Manager
 {: #secrets-manager-roles}
@@ -17061,7 +17163,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="secrets-manager"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table163}
+{: #platform-roles-table164}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17078,7 +17180,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="secrets-manager"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table163}
+{: #service-roles-table164}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17200,7 +17302,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="secrets-manager"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table163}
+{: #actions-table164}
 
 ## Simulated Instruments Analytics API
 {: #sia-roles}
@@ -17219,7 +17321,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sia"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table164}
+{: #platform-roles-table165}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17232,7 +17334,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sia"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table164}
+{: #service-roles-table165}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17295,7 +17397,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sia"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table164}
+{: #actions-table165}
 
 ## Skytap On IBM Cloud
 {: #skytap-roles}
@@ -17314,7 +17416,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="skytap"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table165}
+{: #platform-roles-table166}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17326,7 +17428,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="skytap"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table165}
+{: #service-roles-table166}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17388,7 +17490,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="skytap"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table165}
+{: #actions-table166}
 
 ## Software Billing
 {: #software-billing-roles}
@@ -17407,7 +17509,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="software-billing"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table166}
+{: #platform-roles-table167}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17419,7 +17521,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="software-billing"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table166}
+{: #service-roles-table167}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17481,7 +17583,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="software-billing"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table166}
+{: #actions-table167}
 
 ## software-defined-storage
 {: #software-defined-storage-roles}
@@ -17500,7 +17602,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="software-defined-storage"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table167}
+{: #platform-roles-table168}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17513,7 +17615,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="software-defined-storage"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table167}
+{: #service-roles-table168}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17592,7 +17694,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="software-defined-storage"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table167}
+{: #actions-table168}
 
 ## Speech to Text
 {: #speech-to-text-roles}
@@ -17611,7 +17713,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="speech-to-text"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table168}
+{: #platform-roles-table169}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17626,7 +17728,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="speech-to-text"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table168}
+{: #service-roles-table169}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17693,7 +17795,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="speech-to-text"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table168}
+{: #actions-table169}
 
 ## sql-query
 {: #sql-query-roles}
@@ -17712,7 +17814,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sql-query"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table169}
+{: #platform-roles-table170}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17727,7 +17829,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sql-query"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table169}
+{: #service-roles-table170}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17793,7 +17895,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sql-query"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table169}
+{: #actions-table170}
 
 ## streaming-analytics
 {: #streaming-analytics-roles}
@@ -17812,7 +17914,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="streaming-analytics"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table170}
+{: #platform-roles-table171}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17828,7 +17930,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="streaming-analytics"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table170}
+{: #service-roles-table171}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -17904,7 +18006,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="streaming-analytics"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table170}
+{: #actions-table171}
 
 ## Support Center
 {: #support-roles}
@@ -17923,7 +18025,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="support"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table171}
+{: #platform-roles-table172}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -17935,7 +18037,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="support"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table171}
+{: #service-roles-table172}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18000,7 +18102,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="support"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table171}
+{: #actions-table172}
 
 ## IBM Cloud Monitoring with Sysdig
 {: #sysdig-monitor-roles}
@@ -18019,7 +18121,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sysdig-monitor"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table172}
+{: #platform-roles-table173}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18035,7 +18137,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sysdig-monitor"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table172}
+{: #service-roles-table173}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18161,7 +18263,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sysdig-monitor"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table172}
+{: #actions-table173}
 
 ## IBM Cloud Security
 {: #sysdig-secure-roles}
@@ -18180,7 +18282,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sysdig-secure"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table173}
+{: #platform-roles-table174}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18195,7 +18297,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sysdig-secure"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table173}
+{: #service-roles-table174}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18259,7 +18361,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="sysdig-secure"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table173}
+{: #actions-table174}
 
 ## Text to Speech
 {: #text-to-speech-roles}
@@ -18278,7 +18380,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="text-to-speech"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table174}
+{: #platform-roles-table175}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18293,7 +18395,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="text-to-speech"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table174}
+{: #service-roles-table175}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18360,7 +18462,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="text-to-speech"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table174}
+{: #actions-table175}
 
 ## Toolchain
 {: #toolchain-roles}
@@ -18379,7 +18481,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="toolchain"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table175}
+{: #platform-roles-table176}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18393,7 +18495,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="toolchain"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table175}
+{: #service-roles-table176}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18463,7 +18565,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="toolchain"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table175}
+{: #actions-table176}
 
 ## Transit Gateway
 {: #transit-roles}
@@ -18482,7 +18584,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="transit"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table176}
+{: #platform-roles-table177}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18495,7 +18597,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="transit"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table176}
+{: #service-roles-table177}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18563,7 +18665,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="transit"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table176}
+{: #actions-table177}
 
 ## Transit Gateway
 {: #transit.gateway-roles}
@@ -18582,7 +18684,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="transit.gateway"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table177}
+{: #platform-roles-table178}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18595,7 +18697,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="transit.gateway"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table177}
+{: #service-roles-table178}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18660,7 +18762,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="transit.gateway"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table177}
+{: #actions-table178}
 
 ## IBM Cloud Platform User Management Service
 {: #user-management-roles}
@@ -18679,7 +18781,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="user-management"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table178}
+{: #platform-roles-table179}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18692,7 +18794,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="user-management"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table178}
+{: #service-roles-table179}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18766,7 +18868,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="user-management"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table178}
+{: #actions-table179}
 
 ## validation-is-a
 {: #validation-is-a-roles}
@@ -18785,7 +18887,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="validation-is-a"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table179}
+{: #platform-roles-table180}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18797,7 +18899,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="validation-is-a"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table179}
+{: #service-roles-table180}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18859,7 +18961,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="validation-is-a"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table179}
+{: #actions-table180}
 
 ## validation-is-b
 {: #validation-is-b-roles}
@@ -18878,7 +18980,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="validation-is-b"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table180}
+{: #platform-roles-table181}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -18890,7 +18992,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="validation-is-b"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table180}
+{: #service-roles-table181}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -18952,7 +19054,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="validation-is-b"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table180}
+{: #actions-table181}
 
 ## VMware Solutions on VPC
 {: #vmware-roles}
@@ -18977,7 +19079,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware-solutions"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table182}
+{: #platform-roles-table183}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19000,7 +19102,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware-solutions"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table182}
+{: #service-roles-table183}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19081,7 +19183,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware-solutions"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table182}
+{: #actions-table183}
 
 ## VMware Cloud Director
 {: #vmware.directorsite-roles}
@@ -19100,7 +19202,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware.directorsite"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table183}
+{: #platform-roles-table184}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19123,7 +19225,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware.directorsite"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table183}
+{: #service-roles-table184}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19208,7 +19310,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware.directorsite"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table183}
+{: #actions-table184}
 
 ## VMware Usage Meters
 {: #vmware.usage-meter-roles}
@@ -19227,7 +19329,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware.usage-meter"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table184}
+{: #platform-roles-table185}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19242,7 +19344,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware.usage-meter"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table184}
+{: #service-roles-table185}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19305,7 +19407,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="vmware.usage-meter"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table184}
+{: #actions-table185}
 
 ## Organization Virtual Data Center
 {: #vmware.vdc-roles}
@@ -19330,7 +19432,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="voiceagent"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table186}
+{: #platform-roles-table187}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19345,7 +19447,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="voiceagent"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table186}
+{: #service-roles-table187}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19413,7 +19515,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="voiceagent"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table186}
+{: #actions-table187}
 
 ## watsonx.data integration
 {: #watsonx-data-integration-roles}
@@ -19432,7 +19534,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-data-integration"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table187}
+{: #platform-roles-table188}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19445,7 +19547,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-data-integration"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table187}
+{: #service-roles-table188}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19507,7 +19609,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-data-integration"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table187}
+{: #actions-table188}
 
 ##  IBM watsonx BI Assistant
 {: #watsonx-intelligence-roles}
@@ -19526,7 +19628,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-intelligence"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table188}
+{: #platform-roles-table189}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19541,7 +19643,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-intelligence"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table188}
+{: #service-roles-table189}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19606,7 +19708,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-intelligence"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table188}
+{: #actions-table189}
 
 ## watsonx Orchestrate
 {: #watsonx-orchestrate-roles}
@@ -19625,7 +19727,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-orchestrate"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table189}
+{: #platform-roles-table190}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19640,7 +19742,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-orchestrate"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table189}
+{: #service-roles-table190}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19720,7 +19822,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="watsonx-orchestrate"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table189}
+{: #actions-table190}
 
 ## Annotator for Clinical Data
 {: #wh-acd-roles}
@@ -19739,7 +19841,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="wh-acd"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the platform role name and the column headers identify the specific information available about each role."}
-{: #platform-roles-table190}
+{: #platform-roles-table191}
 
 | Role | Description | Actions |
 | ----- | :----- | :----- |
@@ -19754,7 +19856,7 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="wh-acd"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table has row and column headers. The row headers provide the service role name and the column headers identify the specific information available about each role."}
-{: #service-roles-table190}
+{: #service-roles-table191}
 
 | Action | Description | Roles |
 | ----- | :----- | :----- |
@@ -19824,4 +19926,4 @@ Review the available platform and service roles and the actions mapped to each t
 {: tab-group="wh-acd"}
 {: class="simple-tab-table"}
 {: summary="Use the tab buttons to change the context of the table. This table provides the available actions for the service, descriptions of each, and the roles that each action are mapped to."}
-{: #actions-table190}
+{: #actions-table191}
