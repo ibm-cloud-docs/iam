@@ -4,9 +4,9 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-11-09"
 
-keywords: support, help, AI assistant,
+keywords: IAM help, IAM support
 
 subcollection: iam
 
@@ -14,13 +14,13 @@ subcollection: iam
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Getting help and support
+# Getting help and support for Identity and Access Management (IAM) in {{site.data.keyword.cloud_notm}}
 {: #help-and-support}
 
 If you experience an issue or have questions, you can use the following resources before you open a support case.
 {: shortdesc}
 
-* Ask a question in the [AI assistant](/docs/overview?topic=overview-ask-ai-assistant) from the console or the {{site.data.keyword.cloud_notm}} CLI.
+* Troubleshoot with [{{site.data.keyword.paver_full}}](http://cloud.paver.ibm.com){: external}. {{site.data.keyword.paver}} is an embedded AI operator that understands your account context, creates a resolution plan, and executes changes on your behalf, while always requiring your approval before touching your live environment.
 * Review the [FAQs](/docs/iam?group=faqs) in the product documentation.
 * Review the [troubleshooting information](/docs/iam?group=troubleshooting) to troubleshoot and resolve common issues.
 * Check the status of the {{site.data.keyword.Bluemix_notm}} platform and resources by going to the [Status page](/status){: external}.
