@@ -44,7 +44,7 @@
     }
   ],
   "section_devtools": {
-    "api": "/apidocs/iam-identity-token-api",
+    "api": "/docs/apis/iam-identity-token-api",
     "cli": "/docs/cli?topic=cli-ibmcloud_commands_iam",
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
   },

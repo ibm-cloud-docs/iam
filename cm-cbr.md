@@ -3,7 +3,7 @@
 copyright:
 
   years: 2023, 2026
-lastupdated: "2026-05-21"
+lastupdated: "2026-11-10"
 
 keywords: context-based restrictions, protecting catalog resources, security, catalog management, security, workloads
 
@@ -59,15 +59,15 @@ Catalog
 ## Limitations
 {: #cbr-limitations-cm}
 
-Context-based restrictions protect only the actions associated with the [Catalog Management API](/apidocs/resource-catalog/private-catalog). For more information, see [IAM roles and actions](/docs/iam?topic=iam-iam-service-roles-actions&interface=ui#globalcatalog-collection-roles). Actions that are associated with the following platform APIs are not protected by context-based restrictions. Reference the API docs for the specific action IDs.
+Context-based restrictions protect only the actions associated with the [Catalog Management API](/docs/apis/resource-catalog/private-catalog). For more information, see [IAM roles and actions](/docs/iam?topic=iam-iam-service-roles-actions&interface=ui#globalcatalog-collection-roles). Actions that are associated with the following platform APIs are not protected by context-based restrictions. Reference the API docs for the specific action IDs.
 
-- [Resource Instance APIs](/apidocs/resource-controller/resource-controller#list-resource-instances)
+- [Resource Instance APIs](/docs/apis/resource-controller/resource-controller#list-resource-instances)
 - [Resource Keys APIs](/apidocs/resource-controller/resource-controller#list-resource-keys)
 - [IAM Policy APIs](/apidocs/iam-policy-management#list-policies)
-- [Global Search APIs](/apidocs/search)
-- Global Tagging [Attach](/apidocs/tagging#attach-tag) and [Detach](/apidocs/tagging#detach-tag) APIs
+- [Global Search APIs](/docs/apis/search)
+- Global Tagging [Attach](/docs/apis/tagging#attach-tag) and [Detach](/apidocs/tagging#detach-tag) APIs
 - [Context-based Restriction Rule APIs](/apidocs/context-based-restrictions#create-rule)
-- [Secrets Manager APIs](/apidocs/secrets-manager)
+- [Secrets Manager APIs](/docs/apis/secrets-manager/secrets-manager-v2)
 
 
 ## Creating network zones
@@ -276,7 +276,7 @@ fmt.Println(string(b))
 {: codeblock}
 {: go}
 
-To find a list of available service references, call the [ListAvailableServicerefTargets](/apidocs/context-based-restrictions?code=go#list-available-serviceref-targets) method.
+To find a list of available service references, call the [ListAvailableServicerefTargets](/docs/apis/context-based-restrictions?code=go#list-available-serviceref-targets) method.
 {: tip}
 
 ## Creating network zones by using Terraform

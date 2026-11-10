@@ -3,9 +3,9 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-11-10"
 
-keywords: troubleshoot accessing all instances of a service
+keywords: troubleshoot service instances access, IAM access policy issue, access management tags, access group membership, instance level permissions, context-based restrictions access, IAM role assignment, service instance access denied, resource access troubleshooting
 
 subcollection: iam
 
@@ -15,11 +15,12 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why can't a user in my account access all instances of a service? 
+# Why can't a user in my account access all instances of a service?
 {: #troubleshoot-instances}
 {: troubleshoot}
+{: support}
 
-If a user in your account can't access all instances of a service, you might need to update the type of access they're assigned.
+Troubleshoot why a user in your {{site.data.keyword.cloud_notm}} account cannot access all instances of a service and learn how to resolve policy, tag, or context-based restriction issues.
 {: shortdesc}
 
 You defined a policy that assigns access to a specific service for a user in your account, but they can't access all instances of the service.
@@ -28,7 +29,7 @@ You defined a policy that assigns access to a specific service for a user in you
 You might need to update the access policy. The issue can be caused by the following reasons:
 {: tsCauses}
 
-* The user is not included the correct access group.
+* The user is not included in the correct access group.
 * The user is not assigned the correct role.
 * The access management tag that's defined in the policy isn't correct. The tag in your policy must be the same tag that is attached to the instances of the service.
 * The resource has a context-based restriction that excludes the user.

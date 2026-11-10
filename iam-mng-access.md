@@ -3,7 +3,7 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-05-21"
+lastupdated: "2026-11-10"
 
 keywords: resource access, assign access, IAM access policy, access to resource groups, edit access, remove access, administrator, administrator role
 
@@ -213,7 +213,7 @@ iam user-policy-create name@example.com --roles Viewer --resource-group-name sat
 {: #access-resources-api}
 {: api}
 
-You can assign access to an individual resource in the account or access to a list of resources in the account by calling the [{{site.data.keyword.iamlong}} (IAM) Policy Management API](/apidocs/iam-policy-management#create-policy){: external} as shown in the following sample request. The sample request gives `Administrator` role access for an instance of a service:
+You can assign access to an individual resource in the account or access to a list of resources in the account by calling the [{{site.data.keyword.iamlong}} (IAM) Policy Management API](/docs/apis/iam-policy-management#create-policy){: external} as shown in the following sample request. The sample request gives `Administrator` role access for an instance of a service:
 
 ```bash
 curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $TOKEN' \

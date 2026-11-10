@@ -3,9 +3,9 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-05-21"
+lastupdated: "2026-11-10"
 
-keywords: frequently asked questions, iam faqs, administrator, administrator role
+keywords: IAM FAQ, Identity and Access Management FAQ, IAM access policies, resource groups, access groups, IAM roles, service IDs, trusted profiles, API keys, multifactor authentication FAQ, IAM permissions, user management FAQ
 
 subcollection: iam
 
@@ -18,7 +18,7 @@ content-type: faq
 # FAQ about IAM
 {: #iamfaq}
 
-FAQ for {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) might include questions about access control for resources, resource groups, account management, classic infrastructure resources, and access groups.
+Find answers to frequently asked questions about {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM), including policies, access groups, roles, API keys, trusted profiles, and MFA.
 {: shortdesc}
 
 To find all FAQ for {{site.data.keyword.cloud}}, see our [FAQ library](/docs/faqs).
@@ -34,7 +34,7 @@ Identity and Access Management (IAM) enables you to securely authenticate users 
 {: #iam-enabled}
 {: faq}
 
-An IAM-enabled service must be in a resource group and access to the service is given by using IAM access policies. When you create an IAM-enabled service from the catalog, you must assign it to a resource group. For more information, see [Managing resources](/docs/account?topic=account-manage_resource)
+An IAM-enabled service must be in a resource group and access to the service is given by using IAM access policies. When you create an IAM-enabled service from the catalog, you must assign it to a resource group. For more information, see [Managing resources](/docs/account?topic=account-manage_resource).
 
 {{site.data.keyword.containerlong_notm}} is the only exception; it’s IAM-access controlled, but is always assigned to the default resource group. Therefore, you aren’t given the option to choose one when you create it from the catalog. And, it can’t be assigned to any other resource group.
 
@@ -134,7 +134,7 @@ So, minimally the user must have the following access:
 ## How do I assign access to all resource groups?
 {: #all-rgs}
 
-To assign a user, service ID, or access group a policy on all resource groups,you must assign the following:
+To assign a user, service ID, or access group a policy on all resource groups, you must assign the following:
 
 * A policy for **All Identity and Access enabled services** with the **Viewer** resource group access role selected. However, you must also assign at least one platform or service role to assign this type of policy.
 * A policy for **All Account Management services** with the **Viewer** role or higher provides access to view all resource groups. However, be aware that this type of policy also assigns the role that you choose for each account management service, so it can be a powerful policy that enables a user to manage users, account settings, billing information, and more.
@@ -230,7 +230,7 @@ No. You can invite users, and then assign access later.
 {: #pending-user}
 {: faq}
 
-A user who is list as `Pending` is a user who has been invited to {{site.data.keyword.cloud_notm}} but who hasn't accepted their invitation. On the Users page, the management actions for these users include resending the invitation or cancelling the invitation. 
+A user who is listed as `Pending` is a user who has been invited to {{site.data.keyword.cloud_notm}} but who hasn't accepted their invitation. On the Users page, the management actions for these users include resending the invitation or cancelling the invitation.
 
 When inspecting access group memberships or access policies in your account, you might see memberships or policies that are related to pending users that were created as part of the invite. These display with an IAM ID that uses the `BSS-`. This IAM ID is a placeholder for the memberships and policies until the user accepts the invitation. And, since the user hasn't registered with {{site.data.keyword.cloud_notm}}, they can't retrieve an IAM access token to leverage the assigned access. When the user accepts the invitation and registers with {{site.data.keyword.cloud_notm}}, the ID in these memberships and policies is replaced with their assigned IAM ID.
 
@@ -265,7 +265,7 @@ All permissions that were previously assigned in your SoftLayer account can be m
 {: #total-policies}
 {: faq}
 
-You can [viewing the total number of policies per account](/docs/iam?topic=iam-account-limits&interface=cli#total-number-policies-cli) by using the CLI to ensure that you don't exceed the limit for your account.
+You can [view the total number of policies per account](/docs/iam?topic=iam-account-limits&interface=cli#total-number-policies-cli) by using the CLI to ensure that you don't exceed the limit for your account.
 
 ## What are verification methods and what they are used for?
 {: #verification-methods}

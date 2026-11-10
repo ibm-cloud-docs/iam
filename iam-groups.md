@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2026
-lastupdated: "2026-05-21"
+lastupdated: "2026-11-10"
 
 keywords: access groups, access group, create group, assign access to group, administrator, administrator role, streamlined access, efficient permissions
 
@@ -85,7 +85,7 @@ A unique name is required to differentiate access groups in the account.
 {: #create_ag_api}
 {: api}
 
-You can programmatically create access groups by calling the [{{site.data.keyword.iamlong}} (IAM) Access Groups API](/apidocs/iam-access-groups#create-access-group){: external} as shown in the following sample request. The example creates an access group for managers in the account:
+You can programmatically create access groups by calling the [{{site.data.keyword.iamlong}} (IAM) Access Groups API](/docs/apis/iam-access-groups#create-access-group){: external} as shown in the following sample request. The example creates an access group for managers in the account:
 
 ```bash
 curl -X POST -H "Authorization: Bearer {iam_token}" \
@@ -246,7 +246,7 @@ ibmcloud iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --ro
 {: #access_ag_api}
 {: api}
 
-You can programmatically assign access to a group by calling the [{{site.data.keyword.iamlong}} (IAM) Policy Management API](/apidocs/iam-policy-management#create-policy){: external} as shown in the following sample request. The example assigns an access group `Editor` role for an instance of a service:
+You can programmatically assign access to a group by calling the [{{site.data.keyword.iamlong}} (IAM) Policy Management API](/docs/apis/iam-policy-management#create-policy){: external} as shown in the following sample request. The example assigns an access group `Editor` role for an instance of a service:
 
 ```bash
 curl -X POST 'https://iam.cloud.ibm.com/v1/policies' \
@@ -614,7 +614,7 @@ Members can be users, service IDs, and trusted profiles.
 
 1. List the users, service IDs, or trusted profiles in your account as shown in the following example request. Note the IBMid, service ID or trusted profile ID that is returned for the member that you want to add to the access group.
 
-   [List users](/apidocs/user-management?code=go#list-users):
+   [List users](/docs/apis/user-management?code=go#list-users):
 
     ```bash
     curl -X GET https://user-management.cloud.ibm.com/v2/accounts/987d4cfd77b04e9b9e1a6asdcc861234/users -H 'Authorization: Bearer <IAM_TOKEN>'
@@ -700,7 +700,7 @@ Members can be users, service IDs, and trusted profiles.
     {: codeblock}
     {: go}
 
-   [List service IDs](/apidocs/iam-identity-token-api?code=go#list-service-ids):
+   [List service IDs](/docs/apis/iam-identity-token-api?code=go#list-service-ids):
 
     ```bash
     curl -X GET 'https://iam.cloud.ibm.com/v1/serviceids?account_id=ACCOUNT_ID&name=My-serviceID' -H 'Authorization: Bearer TOKEN' -H 'Content-Type: application/json'
@@ -764,7 +764,7 @@ Members can be users, service IDs, and trusted profiles.
     {: go}
 
 
-   [List trusted profiles](/apidocs/iam-identity-token-api?code=python#list-profiles):
+   [List trusted profiles](/docs/apis/iam-identity-token-api?code=python#list-profiles):
 
     ```bash
     curl -X GET 'https://iam.cloud.ibm.com/v1/profiles?account_id=ACCOUNT_ID' -H 'Authorization: Bearer TOKEN' -H 'Accept: application/json'
@@ -824,7 +824,7 @@ Members can be users, service IDs, and trusted profiles.
     {: codeblock}
     {: go}
 
-1. Add members to the access group by calling the [IAM Access Groups](/apidocs/iam-access-groups?code=go#add-members-to-access-group) API as shown in the following example request.
+1. Add members to the access group by calling the [IAM Access Groups](/docs/apis/iam-access-groups?code=go#add-members-to-access-group) API as shown in the following example request.
 
    The type of member must be `user`, `service` or `profile`.
    {: tip}
