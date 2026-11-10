@@ -3,9 +3,9 @@
 copyright:
 
   years: 2017, 2026
-lastupdated: "2026-08-28"
+lastupdated: "2026-11-10"
 
-keywords: trusted profiles, federated users, compute resources, identity provider, SSO, single sign-on, workload identity, enterprise templates, centralized management, least-privilege access, Power Virtual Server, PowerVS
+keywords: trusted profiles, federated users, compute resources, identity provider, SSO, single sign-on, workload identity, enterprise templates, centralized management, least-privilege access, Power Virtual Server, PowerVS, trusted profile overview, IAM trusted profiles, cross-account access
 
 subcollection: iam
 
@@ -18,7 +18,7 @@ subcollection: iam
 {: support}
 {: help}
 
-Automatically grant federated users access to your account with conditions based on SAML attributes from your corporate directory. Trusted profiles can also be used to set up fine-grained authorization for applications that are running in compute resources. This way, you aren't required to create service IDs or API keys for the compute resources.
+Use {{site.data.keyword.cloud_notm}} trusted profiles to automatically grant federated users and compute resource workloads access to account resources without managing long-lived credentials or API keys.
 {: shortdesc}
 
 Assign access to the profile by adding it to an access group or by assigning individual policies, and then add or remove conditions as needed to grant or deny access to account resources. By using trusted profiles, you can centrally manage the access lifecycle to multiple {{site.data.keyword.cloud_notm}} assets. For more information, see [Creating trusted profiles](/docs/iam?topic=iam-create-trusted-profile).

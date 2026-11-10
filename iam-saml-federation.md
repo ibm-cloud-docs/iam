@@ -3,24 +3,20 @@
 copyright:
 
   years: 2019, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-11-10"
 
-keywords: enterprise SSO
+keywords: deprecated SAML federation, SoftLayer SAML federation, identity provider configuration, delete SAML IdP, edit SAML IdP, IBMid federation, legacy SAML identity provider, IAM identity providers
 
 subcollection: iam
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:tip: .tip}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
     
 # Managing deprecated SAML federation
 {: #saml-federation}
 
-If you previously set up federation by using a SAML identity provider (IdP) in the SoftLayer customer portal, you can edit the IdP configuration data or delete it from the Identity providers page in the {{site.data.keyword.Bluemix}} console. 
+Learn how to view, edit, or delete a deprecated SAML identity provider (IdP) configuration from your {{site.data.keyword.cloud_notm}} account.
 {: shortdesc}
 
 This type of federation is deprecated. If you delete this configuration, it is permanent and you can't set it up again. You can now take advantage of federation with IBMid. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).

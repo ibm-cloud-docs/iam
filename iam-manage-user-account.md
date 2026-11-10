@@ -2,7 +2,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-09-10"
+lastupdated: "2026-11-10"
 
 keywords: invite, invite users, invitation access, vpn-only user, remove user, delete user, IBMid change, credentials, ID, new ID
 
@@ -430,7 +430,7 @@ For command options, see [Managing accounts and users](/docs/cli?topic=cli-ibmcl
 {: #remove-user-acount-api}
 {: api}
 
-To remove a user from an account, call the [User Management API](https://cloud.ibm.com/apidocs/user-management?code=java#remove-user) as shown in the following sample request.
+To remove a user from an account, call the [User Management API](/docs/apis/user-management?code=java#remove-user) as shown in the following sample request.
 
 Replace variables with the user's IAM ID. You must use a user token for authorization. Service IDs can't remove users from an account.
 

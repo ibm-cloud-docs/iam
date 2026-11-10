@@ -2,9 +2,9 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-11-10"
 
-keywords: troubleshoot my access, what do I have acces to
+keywords: troubleshoot user access, check assigned access, view IAM permissions, my access policies, access group access, check roles, verify account access, IAM access troubleshooting, account permissions
 
 subcollection: iam
 
@@ -14,11 +14,12 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# How do I know what access I am assigned? 
+# How do I know what access I am assigned?
 {: #troubleshoot-myaccess}
 {: troubleshoot}
+{: support}
 
-If you can't complete a specific task within an {{site.data.keyword.Bluemix}} account that you're not the owner of, you might need to check the type of access you're assigned.
+Learn how to check your assigned access and permissions in an {{site.data.keyword.cloud_notm}} account to verify policies and access group memberships.
 {: shortdesc}
 
 If you don't have access to complete a particular task, such as creating a service instance and adding it to a resource group or inviting other users to the account, you might need to check what access you are assigned.
@@ -31,7 +32,7 @@ You might not be assigned the correct access.
 
 To check what you have access to and the level of access, complete the following steps. If you need to request access, contact the account owner.
 
-Go to **Manage** &gt; **Access (IAM)** in the {{site.data.keyword.cloud_notm}} console, and select your name on the **Users** page. Then, depending on the access you're looking for, select the different tabs:
+Go to **Manage** > **Access (IAM)** in the {{site.data.keyword.cloud_notm}} console, and select your name on the **Users** page. Then, depending on the access you're looking for, select the different tabs:
 {: tsResolve}
 
 * To view IAM access policies that are assigned to you, select **Access** and view the Access policies table.

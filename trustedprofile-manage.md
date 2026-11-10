@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-08-18"
+lastupdated: "2026-11-10"
 
 keywords: trusted profile, federated users, granting access, update trusted profile, compute resource, IAM trusted profile, trust relationship, establish trust,  trust policy, trusted entity, assume access, apply access, remove trusted profile
 
@@ -224,7 +224,7 @@ If you'd like to remove an access policy for a trusted profile, you can use the 
 {: #updating-tp-api}
 {: api}
 
-For more information, see the [IAM Identity Services API](/apidocs/iam-identity-token-api).
+For more information, see the [IAM Identity Services API](/docs/apis/iam-identity-token-api).
 
 ### Updating the name or description
 {: #update-tp-desc-api}
@@ -394,4 +394,4 @@ curl -X DELETE 'https://iam.cloud.ibm.com/v1/profiles/PROFILE_ID' -H 'Authorizat
 ```
 {: codeblock}
 
-For more information, see the [IAM Identity Services API](/apidocs/iam-identity-token-api).
+For more information, see the [IAM Identity Services API](/docs/apis/iam-identity-token-api).

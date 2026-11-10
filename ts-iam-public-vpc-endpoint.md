@@ -3,7 +3,7 @@
 copyright:
 
   years: 2020, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-11-10"
 
 keywords: troubleshoot context-based restrictions, VPC, public endpoint
 
@@ -33,6 +33,6 @@ To include the public gateway's associated IP addresses in the zone definition, 
 
 1. Go to **Manage** > **Context-based restrictions** in the {{site.data.keyword.cloud_notm}} console, and click **Network zones**.
 2. Select the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") for the network zone that you want to update, and select **Edit**.
-3. Update the list of allowed IP addresses to include the public gateway's associated IP addresses. For more information, see [Retrieve a public gateway](/apidocs/vpc/latest?code=node#get-public-gateway).
+3. Update the list of allowed IP addresses to include the public gateway's associated IP addresses. For more information, see [Retrieve a public gateway](/docs/apis/vpc/latest?code=node#get-public-gateway).
 4. Click **Next** to review your new configuration.
 5. Click **Update** to apply the changes.

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2026
-lastupdated: "2026-10-06"
+lastupdated: "2026-11-10"
 
 keywords: API key, user API keys, IBM Cloud API keys, manage user keys, create API key
 
@@ -91,7 +91,7 @@ For `--action-if-leaked`, possible values are "NONE", "DISABLE", or "DELETE". Th
 {: #create_user_key-api}
 {: api}
 
-To create an API key, call the [IAM Identity Service API](https://cloud.ibm.com/apidocs/iam-identity-token-api?code=go#create-api-key){: external} as shown in the following example:
+To create an API key, call the [IAM Identity Service API](/docs/apis/iam-identity-token-api?code=go#create-api-key){: external} as shown in the following example:
 
 ```bash
 curl -X POST 'https://iam.cloud.ibm.com/v1/apikeys' -H 'Authorization: Bearer TOKEN' -H 'Content-Type: application/json' -d '{
@@ -261,7 +261,7 @@ ibmcloud iam api-key-update MyCurrentName -n MyNewName -d "the new description o
 {: #update_user_key-api}
 {: api}
 
-To edit an API key by using the API, call the [IAM Identity Service API](https://cloud.ibm.com/apidocs/iam-identity-token-api?code=go#update-api-key){: external} as shown in the following example:
+To edit an API key by using the API, call the [IAM Identity Service API](/docs/apis/iam-identity-token-api?code=go#update-api-key){: external} as shown in the following example:
 
 ```bash
 curl -X PUT 'https://iam.cloud.ibm.com/v1/apikeys/APIKEY_UNIQUE_ID' -H 'Authorization: Bearer TOKEN' -H 'If-Match: <value of etag header from GET request>' -H 'Content-Type: application/json' -d '{
@@ -454,7 +454,7 @@ For platform API keys that represent your user identity you can prevent the API 
 {: #lock-keyapi}
 {: api}
 
-To lock an API key by using the API, call the [IAM Identity Service API](https://cloud.ibm.com/apidocs/iam-identity-token-api?code=go#lock-api-key){: external} as shown in the following example:
+To lock an API key by using the API, call the [IAM Identity Service API](/docs/apis/iam-identity-token-api?code=go#lock-api-key){: external} as shown in the following example:
 
 ```bash
 curl -X POST 'https://iam.cloud.ibm.com/v1/apikeys/APIKEY_UNIQUE_ID/lock' -H 'Authorization: Bearer TOKEN' -H 'Content-Type: application/json'
@@ -516,7 +516,7 @@ if err != nil {
 {: #unlock-keyapi}
 {: api}
 
-To unlock an API key by using the API, call the [IAM Identity Service API](https://cloud.ibm.com/apidocs/iam-identity-token-api?code=go#unlock-api-key){: external} as shown in the following example:
+To unlock an API key by using the API, call the [IAM Identity Service API](/docs/apis/iam-identity-token-api?code=go#unlock-api-key){: external} as shown in the following example:
 
 ```bash
 curl -X DELETE 'https://iam.cloud.ibm.com/v1/apikeys/APIKEY_UNIQUE_ID/lock' -H 'Authorization: Bearer TOKEN' -H 'Content-Type: application/json'

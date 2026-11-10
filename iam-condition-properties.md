@@ -3,9 +3,9 @@
 copyright:
 
   years: 2022, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-11-10"
 
-keywords: trusted profile, dynamic rule, operators, rules, conditions, properties, time-based, resource attribute
+keywords: IAM condition properties, dynamic rules, trusted profile conditions, IAM operators, time-based conditions, resource attribute-based conditions, v2 policies conditions, access policy conditions, IdP attributes, IAM policy syntax
 
 subcollection: iam
 
@@ -15,6 +15,9 @@ subcollection: iam
 
 # IAM condition properties
 {: #iam-condition-properties}
+
+Understand condition properties, supported operators, and resource attributes used in dynamic rules, trusted profiles, and time-based or resource attribute-based IAM access policies.
+{: shortdesc}
 
 Dynamic rules and trusted profiles both use conditional IAM statements that you specify to automatically add federated users to access groups or trusted profiles. When users log in with a federated ID, the data from the identity provider (IdP) dynamically maps them to an access group based on conditions that you set. For more information, see [Creating dynamic rules for access groups](/docs/iam?topic=iam-rules) and [Creating trusted profiles](/docs/iam?topic=iam-create-trusted-profile).
 
@@ -29,7 +32,7 @@ Name
 :   Enter a custom name that helps you remember what type of users you are adding to an access group or trusted profile.
 
 Identity provider (IdP)
-:   The dynamic rule or trusted profile is evaluated only if the user who is logging in authenticates by using the enterprise IdP with this issuer URI. Your IdP URL is displayed in the console for you to copy and paste when you create a dynamic rule or trusted profile. For example, `https://w3id.sso.ibm.com/auth/sps/samlidp2/saml20`. You can also view th IdP by clicking `View identity provider (IdP) data`. For IBMid, the IdP is the SAML "entityId" field, sometimes referred to as the issuer ID, and is part of the federation configuration when you are onboarding with IBMid. For App ID, equivalent syntax is the "realm ID". For more information, see [Enabling authentication from an external identity provider](/docs/iam?topic=iam-ibm-idp-integration)
+:   The dynamic rule or trusted profile is evaluated only if the user who is logging in authenticates by using the enterprise IdP with this issuer URI. Your IdP URL is displayed in the console for you to copy and paste when you create a dynamic rule or trusted profile. For example, `https://w3id.sso.ibm.com/auth/sps/samlidp2/saml20`. You can also view the IdP by clicking `View identity provider (IdP) data`. For IBMid, the IdP is the SAML "entityId" field, sometimes referred to as the issuer ID, and is part of the federation configuration when you are onboarding with IBMid. For App ID, equivalent syntax is the "realm ID". For more information, see [Enabling authentication from an external identity provider](/docs/iam?topic=iam-ibm-idp-integration).
 
 Session duration
 :   The dynamic access group membership or trusted profile session expires after the number of hours that are specified in this property. For example, if the property is set to 24 hours, the user’s dynamic or trusted profile session ends one day (24 hours) after they log in.
@@ -40,7 +43,7 @@ Session duration
 Additionally, each dynamic rule and trusted profile trust relationship has one or more conditions that consist of the following properties. Users need to satisfy all conditions for the overall dynamic rule or trusted profile authentication to evaluate to true:
 
 Allow users when
-: An attribute name that is part your identity provider data. To learn more about how attribute names are created from your enterprise identity provider to the condition evaluation, see [Mapping of enterprise identity provider attributes](https://developer.ibm.com/articles/identity-and-access-management-what-developers-need-to-know/#mapping-of-enterprise-identity-provider-attributes){: external}.
+: An attribute name that is part of your identity provider data. To learn more about how attribute names are created from your enterprise identity provider to the condition evaluation, see [Mapping of enterprise identity provider attributes](https://developer.ibm.com/articles/identity-and-access-management-what-developers-need-to-know/#mapping-of-enterprise-identity-provider-attributes){: external}.
 
 Operator
 :   Compares the attribute that is specified in the `Allow users when` field with the `Values` property. You can choose from Equals, Not Equals, Equals Ignore Case, Not Equals Ignore Case, In, and Contains. Use the Contains option when the attribute statement has an array type. You can enter more than one value to be matched by using the In option.
@@ -139,9 +142,9 @@ To connect the trusted profile with the ID `Profile-b2f13064-2b8c-4e4b-9181-c197
 
 ```bash
 ibmcloud iam trusted-profile-rule-create Profile-b2f13064-2b8c-4e4b-9181-c1973a408e3c \
-              --name NewRule4IKS --type Profile-CR --cr-type IKS_SA \
-               --conditions "claim:service_instance,operator:EQUALS,vlaue:c0pigdctkkc07fs7pm06" \
-               --conditions "claim:namespace,operator:EQUALS,value:my-namespace"
+--name NewRule4IKS --type Profile-CR --cr-type IKS_SA \
+--conditions "claim:service_instance,operator:EQUALS,value:c0pigdctkkc07fs7pm06" \
+--conditions "claim:namespace,operator:EQUALS,value:my-namespace"
 ```
 {: pre}
 
@@ -288,7 +291,7 @@ For more information, see [Condition patterns](/docs/iam?topic=iam-iam-time-base
 
 In this example, the `stringMatchAnyOf` values for the `resource.attributes.path` variable indicates that access is granted when the object path matches and begins with either `home/David/*`, `special/*`, `restricted/*`, or `temporary/test*spatial.?.log` (e.g. temporary/test_spatial.1.log). The `or` value indicates that there is an alternative condition that can grant access.
 
-The `stringEqualsAnyOf` value for the `resource.attributes.delimiter` variable indicates that access is granted when there is no boundary indicator or when `/` is present. Additionally, the `stringEqualsAnyOf`for the `resource.attributes.prefix` variable indicates that `home/`, or `home/David/`, or no prefix must also exist to grant access. The `and` value let's us know that both the `resource.attributes.delimiter` and `resource.attributes.prefix` must be met to grant access.
+The `stringEqualsAnyOf` value for the `resource.attributes.delimiter` variable indicates that access is granted when there is no boundary indicator or when `/` is present. Additionally, the `stringEqualsAnyOf` for the `resource.attributes.prefix` variable indicates that `home/`, or `home/David/`, or no prefix must also exist to grant access. The `and` value indicates that both the `resource.attributes.delimiter` and `resource.attributes.prefix` conditions must be met to grant access.
 
 ```json
 "pattern": "attribute-based-condition:resource:literal-and-wildcard",
